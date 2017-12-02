@@ -8,3 +8,19 @@ Starter template project featuring:
 - This project is based on: this [repo](https://github.com/wmonk/create-react-app-typescript)
 - Technical documentation ([link](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents))
 
+
+## Installation
+
+- Clone or download the repository to your local drive
+
+- Install dependencies:
+
+  ```shell
+  # Using npm
+  $ npm install
+
+  # Using yarn
+  $ yarn add
+  ```
+
+  ​
