@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "build/dist",
     "module": "es6",
-    "target": "es6",
+    "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": false,
     "allowJs": true,
@@ -20,6 +20,7 @@
   "exclude": [
     "node_modules",
     "build",
+    "temp",
     "jest"
   ]
 }

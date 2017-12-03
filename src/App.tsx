@@ -4,12 +4,7 @@
 //todo: able to choose to run with or without tslint
 //todo: revisar css style boton "enter-vr"
 
-import 'aframe';
-import './aframe-orbit-controls-component.min.js';
-import * as React from 'react';
-import './App.css';
-
-
+declare var aframe: any;
 
 declare global {
   export namespace JSX {
@@ -64,6 +59,12 @@ declare global {
     }
   }
 }
+
+import 'aframe';
+import './aframe-orbit-controls-component.min.js';
+import * as React from 'react';
+import './App.css';
+
 
 interface IState {
   color: string;
