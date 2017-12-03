@@ -100,7 +100,6 @@ export default class App extends React.Component<{}, IState> {
             material="color: #0099ff; transparent: true; opacity:0.5"/>
         </a-entity>
 
-        <a-entity id="target">
           <a-box id="box" position="-1 0.5 1" rotation="0 45 0" color="#4CC3D9">
             <a-animation attribute="rotation" delay="0" to="0 360 0" dur="5000" repeat="10" direction="alternate"/>
           </a-box>
@@ -109,7 +108,6 @@ export default class App extends React.Component<{}, IState> {
             <a-animation attribute="scale" from="1 1 1" to="2 0.5 1" repeat="50" direction="alternate"></a-animation>
           </a-cylinder>
           <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-        </a-entity>
 
       </a-scene>
     );
