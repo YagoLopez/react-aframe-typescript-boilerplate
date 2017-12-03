@@ -11,20 +11,6 @@ import './App.css';
 declare global {
   namespace JSX {
 
-    // interface IComponent {
-    //   geometry?: string;
-    //   position?: string;
-    //   rotation?: string;
-    //   material?: string;
-    //   color?: string;
-    //   radius?: string;
-    //   width?: string;
-    //   height?: string;
-    //   src?: string;
-    //   "orbit-controls"?: string;
-    //   [index: string]: any;
-    // }
-
     interface IntrinsicElements {
       'a-scene': any;
       'a-entity': any;
@@ -63,26 +49,39 @@ declare global {
 }
 
 interface IState {
-  color: string;
-  rotation: string;
+  cameraPosition: string;
+  orbitControls: string;
 }
 
 export default class App extends React.Component<{}, IState> {
 
-  state = {color: 'red', rotation: '0 45 0'};
+  state = {
+    cameraPosition: '0 2 5',
+    orbitControls: 'autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100'
+  };
 
-  componentDidMount () {
+
+  public componentDidMount() {
     console.log('component did mount');
     const buttons = document.querySelectorAll(".position-selector") as HTMLCollection;
-
     Array.from(buttons).forEach( (button) => {
       button.addEventListener("click", this.rotateTo);
     });
   }
 
-  rotateTo = (event: any) => {
+  private rotateTo(event: any): void {
     const position = event.target.dataset.position;
     (document.querySelector("#camera") as any).setAttribute("orbit-controls", "rotateTo", position);
+  }
+
+  private stopAnimation() {
+    this.setState({orbitControls: 'autoRotate: false; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100'})
+  }
+
+  private startAnimation() {
+    // console.log('orbit controls before animation', this.state.orbitControls);
+    this.setState({orbitControls: 'autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100'})
+    // console.log('orbit controls after animation', this.state.orbitControls);
   }
 
   render() {
@@ -90,8 +89,11 @@ export default class App extends React.Component<{}, IState> {
       <div>
         <div className="buttons">
           <button className="position-selector" data-position="0.17 4.14 2.79">Position 1</button>
-          <button className="position-selector" data-position="3.48 3.57 0.15">Position 2</button>
+          <button className="position-selector" data-position="3.48 0.57 0.15">Position 2</button>
           <button className="position-selector" data-position="-2.89 -2.51 3.20">Position 3</button>
+          <button onClick={ () => this.stopAnimation() }>Stop Animation</button>
+          <button onClick={ () => this.startAnimation() }>Start Animation</button>
+          <div>Camera position: { this.state.cameraPosition }</div>
         </div>
         <a-scene>
 
@@ -104,9 +106,8 @@ export default class App extends React.Component<{}, IState> {
         <a-entity
           id="camera"
           camera="fov: 80; zoom: 1;"
-          position="0 2 5"
-          orbit-controls="autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100"
-          mouse-cursor="">
+          position={ this.state.cameraPosition }
+          orbit-controls={ this.state.orbitControls }>
         </a-entity>
 
         <a-entity id="target">
