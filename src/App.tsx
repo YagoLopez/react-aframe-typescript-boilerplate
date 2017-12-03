@@ -125,19 +125,3 @@ export default class App extends React.Component<{}, IState> {
     );
   }
 }
-
-/*
- var buttons = document.querySelectorAll(".position-selector");
-
- buttons.forEach(function(button) {
- button.addEventListener("click", rotateTo);
- });
-
- function rotateTo(e) {
- var position = e.target.dataset.position;
- document
- .querySelector("#camera")
- .setAttribute("orbit-controls", "rotateTo", position);
- }
-
- */
