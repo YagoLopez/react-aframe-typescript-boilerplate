@@ -299,3 +299,21 @@ a-assets, a-scene audio, a-scene img, a-scene video {
   text-indent: -9999px;
   width: 50px
 }
+
+/* Buttons ******************************************** */
+
+.buttons {
+  position: absolute;
+  z-index: 1;
+  padding: 5px
+}
+
+button {
+  margin: 2px;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: lightgrey;
+  color: black;
+  opacity: 0.5;
+  cursor: pointer;
+}

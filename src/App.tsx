@@ -73,12 +73,27 @@ export default class App extends React.Component<{}, IState> {
 
   componentDidMount () {
     console.log('component did mount');
-    this.setState({color: 'blue'});
-  };
+    const buttons = document.querySelectorAll(".position-selector") as HTMLCollection;
+
+    Array.from(buttons).forEach( (button) => {
+      button.addEventListener("click", this.rotateTo);
+    });
+  }
+
+  rotateTo = (event: any) => {
+    const position = event.target.dataset.position;
+    (document.querySelector("#camera") as any).setAttribute("orbit-controls", "rotateTo", position);
+  }
 
   render() {
     return (
-      <a-scene>
+      <div>
+        <div className="buttons">
+          <button className="position-selector" data-position="0.17 4.14 2.79">Position 1</button>
+          <button className="position-selector" data-position="3.48 3.57 0.15">Position 2</button>
+          <button className="position-selector" data-position="-2.89 -2.51 3.20">Position 3</button>
+        </div>
+        <a-scene>
 
         <a-assets>
           <img id="sky" src="img/1.jpg"/>
@@ -106,6 +121,23 @@ export default class App extends React.Component<{}, IState> {
         </a-entity>
         
       </a-scene>
+      </div>
     );
   }
 }
+
+/*
+ var buttons = document.querySelectorAll(".position-selector");
+
+ buttons.forEach(function(button) {
+ button.addEventListener("click", rotateTo);
+ });
+
+ function rotateTo(e) {
+ var position = e.target.dataset.position;
+ document
+ .querySelector("#camera")
+ .setAttribute("orbit-controls", "rotateTo", position);
+ }
+
+ */
