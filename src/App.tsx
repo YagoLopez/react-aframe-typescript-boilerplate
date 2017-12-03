@@ -4,67 +4,63 @@
 //todo: able to choose to run with or without tslint
 //todo: revisar css style boton "enter-vr"
 
-declare var aframe: any;
+
+import * as React from 'react';
+import './App.css';
 
 declare global {
-  export namespace JSX {
+  namespace JSX {
 
-    interface IComponent {
-      geometry?: string;
-      position?: string;
-      rotation?: string;
-      material?: string;
-      color?: string;
-      radius?: string;
-      width?: string;
-      height?: string;
-      src?: string;
-      "orbit-controls"?: string;
-      [index: string]: any;
-    }
+    // interface IComponent {
+    //   geometry?: string;
+    //   position?: string;
+    //   rotation?: string;
+    //   material?: string;
+    //   color?: string;
+    //   radius?: string;
+    //   width?: string;
+    //   height?: string;
+    //   src?: string;
+    //   "orbit-controls"?: string;
+    //   [index: string]: any;
+    // }
 
     interface IntrinsicElements {
       'a-scene': any;
-      'a-entity': IComponent;
-      'a-box'?: IComponent;
-      'a-camera'?: IComponent;
-      'a-circle'?: IComponent;
-      'a-collada-model'?: IComponent;
-      'a-cone'?: IComponent;
-      'a-cursor'?: IComponent;
-      'a-curvedimage'?: IComponent;
-      'a-cylinder'?: IComponent;
-      'a-dodecahedron'?: IComponent;
-      'a-gltf-model'?: IComponent;
-      'a-icosahedron'?: IComponent;
-      'a-image'?: IComponent;
-      'a-light'?: IComponent;
-      'a-link'?: IComponent;
-      'a-obj-model'?: IComponent;
-      'a-octahedron'?: IComponent;
-      'a-plane'?: IComponent;
-      'a-ring'?: IComponent;
-      'a-sky'?: IComponent;
-      'a-sound'?: IComponent;
-      'a-sphere'?: IComponent;
-      'a-tetrahedron'?: IComponent;
-      'a-text'?: IComponent;
-      'a-torus-knot'?: IComponent;
-      'a-torus'?: IComponent;
-      'a-triangle'?: IComponent;
-      'a-video'?: IComponent;
-      'a-videosphere'?: IComponent;
-      'a-assets'?: IComponent;
+      'a-entity': any;
+      'a-box'?: any;
+      'a-camera'?: any;
+      'a-circle'?: any;
+      'a-collada-model'?: any;
+      'a-cone'?: any;
+      'a-cursor'?: any;
+      'a-curvedimage'?: any;
+      'a-cylinder'?: any;
+      'a-dodecahedron'?: any;
+      'a-gltf-model'?: any;
+      'a-icosahedron'?: any;
+      'a-image'?: any;
+      'a-light'?: any;
+      'a-link'?: any;
+      'a-obj-model'?: any;
+      'a-octahedron'?: any;
+      'a-plane'?: any;
+      'a-ring'?: any;
+      'a-sky'?: any;
+      'a-sound'?: any;
+      'a-sphere'?: any;
+      'a-tetrahedron'?: any;
+      'a-text'?: any;
+      'a-torus-knot'?: any;
+      'a-torus'?: any;
+      'a-triangle'?: any;
+      'a-video'?: any;
+      'a-videosphere'?: any;
+      'a-assets'?: any;
       'a-animation'?: any;
     }
   }
 }
-
-import 'aframe';
-import './aframe-orbit-controls-component.min.js';
-import * as React from 'react';
-import './App.css';
-
 
 interface IState {
   color: string;
@@ -90,16 +86,15 @@ export default class App extends React.Component<{}, IState> {
 
         <a-sky src="#sky"></a-sky>
 
-        {/*valores con animacion: autoRotate: true; dampingFactor: 1.5*/}
-        {/*valores sin aminacion: autoRotate: false; dampingFactor: 0.125*/}
-        <a-entity id="camera" camera="active: true; fov: 80; zoom: 1;" position="0 2 5"
-          orbit-controls="autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed: 0.25; minDistance: 3; maxDistance: 100;"
+        <a-entity
+          id="camera"
+          camera="fov: 80; zoom: 1;"
+          position="0 2 5"
+          orbit-controls="autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100"
           mouse-cursor="">
-          <a-entity geometry="primitive:cone; radius-bottom:1; radius-top:0"
-            scale=".33 1 .33" position="0 0 0" rotation="90 0 0"
-            material="color: #0099ff; transparent: true; opacity:0.5"/>
         </a-entity>
 
+        <a-entity id="target">
           <a-box id="box" position="-1 0.5 1" rotation="0 45 0" color="#4CC3D9">
             <a-animation attribute="rotation" delay="0" to="0 360 0" dur="5000" repeat="10" direction="alternate"/>
           </a-box>
@@ -108,7 +103,8 @@ export default class App extends React.Component<{}, IState> {
             <a-animation attribute="scale" from="1 1 1" to="2 0.5 1" repeat="50" direction="alternate"></a-animation>
           </a-cylinder>
           <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-
+        </a-entity>
+        
       </a-scene>
     );
   }
