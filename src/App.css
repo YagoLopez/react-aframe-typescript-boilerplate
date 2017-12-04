@@ -305,7 +305,10 @@ a-assets, a-scene audio, a-scene img, a-scene video {
 .buttons {
   position: absolute;
   z-index: 1;
-  padding: 5px
+  padding: 5px;
+  text-align: center;
+  margin: auto;
+  width: 100%;
 }
 
 button {
@@ -316,4 +319,16 @@ button {
   color: black;
   opacity: 0.5;
   cursor: pointer;
+}
+/* ***************************************************** */
+/*body { width: 100%; height: 100%; margin: 0; padding: 0; }*/
+
+.intro-loader {
+  position: absolute;
+  width: 98%;
+  top: 45%;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: large;
+  color: cornflowerblue;
 }
