@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "aframe": "^0.7.1",
+    "aframe-video-controls": "^0.3.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts-ts": "2.8.0"

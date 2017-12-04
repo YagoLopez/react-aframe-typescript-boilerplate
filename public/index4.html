@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<header>
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
+</header>
+<html>
+  <body>
+
+  <a-scene>
+
+    <a-assets>
+      <video id="video1" crossorigin="anonymous" autoplay="" playsinline="" webkit-playsinline="">
+        <source type="video/mp4" src="video/echo-hereweare.mp4">
+      </video>
+      <video id="video3" autoplay="" loop="" crossorigin="anonymous" playsinline="" webkit-playsinline="">
+        <source type="video/mp4" src="video/canguros.mp4">
+      </video>
+      <img id="video-play-image" src="img/play-video-btn.png">
+      <img id="video-pause-image" src="img/pause-video-btn.png">
+    </a-assets>
+
+    <a-camera position="0 0.5 1">
+      <a-cursor id="cursor" color="yellow"></a-cursor>
+    </a-camera>
+
+    <a-videosphere src="#video3" material="" geometry=""></a-videosphere>
+
+    <a-video src="#video1" position="0 2.5 -1" scale="2 1 0" material="" geometry=""></a-video>
+
+    <a-entity video-controls="src:#video1;distance:1;size:2">
+    </a-entity>
+
+  </a-scene>
+
+  <!-- Show a button to switch to the multi-source example that shows detail. -->
+    <button onClick="onClickBtnPlay()" style="padding: 10px;position:absolute;top:10px;right:10px;">Play</button>
+    <button onClick="onClickBtnPause()" style="padding: 10px;position:absolute;top:50px;right:10px;">Pause</button>
+
+    <script>
+      const video1El = document.querySelector('#video1');
+      const video3El = document.querySelector('#video3');
+
+      const onClickBtnPause = () => {
+        video1El.pause();
+        video3El.pause();
+//        console.log(video1El);
+      }
+      const onClickBtnPlay = () => {
+        video1El.play();
+        video3El.play();
+      }
+    </script>
+
+  </body>
+</html>

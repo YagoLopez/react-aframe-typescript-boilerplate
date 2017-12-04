@@ -15,6 +15,7 @@
 //todo: creditos
 //todo: usar una imagen de fondo mejor
 //todo: notificar al usuario: rueda del raton hace zoom
+//todo: hacer test
 
 import * as React from 'react';
 import './App.css';
@@ -79,7 +80,7 @@ export default class App extends React.Component<{}, IState> {
   state = {
     orbitControls: {
       autoRotate: true,
-      target: '#target',
+      target: '#entityGroup',
       enableDamping: true,
       dampingFactor: 1.5,
       rotateSpeed: 0.25,
@@ -115,11 +116,11 @@ export default class App extends React.Component<{}, IState> {
     return AFRAME.utils.styleParser.stringify(component);
   }
 
-  private stopAnimation(): void {
+  private stopAnimation = (): void => {
     this.setState({orbitControls: {autoRotate: false}});
   }
 
-  private startAnimation(): void {
+  private startAnimation = (): void => {
     this.setState({orbitControls: {autoRotate: true}});
   }
 
@@ -133,10 +134,8 @@ export default class App extends React.Component<{}, IState> {
           <button className="position-selector" data-position="0.17 4.14 2.79">Position 1</button>
           <button className="position-selector" data-position="3.48 0.57 0.15">Position 2</button>
           <button className="position-selector" data-position="-2.89 -2.51 3.20">Position 3</button>
-        </div>
-        <div className="buttons" style={{marginTop: '52px'}}>
-          <button onClick={ () => this.startAnimation() }>Start Animation</button>
-          <button onClick={ () => this.stopAnimation() }>Stop Animation</button>
+          <button onClick={ this.startAnimation }>Start Rotation</button>
+          <button onClick={ this.stopAnimation }>Stop Rotation</button>
         </div>
 
         <a-scene id="scene" raycaster="far: 100; objects: [link]" cursor="rayOrigin: mouse" camera-position>
@@ -153,7 +152,7 @@ export default class App extends React.Component<{}, IState> {
           <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 2 5"
             orbit-controls={ this.stringify(this.state.orbitControls) }/>
 
-          <a-entity id="target">
+          <a-entity id="entityGroup">
             <a-box id="box" position="-1 -0.5 -1" rotation="0 45 0" color="#4CC3D9">
               <a-animation attribute="rotation" delay="0" to="0 360 0" dur="5000" repeat="10" direction="alternate"/>
             </a-box>
@@ -162,8 +161,8 @@ export default class App extends React.Component<{}, IState> {
             </a-cylinder>
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="img/aframeArena.png"/>
             <a-link href="test.html" title="Link 1" position="-3 1 0" image="#link1"/>
-            <a-link href="img/4.jpg" title="Link 2" position="0 1 0" image="#link2"/>
-            <a-link href="img/7.jpg" title="Link 3" position="3 1 0" image="#link3"/>
+            <a-link href="index4.html" title="360 Video" position="0 1 0" image="#link2"/>
+            <a-link href="img/7.jpg" title="Link 2" position="3 1 0" image="#link3"/>
           </a-entity>
 
         </a-scene>
