@@ -10,6 +10,11 @@
 //todo: añadir pagina con controles material design
 //todo: usar aframe.js no minificado durante development time
 //todo: reducir tamaño de imagenes
+//todo: usar algun objeto 3d no demasiado complejo
+//todo: usar la pagina de los videos de canguros y el reproductor de video
+//todo: creditos
+//todo: usar una imagen de fondo mejor
+//todo: notificar al usuario: rueda del raton hace zoom
 
 import * as React from 'react';
 import './App.css';
@@ -54,14 +59,33 @@ declare global {
   }
 }
 
+declare var AFRAME: any;
+
 interface IState {
-  orbitControls: string;
+  orbitControls: {
+    autoRotate?: boolean,
+    target?: string,
+    enableDamping?: boolean,
+    dampingFactor?: number,
+    rotateSpeed?: number,
+    minDistance?: number,
+    maxDistance?: number,
+    rotateTo?: {x: number, y: number, z: number}
+  };
 }
 
 export default class App extends React.Component<{}, IState> {
 
   state = {
-    orbitControls: 'autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100',
+    orbitControls: {
+      autoRotate: true,
+      target: '#target',
+      enableDamping: true,
+      dampingFactor: 1.5,
+      rotateSpeed: 0.25,
+      minDistance: 3,
+      maxDistance: 100,
+    }
   };
 
   public componentDidMount() {
@@ -72,10 +96,7 @@ export default class App extends React.Component<{}, IState> {
     Array.from(buttons).forEach( (button) => {
       button.addEventListener('click', (event: any) => {
         const position = event.target.dataset.position;
-        const orbitControls = 'autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; ' +
-          'rotateSpeed:0.25; minDistance:3; maxDistance:100; rotateTo: ' + position;
-        // camera.setAttribute('orbit-controls', 'rotateTo', position);
-        this.setState({orbitControls: orbitControls})
+        this.setState( {orbitControls: {rotateTo: position}} )
       });
     });
 
@@ -90,28 +111,19 @@ export default class App extends React.Component<{}, IState> {
     });
   }
 
+  private stringify(component: Object): string {
+    return AFRAME.utils.styleParser.stringify(component);
+  }
+
   private stopAnimation(): void {
-    const orbitControls = 'autoRotate: false; target: #target; enableDamping: true; dampingFactor: 1.5; ' +
-      'rotateSpeed:0.25; minDistance:3; maxDistance:100';
-    this.setState({orbitControls: orbitControls});
+    this.setState({orbitControls: {autoRotate: false}});
   }
 
   private startAnimation(): void {
-    const orbitControls = 'autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; ' +
-      'rotateSpeed:0.25; minDistance:3; maxDistance:100'
-    this.setState({orbitControls: orbitControls});
+    this.setState({orbitControls: {autoRotate: true}});
   }
 
-  private rotateTo(event: any): void {
-    const position = event.target.dataset.position;
-    const camera = document.getElementById('camera') as any;
-    const orbitControls = 'autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; ' +
-      'rotateSpeed:0.25; minDistance:3; maxDistance:100; rotateTo: ' + position;
-    // camera.setAttribute('orbit-controls', 'rotateTo', position);
-    this.setState({orbitControls: orbitControls})
-  }
-
-  render() {
+  public render() {
     return (
       <div>
 
@@ -138,7 +150,8 @@ export default class App extends React.Component<{}, IState> {
 
           <a-sky src="#sky"></a-sky>
 
-          <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 2 5" orbit-controls={ this.state.orbitControls }/>
+          <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 2 5"
+            orbit-controls={ this.stringify(this.state.orbitControls) }/>
 
           <a-entity id="target">
             <a-box id="box" position="-1 -0.5 -1" rotation="0 45 0" color="#4CC3D9">
