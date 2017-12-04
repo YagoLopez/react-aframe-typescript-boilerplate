@@ -9,6 +9,7 @@
 //todo: añadir pagina de video
 //todo: añadir pagina con controles material design
 //todo: usar aframe.js no minificado durante development time
+//todo: reducir tamaño de imagenes
 
 import * as React from 'react';
 import './App.css';
