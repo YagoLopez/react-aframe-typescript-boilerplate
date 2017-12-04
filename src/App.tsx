@@ -4,7 +4,6 @@
 //todo: able to choose to run with or without tslint
 //todo: revisar css style boton "enter-vr"
 
-
 import * as React from 'react';
 import './App.css';
 
@@ -60,28 +59,35 @@ export default class App extends React.Component<{}, IState> {
     orbitControls: 'autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100'
   };
 
-
   public componentDidMount() {
     console.log('component did mount');
     const buttons = document.querySelectorAll(".position-selector") as HTMLCollection;
     Array.from(buttons).forEach( (button) => {
-      button.addEventListener("click", this.rotateTo);
+      button.addEventListener('click', this.rotateTo);
     });
+    // debugger
+    // const link = document.getElementById('link1') as HTMLAnchorElement;
+    // link.addEventListener('click', () => this.onClickLink());
+  }
+
+
+  private stopAnimation(): void {
+    this.setState({orbitControls: 'autoRotate: false; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100'})
+  }
+
+  private startAnimation(): void {
+    this.setState({orbitControls: 'autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100'})
   }
 
   private rotateTo(event: any): void {
     const position = event.target.dataset.position;
     (document.querySelector("#camera") as any).setAttribute("orbit-controls", "rotateTo", position);
+    // this.stopAnimation();
   }
 
-  private stopAnimation() {
-    this.setState({orbitControls: 'autoRotate: false; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100'})
-  }
-
-  private startAnimation() {
-    // console.log('orbit controls before animation', this.state.orbitControls);
-    this.setState({orbitControls: 'autoRotate: true; target: #target; enableDamping: true; dampingFactor: 1.5; rotateSpeed:0.25; minDistance:3; maxDistance:100'})
-    // console.log('orbit controls after animation', this.state.orbitControls);
+  private onClickLink(): void {
+    // debugger
+    // (document.querySelector('a-link') as any).navigate('test.html');
   }
 
   render() {
@@ -95,33 +101,37 @@ export default class App extends React.Component<{}, IState> {
           <button onClick={ () => this.startAnimation() }>Start Animation</button>
           <div>Camera position: { this.state.cameraPosition }</div>
         </div>
-        <a-scene>
 
-        <a-assets>
-          <img id="sky" src="img/1.jpg"/>
-        </a-assets>
+        <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" camera-position>
 
-        <a-sky src="#sky"></a-sky>
+          <a-assets>
+            <img id="sky" src="img/1.jpg"/>
+          </a-assets>
 
-        <a-entity
-          id="camera"
-          camera="fov: 80; zoom: 1;"
-          position={ this.state.cameraPosition }
-          orbit-controls={ this.state.orbitControls }>
-        </a-entity>
+          <a-sky src="#sky"></a-sky>
 
-        <a-entity id="target">
-          <a-box id="box" position="-1 0.5 1" rotation="0 45 0" color="#4CC3D9">
-            <a-animation attribute="rotation" delay="0" to="0 360 0" dur="5000" repeat="10" direction="alternate"/>
-          </a-box>
-          <a-sphere id="sphere" position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
-          <a-cylinder id="cylinder" position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D">
-            <a-animation attribute="scale" from="1 1 1" to="2 0.5 1" repeat="50" direction="alternate"></a-animation>
-          </a-cylinder>
-          <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-        </a-entity>
-        
-      </a-scene>
+          <a-entity
+            id="camera"
+            camera="fov: 80; zoom: 1;"
+            position={ this.state.cameraPosition }
+            orbit-controls={ this.state.orbitControls }>
+          </a-entity>
+
+          <a-entity id="target">
+            <a-box id="box" position="-1 0.5 1" rotation="0 45 0" color="#4CC3D9">
+              <a-animation attribute="rotation" delay="0" to="0 360 0" dur="5000" repeat="10" direction="alternate"/>
+            </a-box>
+            <a-cylinder id="cylinder" position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D">
+              <a-animation attribute="scale" from="1 1 1" to="2 0.5 1" repeat="50" direction="alternate"/>
+            </a-cylinder>
+            <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"/>
+          </a-entity>
+
+          <a-link href="test.html" title="Link 1" position="-3.5 0 -1.0" image="img/sea.jpg" highlighted="true"/>
+          <a-link href="img/2.jpg" title="Link 2" position="0 0 -1.0" image="img/2.jpg"/>
+          <a-link href="img/7.jpg" title="Link 3" position="3.5 0 -1.0" image="img/7.jpg"/>
+
+        </a-scene>
       </div>
     );
   }
