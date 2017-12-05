@@ -1,3 +1,4 @@
+//todo: camera position as component state
 //todo: link to aframe lib in index.html instead of loading it using import
 //todo: add aframe typings or reseach to put in its on file jsx namespace
 //todo: probar a eliminar completamente tslint del proyecto
@@ -138,7 +139,7 @@ export default class App extends React.Component<{}, IState> {
           <button onClick={ this.stopAnimation }>Stop Rotation</button>
         </div>
 
-        <a-scene id="scene" raycaster="far: 100; objects: [link]" cursor="rayOrigin: mouse" camera-position>
+        <a-scene debug id="scene" raycaster="far: 100; objects: [link]" cursor="rayOrigin: mouse" camera-position>
 
           <a-assets>
             <img id="sky" src="img/1.jpg"/>
@@ -147,7 +148,7 @@ export default class App extends React.Component<{}, IState> {
             <img id="link3" src="img/7.jpg"/>
           </a-assets>
 
-          <a-sky src="#sky"></a-sky>
+          <a-sky src="#sky" rotation="0 -90 0"></a-sky>
 
           <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 2 5"
             orbit-controls={ this.stringify(this.state.orbitControls) }/>
