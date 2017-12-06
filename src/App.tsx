@@ -21,9 +21,10 @@
 //todo: hacer test
 //todo: convertir la navegacion programatica de react en un componente de aframe
 //todo: custom event polyfill
+//todo: mouse pointer on <a-link>
 
 import * as React from 'react';
-import '../node_modules/aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.js';
+import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.js';
 import './App.css';
 
 declare global {

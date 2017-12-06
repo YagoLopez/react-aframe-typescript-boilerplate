@@ -5,6 +5,11 @@ import App from './App';
 import PagVideoCmp from "./pagVideo/PagVideoCmp";
 // import registerServiceWorker from './registerServiceWorker';
 
+declare var process : any;
+process = {
+  env: {NODE_PATH: 'node_modules'}
+};
+
 ReactDOM.render(
   <HashRouter>
     <div>

@@ -1,7 +1,7 @@
 //todo: comprobar si se ha cargadoo aframe.js
 
 import * as React from 'react';
-import '../../node_modules/aframe-video-controls/dist/aframe-video-controls.js';
+import 'aframe-video-controls/dist/aframe-video-controls.js';
 
 declare global {
   namespace JSX {
@@ -50,7 +50,6 @@ export default class PagVideoCmp extends React.Component<any, any> {
   state = {};
 
   public componentDidMount() {
-
   }
 
   onClickBtnPause = () => {
