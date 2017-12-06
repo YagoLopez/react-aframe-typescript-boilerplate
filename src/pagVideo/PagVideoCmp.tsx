@@ -3,7 +3,6 @@
 import * as React from 'react';
 import '../../node_modules/aframe-video-controls/dist/aframe-video-controls.js';
 
-
 declare global {
   namespace JSX {
 
@@ -71,6 +70,8 @@ export default class PagVideoCmp extends React.Component<any, any> {
   public render() {
     return (
       <div>
+        <button onClick={ this.onClickBtnPlay } style={ {padding: '10px;position:absolute;top:10px;right:10px'} }>Play</button>
+        <button onClick={ this.onClickBtnPause } style={ {padding: '10px;position:absolute;top:50px;right:10px'} }>Pause</button>
         <a-scene>
 
           <a-assets>
@@ -95,8 +96,6 @@ export default class PagVideoCmp extends React.Component<any, any> {
           <a-entity video-controls="src:#video1;distance:1;size:2"/>
 
         </a-scene>
-        <button onClick={ this.onClickBtnPlay } style={ {padding: '10px;position:absolute;top:10px;right:10px'} }>Play</button>
-        <button onClick={ this.onClickBtnPause } style={ {padding: '10px;position:absolute;top:50px;right:10px'} }>Pause</button>
       </div>
     );
   }
