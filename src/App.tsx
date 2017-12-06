@@ -1,3 +1,5 @@
+//todo: poner attributos que faltan a <video> en forma de props
+//todo: App.tsx en carpeta pagStart
 //todo: camera position as component state
 //todo: link to aframe lib in index.html instead of loading it using import
 //todo: add aframe typings or reseach to put in its on file jsx namespace
@@ -17,8 +19,11 @@
 //todo: usar una imagen de fondo mejor
 //todo: notificar al usuario: rueda del raton hace zoom
 //todo: hacer test
+//todo: convertir la navegacion programatica de react en un componente de aframe
+//todo: custom event polyfill
 
 import * as React from 'react';
+import '../node_modules/aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.js';
 import './App.css';
 
 declare global {
@@ -92,7 +97,7 @@ export default class App extends React.Component<{}, IState> {
 
   public componentDidMount() {
 
-    // A-frame events must be defined here. The rest of react events are defined in elements as always
+    // AFRAME EVENTS must be defined here. The rest of REACT EVENTS are defined in elements as always
 
     const buttons = document.querySelectorAll(".position-selector") as HTMLCollection;
     Array.from(buttons).forEach( (button) => {
@@ -125,11 +130,15 @@ export default class App extends React.Component<{}, IState> {
     this.setState({orbitControls: {autoRotate: true}});
   }
 
-  public render() {
+  private onClickLink1 = () => {
+    (this.props as any).history.push("/video")
+  }
+
+  public render(): any {
     return (
       <div>
 
-        <div className="intro-loader">Loading...</div>
+        <div className="loading">Loading...</div>
 
         <div className="buttons">
           <button className="position-selector" data-position="0.17 4.14 2.79">Position 1</button>
@@ -139,7 +148,7 @@ export default class App extends React.Component<{}, IState> {
           <button onClick={ this.stopAnimation }>Stop Rotation</button>
         </div>
 
-        <a-scene debug id="scene" raycaster="far: 100; objects: [link]" cursor="rayOrigin: mouse" camera-position>
+        <a-scene id="scene" raycaster="far: 100; objects: [link]" cursor="rayOrigin: mouse" camera-position>
 
           <a-assets>
             <img id="sky" src="img/1.jpg"/>
@@ -161,9 +170,11 @@ export default class App extends React.Component<{}, IState> {
               <a-animation attribute="scale" from="1 1 1" to="2 0.5 1" repeat="50" direction="alternate"/>
             </a-cylinder>
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="img/aframeArena.png"/>
-            <a-link href="test.html" title="Link 1" position="-3 1 0" image="#link1"/>
-            <a-link href="index4.html" title="360 Video" position="0 1 0" image="#link2"/>
-            <a-link href="img/7.jpg" title="Link 2" position="3 1 0" image="#link3"/>
+
+            <a-link onClick={ this.onClickLink1 } id="link1" href="javascript:o" title="Link 1" position="-3 1 0" image="#link1"/>
+            <a-link id="link2" href="index4.html" title="360 Video" position="0 1 0" image="#link2"/>
+            <a-link id="link3" href="img/7.jpg" title="Link 2" position="3 1 0" image="#link3"/>
+
           </a-entity>
 
         </a-scene>

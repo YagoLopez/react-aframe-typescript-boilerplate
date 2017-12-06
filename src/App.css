@@ -313,7 +313,7 @@ a-assets, a-scene audio, a-scene img, a-scene video {
 
 button {
   margin: 2px;
-  padding: 15px;
+  padding: 10px;
   border-radius: 4px;
   background-color: lightgrey;
   color: black;
@@ -323,7 +323,7 @@ button {
 /* ***************************************************** */
 /*body { width: 100%; height: 100%; margin: 0; padding: 0; }*/
 
-.intro-loader {
+.loading {
   position: absolute;
   width: 98%;
   top: 45%;
