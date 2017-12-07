@@ -16,7 +16,7 @@ ReactDOM.render(
       <Route exact path="/" component={App}/>
       <Route path="/video" component={PagVideoCmp}/>
     </div>
-  </HashRouter>
-  , document.getElementById('root') as HTMLElement);
+  </HashRouter>,
+  document.getElementById('root') as HTMLElement);
 
 // registerServiceWorker();

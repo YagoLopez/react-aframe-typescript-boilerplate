@@ -1,4 +1,5 @@
 //todo: comprobar si se ha cargadoo aframe.js
+//todo: usar parte del video pnau going bang
 
 import * as React from 'react';
 import 'aframe-video-controls/dist/aframe-video-controls.js';

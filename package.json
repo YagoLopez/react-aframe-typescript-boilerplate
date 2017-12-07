@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "jsnext:main": "src/index.tsx",
   "dependencies": {
     "@types/node": "^8.0.53",
     "@types/react": "^16.0.25",
