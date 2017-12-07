@@ -20,7 +20,7 @@
 
 import * as React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.js';
-import './App.css';
+import './PagRoot.css';
 
 declare let AFRAME: any;
 
@@ -37,7 +37,7 @@ interface IState {
   };
 }
 
-export default class App extends React.Component<{}, IState> {
+export default class PagRoot extends React.Component<{}, IState> {
 
   state = {
     orbitControls: {
@@ -127,8 +127,8 @@ export default class App extends React.Component<{}, IState> {
             </a-cylinder>
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="img/aframeArena.png"/>
 
-            <a-link onClick={ this.onClickLink1 } id="link1" href="javascript:o" title="Link 1" position="-3 1 0" image="#link1"/>
-            <a-link id="link2" href="index4.html" title="360 Video" position="0 1 0" image="#link2"/>
+            <a-link onClick={ this.onClickLink1 } id="link1" href="javascript:void(0)" title="Link 1" position="-3 1 0" image="#link1"/>
+            <a-link id="link2" href="https://www.google.com" target="_blank" title="360 Video" position="0 1 0" image="#link2"/>
             <a-link id="link3" href="img/7.jpg" title="Link 2" position="3 1 0" image="#link3"/>
 
           </a-entity>
