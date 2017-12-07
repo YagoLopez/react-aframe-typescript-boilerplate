@@ -1,20 +1,15 @@
+//todo: gestionar mejor el estado de la entidad camara
 //todo: poner attributos que faltan a <video> en forma de props
-//todo: App.tsx en carpeta pagStart
 //todo: camera position as component state
-//todo: link to aframe lib in index.html instead of loading it using import
 //todo: add aframe typings or reseach to put in its on file jsx namespace
 //todo: probar a eliminar completamente tslint del proyecto
 //todo: able to choose to run with or without tslint
 //todo: revisar css style boton "enter-vr"
 //todo: mejorar el manejo del estado "orbitControls"
-//todo: crear this.camera
-//todo: añadir react router
-//todo: añadir pagina de video
 //todo: añadir pagina con controles material design
 //todo: usar aframe.js no minificado durante development time
 //todo: reducir tamaño de imagenes
 //todo: usar algun objeto 3d no demasiado complejo
-//todo: usar la pagina de los videos de canguros y el reproductor de video
 //todo: creditos
 //todo: usar una imagen de fondo mejor
 //todo: notificar al usuario: rueda del raton hace zoom
@@ -27,47 +22,7 @@ import * as React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.js';
 import './App.css';
 
-declare global {
-  namespace JSX {
-
-    interface IntrinsicElements {
-      'a-scene': any;
-      'a-entity': any;
-      'a-box'?: any;
-      'a-camera'?: any;
-      'a-circle'?: any;
-      'a-collada-model'?: any;
-      'a-cone'?: any;
-      'a-cursor'?: any;
-      'a-curvedimage'?: any;
-      'a-cylinder'?: any;
-      'a-dodecahedron'?: any;
-      'a-gltf-model'?: any;
-      'a-icosahedron'?: any;
-      'a-image'?: any;
-      'a-light'?: any;
-      'a-link'?: any;
-      'a-obj-model'?: any;
-      'a-octahedron'?: any;
-      'a-plane'?: any;
-      'a-ring'?: any;
-      'a-sky'?: any;
-      'a-sound'?: any;
-      'a-sphere'?: any;
-      'a-tetrahedron'?: any;
-      'a-text'?: any;
-      'a-torus-knot'?: any;
-      'a-torus'?: any;
-      'a-triangle'?: any;
-      'a-video'?: any;
-      'a-videosphere'?: any;
-      'a-assets'?: any;
-      'a-animation'?: any;
-    }
-  }
-}
-
-declare var AFRAME: any;
+declare let AFRAME: any;
 
 interface IState {
   orbitControls: {
@@ -160,7 +115,7 @@ export default class App extends React.Component<{}, IState> {
 
           <a-sky src="#sky" rotation="0 -90 0"></a-sky>
 
-          <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 2 5"
+          <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 1 5"
             orbit-controls={ this.stringify(this.state.orbitControls) }/>
 
           <a-entity id="entityGroup">
