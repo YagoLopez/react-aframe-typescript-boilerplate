@@ -1,14 +1,15 @@
 //todo: intentar usar @types/aframe
 
 /**
- * Declare AFRAME as global namespace for use with Typescript.
+ * Declare AFRAME as global object for use with Typescript.
  * This because Aframe library declares a global AFRAME Object
  */
-// declare {namespace  AFRAME{}}
+declare const AFRAME: any;
 
 /**
  * This is needed for typscript not complaining with Aframe entities
  */
+/*
 declare {
   namespace JSX {
     interface IntrinsicElements {
@@ -47,3 +48,5 @@ declare {
     }
   }
 }
+*/
+

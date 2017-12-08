@@ -1,10 +1,8 @@
 //todo: gestionar mejor el estado de la entidad camara
 //todo: poner attributos que faltan a <video> en forma de props
 //todo: camera position as component state
-//todo: add aframe typings or reseach to put in its on file jsx namespace
 //todo: probar a eliminar completamente tslint del proyecto
 //todo: able to choose to run with or without tslint
-//todo: revisar css style boton "enter-vr"
 //todo: mejorar el manejo del estado "orbitControls"
 //todo: añadir pagina con controles material design
 //todo: usar aframe.js no minificado durante development time
@@ -22,8 +20,6 @@ import * as React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.js';
 import './PagRoot.css';
 
-declare let AFRAME: any;
-
 interface IState {
   orbitControls: {
     autoRotate?: boolean,
@@ -37,11 +33,11 @@ interface IState {
   };
 }
 
-export default class PagRoot extends React.Component<{}, IState> {
+export default class PagRoot extends React.Component<any, IState> {
 
-  state = {
+  public state = {
     orbitControls: {
-      autoRotate: true,
+      autoRotate: false,
       target: '#entityGroup',
       enableDamping: true,
       dampingFactor: 1.5,
@@ -50,6 +46,8 @@ export default class PagRoot extends React.Component<{}, IState> {
       maxDistance: 100,
     }
   };
+
+  public props: any;
 
   public componentDidMount() {
 
@@ -64,7 +62,7 @@ export default class PagRoot extends React.Component<{}, IState> {
     });
 
     const links = document.querySelectorAll('a-link') as HTMLCollection;
-    Array.from(links).forEach( (link) => {
+    Array.from(links).forEach( (link: HTMLElement) => {
       link.addEventListener('mouseenter', (event: any) => {
         event.target.setAttribute('scale', {x: 1.1, y: 1.1, z: 1.1});
       });
@@ -72,6 +70,12 @@ export default class PagRoot extends React.Component<{}, IState> {
         event.target.setAttribute('scale', {x: 1, y: 1, z: 1})
       })
     });
+
+    const box = document.querySelector('a-box') as HTMLElement;
+    box.addEventListener('mouseenter', (event: any) => {
+      console.log('box mouse enter');
+
+    })
   }
 
   private stringify(component: Object): string {
@@ -87,12 +91,16 @@ export default class PagRoot extends React.Component<{}, IState> {
   }
 
   private onClickLink1 = () => {
-    (this.props as any).history.push("/video")
+    this.props.history.push('/video');
+  }
+
+  private onClickLink2 = () => {
+    this.props.history.push('/model3d');
   }
 
   public render(): any {
     return (
-      <div>
+      <div style={ {position: 'absolute',  height: '100%', width: '100%'} }>
 
         <div className="loading">Loading...</div>
 
@@ -104,7 +112,7 @@ export default class PagRoot extends React.Component<{}, IState> {
           <button onClick={ this.stopAnimation }>Stop Rotation</button>
         </div>
 
-        <a-scene id="scene" raycaster="far: 100; objects: [link]" cursor="rayOrigin: mouse" camera-position>
+        <a-scene id="scene" raycaster="far: 100; objects: [link], [url]" cursor="rayOrigin: mouse" camera-position>
 
           <a-assets>
             <img id="sky" src="img/1.jpg"/>
@@ -127,8 +135,8 @@ export default class PagRoot extends React.Component<{}, IState> {
             </a-cylinder>
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="img/aframeArena.png"/>
 
-            <a-link onClick={ this.onClickLink1 } id="link1" href="javascript:void(0)" title="Link 1" position="-3 1 0" image="#link1"/>
-            <a-link id="link2" href="https://www.google.com" target="_blank" title="360 Video" position="0 1 0" image="#link2"/>
+            <a-link id="link1" onClick={ this.onClickLink1 } href="javascript:void(0)" title="Link 1" position="-3 1 0" image="#link1"/>
+            <a-link id="link2" onClick={ this.onClickLink2 } href="javascript:void(0)" title="360 Video" position="0 1 0" image="#link2"/>
             <a-link id="link3" href="img/7.jpg" title="Link 2" position="3 1 0" image="#link3"/>
 
           </a-entity>
