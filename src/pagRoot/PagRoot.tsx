@@ -70,12 +70,6 @@ export default class PagRoot extends React.Component<any, IState> {
         event.target.setAttribute('scale', {x: 1, y: 1, z: 1})
       })
     });
-
-    const box = document.querySelector('a-box') as HTMLElement;
-    box.addEventListener('mouseenter', (event: any) => {
-      console.log('box mouse enter');
-
-    })
   }
 
   private stringify(component: Object): string {

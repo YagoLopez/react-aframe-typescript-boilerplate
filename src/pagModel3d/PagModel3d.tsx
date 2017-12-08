@@ -16,7 +16,7 @@ export default class PagModel3d extends React.Component<any, {}> {
   render() {
     return(
       <a-scene raycaster="far: 100" cursor="rayOrigin: mouse">
-        <a-camera><a-cursor></a-cursor></a-camera>
+        {/*<a-camera><a-cursor></a-cursor></a-camera>*/}
         <a-box id="box1" url="http://www.google.com" color="red" position="0 1 -4"></a-box>
       </a-scene>
     )
