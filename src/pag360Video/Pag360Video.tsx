@@ -40,7 +40,7 @@ export default class Pag360Video extends React.Component<{}, {}> {
           <a-assets>
             <video id="video1"
               ref={ (video: HTMLVideoElement) => this.video360 = video }
-              src="video/360-aurora.mp4"/>
+              src="video/360-fractal-4.mp4"/>
           </a-assets>
 
           <a-videosphere id="videoSphere" src="#video1"/>
