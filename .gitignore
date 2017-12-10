@@ -7,8 +7,8 @@
 /coverage
 
 # misc
+ngrok.exe
 *.db
-*.exe
 .DS_Store
 .env.local
 .env.development.local

@@ -1,3 +1,5 @@
+/// <reference path="../index.d.ts"/>
+//todo: a ver si se puede simplificar algu usando (bind) en los eventos
 //todo: gestionar mejor el estado de la entidad camara
 //todo: poner attributos que faltan a <video> en forma de props
 //todo: camera position as component state
@@ -18,7 +20,6 @@
 
 import * as React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.js';
-import './PagRoot.css';
 
 interface IState {
   orbitControls: {
@@ -72,7 +73,7 @@ export default class PagRoot extends React.Component<any, IState> {
     });
   }
 
-  private stringify(component: Object): string {
+  private toString(component: Object): string {
     return AFRAME.utils.styleParser.stringify(component);
   }
 
@@ -84,17 +85,24 @@ export default class PagRoot extends React.Component<any, IState> {
     this.setState({orbitControls: {autoRotate: true}});
   }
 
-  private onClickLink1 = () => {
+  private onClickLink1 = (event: Event) => {
+    event.preventDefault();
     this.props.history.push('/video');
   }
 
-  private onClickLink2 = () => {
+  private onClickLink2 = (event: Event) => {
+    event.preventDefault();
     this.props.history.push('/model3d');
+  }
+
+  private onClickLink3 = (event: Event) => {
+    event.preventDefault();
+    this.props.history.push('/360video');
   }
 
   public render(): any {
     return (
-      <div style={ {position: 'absolute',  height: '100%', width: '100%'} }>
+      <div>
 
         <div className="loading">Loading...</div>
 
@@ -118,7 +126,7 @@ export default class PagRoot extends React.Component<any, IState> {
           <a-sky src="#sky" rotation="0 -90 0"></a-sky>
 
           <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 1 5"
-            orbit-controls={ this.stringify(this.state.orbitControls) }/>
+            orbit-controls={ this.toString(this.state.orbitControls) }/>
 
           <a-entity id="entityGroup">
             <a-box id="box" position="-1 -0.5 -1" rotation="0 45 0" color="#4CC3D9">
@@ -129,9 +137,9 @@ export default class PagRoot extends React.Component<any, IState> {
             </a-cylinder>
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="img/aframeArena.png"/>
 
-            <a-link id="link1" onClick={ this.onClickLink1 } href="javascript:void(0)" title="Link 1" position="-3 1 0" image="#link1"/>
-            <a-link id="link2" onClick={ this.onClickLink2 } href="javascript:void(0)" title="360 Video" position="0 1 0" image="#link2"/>
-            <a-link id="link3" href="img/7.jpg" title="Link 2" position="3 1 0" image="#link3"/>
+            <a-link id="link1" image="#link1" onClick={ this.onClickLink1 } href="#" title="Link 1" position="-3 1 0"/>
+            <a-link id="link2" image="#link2" onClick={ this.onClickLink2 } href="#" title="360 Video" position="0 1 0"/>
+            <a-link id="link3" image="#link3" onClick={ this.onClickLink3 } href="#" title="Link 3" position="3 1 0"/>
 
           </a-entity>
 

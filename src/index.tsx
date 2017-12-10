@@ -4,6 +4,8 @@ import {HashRouter, Route} from 'react-router-dom';
 import PagRoot from './pagRoot/PagRoot';
 import PagVideoCmp from "./pagVideo/PagVideoCmp";
 import PagModel3d from "./pagModel3d/PagModel3d";
+import Pag360Video from "./pag360Video/Pag360Video";
+import './globals.css';
 // import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
@@ -12,6 +14,7 @@ ReactDOM.render(
       <Route exact path="/" component={PagRoot}/>
       <Route path="/video" component={PagVideoCmp}/>
       <Route path="/model3d" component={PagModel3d}/>
+      <Route path="/360video" component={Pag360Video}/>
     </div>
   </HashRouter>,
   document.getElementById('root') as HTMLElement);

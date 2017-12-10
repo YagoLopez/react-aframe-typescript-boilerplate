@@ -1,57 +1,14 @@
+/// <reference path="../index.d.ts"/>
 //todo: comprobar si se ha cargadoo aframe.js
 //todo: usar parte del video pnau going bang
+//todo: usar raycaster para interaccion de raton con video player controls
 
 import * as React from 'react';
 import 'aframe-video-controls/dist/aframe-video-controls.js';
 
-declare global {
-  namespace JSX {
-
-    interface IntrinsicElements {
-      'a-scene': any;
-      'a-entity': any;
-      'a-box'?: any;
-      'a-camera'?: any;
-      'a-circle'?: any;
-      'a-collada-model'?: any;
-      'a-cone'?: any;
-      'a-cursor'?: any;
-      'a-curvedimage'?: any;
-      'a-cylinder'?: any;
-      'a-dodecahedron'?: any;
-      'a-gltf-model'?: any;
-      'a-icosahedron'?: any;
-      'a-image'?: any;
-      'a-light'?: any;
-      'a-link'?: any;
-      'a-obj-model'?: any;
-      'a-octahedron'?: any;
-      'a-plane'?: any;
-      'a-ring'?: any;
-      'a-sky'?: any;
-      'a-sound'?: any;
-      'a-sphere'?: any;
-      'a-tetrahedron'?: any;
-      'a-text'?: any;
-      'a-torus-knot'?: any;
-      'a-torus'?: any;
-      'a-triangle'?: any;
-      'a-video'?: any;
-      'a-videosphere'?: any;
-      'a-assets'?: any;
-      'a-animation'?: any;
-    }
-  }
-}
-
 interface IState {}
 
-export default class PagVideoCmp extends React.Component<any, any> {
-
-  state = {};
-
-  public componentDidMount() {
-  }
+export default class PagVideoCmp extends React.Component<{}, {}> {
 
   onClickBtnPause = () => {
     const video1El = document.querySelector('#video1') as HTMLVideoElement;
@@ -87,9 +44,9 @@ export default class PagVideoCmp extends React.Component<any, any> {
             {/*<a-cursor id="cursor" color="yellow"/>*/}
           </a-camera>
 
-          <a-videosphere src="#video2" material="" geometry=""/>
+          <a-videosphere src="#video2"/>
 
-          <a-video src="#video1" position="0 2.5 -1" scale="2 1 0" material="" geometry=""/>
+          <a-video src="#video1" position="0 2.5 -1" scale="2 1 0"/>
 
           <a-entity video-controls="src:#video1;distance:1;size:2"/>
 
