@@ -29,6 +29,7 @@
 /// <reference path="../index.d.ts"/>
 import * as React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component';
+import {loaderComponentConfig} from "../components/aframe/loader";
 
 interface IState {
   orbitControls: {
@@ -47,10 +48,10 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
   public state = {
     orbitControls: {
-      autoRotate: true,
+      autoRotate: false,
       target: '#entityGroup',
       enableDamping: true,
-      dampingFactor: 0.15,
+      dampingFactor: 0.14,
       rotateSpeed: 0.1,
       autoRotateSpeed: 0.25,
       zoomSpeed: 0.1,
@@ -61,13 +62,22 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
   public props: any;
 
+  public componentWillMount() {
+    AFRAME.registerComponent('loader', loaderComponentConfig);
+  }
+
+  public componentWillUnmount() {
+
+  }
+
   public componentDidMount() {
 
     // AFRAME EVENTS must be defined here. The rest of REACT EVENTS are defined in elements as always
 
-    const aHtmlTags = document.querySelectorAll(".btn-rotate") as HTMLCollection;
-    Array.from(aHtmlTags).forEach( (button) => {
-      button.addEventListener('click', (event: any) => {
+    const aHtmlTags = document.querySelectorAll(".rotate-camera") as HTMLCollection;
+    Array.from(aHtmlTags).forEach( (aTag: HTMLAnchorElement) => {
+      aTag.addEventListener('click', (event: any) => {
+        debugger
         const position = event.target.dataset.position;
         //todo: revisar esto, se producen estados incosistentes
         this.setState( {orbitControls: {rotateTo: position}} )
@@ -75,12 +85,12 @@ export default class PagIndexCmp extends React.Component<any, IState> {
     });
 
     const aFrameLinks = document.querySelectorAll('a-link') as HTMLCollection;
-    Array.from(aFrameLinks).forEach( (link: HTMLElement) => {
-      link.addEventListener('mouseenter', (event: any) => {
-        event.target.setAttribute('scale', {x: 1.1, y: 1.1, z: 1.1});
+    Array.from(aFrameLinks).forEach( (aLink: AFrame.Entity) => {
+      aLink.addEventListener('mouseenter', () => {
+        aLink.setAttribute('scale', {x: 1.1, y: 1.1, z: 1.1});
       });
-      link.addEventListener('mouseleave', (event: any) => {
-        event.target.setAttribute('scale', {x: 1, y: 1, z: 1})
+      aLink.addEventListener('mouseleave', () => {
+        aLink.setAttribute('scale', {x: 1, y: 1, z: 1})
       })
     });
   }
@@ -112,21 +122,23 @@ export default class PagIndexCmp extends React.Component<any, IState> {
     this.props.history.push('/360video');
   }
 
-  public render(): any {
+  public render() {
     return (
       <div>
 
-        <div className="loading">Loading...</div>
+        <div id="loader" className="loader2-container">
+          <div className="loader2-content">Loading</div>
+        </div>
 
         <div className="top-menu">
-          <a className="btn-rotate top-menu-item" data-position="0.17 4.14 2.79">Position 1</a>
-          <a className="btn-rotate top-menu-item" data-position="3.48 0.57 0.15">Position 2</a>
-          <a className="btn-rotate top-menu-item" data-position="-2.89 -2.51 3.20">Position 3</a>
+          <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
+          <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
+          <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
           <a onClick={ this.startAnimation } className="top-menu-item">Start Rotation</a>
           <a onClick={ this.stopAnimation } className="top-menu-item">Stop Rotation</a>
         </div>
 
-        <a-scene id="scene" raycaster="far: 100; objects: [link], [url]" cursor="rayOrigin: mouse">
+        <a-scene loader id="scene" raycaster="far: 100; objects: [link], [url]" cursor="rayOrigin: mouse">
 
           <a-assets>
             <img id="sky" src="img/1.jpg" attr-crossorigin="anonymous"/>
@@ -160,3 +172,36 @@ export default class PagIndexCmp extends React.Component<any, IState> {
     );
   }
 }
+
+
+
+// WEBPACK FOOTER //
+// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
+
+
+// WEBPACK FOOTER //
+// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
+
+
+// WEBPACK FOOTER //
+// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
+
+
+// WEBPACK FOOTER //
+// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
+
+
+// WEBPACK FOOTER //
+// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
+
+
+// WEBPACK FOOTER //
+// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
+
+
+// WEBPACK FOOTER //
+// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
+
+
+// WEBPACK FOOTER //
+// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx

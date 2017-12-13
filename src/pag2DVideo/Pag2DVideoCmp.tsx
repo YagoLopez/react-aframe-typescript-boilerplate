@@ -1,6 +1,5 @@
 /// <reference path="../index.d.ts"/>
 //todo: hacer componente con raycaster para que entidad sea clicable (ejemplo: btn play videoplayer)
-//todo: comprobar si se ha cargadoo aframe.js
 //todo: usar parte del video pnau going bang
 //todo: usar raycaster para interaccion de raton con video player controls
 

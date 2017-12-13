@@ -1,4 +1,3 @@
-//todo: router not found page or redirection
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {HashRouter, Route} from 'react-router-dom';
