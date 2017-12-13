@@ -1,20 +1,21 @@
+//todo: router not found page or redirection
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {HashRouter, Route} from 'react-router-dom';
-import PagRoot from './pagRoot/PagRoot';
-import PagVideoCmp from "./pagVideo/PagVideoCmp";
-import PagModel3d from "./pagModel3d/PagModel3d";
-import Pag360Video from "./pag360Video/Pag360Video";
-import './globals.css';
+import PagIndexCmp from './pagIndex/PagIndexCmp';
+import Pag2DVideoCmp from "./pag2DVideo/Pag2DVideoCmp";
+import Pag3DModel from "./pag3DModel/Pag3DModel";
+import Pag360VideoCmp from "./pag360Video/Pag360VideoCmp";
+import './index.css';
 // import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   <HashRouter>
     <div>
-      <Route exact path="/" component={PagRoot}/>
-      <Route path="/video" component={PagVideoCmp}/>
-      <Route path="/model3d" component={PagModel3d}/>
-      <Route path="/360video" component={Pag360Video}/>
+      <Route exact path="/" component={PagIndexCmp}/>
+      <Route path="/2dvideo" component={Pag2DVideoCmp}/>
+      <Route path="/3dmodel" component={Pag3DModel}/>
+      <Route path="/360video" component={Pag360VideoCmp}/>
     </div>
   </HashRouter>,
   document.getElementById('root') as HTMLElement);
@@ -32,15 +33,15 @@ ReactDOM.render(
   <HashRouter>
     <div>
       <Route exact path="/" component={PagRoot}/>
-      <Route path="/video" component={PagVideoCmp}/>
+      <Route path="/2dvideo" component={PagVideoCmp}/>
     </div>
   </HashRouter>,
   document.getElementById('root') as HTMLElement);
 
 if (module.hot) {
-  module.hot.accept('./pagRoot/PagRoot', () => {
+  module.hot.accept('./pagIndex/PagRoot', () => {
     debugger
-    const NextApp = require('./pagRoot/PagRoot').default;
+    const NextApp = require('./pagIndex/PagRoot').default;
     ReactDOM.render(<NextApp />, document.getElementById('root'))
   })
 }

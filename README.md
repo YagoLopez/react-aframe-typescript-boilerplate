@@ -33,3 +33,8 @@ Features:
 
 - [Mobile Simulator](http://mobiletest.me/htc_one_emulator/?u=https://yagolopez.js.org/react-aframe-typescript-boilerplate/build/)
 - [Full Screen](https://yagolopez.js.org/react-aframe-typescript-boilerplate/build/)
+
+
+
+## Notes
+
