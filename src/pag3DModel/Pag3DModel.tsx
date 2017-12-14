@@ -1,3 +1,5 @@
+//todo: sonido inicial
+
 /// <reference path="../index.d.ts"/>
 import * as React from 'react';
 import 'aframe-extras/dist/aframe-extras.loaders'; // for json loader
@@ -8,7 +10,7 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
 
   public state = {botStatus: botStatus.IDLE};
 
-  // crossFadeDuration: delay between transitions of bot animations. For example: walk -> run
+  // crossFadeDuration: delay between bot animation transition. For example: walk -> run
   private crossFadeDuration = 0.5;
 
   private orbitControls = {

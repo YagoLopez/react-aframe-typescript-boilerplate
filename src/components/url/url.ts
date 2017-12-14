@@ -19,7 +19,7 @@ export const urlComponentConfig =  {
    */
   init: function(this: any) {
 
-    // Adds raycaster component to element dinamically
+    // Adds raycaster component to host element dinamically
     this.el.sceneEl.components.raycaster.attrValue.objects = '[url]';
 
     this.el.addEventListener('click', (event: any) => {

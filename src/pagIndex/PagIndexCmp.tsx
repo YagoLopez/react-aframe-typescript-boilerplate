@@ -1,4 +1,4 @@
-//todo: react loader
+//todo: transitions with fade: fade in/out on page load/unload
 //todo: react dialog
 //todo: react menu
 //todo: probar a hacer menu superior y botones con stencil como componentes
@@ -29,7 +29,7 @@
 /// <reference path="../index.d.ts"/>
 import * as React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component';
-import {loaderComponentConfig} from "../components/aframe/loader";
+import Loader from "../components/loader/LoaderCmp";
 
 interface IState {
   orbitControls: {
@@ -62,22 +62,14 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
   public props: any;
 
-  public componentWillMount() {
-    AFRAME.registerComponent('loader', loaderComponentConfig);
-  }
-
-  public componentWillUnmount() {
-
-  }
-
   public componentDidMount() {
 
-    // AFRAME EVENTS must be defined here. The rest of REACT EVENTS are defined in elements as always
+    // AFRAME EVENTS must be defined in componentDidMount() lifecycle.
+    // The rest of REACT EVENTS are defined in elements as always
 
     const aHtmlTags = document.querySelectorAll(".rotate-camera") as HTMLCollection;
     Array.from(aHtmlTags).forEach( (aTag: HTMLAnchorElement) => {
       aTag.addEventListener('click', (event: any) => {
-        debugger
         const position = event.target.dataset.position;
         //todo: revisar esto, se producen estados incosistentes
         this.setState( {orbitControls: {rotateTo: position}} )
@@ -114,21 +106,19 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
   private onClickLink2 = (event: Event) => {
     event.preventDefault();
-    this.props.history.push('/3dmodel');
+    this.props.history.push('/360video');
   }
 
   private onClickLink3 = (event: Event) => {
     event.preventDefault();
-    this.props.history.push('/360video');
+    this.props.history.push('/3dmodel');
   }
 
   public render() {
     return (
       <div>
 
-        <div id="loader" className="loader2-container">
-          <div className="loader2-content">Loading</div>
-        </div>
+        <Loader>Loading</Loader>
 
         <div className="top-menu">
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
@@ -161,9 +151,9 @@ export default class PagIndexCmp extends React.Component<any, IState> {
             </a-cylinder>
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="img/aframeArena.png"/>
 
-            <a-link id="link1" image="#link1" onClick={ this.onClickLink1 } href="#" title="Link 1" position="-3 1 0"/>
+            <a-link id="link1" image="#link1" onClick={ this.onClickLink1 } href="#" title="2D Video" position="-3 1 0"/>
             <a-link id="link2" image="#link2" onClick={ this.onClickLink2 } href="#" title="360 Video" position="0 1 0"/>
-            <a-link id="link3" image="#link3" onClick={ this.onClickLink3 } href="#" title="Link 3" position="3 1 0"/>
+            <a-link id="link3" image="#link3" onClick={ this.onClickLink3 } href="#" title="Model Animation" position="3 1 0"/>
 
           </a-entity>
 
@@ -172,36 +162,3 @@ export default class PagIndexCmp extends React.Component<any, IState> {
     );
   }
 }
-
-
-
-// WEBPACK FOOTER //
-// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
-
-
-// WEBPACK FOOTER //
-// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
-
-
-// WEBPACK FOOTER //
-// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
-
-
-// WEBPACK FOOTER //
-// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
-
-
-// WEBPACK FOOTER //
-// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
-
-
-// WEBPACK FOOTER //
-// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
-
-
-// WEBPACK FOOTER //
-// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
-
-
-// WEBPACK FOOTER //
-// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx

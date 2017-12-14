@@ -6,16 +6,16 @@
 import * as React from 'react';
 import 'aframe-video-controls/dist/aframe-video-controls';
 
-export default class Pag2DVideoCmp extends React.Component<{}, {}> {
+export default class Pag2DVideoCmp extends React.PureComponent {
 
-  onClickBtnPause = () => {
+  private onClickBtnPause = () => {
     const video1El = document.querySelector('#video1') as HTMLVideoElement;
     const video2El = document.querySelector('#video2') as HTMLVideoElement;
     video1El.pause();
     video2El.pause();
   };
 
-  onClickBtnPlay = () => {
+  private onClickBtnPlay = () => {
     const video1El = document.querySelector('#video1') as HTMLVideoElement;
     const video2El = document.querySelector('#video2') as HTMLVideoElement;
     video1El.play();
