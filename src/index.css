@@ -35,12 +35,50 @@ a-scene {position: absolute; height: 100%; width: 100%}
   background-color: lightgrey;
   box-shadow: 0 0 10px 1px white;
 }
-/*.loading {
-  position: absolute;
-  width: 100%;
-  top: 45%;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: large;
-  color: cornflowerblue;
-}*/
+/* Fade in */
+.fade-in {
+  -webkit-animation: fade 0.4s ease both;
+  animation: fade 0.4s ease both
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+/* Fade in long */
+.fade-in-long {
+  -webkit-animation: fade 2s ease both;
+  animation: fade 2s ease both
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}

@@ -4,6 +4,7 @@
 //todo: this.state.isPlaying (click to toggle play/pause)
 //todo: open issue en aframe reepo: isPlaying = true inicialmente
 import * as React from 'react';
+import Loader from "../components/loader/LoaderCmp";
 
 export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
 
@@ -38,11 +39,14 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
   public render() {
     return(
       <div>
+
+        <Loader>Loading...</Loader>
+
         <div className="top-menu">
           <a onClick={ this.togglePlayVideo } className="top-menu-item">Play</a>
           <a onClick={ this.togglePlayVideo } className="top-menu-item">Pause</a>
         </div>
-        {/*<a-scene raycaster="far: 100" cursor="rayOrigin: mouse">*/}
+
         <a-scene>
 
           <a-assets>

@@ -3,6 +3,7 @@
 /// <reference path="../index.d.ts"/>
 import * as React from 'react';
 import 'aframe-extras/dist/aframe-extras.loaders'; // for json loader
+import Loader from "../components/loader/LoaderCmp";
 
 enum botStatus {IDLE = 'idle', RUN = 'run', WALK = 'walk', JUMP = 'jump'}
 
@@ -44,6 +45,8 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
   public render() {
     return (
       <div>
+
+        <Loader>Loading...</Loader>
 
         <div className="top-menu">
           <a id="btnIdle" onClick={ this.onClickBtnWalk } className="top-menu-item">Walk</a>

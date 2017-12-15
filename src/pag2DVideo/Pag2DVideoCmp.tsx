@@ -5,6 +5,7 @@
 
 import * as React from 'react';
 import 'aframe-video-controls/dist/aframe-video-controls';
+import Loader from "../components/loader/LoaderCmp";
 
 export default class Pag2DVideoCmp extends React.PureComponent {
 
@@ -25,28 +26,33 @@ export default class Pag2DVideoCmp extends React.PureComponent {
   public render() {
     return (
       <div>
-        <a-scene raycaster="far: 100; objects: [src='#video-play-image']" cursor="rayOrigin: mouse">
 
-          <a-assets>
-            <video id="video1"><source type="video/mp4" src="video/echo-hereweare.mp4"/></video>
-            <video id="video2"><source type="video/mp4" src="video/canguros.mp4"/></video>
-            <img id="video-play-image" src="img/play-video-btn.png"/>
-            <img id="video-pause-image" src="img/pause-video-btn.png"/>
-          </a-assets>
+        <Loader>Loading</Loader>
 
-          <a-camera position="0 0.5 1"><a-cursor id="cursor" color="yellow"/></a-camera>
+        <a-scene raycaster="far: 100; objects: [src='#video-play-image']; interval: 150" cursor="rayOrigin: mouse">
 
-          <a-videosphere src="#video2"/>
+            <a-assets>
+              <video id="video1"><source type="video/mp4" src="video/echo-hereweare.mp4"/></video>
+              <video id="video2"><source type="video/mp4" src="video/canguros.mp4"/></video>
+              <img id="video-play-image" src="img/play-video-btn.png"/>
+              <img id="video-pause-image" src="img/pause-video-btn.png"/>
+            </a-assets>
 
-          <a-video src="#video1" position="0 2.5 -1" scale="2 1 0"/>
+            <a-camera position="0 0.5 1"><a-cursor id="cursor" color="yellow"/></a-camera>
 
-          <a-entity video-controls="src:#video1; distance:1; size:2"/>
+            <a-videosphere src="#video2"/>
 
-        </a-scene>
+            <a-video src="#video1" position="0 2.5 -1" scale="2 1 0"/>
+
+            <a-entity video-controls="src:#video1; distance:1; size:2"/>
+
+          </a-scene>
+
         <div className="top-menu">
           <a onClick={ this.onClickBtnPlay } className="top-menu-item">Play</a>
           <a onClick={ this.onClickBtnPause } className="top-menu-item">Pause</a>
         </div>
+
       </div>
     );
   }

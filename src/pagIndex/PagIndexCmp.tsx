@@ -17,14 +17,12 @@
 //todo: añadir pagina con controles material design
 //todo: usar aframe.js no minificado durante development time
 //todo: reducir tamaño de imagenes
-//todo: usar algun objeto 3d no demasiado complejo
 //todo: creditos
 //todo: usar una imagen de fondo mejor
 //todo: notificar al usuario: rueda del raton hace zoom
 //todo: hacer test
-//todo: convertir la navegacion programatica de react en un componente de aframe
 //todo: custom event polyfill
-//todo: mouse pointer on <a-link>
+//todo: mouse cursor pointer on <a-link>
 
 /// <reference path="../index.d.ts"/>
 import * as React from 'react';
@@ -54,7 +52,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
       dampingFactor: 0.14,
       rotateSpeed: 0.1,
       autoRotateSpeed: 0.25,
-      zoomSpeed: 0.1,
+      zoomSpeed: 0.5,
       minDistance: 3,
       maxDistance: 100,
     }
@@ -64,8 +62,8 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
   public componentDidMount() {
 
-    // AFRAME EVENTS must be defined in componentDidMount() lifecycle.
-    // The rest of REACT EVENTS are defined in elements as always
+    // AFRAME Events must be defined in componentDidMount().
+    // The others React Events are defined in elements as always
 
     const aHtmlTags = document.querySelectorAll(".rotate-camera") as HTMLCollection;
     Array.from(aHtmlTags).forEach( (aTag: HTMLAnchorElement) => {
@@ -128,18 +126,18 @@ export default class PagIndexCmp extends React.Component<any, IState> {
           <a onClick={ this.stopAnimation } className="top-menu-item">Stop Rotation</a>
         </div>
 
-        <a-scene loader id="scene" raycaster="far: 100; objects: [link], [url]" cursor="rayOrigin: mouse">
+        <a-scene id="scene" raycaster="far: 100; objects: [link], [url]; interval: 150" cursor="rayOrigin: mouse">
 
           <a-assets>
-            <img id="sky" src="img/1.jpg" attr-crossorigin="anonymous"/>
-            <img id="link1" src="img/sea.jpg" attr-crossorigin="anonymous"/>
-            <img id="link2" src="img/4.jpg" attr-crossorigin="anonymous"/>
-            <img id="link3" src="img/7.jpg" attr-crossorigin="anonymous"/>
+            <img id="sky" src="img/1.jpg"/>
+            <img id="link1" src="img/sea.jpg"/>
+            <img id="link2" src="img/4.jpg"/>
+            <img id="link3" src="img/7.jpg"/>
           </a-assets>
 
           <a-sky src="#sky" rotation="0 -90 0"/>
 
-          <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 1 5"
+          <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 -0.2 5"
             orbit-controls={ this.objToString(this.state.orbitControls) }/>
 
           <a-entity id="entityGroup">
