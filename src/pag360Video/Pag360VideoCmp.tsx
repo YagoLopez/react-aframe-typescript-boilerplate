@@ -38,7 +38,7 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
 
   public render() {
     return(
-      <div>
+      <div className="fade-in">
 
         <Loader>Loading...</Loader>
 

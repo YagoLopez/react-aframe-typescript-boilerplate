@@ -1,3 +1,4 @@
+//todo: crear un component de react que sea un link con imagen (parecido al componente portal)
 //todo: transitions with fade: fade in/out on page load/unload
 //todo: react dialog
 //todo: react menu
@@ -60,6 +61,17 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
   public props: any;
 
+  public refs: {
+    loader: Loader;
+  }
+
+  public constructor(props: any) {
+    super(props);
+    this.onClickLink1 = this.onClickLink1.bind(this);
+    this.onClickLink2 = this.onClickLink2.bind(this);
+    this.onClickLink3 = this.onClickLink3.bind(this);
+  }
+
   public componentDidMount() {
 
     // AFRAME Events must be defined in componentDidMount().
@@ -99,24 +111,29 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
   private onClickLink1 = (event: Event) => {
     event.preventDefault();
+    this.refs.loader.show();
     this.props.history.push('/2dvideo');
   }
 
   private onClickLink2 = (event: Event) => {
     event.preventDefault();
+    this.refs.loader.show();
     this.props.history.push('/360video');
   }
 
   private onClickLink3 = (event: Event) => {
     event.preventDefault();
+    this.refs.loader.show();
     this.props.history.push('/3dmodel');
   }
 
+  loader: any;
+
   public render() {
     return (
-      <div>
+      <div className="fade-in">
 
-        <Loader>Loading</Loader>
+        <Loader ref="loader">Loading</Loader>
 
         <div className="top-menu">
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
@@ -126,7 +143,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
           <a onClick={ this.stopAnimation } className="top-menu-item">Stop Rotation</a>
         </div>
 
-        <a-scene id="scene" raycaster="far: 100; objects: [link], [url]; interval: 150" cursor="rayOrigin: mouse">
+        <a-scene id="scene" raycaster="far: 100; objects: [link], [url]" cursor="rayOrigin: mouse">
 
           <a-assets>
             <img id="sky" src="img/1.jpg"/>

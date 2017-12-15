@@ -44,7 +44,7 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
 
   public render() {
     return (
-      <div>
+      <div className="fade-in">
 
         <Loader>Loading...</Loader>
 

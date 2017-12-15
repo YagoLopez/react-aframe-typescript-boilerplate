@@ -25,7 +25,7 @@ export default class Pag2DVideoCmp extends React.PureComponent {
 
   public render() {
     return (
-      <div>
+      <div className="fade-in">
 
         <Loader>Loading</Loader>
 

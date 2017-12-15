@@ -1,5 +1,6 @@
 //todo: transitions
 //todo: animation
+//todo: eliminar codigo imperativo?
 
 import * as React from 'react';
 
@@ -13,6 +14,8 @@ interface IProps {
 export default class Loader extends React.PureComponent<IProps> {
 
   public props: IProps;
+
+  private loaderElement: HTMLDivElement;
 
   private containerStyle: any = {
     zIndex: 10,
@@ -40,38 +43,40 @@ export default class Loader extends React.PureComponent<IProps> {
     const shadowDeep = this.props.shadowDeep || '1';
     this.contentStyle.boxShadow = `0 0 ${shadowDeep}px 0 ${shadowColor}`;
   }
-
   public componentDidMount() {
 
-    const loader = document.getElementById('loader') as HTMLDivElement;
     const assets = document.querySelector('a-assets') as AFrame.Entity;
     const scene = document.querySelector('a-scene') as AFrame.Entity;
 
-    const removeLoader = (loader: HTMLDivElement): void => {
-      const parentLoader = loader.parentElement as HTMLElement;
-      setTimeout( () => {
-        parentLoader && parentLoader.removeChild(loader);
-        scene.classList.add('fade-in-long');
-      }, 150)
-    };
-
     if(assets) {
       assets.addEventListener('loaded', () => {
-        removeLoader(loader);
+        this.hide();
       });
       assets.addEventListener('timeout', () => {
-        removeLoader(loader);
+        this.hide();
       })
     } else {
       scene.addEventListener('loaded', () => {
-        removeLoader(loader);
+        this.hide();
       })
     }
   }
 
+  public hide() {
+    setTimeout( () => {
+      this.loaderElement.style.display = 'none';
+      // this.loaderElement.classList.add('fade-out');
+    }, 200)
+  }
+
+  public show() {
+    this.loaderElement.style.display = 'block';
+  }
+
   public render() {
     return(
-      <div id="loader" style={ this.containerStyle }>
+      <div id="loader-element" ref={ (loader: HTMLDivElement) => this.loaderElement = loader }
+      style={ this.containerStyle }>
         <div style ={ this.contentStyle }>{ this.props.children }</div>
       </div>
     )
