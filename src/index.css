@@ -35,36 +35,42 @@ a-scene {position: absolute; height: 100%; width: 100%}
   background-color: lightgrey;
   box-shadow: 0 0 10px 1px white;
 }
+
+
 /* Fade in */
 .fade-in {
-  -webkit-animation: fade 0.4s ease both;
-  animation: fade 0.4s ease both
+  -webkit-animation: fade-in 0.4s ease both;
+  animation: fade-in 0.4s ease both
 }
-@-webkit-keyframes fade {
+@-webkit-keyframes fade-in {
   from {opacity: 0} to {opacity: 1}
 }
-@keyframes fade {
+@keyframes fade-in {
   from {opacity: 0} to {opacity: 1}
 }
+
+
 /* Fade out */
 .fade-out {
-  -webkit-animation: fade 0.4s ease both;
-  animation: fade 0.4s ease both
+  -webkit-animation: fade-out 0.4s ease-out both;
+  animation: fade-out 0.4s ease-out both;
 }
-@-webkit-keyframes fade {
-  from {opacity: 1} to {opacity: 0}
+@-webkit-keyframes fade-out {
+  0% {opacity: 1} 100% {opacity: 0}
 }
-@keyframes fade {
-  from {opacity: 1} to {opacity: 0}
+@keyframes fade-out {
+  0% {opacity: 1} 100% {opacity: 0}
 }
+
+
 /* Fade in long */
 .fade-in-long {
-  -webkit-animation: fade 2s ease both;
+  -webkit-animation: fade-in-long 2s ease both;
   animation: fade 2s ease both
 }
-@-webkit-keyframes fade {
+@-webkit-keyframes fade-in-long {
   from {opacity: 0} to {opacity: 1}
 }
-@keyframes fade {
+@keyframes fade-in-long {
   from {opacity: 0} to {opacity: 1}
 }

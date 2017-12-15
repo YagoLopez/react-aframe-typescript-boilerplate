@@ -1,14 +1,10 @@
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)
-//todo: transitions with fade: fade in/out on page load/unload
 //todo: react dialog
 //todo: react menu
-//todo: probar a hacer menu superior y botones con stencil como componentes
 //todo: arreglar lo de que da errores al poner atributos no html5. Por ejemplo <img crossorigin="anonymous">
 //todo: cambiar color de theme de chrome android en index.html
-//todo: añadir click de mouse (raytracer component) a video 2d control
-//todo: hacer un pull request en repositorio de "aframe.d.ts" (tipos de aframe) añadiendo tipos para "THREEJS"
+//todo: añadir click de mouse (raytracer component) a boton play de video 2d control
 //todo: usar "ref" en <a-camera> a ver si se arregla el funcionamiento de las animaciones
-//todo: a ver si se puede simplificar algu usando (bind) en los eventos
 //todo: gestionar mejor el estado de la entidad camara
 //todo: poner attributos que faltan a <video> en forma de props
 //todo: camera position as component state
@@ -62,7 +58,8 @@ export default class PagIndexCmp extends React.Component<any, IState> {
   public props: any;
 
   public refs: {
-    loader: Loader;
+    loader: Loader,
+    sky: AFrame.Entity
   }
 
   public constructor(props: any) {
@@ -95,6 +92,9 @@ export default class PagIndexCmp extends React.Component<any, IState> {
         aLink.setAttribute('scale', {x: 1, y: 1, z: 1})
       })
     });
+
+    this.refs.loader.hideWhen(this.refs.sky, 'loaded');
+
   }
 
   private objToString(component: Object): string {
@@ -131,7 +131,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
   public render() {
     return (
-      <div className="fade-in">
+      <div>
 
         <Loader ref="loader">Loading</Loader>
 
@@ -139,11 +139,11 @@ export default class PagIndexCmp extends React.Component<any, IState> {
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
           <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
-          <a onClick={ this.startAnimation } className="top-menu-item">Start Rotation</a>
-          <a onClick={ this.stopAnimation } className="top-menu-item">Stop Rotation</a>
+          {/*<a onClick={ this.startAnimation } className="top-menu-item">Start Rotation</a>*/}
+          {/*<a onClick={ this.stopAnimation } className="top-menu-item">Stop Rotation</a>*/}
         </div>
 
-        <a-scene id="scene" raycaster="far: 100; objects: [link], [url]" cursor="rayOrigin: mouse">
+        <a-scene id="scene" raycaster="far: 100; objects: [link], [url]; interval: 200" cursor="rayOrigin: mouse">
 
           <a-assets>
             <img id="sky" src="img/1.jpg"/>
@@ -152,7 +152,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
             <img id="link3" src="img/7.jpg"/>
           </a-assets>
 
-          <a-sky src="#sky" rotation="0 -90 0"/>
+          <a-sky ref="sky" src="#sky" rotation="0 -90 0"/>
 
           <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 -0.2 5"
             orbit-controls={ this.objToString(this.state.orbitControls) }/>

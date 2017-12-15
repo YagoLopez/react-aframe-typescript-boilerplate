@@ -33,8 +33,8 @@ export default class Loader extends React.PureComponent<IProps> {
     width: '100px',
     padding: '20px',
     borderRadius: '1px',
-    fontFamily: 'sans-serif',
-    fontSize: 'large',
+    fontFamily: 'verdana, sans-serif',
+    fontSize: 'small'
   };
 
   public constructor(props: IProps) {
@@ -43,8 +43,8 @@ export default class Loader extends React.PureComponent<IProps> {
     const shadowDeep = this.props.shadowDeep || '1';
     this.contentStyle.boxShadow = `0 0 ${shadowDeep}px 0 ${shadowColor}`;
   }
+/*
   public componentDidMount() {
-
     const assets = document.querySelector('a-assets') as AFrame.Entity;
     const scene = document.querySelector('a-scene') as AFrame.Entity;
 
@@ -61,22 +61,27 @@ export default class Loader extends React.PureComponent<IProps> {
       })
     }
   }
+*/
 
   public hide() {
-    setTimeout( () => {
-      this.loaderElement.style.display = 'none';
-      // this.loaderElement.classList.add('fade-out');
-    }, 200)
+    this.loaderElement.classList.remove('fade-in');
+    this.loaderElement.classList.add('fade-out');
   }
 
   public show() {
-    this.loaderElement.style.display = 'block';
+    this.loaderElement.classList.add('fade-in');
+  }
+
+  public hideWhen(entity: AFrame.Entity, eventName: string = 'loaded') {
+    entity.addEventListener(eventName, () => {
+      this.hide();
+    })
   }
 
   public render() {
     return(
       <div id="loader-element" ref={ (loader: HTMLDivElement) => this.loaderElement = loader }
-      style={ this.containerStyle }>
+      style={ this.containerStyle } className="fade-in">
         <div style ={ this.contentStyle }>{ this.props.children }</div>
       </div>
     )

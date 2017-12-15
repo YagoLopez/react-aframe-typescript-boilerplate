@@ -26,6 +26,15 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
     maxDistance: 100
   };
 
+  refs: {
+    loader: Loader,
+    bot: AFrame.Entity
+  };
+
+  public componentDidMount() {
+    this.refs.loader.hideWhen(this.refs.bot, 'model-loaded');
+  }
+
   private onClickBtnRun = () => {
     this.setState({botStatus: botStatus.RUN});
   };
@@ -44,9 +53,9 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
 
   public render() {
     return (
-      <div className="fade-in">
+      <div>
 
-        <Loader>Loading...</Loader>
+        <Loader ref="loader">Loading</Loader>
 
         <div className="top-menu">
           <a id="btnIdle" onClick={ this.onClickBtnWalk } className="top-menu-item">Walk</a>
@@ -59,6 +68,7 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
 
           <a-assets>
             <img id="sky" src="img/square.jpg"/>
+            <a-asset-item id="botmodel" src="models/bot4.json"></a-asset-item>
           </a-assets>
 
           <a-sky src="#sky" rotation="0 -90 0"/>
@@ -68,11 +78,11 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
             orbit-controls={ AFRAME.utils.styleParser.stringify(this.orbitControls) }/>
           </a-entity>
 
-          <a-entity id="bot"
+          <a-entity id="bot" ref={ (bot: AFrame.Entity) => this.refs.bot = bot }
             scale="1 1 1"
             position="0 0 0"
             animation-mixer={ `clip: ${this.state.botStatus}; crossFadeDuration: ${this.crossFadeDuration}` }
-            json-model="src: models/bot4.json">
+            json-model="src: #botmodel">
           </a-entity>
 
           <a-plane height="100" width="33" color="#4d672b" rotation="-90 0 0"></a-plane>

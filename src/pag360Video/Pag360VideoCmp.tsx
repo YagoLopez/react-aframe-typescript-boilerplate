@@ -38,7 +38,7 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
 
   public render() {
     return(
-      <div className="fade-in">
+      <div>
 
         <Loader>Loading...</Loader>
 
@@ -48,16 +48,14 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
         </div>
 
         <a-scene>
-
           <a-assets>
             <video id="video1"
               ref={ (video: HTMLVideoElement) => this.video360 = video }
               src="video/360-fractal-4.mp4"/>
           </a-assets>
-
           <a-videosphere id="videoSphere" src="#video1" rotation="0 -90 0"/>
-
         </a-scene>
+
       </div>
     )
   }
