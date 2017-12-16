@@ -1,7 +1,7 @@
 //todo: sonido inicial
 
 /// <reference path="../index.d.ts"/>
-import * as React from 'react';
+import React from 'react';
 import 'aframe-extras/dist/aframe-extras.loaders'; // for json loader
 import Loader from "../components/loader/LoaderCmp";
 

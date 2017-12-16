@@ -1,0 +1,22 @@
+.dialogContainer {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: none;
+}
+
+.dialogContent {
+  position: relative;
+  top: 44%;
+  color: white;
+  background-color: black;
+  width: 300px;
+  padding: 20px;
+  font-family: sans-serif;
+  opacity: 0.8;
+  border-radius: 4px;
+  border: 1px solid white;
+  margin: auto;
+}

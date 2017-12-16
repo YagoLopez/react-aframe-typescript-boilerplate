@@ -3,7 +3,7 @@
 //todo: dialog/over imposed div
 //todo: this.state.isPlaying (click to toggle play/pause)
 //todo: open issue en aframe reepo: isPlaying = true inicialmente
-import * as React from 'react';
+import React from 'react';
 import Loader from "../components/loader/LoaderCmp";
 
 export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {

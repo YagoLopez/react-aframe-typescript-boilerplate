@@ -1,8 +1,7 @@
 //todo: transitions
 //todo: animation
-//todo: eliminar codigo imperativo?
 
-import * as React from 'react';
+import React from 'react';
 
 interface IProps {
   shadowColor?: string;
@@ -26,7 +25,7 @@ export default class Loader extends React.PureComponent<IProps> {
   };
 
   private contentStyle: any = {
-    color: 'grey',
+    color: 'black',
     backgroundColor: 'white',
     display: 'block',
     margin: 'auto',
@@ -43,25 +42,6 @@ export default class Loader extends React.PureComponent<IProps> {
     const shadowDeep = this.props.shadowDeep || '1';
     this.contentStyle.boxShadow = `0 0 ${shadowDeep}px 0 ${shadowColor}`;
   }
-/*
-  public componentDidMount() {
-    const assets = document.querySelector('a-assets') as AFrame.Entity;
-    const scene = document.querySelector('a-scene') as AFrame.Entity;
-
-    if(assets) {
-      assets.addEventListener('loaded', () => {
-        this.hide();
-      });
-      assets.addEventListener('timeout', () => {
-        this.hide();
-      })
-    } else {
-      scene.addEventListener('loaded', () => {
-        this.hide();
-      })
-    }
-  }
-*/
 
   public hide() {
     this.loaderElement.classList.remove('fade-in');

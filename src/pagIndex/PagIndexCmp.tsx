@@ -16,15 +16,16 @@
 //todo: reducir tamaño de imagenes
 //todo: creditos
 //todo: usar una imagen de fondo mejor
-//todo: notificar al usuario: rueda del raton hace zoom
+//todo: notificar al usuario manejo de controles: rueda del raton hace zoom, etc.
 //todo: hacer test
 //todo: custom event polyfill
 //todo: mouse cursor pointer on <a-link>
 
 /// <reference path="../index.d.ts"/>
-import * as React from 'react';
+import React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component';
 import Loader from "../components/loader/LoaderCmp";
+import Dialog from "../components/dialog/DialogCmp";
 
 interface IState {
   orbitControls: {
@@ -57,16 +58,17 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
   public props: any;
 
-  public refs: {
-    loader: Loader,
-    sky: AFrame.Entity
-  }
+  public refs: {loader: Loader, sky: AFrame.Entity, dialog: Dialog}
 
   public constructor(props: any) {
     super(props);
     this.onClickLink1 = this.onClickLink1.bind(this);
     this.onClickLink2 = this.onClickLink2.bind(this);
     this.onClickLink3 = this.onClickLink3.bind(this);
+    this.openDialog = this.openDialog.bind(this);
+    this.closeDialog = this.closeDialog.bind(this);
+    this.startAnimation = this.startAnimation.bind(this);
+    this.stopAnimation = this.stopAnimation.bind(this);
   }
 
   public componentDidMount() {
@@ -92,42 +94,46 @@ export default class PagIndexCmp extends React.Component<any, IState> {
         aLink.setAttribute('scale', {x: 1, y: 1, z: 1})
       })
     });
-
     this.refs.loader.hideWhen(this.refs.sky, 'loaded');
-
   }
 
   private objToString(component: Object): string {
     return AFRAME.utils.styleParser.stringify(component);
   }
 
-  private stopAnimation = (): void => {
+  private stopAnimation(): void {
     this.setState({orbitControls: {autoRotate: false}});
   }
 
-  private startAnimation = (): void => {
+  private startAnimation(): void {
     this.setState({orbitControls: {autoRotate: true}});
   }
 
-  private onClickLink1 = (event: Event) => {
+  private onClickLink1(event: Event) {
     event.preventDefault();
     this.refs.loader.show();
     this.props.history.push('/2dvideo');
   }
 
-  private onClickLink2 = (event: Event) => {
+  private onClickLink2(event: Event) {
     event.preventDefault();
     this.refs.loader.show();
     this.props.history.push('/360video');
   }
 
-  private onClickLink3 = (event: Event) => {
+  private onClickLink3 (event: Event) {
     event.preventDefault();
     this.refs.loader.show();
     this.props.history.push('/3dmodel');
   }
 
-  loader: any;
+  private openDialog() {
+    this.refs.dialog.show();
+  }
+
+  private closeDialog() {
+    this.refs.dialog.hide();
+  }
 
   public render() {
     return (
@@ -135,10 +141,19 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
         <Loader ref="loader">Loading</Loader>
 
+        <Dialog ref="dialog">
+          Dialog
+          <br/>
+          <div onClick={ this.closeDialog } style={ {cursor: 'pointer', textDecoration: 'underline'} }>
+            Close
+          </div>
+        </Dialog>
+
         <div className="top-menu">
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
           <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
+          <a className="top-menu-item" onClick={ this.openDialog }>Open Dialog</a>
           {/*<a onClick={ this.startAnimation } className="top-menu-item">Start Rotation</a>*/}
           {/*<a onClick={ this.stopAnimation } className="top-menu-item">Stop Rotation</a>*/}
         </div>
@@ -177,3 +192,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
     );
   }
 }
+
+
+// WEBPACK FOOTER //
+// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
