@@ -26,6 +26,8 @@ import React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component';
 import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
+import SideMenu from "../components/sideMenu/SideMenuCmp";
+
 
 interface IState {
   orbitControls: {
@@ -58,7 +60,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
   public props: any;
 
-  public refs: {loader: Loader, sky: AFrame.Entity, dialog: Dialog}
+  public refs: {loader: Loader, scene: AFrame.Entity, dialog: Dialog, sideMenu: SideMenu}
 
   public constructor(props: any) {
     super(props);
@@ -94,7 +96,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
         aLink.setAttribute('scale', {x: 1, y: 1, z: 1})
       })
     });
-    this.refs.loader.hideWhen(this.refs.sky, 'loaded');
+    this.refs.loader.hideWhen(this.refs.scene, 'loaded');
   }
 
   private objToString(component: Object): string {
@@ -135,56 +137,59 @@ export default class PagIndexCmp extends React.Component<any, IState> {
     this.refs.dialog.hide();
   }
 
+  private openSideMenu() {
+    this.refs.sideMenu.show();
+  }
+
+  private closeSideMenu() {
+    this.refs.sideMenu.hide();
+  }
+
   public render() {
     return (
       <div>
 
         <Loader ref="loader">Loading</Loader>
 
-        <Dialog ref="dialog">
-          Dialog
-          <br/>
-          <div onClick={ this.closeDialog } style={ {cursor: 'pointer', textDecoration: 'underline'} }>
-            Close
-          </div>
-        </Dialog>
+        {/*<Dialog ref="dialog">*/}
+          {/*Dialog*/}
+          {/*<br/><br/>*/}
+          {/*<div onClick={ this.closeDialog } style={ {cursor: 'pointer', textDecoration: 'underline'} }>*/}
+            {/*Close*/}
+          {/*</div>*/}
+        {/*</Dialog>*/}
+
+        <SideMenu ref="sideMenu">side menu</SideMenu>
 
         <div className="top-menu">
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
           <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
-          <a className="top-menu-item" onClick={ this.openDialog }>Open Dialog</a>
+          <a className="top-menu-item" onClick={ this.openSideMenu.bind(this) }>Open Menu</a>
           {/*<a onClick={ this.startAnimation } className="top-menu-item">Start Rotation</a>*/}
           {/*<a onClick={ this.stopAnimation } className="top-menu-item">Stop Rotation</a>*/}
         </div>
 
-        <a-scene id="scene" raycaster="far: 100; objects: [link], [url]; interval: 200" cursor="rayOrigin: mouse">
+        <a-scene id="scene" ref="scene" raycaster="far: 100; objects: [link], [url]; interval: 200" cursor="rayOrigin: mouse">
 
           <a-assets>
             <img id="sky" src="img/1.jpg"/>
             <img id="link1" src="img/sea.jpg"/>
             <img id="link2" src="img/4.jpg"/>
             <img id="link3" src="img/7.jpg"/>
+            <img id="aframeArena" src="img/aframeArena.png"/>
           </a-assets>
 
-          <a-sky ref="sky" src="#sky" rotation="0 -90 0"/>
+          <a-sky src="#sky" rotation="0 -90 0"/>
 
           <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 -0.2 5"
             orbit-controls={ this.objToString(this.state.orbitControls) }/>
 
           <a-entity id="entityGroup">
-            <a-box id="box" position="-1 -0.5 -1" rotation="0 45 0" color="#4CC3D9">
-              <a-animation attribute="rotation" delay="0" to="0 360 0" dur="5000" repeat="10" direction="alternate"/>
-            </a-box>
-            <a-cylinder id="cylinder" position="1 -0.5 -1" radius="0.5" height="0.5" color="#FFC65D">
-              <a-animation attribute="scale" from="1 1 1" to="2 0.5 1" repeat="50" direction="alternate"/>
-            </a-cylinder>
-            <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="img/aframeArena.png"/>
-
+            <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="#aframeArena"/>
             <a-link id="link1" image="#link1" onClick={ this.onClickLink1 } href="#" title="2D Video" position="-3 1 0"/>
             <a-link id="link2" image="#link2" onClick={ this.onClickLink2 } href="#" title="360 Video" position="0 1 0"/>
             <a-link id="link3" image="#link3" onClick={ this.onClickLink3 } href="#" title="Model Animation" position="3 1 0"/>
-
           </a-entity>
 
         </a-scene>
@@ -192,7 +197,3 @@ export default class PagIndexCmp extends React.Component<any, IState> {
     );
   }
 }
-
-
-// WEBPACK FOOTER //
-// ./node_modules/tslint-loader!./src/pagIndex/PagIndexCmp.tsx
