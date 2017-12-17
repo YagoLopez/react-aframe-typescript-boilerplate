@@ -3,7 +3,7 @@
 //todo: menu state
 import React from 'react';
 import './SideMenuCmp.css';
-
+const btnCloseSvg = require('./highlight_off_24px.svg');
 
 export default class SideMenu extends React.PureComponent {
 
@@ -28,7 +28,9 @@ export default class SideMenu extends React.PureComponent {
         className="sideMenuContainer slide-in-left">
         <div className="sideMenuContent">
           { this.props.children }
-          <div className="closeBtn" onClick={ this.hide.bind(this) }>X</div>
+          <div className="side-menu-btn-close" onClick={ this.hide.bind(this) }>
+            <img src={ btnCloseSvg } className="vertical-center"/>
+          </div>
         </div>
       </div>
     )

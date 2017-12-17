@@ -1,50 +1,7 @@
 /* Needed to show the "Enter VR" icon */
 a-scene {position: absolute; height: 100%; width: 100%}
 
-/*body { width: 100%; height: 100%; margin: 0; padding: 0; }*/
-
-.top-menu {
-  position: absolute;
-  z-index: 1;
-  padding: 5px;
-  /*text-align: center;*/
-  /*margin: auto;*/
-  width: 100%;
-  background-color: black;
-  opacity: .4;
-  border-bottom: 1px solid white
-}
-.top-menu-item {
-  color: white;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 14px;
-  padding: 10px;
-  border-radius: 2px;
-  border: 1px solid;
-  cursor: pointer;
-  display: inline-block;
-  margin: 2px;
-}
-.top-menu-item:hover {
-  color: white;
-  background-color: grey;
-}
-.top-menu-item:active {
-  color: white;
-  background-color: lightgrey;
-  box-shadow: 0 0 10px 1px white;
-}
-.top-menu-icon {
-  background-color: white;
-  vertical-align: middle;
-  margin-top: 3px;
-  margin-bottom: 5px;
-  padding: 6px;
-  margin-right: 7px;
-  cursor: pointer;
-}
-
+/*todo: las clases fade deberian ir en el componente loader*/
 /* Fade in */
 .fade-in {
   -webkit-animation: fade-in 0.4s ease both;
@@ -57,7 +14,6 @@ a-scene {position: absolute; height: 100%; width: 100%}
   from {opacity: 0} to {opacity: 1}
 }
 
-
 /* Fade out */
 .fade-out {
   -webkit-animation: fade-out 0.4s ease-out both;
@@ -69,7 +25,6 @@ a-scene {position: absolute; height: 100%; width: 100%}
 @keyframes fade-out {
   0% {opacity: 1} 100% {opacity: 0}
 }
-
 
 /* Fade in long */
 .fade-in-long {

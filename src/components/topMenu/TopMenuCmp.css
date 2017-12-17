@@ -2,8 +2,6 @@
   position: absolute;
   z-index: 1;
   padding: 5px;
-  /*text-align: center;*/
-  /*margin: auto;*/
   width: 100%;
   background-color: black;
   opacity: .4;
@@ -30,12 +28,17 @@
   background-color: lightgrey;
   box-shadow: 0 0 10px 1px white;
 }
-.top-menu-icon {
-  background-color: white;
+.top-menu-icon-burger {
   vertical-align: middle;
   margin-top: 3px;
   margin-bottom: 5px;
   padding: 6px;
   margin-right: 7px;
   cursor: pointer;
+}
+.top-menu-icon-burger:hover {
+  background-color: dimgrey;
+}
+.top-menu-icon-burger:active {
+  box-shadow: 0 0 1px 1px white;
 }

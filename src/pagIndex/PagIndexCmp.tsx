@@ -28,7 +28,9 @@ import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component';
 import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
-const menuIconSvg= require('../components/topMenu/icons8-menu.svg');
+//todo: borrar cuando se haya creado el componente TopMenuCmp
+import '../components/topMenu/TopMenuCmp.css';
+const iconBurger = require('../components/topMenu/burger-icon.svg');
 
 
 interface IState {
@@ -164,7 +166,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
         <SideMenu ref="sideMenu">side menu</SideMenu>
 
         <div className="top-menu">
-          <img src={ menuIconSvg } className="top-menu-icon" onClick={ this.openSideMenu.bind(this) }/>
+          <img src={ iconBurger } className="top-menu-icon-burger" onClick={ this.openSideMenu.bind(this) }/>
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
           <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
