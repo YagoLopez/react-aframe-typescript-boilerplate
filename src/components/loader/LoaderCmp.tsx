@@ -31,16 +31,17 @@ export default class Loader extends React.PureComponent<IProps> {
     margin: 'auto',
     width: '100px',
     padding: '20px',
-    borderRadius: '1px',
+    borderRadius: '2px',
     fontFamily: 'verdana, sans-serif',
     fontSize: 'small'
   };
 
   public constructor(props: IProps) {
     super(props);
-    const shadowColor = this.props.shadowColor || 'black';
-    const shadowDeep = this.props.shadowDeep || '1';
-    this.contentStyle.boxShadow = `0 0 ${shadowDeep}px 0 ${shadowColor}`;
+    const shadowColor = this.props.shadowColor || 'grey';
+    const shadowDeep = this.props.shadowDeep || '10';
+    this.contentStyle.boxShadow = `${shadowColor} 0 0 ${shadowDeep}px 0`;
+    console.log('box shadow', this.contentStyle.boxShadow);
   }
 
   public hide() {

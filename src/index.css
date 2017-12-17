@@ -7,8 +7,8 @@ a-scene {position: absolute; height: 100%; width: 100%}
   position: absolute;
   z-index: 1;
   padding: 5px;
-  text-align: center;
-  margin: auto;
+  /*text-align: center;*/
+  /*margin: auto;*/
   width: 100%;
   background-color: black;
   opacity: .4;
@@ -35,7 +35,15 @@ a-scene {position: absolute; height: 100%; width: 100%}
   background-color: lightgrey;
   box-shadow: 0 0 10px 1px white;
 }
-
+.top-menu-icon {
+  background-color: white;
+  vertical-align: middle;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  padding: 6px;
+  margin-right: 7px;
+  cursor: pointer;
+}
 
 /* Fade in */
 .fade-in {

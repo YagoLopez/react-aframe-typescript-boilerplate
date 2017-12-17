@@ -1,5 +1,6 @@
 //todo: cuando el side menu este abierto añadir un event listener a la escena para que al hacer click fuera del
 // side menu (en la escena) se oculte el side menu. Eliminar el event listener (donde?)
+//todo: menu state
 import React from 'react';
 import './SideMenuCmp.css';
 
@@ -34,7 +35,3 @@ export default class SideMenu extends React.PureComponent {
   }
   
 }
-
-
-// WEBPACK FOOTER //
-// ./node_modules/tslint-loader!./src/components/sideMenu/SideMenuCmp.tsx

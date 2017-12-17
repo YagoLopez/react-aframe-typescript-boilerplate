@@ -1,3 +1,4 @@
+//todo: barra superior de menu como componente
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)
 //todo: react dialog
 //todo: react menu
@@ -27,6 +28,7 @@ import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component';
 import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
+const menuIconSvg= require('../components/topMenu/icons8-menu.svg');
 
 
 interface IState {
@@ -162,10 +164,10 @@ export default class PagIndexCmp extends React.Component<any, IState> {
         <SideMenu ref="sideMenu">side menu</SideMenu>
 
         <div className="top-menu">
+          <img src={ menuIconSvg } className="top-menu-icon" onClick={ this.openSideMenu.bind(this) }/>
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
           <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
-          <a className="top-menu-item" onClick={ this.openSideMenu.bind(this) }>Open Menu</a>
           {/*<a onClick={ this.startAnimation } className="top-menu-item">Start Rotation</a>*/}
           {/*<a onClick={ this.stopAnimation } className="top-menu-item">Stop Rotation</a>*/}
         </div>
