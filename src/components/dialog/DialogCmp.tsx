@@ -1,3 +1,4 @@
+//todo: cuidado con las clases fade. ahora mismo no se cargan de ningun sitio
 import React from 'react';
 import './DialogCmp.css';
 

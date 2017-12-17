@@ -3,7 +3,7 @@
 //todo: menu state
 import React from 'react';
 import './SideMenuCmp.css';
-const btnCloseSvg = require('./highlight_off_24px.svg');
+const btnCloseSvg = require('./close-btn.svg');
 
 export default class SideMenu extends React.PureComponent {
 

@@ -6,8 +6,10 @@
 import React from 'react';
 import 'aframe-video-controls/dist/aframe-video-controls';
 import Loader from "../components/loader/LoaderCmp";
+import '../components/topMenu/TopMenuCmp.css';
+const backArrow = require('../components/topMenu/left-arrow.svg');
 
-export default class Pag2DVideoCmp extends React.PureComponent {
+export default class Pag2DVideoCmp extends React.PureComponent<any> {
 
   private onClickBtnPause = () => {
     const video1El = document.querySelector('#video1') as HTMLVideoElement;
@@ -23,11 +25,21 @@ export default class Pag2DVideoCmp extends React.PureComponent {
     video2El.play();
   };
 
+  private onClickBackBtn() {
+    this.props.history.goBack();
+  }
+
   public render() {
     return (
       <div>
 
         <Loader>Loading</Loader>
+
+        <div className="top-menu">
+          <img src={ backArrow } className="top-menu-icon-burger" onClick={ this.onClickBackBtn.bind(this) } />
+          <a onClick={ this.onClickBtnPlay } className="top-menu-item">Play</a>
+          <a onClick={ this.onClickBtnPause } className="top-menu-item">Pause</a>
+        </div>
 
         <a-scene raycaster="far: 100; objects: [src='#video-play-image']; interval: 150" cursor="rayOrigin: mouse">
 
@@ -48,10 +60,7 @@ export default class Pag2DVideoCmp extends React.PureComponent {
 
           </a-scene>
 
-        <div className="top-menu">
-          <a onClick={ this.onClickBtnPlay } className="top-menu-item">Play</a>
-          <a onClick={ this.onClickBtnPause } className="top-menu-item">Pause</a>
-        </div>
+
 
       </div>
     );

@@ -8,6 +8,7 @@
     "@types/node": "^8.0.53",
     "@types/react": "^16.0.25",
     "@types/react-dom": "^16.0.3",
+    "@types/react-router": "^4.0.19",
     "@types/react-router-dom": "^4.2.3",
     "aframe": "^0.7.1",
     "aframe-extras": "^3.13.1",

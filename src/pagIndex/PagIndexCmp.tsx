@@ -62,8 +62,6 @@ export default class PagIndexCmp extends React.Component<any, IState> {
     }
   };
 
-  public props: any;
-
   public refs: {loader: Loader, scene: AFrame.Entity, dialog: Dialog, sideMenu: SideMenu}
 
   public constructor(props: any) {
