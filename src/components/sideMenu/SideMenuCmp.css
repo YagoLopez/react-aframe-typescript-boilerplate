@@ -14,20 +14,31 @@
 }
 .side-menu-btn-close {
   position: absolute;
-  top: 8px;
+  top: 22px;
   right: 10px;
   cursor: pointer;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .side-menu-btn-close:hover {
-  background-color: #545454;
+  background-color: #a5a5a5;
 }
 .side-menu-btn-close:active {
   box-shadow: 0 0 3px 0 white;
 }
 .vertical-center {
   vertical-align: middle;
+}
+.items-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.side-menu-title {
+  font-size: 20px;
+}
+.side-menu-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 /**
  * ----------------------------------------

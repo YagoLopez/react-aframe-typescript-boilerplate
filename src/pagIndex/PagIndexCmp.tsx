@@ -146,6 +146,12 @@ export default class PagIndexCmp extends React.Component<any, IState> {
     this.refs.sideMenu.hide();
   }
 
+  private sideMenuItems = [
+    {name: '2D Video', url: '#/2dvideo'},
+    {name: '360 Video', url: '#/360video'},
+    {name: '3D Model Animation', url: '#/3dmodel'}
+  ];
+
   public render() {
     return (
       <div>
@@ -160,7 +166,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
           {/*</div>*/}
         {/*</Dialog>*/}
 
-        <SideMenu ref="sideMenu">side menu</SideMenu>
+        <SideMenu ref="sideMenu" title="Side Menu" items={ this.sideMenuItems } />
 
         <TopMenu leftIcon={ iconBurger } onClickLeftIcon={ this.openSideMenu.bind(this) }>
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
@@ -187,7 +193,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="#aframeArena"/>
             <a-link id="link1" image="#link1" onClick={ this.onClickLink1 } href="#" title="2D Video" position="-3 1 0"/>
             <a-link id="link2" image="#link2" onClick={ this.onClickLink2 } href="#" title="360 Video" position="0 1 0"/>
-            <a-link id="link3" image="#link3" onClick={ this.onClickLink3 } href="#" title="Model Animation" position="3 1 0"/>
+            <a-link id="link3" image="#link3" onClick={ this.onClickLink3 } href="#" title="3D Model Animation" position="3 1 0"/>
           </a-entity>
 
         </a-scene>
