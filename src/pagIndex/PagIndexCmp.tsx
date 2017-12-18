@@ -1,7 +1,8 @@
-//todo: crear jerarquia de componentes: dialog, sideMenu, loader a partir de un componente base abstracto
+//todo: dialogo con ayuda para movimiento, etc.
+//todo: crear jerarquia de componentes (usar herencia): dialog, sideMenu, loader a partir de un componente base abstracto
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)
 //todo: arreglar lo de que da errores al poner atributos no html5. Por ejemplo <img crossorigin="anonymous">
-//todo: cambiar color de theme de chrome android en index.html
+//todo: cambiar color de theme de chrome android en index.html (color de barra superior de chrome android)
 //todo: añadir click de mouse (raytracer component) a boton play de video 2d control
 //todo: usar "ref" en <a-camera> a ver si se arregla el funcionamiento de las animaciones
 //todo: gestionar mejor el estado de la entidad camara
@@ -15,7 +16,7 @@
 //todo: reducir tamaño de imagenes
 //todo: creditos
 //todo: usar una imagen de fondo mejor
-//todo: notificar al usuario manejo de controles: rueda del raton hace zoom, etc.
+//todo: notificar al usuario manejo de controles: rueda del raton hace zoom, etc. en cuadro de dialogo
 //todo: hacer test
 //todo: custom event polyfill
 //todo: mouse cursor pointer on <a-link>
@@ -30,6 +31,9 @@ import TopMenu from "../components/topMenu/TopMenuCmp";
 //todo: borrar cuando se haya creado el componente TopMenuCmp
 import '../components/topMenu/TopMenuCmp.css';
 const iconBurger = require('../components/topMenu/burger-icon.svg');
+const ico3dprinter = require('../components/sideMenu/icons/3d-printer.svg');
+const ico360degrees = require('../components/sideMenu/icons/360-degrees.svg');
+const icoVideoPlayer = require('../components/sideMenu/icons/video-player.svg');
 
 
 interface IState {
@@ -147,9 +151,9 @@ export default class PagIndexCmp extends React.Component<any, IState> {
   }
 
   private sideMenuItems = [
-    {name: '2D Video', url: '#/2dvideo'},
-    {name: '360 Video', url: '#/360video'},
-    {name: '3D Model Animation', url: '#/3dmodel'}
+    {name: '2D/3D Video', url: '#/2dvideo', ico: icoVideoPlayer},
+    {name: '360 Video', url: '#/360video', ico: ico360degrees},
+    {name: '3D Model Animation', url: '#/3dmodel', ico: ico3dprinter}
   ];
 
   public render() {
@@ -168,7 +172,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
         <SideMenu ref="sideMenu" title="Menu" items={ this.sideMenuItems } />
 
-        <TopMenu leftIcon={ iconBurger } onClickLeftIcon={ this.openSideMenu.bind(this) }>
+        <TopMenu onClickLeftIcon={ this.openSideMenu.bind(this) }>
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
           <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>

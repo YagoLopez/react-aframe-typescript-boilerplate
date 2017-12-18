@@ -3,11 +3,12 @@
 //todo: menu state
 import React from 'react';
 import './SideMenuCmp.css';
-const btnCloseSvg = require('./close-btn.svg');
+const btnCloseSvg = require('./icons/close-btn.svg');
 
 interface IItem {
   readonly name: string;
   readonly url: string;
+  readonly ico: string;
 }
 
 interface IProps {
@@ -19,8 +20,6 @@ interface IProps {
 export default class SideMenu extends React.PureComponent<IProps> {
 
   private sideMenuContainer: HTMLDivElement;
-
-  // private closeSideMenuEventListener: EventListener;
 
   public show() {
     //todo: crear event listener: cuando se haga click fuera de side menu en pantalla, cerrar side menu
@@ -51,7 +50,7 @@ export default class SideMenu extends React.PureComponent<IProps> {
               this.props.items && this.props.items.map( (item: IItem) => {
                 return (
                   <div key={ item.url } className="side-menu-item">
-                    <img src={ btnCloseSvg } className="icon-item" />
+                    <img src={ item.ico } className="icon-item" />
                     <a href={ item.url }>{ item.name }</a>
                   </div>
                 )

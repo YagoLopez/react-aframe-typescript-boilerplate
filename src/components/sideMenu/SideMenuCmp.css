@@ -23,7 +23,6 @@
 .side-menu-btn-close:hover {
   background-color: darkgrey;
   border-radius: 2px;
-  border: 1px solid white;
   cursor: pointer;
 }
 .side-menu-btn-close:active {
@@ -69,7 +68,6 @@
   -webkit-animation: slide-in-left 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: slide-in-left 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-1000px);
@@ -103,28 +101,23 @@
   -webkit-animation: slide-out-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: slide-out-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
 @-webkit-keyframes slide-out-left {
   0% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    /*opacity: 1;*/
   }
   100% {
     -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
-    /*opacity: 0;*/
   }
 }
 @keyframes slide-out-left {
   0% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    /*opacity: 1;*/
   }
   100% {
     -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
-    /*opacity: 0;*/
   }
 }

@@ -39,6 +39,9 @@
 }
 .top-menu-icon:hover {
   background-color: dimgrey;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 2px;
 }
 .top-menu-icon:active {
   box-shadow: 0 0 1px 1px white;

@@ -1,11 +1,11 @@
 import React from 'react';
 import './TopMenuCmp.css';
-import any = jasmine.any;
+const leftIconSvg = require('./burger-icon.svg');
 
 interface IProps {
-  leftIcon?: string;
-  onClickLeftIcon?: Function;
-  [attrs: string]: any;
+  readonly leftIcon?: string;
+  readonly onClickLeftIcon?: Function;
+  readonly [attrs: string]: any;
 }
 
 export default class TopMenu extends React.PureComponent<IProps> {
@@ -17,7 +17,8 @@ export default class TopMenu extends React.PureComponent<IProps> {
   public render(){
     return (
       <div className="top-menu">
-        <img src={ this.props.leftIcon } className="top-menu-icon" onClick={ this.onClickLeftIcon.bind(this) }/>
+        <img src={ this.props.leftIcon || leftIconSvg } className="top-menu-icon"
+          onClick={ this.onClickLeftIcon.bind(this) }/>
         { this.props.children }
       </div>
     )

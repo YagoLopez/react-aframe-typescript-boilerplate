@@ -40,7 +40,7 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
     return(
       <div>
 
-        <Loader>Loading...</Loader>
+        <Loader>Loading</Loader>
 
         <div className="top-menu">
           <a onClick={ this.togglePlayVideo } className="top-menu-item">Play</a>
