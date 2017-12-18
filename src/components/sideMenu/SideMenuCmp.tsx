@@ -42,13 +42,19 @@ export default class SideMenu extends React.PureComponent<IProps> {
         className="sideMenuContainer slide-in-left">
         <div className="sideMenuContent">
           <h1 className="side-menu-title">{ this.props.title }</h1>
+          <hr/>
           <div className="side-menu-btn-close" onClick={ this.hide.bind(this) }>
             <img src={ btnCloseSvg } className="vertical-center"/>
           </div>
-            <div className="items-container">
+          <div className="items-container">
             {
               this.props.items && this.props.items.map( (item: IItem) => {
-                return <div key={ item.name } className="side-menu-item"><a href={ item.url }>{ item.name }</a></div>
+                return (
+                  <div key={ item.url } className="side-menu-item">
+                    <img src={ btnCloseSvg } className="icon-item" />
+                    <a href={ item.url }>{ item.name }</a>
+                  </div>
+                )
               })
             }
             </div>

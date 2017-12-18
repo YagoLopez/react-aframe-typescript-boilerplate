@@ -166,7 +166,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
           {/*</div>*/}
         {/*</Dialog>*/}
 
-        <SideMenu ref="sideMenu" title="Side Menu" items={ this.sideMenuItems } />
+        <SideMenu ref="sideMenu" title="Menu" items={ this.sideMenuItems } />
 
         <TopMenu leftIcon={ iconBurger } onClickLeftIcon={ this.openSideMenu.bind(this) }>
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>

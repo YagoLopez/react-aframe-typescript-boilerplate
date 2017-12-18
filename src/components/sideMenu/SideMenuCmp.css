@@ -21,7 +21,10 @@
   border-radius: 3px;
 }
 .side-menu-btn-close:hover {
-  background-color: #a5a5a5;
+  background-color: darkgrey;
+  border-radius: 2px;
+  border: 1px solid white;
+  cursor: pointer;
 }
 .side-menu-btn-close:active {
   box-shadow: 0 0 3px 0 white;
@@ -39,6 +42,23 @@
 .side-menu-item {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.side-menu-item:hover {
+  background-color: darkgrey;
+  border-radius: 2px;
+  border: 1px solid white;
+  padding-left: 10px;
+  cursor: pointer;
+  /*box-shadow: 0 0 6px 0 black;*/
+}
+.side-menu-item a {
+  text-decoration: none;
+  color: white;
+}
+.icon-item {
+  padding-bottom: 2px;
+  padding-right: 10px;
+  vertical-align: middle;
 }
 /**
  * ----------------------------------------
