@@ -1,7 +1,5 @@
-//todo: barra superior de menu como componente
+//todo: crear jerarquia de componentes: dialog, sideMenu, loader a partir de un componente base abstracto
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)
-//todo: react dialog
-//todo: react menu
 //todo: arreglar lo de que da errores al poner atributos no html5. Por ejemplo <img crossorigin="anonymous">
 //todo: cambiar color de theme de chrome android en index.html
 //todo: añadir click de mouse (raytracer component) a boton play de video 2d control
@@ -28,6 +26,7 @@ import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component';
 import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
+import TopMenu from "../components/topMenu/TopMenuCmp";
 //todo: borrar cuando se haya creado el componente TopMenuCmp
 import '../components/topMenu/TopMenuCmp.css';
 const iconBurger = require('../components/topMenu/burger-icon.svg');
@@ -163,14 +162,11 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
         <SideMenu ref="sideMenu">side menu</SideMenu>
 
-        <div className="top-menu">
-          <img src={ iconBurger } className="top-menu-icon-burger" onClick={ this.openSideMenu.bind(this) }/>
+        <TopMenu leftIcon={ iconBurger } onClickLeftIcon={ this.openSideMenu.bind(this) }>
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
           <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
-          {/*<a onClick={ this.startAnimation } className="top-menu-item">Start Rotation</a>*/}
-          {/*<a onClick={ this.stopAnimation } className="top-menu-item">Stop Rotation</a>*/}
-        </div>
+        </TopMenu>
 
         <a-scene id="scene" ref="scene" raycaster="far: 100; objects: [link], [url]; interval: 200" cursor="rayOrigin: mouse">
 

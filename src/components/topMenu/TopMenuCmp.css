@@ -5,7 +5,8 @@
   width: 100%;
   background-color: black;
   opacity: .4;
-  border-bottom: 1px solid white
+  border-bottom: 1px solid white;
+  text-align: center;
 }
 .top-menu-item {
   color: white;
@@ -28,7 +29,7 @@
   background-color: lightgrey;
   box-shadow: 0 0 10px 1px white;
 }
-.top-menu-icon-burger {
+.top-menu-icon {
   vertical-align: middle;
   margin-top: 3px;
   margin-bottom: 5px;
@@ -36,9 +37,9 @@
   margin-right: 7px;
   cursor: pointer;
 }
-.top-menu-icon-burger:hover {
+.top-menu-icon:hover {
   background-color: dimgrey;
 }
-.top-menu-icon-burger:active {
+.top-menu-icon:active {
   box-shadow: 0 0 1px 1px white;
 }

@@ -25,7 +25,7 @@ export default class SideMenu extends React.PureComponent {
   public render() {
     return (
       <div ref={ (sideMenuContainer: HTMLDivElement) => this.sideMenuContainer = sideMenuContainer }
-        className="sideMenuContainer slide-in-left">
+      className="sideMenuContainer slide-in-left">
         <div className="sideMenuContent">
           { this.props.children }
           <div className="side-menu-btn-close" onClick={ this.hide.bind(this) }>

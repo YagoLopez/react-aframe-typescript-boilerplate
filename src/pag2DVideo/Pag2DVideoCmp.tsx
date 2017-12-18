@@ -36,7 +36,7 @@ export default class Pag2DVideoCmp extends React.PureComponent<any> {
         <Loader>Loading</Loader>
 
         <div className="top-menu">
-          <img src={ backArrow } className="top-menu-icon-burger" onClick={ this.onClickBackBtn.bind(this) } />
+          <img src={ backArrow } className="top-menu-icon" onClick={ this.onClickBackBtn.bind(this) } />
           <a onClick={ this.onClickBtnPlay } className="top-menu-item">Play</a>
           <a onClick={ this.onClickBtnPause } className="top-menu-item">Pause</a>
         </div>
