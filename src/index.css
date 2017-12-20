@@ -1,4 +1,4 @@
-/* Needed to show the "Enter VR" icon */
+/* Show the "Enter VR" icon in fullscreen mode */
 a-scene {position: absolute; height: 100%; width: 100%}
 
 /*todo: las clases fade deberian ir en el componente loader*/

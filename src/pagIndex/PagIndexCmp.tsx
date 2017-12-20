@@ -1,3 +1,5 @@
+//todo: implementar dialogo
+//todo: test con jest
 //todo: dialogo con ayuda para movimiento, etc.
 //todo: crear jerarquia de componentes (usar herencia): dialog, sideMenu, loader a partir de un componente base abstracto
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)
@@ -28,13 +30,8 @@ import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
-//todo: borrar cuando se haya creado el componente TopMenuCmp
-import '../components/topMenu/TopMenuCmp.css';
-const iconBurger = require('../components/topMenu/burger-icon.svg');
-const ico3dprinter = require('../components/sideMenu/icons/3d-printer.svg');
-const ico360degrees = require('../components/sideMenu/icons/360-degrees.svg');
-const icoVideoPlayer = require('../components/sideMenu/icons/video-player.svg');
-
+import {ISideMenuItem} from "../components/sideMenu/SideMenuCmp";
+import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
 
 interface IState {
   orbitControls: {
@@ -49,7 +46,7 @@ interface IState {
   };
 }
 
-export default class PagIndexCmp extends React.Component<any, IState> {
+export default class PagIndexCmp extends React.Component<{}, IState> {
 
   public state = {
     orbitControls: {
@@ -61,22 +58,11 @@ export default class PagIndexCmp extends React.Component<any, IState> {
       autoRotateSpeed: 0.25,
       zoomSpeed: 0.5,
       minDistance: 3,
-      maxDistance: 100,
+      maxDistance: 100
     }
   };
 
   public refs: {loader: Loader, scene: AFrame.Entity, dialog: Dialog, sideMenu: SideMenu}
-
-  public constructor(props: any) {
-    super(props);
-    this.onClickLink1 = this.onClickLink1.bind(this);
-    this.onClickLink2 = this.onClickLink2.bind(this);
-    this.onClickLink3 = this.onClickLink3.bind(this);
-    this.openDialog = this.openDialog.bind(this);
-    this.closeDialog = this.closeDialog.bind(this);
-    this.startAnimation = this.startAnimation.bind(this);
-    this.stopAnimation = this.stopAnimation.bind(this);
-  }
 
   public componentDidMount() {
 
@@ -88,6 +74,7 @@ export default class PagIndexCmp extends React.Component<any, IState> {
       aTag.addEventListener('click', (event: any) => {
         const position = event.target.dataset.position;
         //todo: revisar esto, se producen estados incosistentes
+        //El estado deberia de contener las coordenadas de rotacion de la camara
         this.setState( {orbitControls: {rotateTo: position}} )
       });
     });
@@ -116,45 +103,25 @@ export default class PagIndexCmp extends React.Component<any, IState> {
     this.setState({orbitControls: {autoRotate: true}});
   }
 
-  private onClickLink1(event: Event) {
-    event.preventDefault();
-    this.refs.loader.show();
-    this.props.history.push('/2dvideo');
-  }
-
-  private onClickLink2(event: Event) {
-    event.preventDefault();
-    this.refs.loader.show();
-    this.props.history.push('/360video');
-  }
-
-  private onClickLink3 (event: Event) {
-    event.preventDefault();
-    this.refs.loader.show();
-    this.props.history.push('/3dmodel');
-  }
-
-  private openDialog() {
+  private openDialog = () => {
     this.refs.dialog.show();
   }
 
-  private closeDialog() {
+  private closeDialog = () => {
     this.refs.dialog.hide();
   }
 
-  private openSideMenu() {
+  private openSideMenu = () => {
     this.refs.sideMenu.show();
   }
 
-  private closeSideMenu() {
+  private closeSideMenu = () => {
     this.refs.sideMenu.hide();
   }
 
-  private sideMenuItems = [
-    {name: '2D/3D Video', url: '#/2dvideo', ico: icoVideoPlayer},
-    {name: '360 Video', url: '#/360video', ico: ico360degrees},
-    {name: '3D Model Animation', url: '#/3dmodel', ico: ico3dprinter}
-  ];
+  private openDialog = () => {
+    this.dialog.show();
+  }
 
   public render() {
     return (
@@ -162,20 +129,21 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
         <Loader ref="loader">Loading</Loader>
 
-        {/*<Dialog ref="dialog">*/}
-          {/*Dialog*/}
-          {/*<br/><br/>*/}
-          {/*<div onClick={ this.closeDialog } style={ {cursor: 'pointer', textDecoration: 'underline'} }>*/}
-            {/*Close*/}
-          {/*</div>*/}
-        {/*</Dialog>*/}
+        <Dialog ref="dialog">
+          Dialog
+          <br/><br/>
+          <div onClick={ this.closeDialog } style={ {cursor: 'pointer', textDecoration: 'underline'} }>
+            Close
+          </div>
+        </Dialog>
 
-        <SideMenu ref="sideMenu" title="React + AFrame" items={ this.sideMenuItems } />
+        <SideMenu ref="sideMenu" title="React, AFrame, TypeScript Demo" items={ SIDE_MENU_ITEMS } />
 
-        <TopMenu onClickLeftIcon={ this.openSideMenu.bind(this) }>
+        <TopMenu onClickLeftIcon={ this.openSideMenu }>
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
-          <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
+          {/*<a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>*/}
+          <a className="top-menu-item">Dialog</a>
         </TopMenu>
 
         <a-scene id="scene" ref="scene" raycaster="far: 100; objects: [link], [url]; interval: 200" cursor="rayOrigin: mouse">
@@ -195,9 +163,9 @@ export default class PagIndexCmp extends React.Component<any, IState> {
 
           <a-entity id="entityGroup">
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="#aframeArena"/>
-            <a-link id="link1" image="#link1" onClick={ this.onClickLink1 } href="#" title="2D Video" position="-3 1 0"/>
-            <a-link id="link2" image="#link2" onClick={ this.onClickLink2 } href="#" title="360 Video" position="0 1 0"/>
-            <a-link id="link3" image="#link3" onClick={ this.onClickLink3 } href="#" title="3D Model Animation" position="3 1 0"/>
+            <a-link id="link1" image="#link1" href="#/2dvideo" title="2D Video" position="-3 1 0"/>
+            <a-link id="link2" image="#link2" href="#/360video" title="360 Video" position="0 1 0"/>
+            <a-link id="link3" image="#link3" href="#/3dmodel" title="3D Model Animation" position="3 1 0"/>
           </a-entity>
 
         </a-scene>

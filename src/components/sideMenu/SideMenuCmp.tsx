@@ -5,7 +5,7 @@ import React from 'react';
 import './SideMenuCmp.css';
 const btnCloseSvg = require('./icons/close-btn.svg');
 
-interface IItem {
+export interface ISideMenuItem {
   readonly name: string;
   readonly url: string;
   readonly ico: string;
@@ -13,7 +13,7 @@ interface IItem {
 
 interface IProps {
   readonly title?: any,
-  readonly items?: IItem[],
+  readonly items?: ISideMenuItem[],
   readonly [otherAttrs: string]: any
 }
 
@@ -47,7 +47,7 @@ export default class SideMenu extends React.PureComponent<IProps> {
           </div>
           <div className="items-container">
             {
-              this.props.items && this.props.items.map( (item: IItem) => {
+              this.props.items && this.props.items.map( (item: ISideMenuItem) => {
                 return (
                   <div key={ item.url } className="side-menu-item">
                     <img src={ item.ico } className="icon-item" />

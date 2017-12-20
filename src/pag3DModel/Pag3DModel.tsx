@@ -26,10 +26,7 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
     maxDistance: 100
   };
 
-  refs: {
-    loader: Loader,
-    bot: AFrame.Entity
-  };
+  refs: {loader: Loader, bot: AFrame.Entity};
 
   public componentDidMount() {
     this.refs.loader.hideWhen(this.refs.bot, 'model-loaded');

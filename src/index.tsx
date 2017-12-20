@@ -11,14 +11,15 @@ import './index.css';
 ReactDOM.render(
   <HashRouter>
     <div>
-      <Route exact path="/" component={PagIndexCmp}/>
-      <Route path="/2dvideo" component={Pag2DVideoCmp}/>
-      <Route path="/3dmodel" component={Pag3DModel}/>
-      <Route path="/360video" component={Pag360VideoCmp}/>
+      <Route exact path="/" component={ PagIndexCmp }/>
+      <Route path="/2dvideo" component ={ Pag2DVideoCmp }/>
+      <Route path="/3dmodel" component ={ Pag3DModel }/>
+      <Route path="/360video" component ={ Pag360VideoCmp }/>
     </div>
   </HashRouter>,
   document.getElementById('root') as HTMLElement);
 // registerServiceWorker();
+
 
 
 /*
