@@ -1,4 +1,5 @@
 //todo: test con jest
+//todo: crear button close component para dialogo y side menu
 //todo: notificar al usuario manejo de controles: rueda del raton hace zoom, etc. en cuadro de dialogo
 //todo: crear jerarquia de componentes (usar herencia): dialog, sideMenu, loader a partir de un componente base abstracto
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)
@@ -25,7 +26,7 @@ import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
-import {SIDE_MENU_ITEMS, ISideMenuItem} from "../components/sideMenu/SideMenuItems";
+import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
 const helpIcon = require('../components/sideMenu/icons/help.svg');
 
 interface IState {
@@ -59,17 +60,10 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
 
   public refs: {loader: Loader, scene: AFrame.Entity, dialog: Dialog, sideMenu: SideMenu};
 
-  private sideMenuItems: ISideMenuItem[] = SIDE_MENU_ITEMS;
-
-  // public componentWillMount() {
-  //   this.sideMenuItems[0].active = true;
-  // }
-
   public componentDidMount() {
 
     // AFRAME Events must be defined in componentDidMount().
     // The others React Events are defined in React elements as always
-
 
     const aHtmlTags = document.querySelectorAll(".rotate-camera") as HTMLCollection;
     Array.from(aHtmlTags).forEach( (aTag: HTMLAnchorElement) => {
@@ -152,7 +146,7 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
 
         {/*todo: definir SIDE_MENU_ITEMS aqui. de esta forma puedo definir la funcion*/}
         {/*openDialog en sideMenuItem*/}
-        <SideMenu ref="sideMenu" title="React + AFrame" items={ this.sideMenuItems } itemActive="0">
+        <SideMenu ref="sideMenu" title="React + AFrame" items={ SIDE_MENU_ITEMS } itemActive="0">
           <img src={ helpIcon } className="icon-item" /><a href="#" onClick={ this.openDialog }>Help</a>
         </SideMenu>
 

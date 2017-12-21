@@ -4,7 +4,6 @@
 import React from 'react';
 import {ISideMenuItem} from "./SideMenuItems";
 import './SideMenuCmp.css';
-import {escape} from "querystring";
 const btnCloseSvg = require('./icons/close-btn.svg');
 
 
@@ -20,24 +19,13 @@ export default class SideMenu extends React.PureComponent<IProps> {
   private sideMenuContainer: HTMLDivElement;
 
   public componentWillMount() {
-
     if (this.props.items) {
       // Initialize all sideMenuItems to inactive
       this.props.items.forEach( item => {
         item.active = false;
       });
-
-      // If itemActive is a text string => search item by name to activate
-      if (isNaN(parseInt(this.props.itemActive))) {
-        this.props.items.forEach( item => {
-          if (item.name.toLowerCase() === this.props.itemActive.toLowerCase()) {
-            item.active = true;
-          }
-        })
-      // If itemActive is a number => use array index to set item as active
-      } else {
-        this.props.items[this.props.itemActive].active = true;
-      }
+      // Set side menu item as active using array index passed as prop
+      this.props.items[this.props.itemActive].active = true;
     }
   }
 
@@ -86,5 +74,4 @@ export default class SideMenu extends React.PureComponent<IProps> {
       </div>
     )
   }
-  
 }

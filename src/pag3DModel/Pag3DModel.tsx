@@ -1,15 +1,20 @@
 //todo: sonido inicial
+//todo: reportar bug en aframe-extras repo
 
 /// <reference path="../index.d.ts"/>
 import React from 'react';
 import 'aframe-extras/dist/aframe-extras.loaders'; // for json loader
 import Loader from "../components/loader/LoaderCmp";
+import SideMenu from "../components/sideMenu/SideMenuCmp";
+import TopMenu from "../components/topMenu/TopMenuCmp";
+import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
 
 enum botStatus {IDLE = 'idle', RUN = 'run', WALK = 'walk', JUMP = 'jump'}
 
 export default class Pag3DModel extends React.Component<{}, {botStatus: botStatus}> {
 
   public state = {botStatus: botStatus.IDLE};
+  public refs: {sideMenu: SideMenu, loader: Loader, bot: AFrame.Entity};
 
   // crossFadeDuration: delay between bot animation transition. For example: walk -> run
   private crossFadeDuration = 0.5;
@@ -25,8 +30,6 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
     minDistance: 0,
     maxDistance: 100
   };
-
-  refs: {loader: Loader, bot: AFrame.Entity};
 
   public componentDidMount() {
     this.refs.loader.hideWhen(this.refs.bot, 'model-loaded');
@@ -48,18 +51,30 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
     this.setState({botStatus: botStatus.JUMP})
   };
 
+  private openSideMenu = () => {
+    this.refs.sideMenu.show();
+  };
+
   public render() {
     return (
       <div>
 
         <Loader ref="loader">Loading</Loader>
 
-        <div className="top-menu">
+        <SideMenu ref="sideMenu" title="3D Model Animation" items={ SIDE_MENU_ITEMS } itemActive="3" />
+
+        {/*<div className="top-menu">*/}
+          {/*<a id="btnIdle" onClick={ this.onClickBtnWalk } className="top-menu-item">Walk</a>*/}
+          {/*<a id="btnRun" onClick={ this.onClickBtnRun } className="top-menu-item">Run</a>*/}
+          {/*<a id="btnIdle" onClick={ this.onClickBtnJump } className="top-menu-item">Jump</a>*/}
+          {/*<a id="btnIdle" onClick={ this.onClickBtnIdle } className="top-menu-item">Stop</a>*/}
+        {/*</div>*/}
+        <TopMenu onClickLeftIcon={ this.openSideMenu }>
           <a id="btnIdle" onClick={ this.onClickBtnWalk } className="top-menu-item">Walk</a>
           <a id="btnRun" onClick={ this.onClickBtnRun } className="top-menu-item">Run</a>
           <a id="btnIdle" onClick={ this.onClickBtnJump } className="top-menu-item">Jump</a>
           <a id="btnIdle" onClick={ this.onClickBtnIdle } className="top-menu-item">Stop</a>
-        </div>
+        </TopMenu>
 
         <a-scene>
 
