@@ -42,6 +42,7 @@
 .side-menu-item {
   padding-top: 10px;
   padding-bottom: 10px;
+  border-radius: 4px;
 }
 .side-menu-item:hover {
   background-color: darkgrey;
@@ -49,6 +50,10 @@
   border: 1px solid white;
   padding-left: 10px;
   /*box-shadow: 0 0 6px 0 black;*/
+}
+.active {
+  border-radius: 4px;
+  background-color: cornflowerblue;
 }
 .side-menu-item a {
   text-decoration: none;

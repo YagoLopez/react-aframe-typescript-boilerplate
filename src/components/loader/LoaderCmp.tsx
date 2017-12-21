@@ -15,7 +15,7 @@ export default class Loader extends React.PureComponent<IProps> {
   private loaderElement: HTMLDivElement;
 
   private containerStyle: any = {
-    zIndex: 10,
+    zIndex: 11,
     position: 'absolute',
     width: '100%',
     top: '41%',

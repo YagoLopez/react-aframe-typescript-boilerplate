@@ -1,33 +1,33 @@
-//todo: cuidado con las clases fade. ahora mismo no se cargan de ningun sitio
 import React from 'react';
 import './DialogCmp.css';
 
-
-export default class Dialog extends React.PureComponent {
+export default class Dialog extends React.PureComponent<{children?: any, [attrs: string]: any}> {
 
   private dialogContainer: HTMLDivElement;
 
-  public props: {children?: any, [otherAttrs: string]: any};
+  /* Css class name for animation when showing Dialog */
+  private static classShowAnimation = 'scale-in-ver-center';
+
+  /* Css class name for animation when hidding Dialog */
+  private static classHideAnimation = 'scale-out-vertical';
 
   public hide() {
-    this.dialogContainer.style.display = 'none';
-    this.dialogContainer.classList.remove('fade-in');
-    this.dialogContainer.classList.add('fade-out');
+    this.dialogContainer.classList.remove(Dialog.classShowAnimation);
+    this.dialogContainer.classList.add(Dialog.classHideAnimation);
   }
 
   public show() {
     this.dialogContainer.style.display = 'block';
-    this.dialogContainer.classList.remove('fade-out');
-    this.dialogContainer.classList.add('fade-in');
+    this.dialogContainer.classList.remove(Dialog.classHideAnimation);
+    this.dialogContainer.classList.add(Dialog.classShowAnimation);
   }
 
   public render() {
     return (
       <div ref={ (dialogContainer: HTMLDivElement) => this.dialogContainer = dialogContainer }
-        className="dialogContainer fade-in">
-        <div className="dialogContent">{ this.props.children }</div>
+        className="dialogContainer">
+        <div className={ `dialogContent ${Dialog.classShowAnimation}` }>{ this.props.children }</div>
       </div>
     )
   }
-  
 }

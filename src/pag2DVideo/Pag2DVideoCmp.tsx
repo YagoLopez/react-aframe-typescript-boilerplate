@@ -8,7 +8,7 @@ import 'aframe-video-controls/dist/aframe-video-controls';
 import Loader from "../components/loader/LoaderCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
-import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
+import {SIDE_MENU_ITEMS, ISideMenuItem} from "../components/sideMenu/SideMenuItems";
 const leftArrowIcon = require('../components/topMenu/left-arrow.svg');
 const burgerIcon = require('../components/topMenu/burger-icon.svg');
 
@@ -18,7 +18,9 @@ interface IProps {
 
 export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
 
-  refs: {loader: Loader, sideMenu: SideMenu};
+  public refs: {loader: Loader, sideMenu: SideMenu};
+
+  private sideMenuItems: ISideMenuItem[] = SIDE_MENU_ITEMS;
 
   public componentDidMount() {
     (document.getElementById('assets') as AFrame.Entity).addEventListener('loaded', () => {
@@ -54,7 +56,7 @@ export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
 
         <Loader ref="loader">Loader</Loader>
 
-        <SideMenu ref="sideMenu" title="React, AFrame, TypeScript Demo" items={ SIDE_MENU_ITEMS } />
+        <SideMenu ref="sideMenu" title="React, AFrame, TypeScript Demo" items={ this.sideMenuItems } itemActive="1" />
 
         <TopMenu leftIcon={ leftArrowIcon } onClickLeftIcon={ this.onClickLeftIcon }>
           <img src={ burgerIcon } className="top-menu-icon" onClick={ this.onClickBurgerIcon } />
