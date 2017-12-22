@@ -46,7 +46,7 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
 
   public state = {
     orbitControls: {
-      autoRotate: true,
+      autoRotate: false,
       target: '#entityGroup',
       enableDamping: true,
       dampingFactor: 0.14,
@@ -137,15 +137,18 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
         <Loader ref="loader">Loading</Loader>
 
         <Dialog ref="dialog">
-          Dialog
-          <br/><br/>
-          <div>
-            <img className="icon-help" src={require('../components/sideMenu/icons/mouse-wheel.svg')} />
-            <img className="icon-help" src={require('../components/sideMenu/icons/mouse-move.svg')} />Mouse Move
-          </div>
-          <div onClick={ this.closeDialog } style={ {cursor: 'pointer', textDecoration: 'underline'} }>
-            Close
-          </div>
+          <div className="dialog-title">Actions</div>
+          <fieldset>
+            <legend>Panning</legend>
+            <div><img className="icon-help" src={ require('./icons/mouse-move.svg') } /> Mouse Pointer</div>
+            <div><img className="icon-help" src={ require('./icons/move-gesture.svg') } /> Hand Gesture</div>
+          </fieldset>
+          <fieldset>
+            <legend>Zooming</legend>
+            <div><img className="icon-help" src={ require('./icons/mouse-wheel.svg') } /> Mouse Wheel</div>
+            <div><img className="icon-help" src={ require('./icons/zoom-gesture.svg') } /> Hand Gesture</div>
+          </fieldset>
+          <div onClick={ this.closeDialog } className="dialog-close-bottom">Close</div>
         </Dialog>
 
         {/*todo: definir SIDE_MENU_ITEMS aqui. de esta forma puedo definir la funcion*/}

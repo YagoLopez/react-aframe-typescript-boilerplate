@@ -14,7 +14,7 @@
 
 .dialogContent {
   position: relative;
-  top: 41%;
+  top: 22%;
   color: white;
   background-color: black;
   width: 300px;
@@ -25,6 +25,23 @@
   /*border: 1px solid white;*/
   margin: auto;
   box-shadow: 0 3px 10px 0 black;
+}
+.dialog-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.dialog-close-bottom {
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 10px;
+}
+fieldset {
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+legend {
+  text-align: left;
+  font-size: x-small;
 }
 /**
  * ----------------------------------------
