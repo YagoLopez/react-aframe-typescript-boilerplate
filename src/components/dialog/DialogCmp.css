@@ -14,7 +14,7 @@
 
 .dialogContent {
   position: relative;
-  top: 22%;
+  top: 16%;
   color: white;
   background-color: black;
   width: 300px;
@@ -27,21 +27,8 @@
   box-shadow: 0 3px 10px 0 black;
 }
 .dialog-title {
-  margin-bottom: 10px;
   font-weight: 600;
-}
-.dialog-close-bottom {
-  cursor: pointer;
-  text-decoration: underline;
-  padding: 10px;
-}
-fieldset {
-  border-radius: 4px;
-  margin-bottom: 5px;
-}
-legend {
-  text-align: left;
-  font-size: x-small;
+  padding-bottom: 10px;
 }
 /**
  * ----------------------------------------
@@ -242,11 +229,3 @@ legend {
   }
 }
 
-.icon-help {
-  vertical-align: middle;
-  padding: 5px;
-  border-radius: 4px;
-  border: 2px solid;
-  background-color: grey;
-  margin: 3px;
-}

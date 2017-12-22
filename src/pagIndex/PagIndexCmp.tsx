@@ -1,13 +1,12 @@
 //todo: test con jest
-//todo: crear button close component para dialogo y side menu
-//todo: notificar al usuario manejo de controles: rueda del raton hace zoom, etc. en cuadro de dialogo
+//todo: crear componente button close para dialogo y side menu
 //todo: crear jerarquia de componentes (usar herencia): dialog, sideMenu, loader a partir de un componente base abstracto
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)
+//todo: poner attributos que faltan a <video> en forma de props
 //todo: arreglar lo de que da errores al poner atributos no html5. Por ejemplo <img crossorigin="anonymous">
 //todo: cambiar color de theme de chrome android en index.html (color de barra superior de chrome android)
 //todo: añadir click de mouse (raytracer component) a boton play de video 2d control
 //todo: gestionar mejor el estado de la entidad camara
-//todo: poner attributos que faltan a <video> en forma de props
 //todo: camera position as component state
 //todo: probar a eliminar completamente tslint del proyecto
 //todo: able to choose to run with or without tslint
@@ -15,7 +14,6 @@
 //todo: reducir tamaño de imagenes
 //todo: creditos
 //todo: usar una imagen de fondo mejor
-//todo: hacer test
 //todo: custom event polyfill
 //todo: mouse cursor pointer on <a-link>
 
@@ -27,7 +25,12 @@ import Dialog from "../components/dialog/DialogCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
 import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
+import './PagIndexCmp.css';
 const helpIcon = require('../components/sideMenu/icons/help.svg');
+const mouseMove = require('./icons/mouse-move.svg');
+const mouseGesture = require('./icons/move-gesture.svg');
+const mouseWheel = require('./icons/mouse-wheel.svg');
+const zoomGesture = require('./icons/zoom-gesture.svg');
 
 interface IState {
   orbitControls: {
@@ -39,7 +42,7 @@ interface IState {
     minDistance?: number,
     maxDistance?: number,
     rotateTo?: {x: number, y: number, z: number}
-  };
+  }
 }
 
 export default class PagIndexCmp extends React.Component<{}, IState> {
@@ -136,17 +139,20 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
 
         <Loader ref="loader">Loading</Loader>
 
-        <Dialog ref="dialog">
-          <div className="dialog-title">Actions</div>
+        <Dialog ref="dialog" title="Information">
+          <div className="dialog-subtitle">This is a demostration of ReactJS, AFrame and TypeScript integration.
+            No real functionality is implemented</div>
+          <div className="dialog-subtitle">For a full experience, use a VR Viewer like
+            <a href="https://vr.google.com/cardboard" className="dialog-link" target="_blank"> Cardboard</a> or other</div>
           <fieldset>
             <legend>Panning</legend>
-            <div><img className="icon-help" src={ require('./icons/mouse-move.svg') } /> Mouse Pointer</div>
-            <div><img className="icon-help" src={ require('./icons/move-gesture.svg') } /> Hand Gesture</div>
+            <div><img className="icon-info" src={ mouseMove } /> Mouse Pointer</div>
+            <div><img className="icon-info" src={ mouseGesture } /> Hand Gesture</div>
           </fieldset>
           <fieldset>
             <legend>Zooming</legend>
-            <div><img className="icon-help" src={ require('./icons/mouse-wheel.svg') } /> Mouse Wheel</div>
-            <div><img className="icon-help" src={ require('./icons/zoom-gesture.svg') } /> Hand Gesture</div>
+            <div><img className="icon-info" src={ mouseWheel } /> Mouse Wheel</div>
+            <div><img className="icon-info" src={ zoomGesture } /> Hand Gesture</div>
           </fieldset>
           <div onClick={ this.closeDialog } className="dialog-close-bottom">Close</div>
         </Dialog>
@@ -160,8 +166,7 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
         <TopMenu onClickLeftIcon={ this.openSideMenu }>
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
-          {/*<a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>*/}
-          <a className="top-menu-item" onClick={ this.openDialog }>Dialog</a>
+          <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
         </TopMenu>
 
         <a-scene id="scene" ref="scene" raycaster="far: 100; objects: [link], [url]; interval: 200" cursor="rayOrigin: mouse">
@@ -181,7 +186,7 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
 
           <a-entity id="entityGroup">
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="#aframeArena"/>
-            <a-link id="link1" image="#link1" href="#/2dvideo" title="2D Video" position="-3 1 0"/>
+            <a-link id="link1" image="#link1" href="#/2dvideo" title="2D/3D Video" position="-3 1 0"/>
             <a-link id="link2" image="#link2" href="#/360video" title="360 Video" position="0 1 0"/>
             <a-link id="link3" image="#link3" href="#/3dmodel" title="3D Model Animation" position="3 1 0"/>
           </a-entity>

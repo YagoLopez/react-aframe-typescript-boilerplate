@@ -41,7 +41,7 @@ export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
   };
 
   private onClickLeftIcon = () => {
-    this.props.history.goBack();
+    this.refs.sideMenu.show();
   };
 
   private onClickBurgerIcon = () => {
@@ -56,8 +56,7 @@ export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
 
         <SideMenu ref="sideMenu" title="2D/3D Video" items={ SIDE_MENU_ITEMS } itemActive="1" />
 
-        <TopMenu leftIcon={ leftArrowIcon } onClickLeftIcon={ this.onClickLeftIcon }>
-          <img src={ burgerIcon } className="top-menu-icon" onClick={ this.onClickBurgerIcon } />
+        <TopMenu leftIcon={ burgerIcon } onClickLeftIcon={ this.onClickLeftIcon }>
           <a onClick={ this.onClickBtnPlay } className="top-menu-item">Play</a>
           <a onClick={ this.onClickBtnPause } className="top-menu-item">Pause</a>
         </TopMenu>

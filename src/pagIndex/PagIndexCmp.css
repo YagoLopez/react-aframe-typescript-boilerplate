@@ -1,0 +1,30 @@
+.dialog-subtitle {
+  font-size: small;
+  padding-bottom: 10px;
+  text-align: left;
+}
+.icon-info {
+  vertical-align: middle;
+  padding: 5px;
+  border-radius: 4px;
+  border: 2px solid;
+  background-color: grey;
+  margin: 3px;
+}
+fieldset {
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+legend {
+  text-align: left;
+  font-size: small;
+}
+.dialog-close-bottom {
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 10px;
+}
+.dialog-link {
+  color: cornflowerblue;
+  text-decoration: none;
+}

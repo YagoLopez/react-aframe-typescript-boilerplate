@@ -11,23 +11,23 @@ import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
 
 export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
 
-  private video360: HTMLVideoElement;
   public state = {isPlaying: false};
-  public refs: {video360: HTMLVideoElement, sideMenu: SideMenu};
+  public refs: {video360: HTMLVideoElement, sideMenu: SideMenu, assets: AFrame.Entity, loader: Loader};
 
-  playVideo() {
+  public componentDidMount() {
+    this.refs.assets.addEventListener('loaded', () => {
+      this.refs.loader.hide();
+    })
+  }
+
+  private playVideo() {
     this.setState({isPlaying: true});
     this.refs.video360.play();
   }
 
-  pauseVideo() {
+  private pauseVideo() {
     this.setState({isPlaying: false});
     this.refs.video360.pause();
-  }
-  constructor(props: {}) {
-    super(props);
-    // Recommended way to create events to get a reference to "this" while debugging
-    // this.togglePlayVideo = this.togglePlayVideo.bind(this);
   }
 
   private togglePlayVideo = () => {
@@ -39,17 +39,17 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
     } else {
       this.playVideo();
     }
-  };
+  }
 
   private openSideMenu = () => {
     this.refs.sideMenu.show();
-  };
+  }
 
   public render() {
     return(
       <div>
 
-        <Loader>Loading</Loader>
+        <Loader ref="loader">Loading</Loader>
 
         <SideMenu ref="sideMenu" title="React + AFrame" items={ SIDE_MENU_ITEMS } itemActive="2"/>
 
@@ -59,12 +59,14 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
         </TopMenu>
 
         <a-scene>
-          <a-assets>
-            <video id="video1"
-              ref="video360"
-              src="video/360-fractal-4.mp4"/>
+          <a-assets ref="assets">
+            <video id="video1" ref="video360" src="video/360-fractal-4.mp4"/>
           </a-assets>
+
+          <a-camera reverse-mouse-drag="true" />
+
           <a-videosphere id="videoSphere" src="#video1" rotation="0 -90 0"/>
+
         </a-scene>
 
       </div>

@@ -62,9 +62,9 @@ export default class SideMenu extends React.PureComponent<IProps> {
               this.props.items && this.props.items.map( (item: ISideMenuItem) => {
                 return (
                   <div key={ item.name } className={ item.active ? "side-menu-item active" : "side-menu-item" }>
-                      <img src={ item.ico } className="icon-item" />
-                      <a href={ item.url }>{ item.name }</a>
-                  </div>
+                    <img src={ item.ico } className="icon-item" />
+                    <a href={ item.url }>{ item.name }</a>
+                </div>
                 )
               })
             }

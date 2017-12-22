@@ -63,12 +63,6 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
 
         <SideMenu ref="sideMenu" title="3D Model Animation" items={ SIDE_MENU_ITEMS } itemActive="3" />
 
-        {/*<div className="top-menu">*/}
-          {/*<a id="btnIdle" onClick={ this.onClickBtnWalk } className="top-menu-item">Walk</a>*/}
-          {/*<a id="btnRun" onClick={ this.onClickBtnRun } className="top-menu-item">Run</a>*/}
-          {/*<a id="btnIdle" onClick={ this.onClickBtnJump } className="top-menu-item">Jump</a>*/}
-          {/*<a id="btnIdle" onClick={ this.onClickBtnIdle } className="top-menu-item">Stop</a>*/}
-        {/*</div>*/}
         <TopMenu onClickLeftIcon={ this.openSideMenu }>
           <a id="btnIdle" onClick={ this.onClickBtnWalk } className="top-menu-item">Walk</a>
           <a id="btnRun" onClick={ this.onClickBtnRun } className="top-menu-item">Run</a>

@@ -1,7 +1,13 @@
 import React from 'react';
 import './DialogCmp.css';
 
-export default class Dialog extends React.PureComponent<{children?: any, [attrs: string]: any}> {
+interface IProps {
+  title: string;
+  children?: any;
+  [attrs: string]: any;
+}
+
+export default class Dialog extends React.PureComponent<IProps> {
 
   private dialogContainer: HTMLDivElement;
 
@@ -10,6 +16,13 @@ export default class Dialog extends React.PureComponent<{children?: any, [attrs:
 
   /* Css class name for animation when hidding Dialog */
   private static classHideAnimation = 'scale-out-vertical';
+
+  public componentDidMount() {
+    const parentElement = this.dialogContainer.parentElement as HTMLElement;
+    parentElement.addEventListener('click', () => {
+      this.hide(); // Hide dialog when click outside
+    });
+  }
 
   public hide() {
     this.dialogContainer.classList.remove(Dialog.classShowAnimation);
@@ -26,7 +39,10 @@ export default class Dialog extends React.PureComponent<{children?: any, [attrs:
     return (
       <div ref={ (dialogContainer: HTMLDivElement) => this.dialogContainer = dialogContainer }
         className="dialogContainer">
-        <div className={ `dialogContent ${Dialog.classShowAnimation}` }>{ this.props.children }</div>
+          <div className={ `dialogContent ${Dialog.classShowAnimation}` }>
+            <div className="dialog-title">{ this.props.title }</div>
+            { this.props.children }
+          </div>
       </div>
     )
   }
