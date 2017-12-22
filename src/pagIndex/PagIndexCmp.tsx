@@ -87,7 +87,7 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
 
     this.refs.loader.hideWhen(this.refs.scene, 'loaded');
 
-    // this.openDialogDelayed(2000);
+    this.openDialogDelayed(2000);
 
     this.refs.scene.addEventListener('click', () => {
       this.stopAnimation();
@@ -139,6 +139,10 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
         <Dialog ref="dialog">
           Dialog
           <br/><br/>
+          <div>
+            <img className="icon-help" src={require('../components/sideMenu/icons/mouse-wheel.svg')} />
+            <img className="icon-help" src={require('../components/sideMenu/icons/mouse-move.svg')} />Mouse Move
+          </div>
           <div onClick={ this.closeDialog } style={ {cursor: 'pointer', textDecoration: 'underline'} }>
             Close
           </div>
