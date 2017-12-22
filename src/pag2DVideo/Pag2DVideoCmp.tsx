@@ -70,7 +70,7 @@ export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
               <img id="video-pause-image" src="img/pause-video-btn.png"/>
             </a-assets>
 
-            <a-camera position="0 0.5 1"><a-cursor id="cursor" color="yellow"/></a-camera>
+            <a-camera position="0 0.5 1" reverse-mouse-drag="true"><a-cursor id="cursor" color="yellow"/></a-camera>
 
             <a-videosphere src="#video2"/>
 

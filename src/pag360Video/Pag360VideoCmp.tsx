@@ -12,7 +12,12 @@ import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
 export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
 
   public state = {isPlaying: false};
-  public refs: {video360: HTMLVideoElement, sideMenu: SideMenu, assets: AFrame.Entity, loader: Loader};
+  public refs: {
+    videoEntity: AFrame.Entity,
+    sideMenu: SideMenu,
+    assets: AFrame.Entity,
+    loader: Loader
+  };
 
   public componentDidMount() {
     this.refs.assets.addEventListener('loaded', () => {
@@ -22,22 +27,22 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
 
   private playVideo() {
     this.setState({isPlaying: true});
-    this.refs.video360.play();
+    this.refs.videoEntity.play();
   }
 
   private pauseVideo() {
     this.setState({isPlaying: false});
-    this.refs.video360.pause();
+    this.refs.videoEntity.pause();
   }
 
   private togglePlayVideo = () => {
     //todo: revisar
-    // Note: AFrame.Entity.isPlaying seems not to work ("isPlaying = true" when scene is just started)
-    // Thats why this imperative way of managin state is needed
-    if (this.state.isPlaying) {
-      this.pauseVideo();
-    } else {
+    // Note: "this.videoSphere.isPlaying" seems not to work (it seems "isPlaying" is always true)
+    // Thats why it is needed to use "this.state.isPlaying"
+    if (!this.state.isPlaying) {
       this.playVideo();
+    } else {
+      this.pauseVideo();
     }
   }
 
@@ -54,19 +59,16 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
         <SideMenu ref="sideMenu" title="React + AFrame" items={ SIDE_MENU_ITEMS } itemActive="2"/>
 
         <TopMenu onClickLeftIcon={ this.openSideMenu }>
-          <a onClick={ this.togglePlayVideo } className="top-menu-item">Play</a>
-          <a onClick={ this.togglePlayVideo } className="top-menu-item">Pause</a>
+          <a onClick={ this.togglePlayVideo.bind(this) } className="top-menu-item">Play</a>
+          <a onClick={ this.togglePlayVideo.bind(this) } className="top-menu-item">Pause</a>
         </TopMenu>
 
         <a-scene>
           <a-assets ref="assets">
-            <video id="video1" ref="video360" src="video/360-fractal-4.mp4"/>
+            <video id="videoEntity" ref="videoEntity" src="video/360-fractal-4.mp4"/>
           </a-assets>
-
           <a-camera reverse-mouse-drag="true" />
-
-          <a-videosphere id="videoSphere" src="#video1" rotation="0 -90 0"/>
-
+          <a-videosphere src="#videoEntity" rotation="0 -90 0"/>
         </a-scene>
 
       </div>
