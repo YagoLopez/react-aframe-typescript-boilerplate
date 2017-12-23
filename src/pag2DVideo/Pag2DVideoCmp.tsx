@@ -9,8 +9,8 @@ import Loader from "../components/loader/LoaderCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
 import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
-const leftArrowIcon = require('../components/topMenu/left-arrow.svg');
 const burgerIcon = require('../components/topMenu/burger-icon.svg');
+const playerBtn: any = {width: '50px'};
 
 interface IProps {
   readonly history?: any;
@@ -56,9 +56,9 @@ export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
 
         <SideMenu ref="sideMenu" title="2D/3D Video" items={ SIDE_MENU_ITEMS } itemActive="1" />
 
-        <TopMenu leftIcon={ burgerIcon } onClickLeftIcon={ this.onClickLeftIcon }>
-          <a onClick={ this.onClickBtnPlay } className="top-menu-item">Play</a>
-          <a onClick={ this.onClickBtnPause } className="top-menu-item">Pause</a>
+        <TopMenu leftIcon={ burgerIcon } onClickMenuBtn={ this.onClickLeftIcon }>
+          <a onClick={ this.onClickBtnPlay } className="top-menu-item" style={ playerBtn }>Play</a>
+          <a onClick={ this.onClickBtnPause } className="top-menu-item" style={ playerBtn }>Pause</a>
         </TopMenu>
 
         <a-scene raycaster="far: 100; objects: [src='#video-play-image']; interval: 150" cursor="rayOrigin: mouse">
@@ -74,7 +74,7 @@ export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
 
             <a-videosphere src="#video2"/>
 
-            <a-entity>
+            <a-entity rotation="0 -45 0">
               <a-video src="#video1" position="0 2.5 -1" scale="2 1 0"/>
               <a-entity video-controls="src:#video1; distance:1; size:2"/>
             </a-entity>

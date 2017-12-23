@@ -1,0 +1,8 @@
+.player-btn {
+  color: black;
+  background-color: white;
+  width: 40px;
+}
+.player-btn:hover {
+  background-color: cyan;
+}

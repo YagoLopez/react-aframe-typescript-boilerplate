@@ -16,6 +16,7 @@
 //todo: usar una imagen de fondo mejor
 //todo: custom event polyfill
 //todo: mouse cursor pointer on <a-link>
+//todo: usar router active class name. buscar mas info
 
 /// <reference path="../index.d.ts"/>
 import React from 'react';
@@ -31,6 +32,7 @@ const mouseMove = require('./icons/mouse-move.svg');
 const mouseGesture = require('./icons/move-gesture.svg');
 const mouseWheel = require('./icons/mouse-wheel.svg');
 const zoomGesture = require('./icons/zoom-gesture.svg');
+const urlVRviewer = 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer';
 
 interface IState {
   orbitControls: {
@@ -143,7 +145,8 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
           <div className="dialog-subtitle">This is a demostration of ReactJS, AFrame and TypeScript integration.
             No real functionality is implemented</div>
           <div className="dialog-subtitle">For a full experience, use a VR Viewer like
-            <a href="https://vr.google.com/cardboard" className="dialog-link" target="_blank"> Cardboard</a> or other</div>
+            <a href="https://vr.google.com/cardboard" className="dialog-link" target="_blank"> Cardboard</a> or
+            <a href={ urlVRviewer } target="_blank" className="dialog-link"> other</a></div>
           <fieldset>
             <legend>Panning</legend>
             <div><img className="icon-info" src={ mouseMove } /> Mouse Pointer</div>
@@ -163,7 +166,7 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
           <img src={ helpIcon } className="icon-item" /><a href="#" onClick={ this.openDialog }>Help</a>
         </SideMenu>
 
-        <TopMenu onClickLeftIcon={ this.openSideMenu }>
+        <TopMenu onClickMenuBtn={ this.openSideMenu.bind(this) }>
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
           <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>

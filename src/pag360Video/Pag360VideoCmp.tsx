@@ -1,17 +1,17 @@
 /// <reference path="../index.d.ts"/>
 //todo: crear componente react para incrustar videos 360 grados. Estaria basado en Aframe o en threejs
-//todo: dialog/over imposed div
-//todo: this.state.isPlaying (click to toggle play/pause)
 //todo: open issue en aframe reepo: isPlaying = true inicialmente
 import React from 'react';
 import Loader from "../components/loader/LoaderCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
 import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
+import './pag360VideoCmp.css';
+
 
 export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
 
-  public state = {isPlaying: false};
+  // todo: "document.querySelector('a-videosphere').isPlaying" seems not to work ("isPlaying" always true)
   public refs: {
     videoEntity: AFrame.Entity,
     sideMenu: SideMenu,
@@ -25,25 +25,12 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
     })
   }
 
-  private playVideo() {
-    this.setState({isPlaying: true});
+  private playVideo = () => {
     this.refs.videoEntity.play();
   }
 
-  private pauseVideo() {
-    this.setState({isPlaying: false});
+  private pauseVideo = () => {
     this.refs.videoEntity.pause();
-  }
-
-  private togglePlayVideo = () => {
-    //todo: revisar
-    // Note: "this.videoSphere.isPlaying" seems not to work (it seems "isPlaying" is always true)
-    // Thats why it is needed to use "this.state.isPlaying"
-    if (!this.state.isPlaying) {
-      this.playVideo();
-    } else {
-      this.pauseVideo();
-    }
   }
 
   private openSideMenu = () => {
@@ -58,9 +45,9 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
 
         <SideMenu ref="sideMenu" title="React + AFrame" items={ SIDE_MENU_ITEMS } itemActive="2"/>
 
-        <TopMenu onClickLeftIcon={ this.openSideMenu }>
-          <a onClick={ this.togglePlayVideo.bind(this) } className="top-menu-item">Play</a>
-          <a onClick={ this.togglePlayVideo.bind(this) } className="top-menu-item">Pause</a>
+        <TopMenu onClickMenuBtn={ this.openSideMenu }>
+          <a onClick={ this.playVideo } className="top-menu-item player-btn">Play</a>
+          <a onClick={ this.pauseVideo } className="top-menu-item player-btn">Pause</a>
         </TopMenu>
 
         <a-scene>

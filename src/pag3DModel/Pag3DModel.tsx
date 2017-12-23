@@ -16,7 +16,7 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
   public state = {botStatus: botStatus.IDLE};
   public refs: {sideMenu: SideMenu, loader: Loader, bot: AFrame.Entity};
 
-  // crossFadeDuration: delay between bot animation transition. For example: walk -> run
+  // crossFadeDuration: delay between bot animation transitions. For example: walk -> run
   private crossFadeDuration = 0.5;
 
   private orbitControls = {
@@ -63,7 +63,7 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
 
         <SideMenu ref="sideMenu" title="3D Model Animation" items={ SIDE_MENU_ITEMS } itemActive="3" />
 
-        <TopMenu onClickLeftIcon={ this.openSideMenu }>
+        <TopMenu onClickMenuBtn={ this.openSideMenu }>
           <a id="btnIdle" onClick={ this.onClickBtnWalk } className="top-menu-item">Walk</a>
           <a id="btnRun" onClick={ this.onClickBtnRun } className="top-menu-item">Run</a>
           <a id="btnIdle" onClick={ this.onClickBtnJump } className="top-menu-item">Jump</a>

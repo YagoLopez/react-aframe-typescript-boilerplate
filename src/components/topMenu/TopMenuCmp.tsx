@@ -1,26 +1,52 @@
 import React from 'react';
 import './TopMenuCmp.css';
-const leftIconSvg = require('./burger-icon.svg');
+const burgerIconSvg = require('./burger-icon.svg');
+const leftArrowSvg = require('./left-arrow.svg');
 
-interface IProps {
-  readonly leftIcon?: string;
-  readonly onClickLeftIcon?: Function;
-  readonly [attrs: string]: any;
-}
 
-export default class TopMenu extends React.PureComponent<IProps> {
+export default class TopMenu extends React.Component {
 
-  private onClickLeftIcon(): void {
-    this.props.onClickLeftIcon && this.props.onClickLeftIcon();
+  public props: {
+    readonly leftIcon?: string;
+    readonly onClickMenuBtn?: Function;
+    readonly children?: any;
+    readonly [attrs: string]: any;
+  }
+
+  public componentWillUpdate() {
+    // debugger;
+    // this.setState({isFirstPage: window.history.length < 21})
+    console.log('history length', window.history.length);
+  }
+
+  private onClickMenuBtn = () => {
+    this.props.onClickMenuBtn && this.props.onClickMenuBtn();
+  }
+
+  private onClickBtnGoBack = () => {
+    window.history.back();
   }
 
   public render(){
-    return (
-      <div className="top-menu">
-        <img src={ this.props.leftIcon || leftIconSvg } className="top-menu-icon"
-          onClick={ this.onClickLeftIcon.bind(this) }/>
-        { this.props.children }
-      </div>
-    )
+    // Not root route => Render left arrow button
+    if (window.location.hash !== "#/") {
+      return(
+        <div className="top-menu">
+          <img src={ leftArrowSvg } className="top-menu-icon-left" onClick={ this.onClickBtnGoBack }/>
+          { this.props.children }
+          <img src={ this.props.leftIcon || burgerIconSvg } className="top-menu-icon-right"
+            onClick={ this.onClickMenuBtn }/>
+        </div>
+      )
+      // Root route => not to render left arrow button
+    } else {
+      return (
+        <div className="top-menu">
+          { this.props.children }
+          <img src={ this.props.leftIcon || burgerIconSvg } className="top-menu-icon-right"
+            onClick={ this.onClickMenuBtn }/>
+        </div>
+      )
+    }
   }
 }

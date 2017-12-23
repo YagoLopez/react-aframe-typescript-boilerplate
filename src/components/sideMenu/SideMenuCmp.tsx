@@ -1,22 +1,24 @@
 //todo: cuando el side menu este abierto añadir un event listener a la escena para que al hacer click fuera del
 // side menu (en la escena) se oculte el side menu. Eliminar el event listener (donde?)
 //todo: menu state
+
 import React from 'react';
 import {ISideMenuItem} from "./SideMenuItems";
 import './SideMenuCmp.css';
 const btnCloseSvg = require('./icons/close-btn.svg');
 
 
-interface IProps {
-  readonly title?: any,
-  readonly items?: ISideMenuItem[],
-  readonly itemActive: string,
-  readonly [otherAttrs: string]: any
-}
-
-export default class SideMenu extends React.PureComponent<IProps> {
+export default class SideMenu extends React.PureComponent {
 
   private sideMenuContainer: HTMLDivElement;
+
+  public props: {
+    readonly title?: any,
+    readonly items?: ISideMenuItem[],
+    readonly itemActive: string,
+    readonly children?: any,
+    readonly [otherAttrs: string]: any
+  };
 
   public componentWillMount() {
     if (this.props.items) {
@@ -64,11 +66,11 @@ export default class SideMenu extends React.PureComponent<IProps> {
                   <div key={ item.name } className={ item.active ? "side-menu-item active" : "side-menu-item" }>
                     <img src={ item.ico } className="icon-item" />
                     <a href={ item.url }>{ item.name }</a>
-                </div>
+                  </div>
                 )
               })
             }
-            <div className="side-menu-item">{ this.props.children }</div>
+            { this.props.children && <div className="side-menu-item">{ this.props.children }</div> }
           </div>
         </div>
       </div>
