@@ -51,7 +51,7 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
 
   public state = {
     orbitControls: {
-      autoRotate: false,
+      autoRotate: true,
       target: '#entityGroup',
       enableDamping: true,
       dampingFactor: 0.14,
@@ -144,9 +144,9 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
         <Dialog ref="dialog" title="Information">
           <div className="dialog-subtitle">This is a demostration of ReactJS, AFrame and TypeScript integration.
             No real functionality is implemented</div>
-          <div className="dialog-subtitle">For a full experience, use a VR Viewer like
-            <a href="https://vr.google.com/cardboard" className="dialog-link" target="_blank"> Cardboard</a> or
-            <a href={ urlVRviewer } target="_blank" className="dialog-link"> other</a></div>
+          <div className="dialog-subtitle">For a full experience, use a
+            <a href={ urlVRviewer } className="dialog-link" target="_blank"> VR Viewer</a>
+          </div>
           <fieldset>
             <legend>Panning</legend>
             <div><img className="icon-info" src={ mouseMove } /> Mouse Pointer</div>

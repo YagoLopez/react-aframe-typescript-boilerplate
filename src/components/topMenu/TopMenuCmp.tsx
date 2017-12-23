@@ -4,19 +4,13 @@ const burgerIconSvg = require('./burger-icon.svg');
 const leftArrowSvg = require('./left-arrow.svg');
 
 
-export default class TopMenu extends React.Component {
+export default class TopMenu extends React.PureComponent{
 
   public props: {
     readonly leftIcon?: string;
     readonly onClickMenuBtn?: Function;
     readonly children?: any;
     readonly [attrs: string]: any;
-  }
-
-  public componentWillUpdate() {
-    // debugger;
-    // this.setState({isFirstPage: window.history.length < 21})
-    console.log('history length', window.history.length);
   }
 
   private onClickMenuBtn = () => {
