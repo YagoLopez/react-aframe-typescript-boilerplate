@@ -1,7 +1,7 @@
-<p align="center">
 # React + AFrame + TypeScript Boilerplate
 
-![logo.svg](logo.svg)
+<p align="center">
+<img src="logo.svg" />
 </p>
 
 Features:
