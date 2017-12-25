@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideMenu/> Matches snapshot 1`] = `
+<div
+  className="sideMenuContainer slide-in-left"
+>
+  <div
+    className="sideMenuContent"
+  >
+    <h1
+      className="side-menu-title"
+    />
+    <hr />
+    <div
+      className="side-menu-btn-close"
+      onClick={[Function]}
+    >
+      <img
+        className="vertical-center"
+        src="close-btn.svg"
+      />
+    </div>
+    <div
+      className="items-container"
+    >
+      <div
+        className="side-menu-item"
+      >
+        Side Menu Content
+      </div>
+    </div>
+  </div>
+</div>
+`;

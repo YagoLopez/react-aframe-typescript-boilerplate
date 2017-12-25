@@ -20,7 +20,7 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
   };
 
   public componentDidMount() {
-    this.refs.assets.addEventListener('loaded', () => {
+    this.refs.assets && this.refs.assets.addEventListener('loaded', () => {
       this.refs.loader.hide();
     })
   }

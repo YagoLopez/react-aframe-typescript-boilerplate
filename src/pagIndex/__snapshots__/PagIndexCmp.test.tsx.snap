@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PagIndexCmp/> Matches snapshot 1`] = `
+<div>
+  <div
+    className="fade-in"
+    id="loader-element"
+    style={
+      Object {
+        "position": "absolute",
+        "textAlign": "center",
+        "top": "41%",
+        "width": "100%",
+        "zIndex": 11,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": "4px",
+          "boxShadow": "grey 0 0 10px 0",
+          "color": "black",
+          "display": "block",
+          "fontFamily": "verdana, sans-serif",
+          "fontSize": "small",
+          "margin": "auto",
+          "padding": "20px",
+          "textAlign": "center",
+          "width": "70px",
+        }
+      }
+    >
+      <img
+        src="img/history3.svg"
+        style={
+          Object {
+            "verticalAlign": "middle",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "paddingTop": "5px",
+          }
+        }
+      >
+        Loading
+      </div>
+    </div>
+  </div>
+  <div
+    className="dialogContainer"
+  >
+    <div
+      className="dialogContent scale-in-ver-center"
+    >
+      <div
+        className="dialog-title"
+      >
+        Information
+      </div>
+      <div
+        className="dialog-subtitle"
+      >
+        This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
+      </div>
+      <div
+        className="dialog-subtitle"
+      >
+        For a full experience, use a
+        <a
+          className="dialog-link"
+          href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
+          target="_blank"
+        >
+           VR Viewer
+        </a>
+      </div>
+      <fieldset>
+        <legend>
+          Panning
+        </legend>
+        <div>
+          <img
+            className="icon-info"
+            src="mouse-move.svg"
+          />
+           Mouse Pointer
+        </div>
+        <div>
+          <img
+            className="icon-info"
+            src="move-gesture.svg"
+          />
+           Hand Gesture
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Zooming
+        </legend>
+        <div>
+          <img
+            className="icon-info"
+            src="mouse-wheel.svg"
+          />
+           Mouse Wheel
+        </div>
+        <div>
+          <img
+            className="icon-info"
+            src="zoom-gesture.svg"
+          />
+           Hand Gesture
+        </div>
+      </fieldset>
+      <div
+        className="dialog-close-bottom"
+        onClick={[Function]}
+      >
+        Close
+      </div>
+    </div>
+  </div>
+  <div
+    className="sideMenuContainer slide-in-left"
+  >
+    <div
+      className="sideMenuContent"
+    >
+      <h1
+        className="side-menu-title"
+      >
+        React + AFrame
+      </h1>
+      <hr />
+      <div
+        className="side-menu-btn-close"
+        onClick={[Function]}
+      >
+        <img
+          className="vertical-center"
+          src="close-btn.svg"
+        />
+      </div>
+      <div
+        className="items-container"
+      >
+        <div
+          className="side-menu-item active"
+        >
+          <img
+            className="icon-item"
+            src="start.svg"
+          />
+          <a
+            href="#/"
+          >
+            Start
+          </a>
+        </div>
+        <div
+          className="side-menu-item"
+        >
+          <img
+            className="icon-item"
+            src="video-player.svg"
+          />
+          <a
+            href="#/2dvideo"
+          >
+            2D/3D Video
+          </a>
+        </div>
+        <div
+          className="side-menu-item"
+        >
+          <img
+            className="icon-item"
+            src="360-degrees.svg"
+          />
+          <a
+            href="#/360video"
+          >
+            360 Video
+          </a>
+        </div>
+        <div
+          className="side-menu-item"
+        >
+          <img
+            className="icon-item"
+            src="3d-printer.svg"
+          />
+          <a
+            href="#/3dmodel"
+          >
+            3D Model Animation
+          </a>
+        </div>
+        <div
+          className="side-menu-item"
+        >
+          <img
+            className="icon-item"
+            src="help.svg"
+          />
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            Help
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="top-menu"
+  >
+    <img
+      className="top-menu-icon-left"
+      onClick={[Function]}
+      src="left-arrow.svg"
+    />
+    <a
+      className="top-menu-item rotate-camera"
+      data-position="0.17 4.14 2.79"
+    >
+      Position 1
+    </a>
+    <a
+      className="top-menu-item rotate-camera"
+      data-position="3.48 0.57 0.15"
+    >
+      Position 2
+    </a>
+    <a
+      className="top-menu-item rotate-camera"
+      data-position="-2.89 -2.51 3.20"
+    >
+      Position 3
+    </a>
+    <img
+      className="top-menu-icon-right"
+      onClick={[Function]}
+      src="burger-icon.svg"
+    />
+  </div>
+  <a-scene
+    cursor="rayOrigin: mouse"
+    id="scene"
+    raycaster="far: 100; objects: [link], [url]; interval: 200"
+  >
+    <a-assets>
+      <img
+        id="sky"
+        src="img/1.jpg"
+      />
+      <img
+        id="link1"
+        src="img/sea.jpg"
+      />
+      <img
+        id="link2"
+        src="img/4.jpg"
+      />
+      <img
+        id="link3"
+        src="img/7.jpg"
+      />
+      <img
+        id="aframeArena"
+        src="img/aframeArena.png"
+      />
+    </a-assets>
+    <a-sky
+      rotation="0 -90 0"
+      src="#sky"
+    />
+    <a-entity
+      camera="fov: 80; zoom: 1"
+      id="camera"
+      orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.14;rotateSpeed:0.1;autoRotateSpeed:0.25;zoomSpeed:0.5;minDistance:3;maxDistance:100"
+      position="0 -0.2 5"
+    />
+    <a-entity
+      id="entityGroup"
+    >
+      <a-plane
+        height="6"
+        position="0 -1 0"
+        rotation="-90 0 0"
+        src="#aframeArena"
+        width="6"
+      />
+      <a-link
+        href="#/2dvideo"
+        id="link1"
+        image="#link1"
+        position="-3 1 0"
+        title="2D/3D Video"
+      />
+      <a-link
+        href="#/360video"
+        id="link2"
+        image="#link2"
+        position="0 1 0"
+        title="360 Video"
+      />
+      <a-link
+        href="#/3dmodel"
+        id="link3"
+        image="#link3"
+        position="3 1 0"
+        title="3D Model Animation"
+      />
+    </a-entity>
+  </a-scene>
+</div>
+`;

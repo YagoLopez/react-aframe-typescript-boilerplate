@@ -4,7 +4,7 @@ const burgerIconSvg = require('./burger-icon.svg');
 const leftArrowSvg = require('./left-arrow.svg');
 
 
-export default class TopMenu extends React.PureComponent{
+export default class TopMenu extends React.PureComponent {
 
   public props: {
     readonly leftIcon?: string;

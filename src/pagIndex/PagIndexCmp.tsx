@@ -1,4 +1,11 @@
-//todo: test con jest
+//todo: open issue en create-react-app-typescript: la documentacion está incompleta:
+//para ejecutar jest snapshots es necesarion instalar el paquete: react-test-renderer
+//todo: Warning: React depends on requestAnimationFrame. Make sure that you load a polyfill in older browsers. http://fb.me/react-poly
+//todo: ampliar un poco los snapshot. consultar ayuda
+//todo: comentar en stackoverflow aframe y abrir issue en aframe-extras. hay una dependencia defectuosa
+//todo: completar smoke test, añadir snapshot test
+//todo: añadir @types/react-test-renderer
+//todo: evento on load 360 video
 //todo: crear componente button close para dialogo y side menu
 //todo: crear jerarquia de componentes (usar herencia): dialog, sideMenu, loader a partir de un componente base abstracto
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)
@@ -94,7 +101,7 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
 
     this.openDialogDelayed(2000);
 
-    this.refs.scene.addEventListener('click', () => {
+    this.refs.scene && this.refs.scene.addEventListener('click', () => {
       this.stopAnimation();
     })
 
@@ -166,7 +173,7 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
           <img src={ helpIcon } className="icon-item" /><a href="#" onClick={ this.openDialog }>Help</a>
         </SideMenu>
 
-        <TopMenu onClickMenuBtn={ this.openSideMenu.bind(this) }>
+        <TopMenu onClickMenuBtn={ this.openSideMenu }>
           <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
           <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
           <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>

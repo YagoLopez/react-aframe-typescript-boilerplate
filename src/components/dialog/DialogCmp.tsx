@@ -7,7 +7,7 @@ interface IProps {
   [attrs: string]: any;
 }
 
-export default class Dialog extends React.PureComponent<IProps> {
+export default class Dialog extends React.PureComponent<IProps, {}> {
 
   private dialogContainer: HTMLDivElement;
 
@@ -18,8 +18,8 @@ export default class Dialog extends React.PureComponent<IProps> {
   private static classHideAnimation = 'scale-out-vertical';
 
   public componentDidMount() {
-    const parentElement = this.dialogContainer.parentElement as HTMLElement;
-    parentElement.addEventListener('click', () => {
+    const parentElement = this.dialogContainer && this.dialogContainer.parentElement as HTMLElement;
+    parentElement && parentElement.addEventListener('click', () => {
       this.hide(); // Hide dialog when click outside
     });
   }

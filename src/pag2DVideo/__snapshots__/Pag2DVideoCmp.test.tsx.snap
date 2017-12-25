@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pag2DVideoCmp/> Matches snapshot 1`] = `
+<div>
+  <div
+    className="fade-in"
+    id="loader-element"
+    style={
+      Object {
+        "position": "absolute",
+        "textAlign": "center",
+        "top": "41%",
+        "width": "100%",
+        "zIndex": 11,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": "4px",
+          "boxShadow": "grey 0 0 10px 0",
+          "color": "black",
+          "display": "block",
+          "fontFamily": "verdana, sans-serif",
+          "fontSize": "small",
+          "margin": "auto",
+          "padding": "20px",
+          "textAlign": "center",
+          "width": "70px",
+        }
+      }
+    >
+      <img
+        src="img/history3.svg"
+        style={
+          Object {
+            "verticalAlign": "middle",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "paddingTop": "5px",
+          }
+        }
+      >
+        Loader
+      </div>
+    </div>
+  </div>
+  <div
+    className="sideMenuContainer slide-in-left"
+  >
+    <div
+      className="sideMenuContent"
+    >
+      <h1
+        className="side-menu-title"
+      >
+        2D/3D Video
+      </h1>
+      <hr />
+      <div
+        className="side-menu-btn-close"
+        onClick={[Function]}
+      >
+        <img
+          className="vertical-center"
+          src="close-btn.svg"
+        />
+      </div>
+      <div
+        className="items-container"
+      >
+        <div
+          className="side-menu-item"
+        >
+          <img
+            className="icon-item"
+            src="start.svg"
+          />
+          <a
+            href="#/"
+          >
+            Start
+          </a>
+        </div>
+        <div
+          className="side-menu-item active"
+        >
+          <img
+            className="icon-item"
+            src="video-player.svg"
+          />
+          <a
+            href="#/2dvideo"
+          >
+            2D/3D Video
+          </a>
+        </div>
+        <div
+          className="side-menu-item"
+        >
+          <img
+            className="icon-item"
+            src="360-degrees.svg"
+          />
+          <a
+            href="#/360video"
+          >
+            360 Video
+          </a>
+        </div>
+        <div
+          className="side-menu-item"
+        >
+          <img
+            className="icon-item"
+            src="3d-printer.svg"
+          />
+          <a
+            href="#/3dmodel"
+          >
+            3D Model Animation
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="top-menu"
+  >
+    <img
+      className="top-menu-icon-left"
+      onClick={[Function]}
+      src="left-arrow.svg"
+    />
+    <a
+      className="top-menu-item"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "50px",
+        }
+      }
+    >
+      Play
+    </a>
+    <a
+      className="top-menu-item"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "50px",
+        }
+      }
+    >
+      Pause
+    </a>
+    <img
+      className="top-menu-icon-right"
+      onClick={[Function]}
+      src="burger-icon.svg"
+    />
+  </div>
+  <a-scene
+    cursor="rayOrigin: mouse"
+    raycaster="far: 100; objects: [src='#video-play-image']; interval: 150"
+  >
+    <a-assets
+      id="assets"
+    >
+      <video
+        id="video1"
+      >
+        <source
+          src="video/echo-hereweare.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <video
+        id="video2"
+      >
+        <source
+          src="video/canguros.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <img
+        id="video-play-image"
+        src="img/play-video-btn.png"
+      />
+      <img
+        id="video-pause-image"
+        src="img/pause-video-btn.png"
+      />
+    </a-assets>
+    <a-camera
+      position="0 0.5 1"
+      reverse-mouse-drag="true"
+    >
+      <a-cursor
+        color="yellow"
+        id="cursor"
+      />
+    </a-camera>
+    <a-videosphere
+      src="#video2"
+    />
+    <a-entity
+      rotation="0 -45 0"
+    >
+      <a-video
+        position="0 2.5 -1"
+        scale="2 1 0"
+        src="#video1"
+      />
+      <a-entity
+        video-controls="src:#video1; distance:1; size:2"
+      />
+    </a-entity>
+  </a-scene>
+</div>
+`;

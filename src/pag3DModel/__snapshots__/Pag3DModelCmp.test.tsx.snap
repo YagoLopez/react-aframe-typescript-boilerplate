@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pag3DModel/> Matches snapshot 1`] = `
+<div>
+  <div
+    className="fade-in"
+    id="loader-element"
+    style={
+      Object {
+        "position": "absolute",
+        "textAlign": "center",
+        "top": "41%",
+        "width": "100%",
+        "zIndex": 11,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": "4px",
+          "boxShadow": "grey 0 0 10px 0",
+          "color": "black",
+          "display": "block",
+          "fontFamily": "verdana, sans-serif",
+          "fontSize": "small",
+          "margin": "auto",
+          "padding": "20px",
+          "textAlign": "center",
+          "width": "70px",
+        }
+      }
+    >
+      <img
+        src="img/history3.svg"
+        style={
+          Object {
+            "verticalAlign": "middle",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "paddingTop": "5px",
+          }
+        }
+      >
+        Loading
+      </div>
+    </div>
+  </div>
+  <div
+    className="sideMenuContainer slide-in-left"
+  >
+    <div
+      className="sideMenuContent"
+    >
+      <h1
+        className="side-menu-title"
+      >
+        3D Model Animation
+      </h1>
+      <hr />
+      <div
+        className="side-menu-btn-close"
+        onClick={[Function]}
+      >
+        <img
+          className="vertical-center"
+          src="close-btn.svg"
+        />
+      </div>
+      <div
+        className="items-container"
+      >
+        <div
+          className="side-menu-item"
+        >
+          <img
+            className="icon-item"
+            src="start.svg"
+          />
+          <a
+            href="#/"
+          >
+            Start
+          </a>
+        </div>
+        <div
+          className="side-menu-item"
+        >
+          <img
+            className="icon-item"
+            src="video-player.svg"
+          />
+          <a
+            href="#/2dvideo"
+          >
+            2D/3D Video
+          </a>
+        </div>
+        <div
+          className="side-menu-item"
+        >
+          <img
+            className="icon-item"
+            src="360-degrees.svg"
+          />
+          <a
+            href="#/360video"
+          >
+            360 Video
+          </a>
+        </div>
+        <div
+          className="side-menu-item active"
+        >
+          <img
+            className="icon-item"
+            src="3d-printer.svg"
+          />
+          <a
+            href="#/3dmodel"
+          >
+            3D Model Animation
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="top-menu"
+  >
+    <img
+      className="top-menu-icon-left"
+      onClick={[Function]}
+      src="left-arrow.svg"
+    />
+    <a
+      className="top-menu-item"
+      id="btnIdle"
+      onClick={[Function]}
+    >
+      Walk
+    </a>
+    <a
+      className="top-menu-item"
+      id="btnRun"
+      onClick={[Function]}
+    >
+      Run
+    </a>
+    <a
+      className="top-menu-item"
+      id="btnIdle"
+      onClick={[Function]}
+    >
+      Jump
+    </a>
+    <a
+      className="top-menu-item"
+      id="btnIdle"
+      onClick={[Function]}
+    >
+      Stop
+    </a>
+    <img
+      className="top-menu-icon-right"
+      onClick={[Function]}
+      src="burger-icon.svg"
+    />
+  </div>
+  <a-scene>
+    <a-assets>
+      <img
+        id="sky"
+        src="img/square.jpg"
+      />
+      <a-asset-item
+        id="botmodel"
+        src="models/bot4.json"
+      />
+    </a-assets>
+    <a-sky
+      rotation="0 -90 0"
+      src="#sky"
+    />
+    <a-entity
+      position="0 1 0"
+    >
+      <a-entity
+        camera="userHeight: 0; near: 0.5; fov: 100"
+        orbit-controls="autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.15;rotateSpeed:0.15;autoRotateSpeed:0.25;zoomSpeed:0.1;minDistance:0;maxDistance:100"
+        position="0 -0.5 1.25"
+      />
+    </a-entity>
+    <a-entity
+      animation-mixer="clip: idle; crossFadeDuration: 0.5"
+      id="bot"
+      json-model="src: #botmodel"
+      position="0 0 0"
+      scale="1 1 1"
+    />
+    <a-plane
+      color="#4d672b"
+      height="100"
+      rotation="-90 0 0"
+      width="33"
+    />
+  </a-scene>
+</div>
+`;

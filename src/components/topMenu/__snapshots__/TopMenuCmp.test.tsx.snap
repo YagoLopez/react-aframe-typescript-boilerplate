@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopMenu/> Matches snapshot 1`] = `
+<div
+  className="top-menu"
+>
+  <img
+    className="top-menu-icon-left"
+    onClick={[Function]}
+    src="left-arrow.svg"
+  />
+  Top Menu Content
+  <img
+    className="top-menu-icon-right"
+    onClick={[Function]}
+    src="burger-icon.svg"
+  />
+</div>
+`;

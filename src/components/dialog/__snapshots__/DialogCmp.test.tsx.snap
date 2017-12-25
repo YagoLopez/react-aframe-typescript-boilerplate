@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dialog/> Matches snapshot 1`] = `
+<div
+  className="dialogContainer"
+>
+  <div
+    className="dialogContent scale-in-ver-center"
+  >
+    <div
+      className="dialog-title"
+    />
+    Dialog Content
+  </div>
+</div>
+`;

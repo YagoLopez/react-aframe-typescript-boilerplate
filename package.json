@@ -22,12 +22,17 @@
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "build2": "node_modules/.bin/webpack --progress"
+    "progress build": "node_modules/.bin/webpack --progress",
+    "test": "react-scripts-ts test --env=jsdom",
+    "yarn:test:coverage": "yarn test --coverage",
+    "npm:test:coverage": "npm test --coverage",
+    "analyze": "source-map-explorer build/static/js/main.*"
   },
   "devDependencies": {
     "@types/jest": "^21.1.8",
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.3.0",
+    "react-test-renderer": "^16.2.0",
+    "source-map-explorer": "^1.5.0"
   }
 }

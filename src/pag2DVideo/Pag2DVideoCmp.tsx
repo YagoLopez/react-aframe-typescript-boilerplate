@@ -1,8 +1,8 @@
-/// <reference path="../index.d.ts"/>
 //todo: hacer componente con raycaster para que entidad sea clicable (ejemplo: btn play videoplayer)
 //todo: usar parte del video pnau going bang
 //todo: usar raycaster para interaccion de raton con video player controls
 
+/// <reference path="../index.d.ts"/>
 import React from 'react';
 import 'aframe-video-controls/dist/aframe-video-controls';
 import Loader from "../components/loader/LoaderCmp";
@@ -21,7 +21,8 @@ export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
   public refs: {loader: Loader, sideMenu: SideMenu};
 
   public componentDidMount() {
-    (document.getElementById('assets') as AFrame.Entity).addEventListener('loaded', () => {
+    const assets = document.getElementById('assets') as AFrame.Entity;
+    assets && assets.addEventListener('loaded', () => {
       this.refs.loader.hide();
     })
   }

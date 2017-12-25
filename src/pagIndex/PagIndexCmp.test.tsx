@@ -1,12 +1,18 @@
+/// <reference path="./index.d.ts"/>
+
+import 'aframe';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import PagIndexCmp from './PagIndexCmp';
+import PagIndexCmp from "./PagIndexCmp";
+import TestRenderer from 'react-test-renderer';
 
+describe('<PagIndexCmp/>', () => {
 
-// describe('<PagIndexCmp/>', () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<PagIndexCmp />, div);
+  it('Matches snapshot', () => {
+    const component = TestRenderer.create(
+      <PagIndexCmp>Pag Index Component Content</PagIndexCmp>
+    );
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
-// });
+});
+

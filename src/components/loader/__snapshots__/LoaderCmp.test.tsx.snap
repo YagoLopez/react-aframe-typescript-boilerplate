@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader/> Matches snapshot 1`] = `
+<div
+  className="fade-in"
+  id="loader-element"
+  style={
+    Object {
+      "position": "absolute",
+      "textAlign": "center",
+      "top": "41%",
+      "width": "100%",
+      "zIndex": 11,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": "4px",
+        "boxShadow": "grey 0 0 10px 0",
+        "color": "black",
+        "display": "block",
+        "fontFamily": "verdana, sans-serif",
+        "fontSize": "small",
+        "margin": "auto",
+        "padding": "20px",
+        "textAlign": "center",
+        "width": "70px",
+      }
+    }
+  >
+    <img
+      src="img/history3.svg"
+      style={
+        Object {
+          "verticalAlign": "middle",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "paddingTop": "5px",
+        }
+      }
+    >
+      Loading
+    </div>
+  </div>
+</div>
+`;

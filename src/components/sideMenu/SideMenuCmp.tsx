@@ -8,17 +8,17 @@ import './SideMenuCmp.css';
 const btnCloseSvg = require('./icons/close-btn.svg');
 
 
-export default class SideMenu extends React.PureComponent {
+interface IProps {
+  title?: any;
+  items?: ISideMenuItem[];
+  itemActive: string;
+  children?: any;
+  [otherAttrs: string]: any
+}
+
+export default class SideMenu extends React.PureComponent<IProps> {
 
   private sideMenuContainer: HTMLDivElement;
-
-  public props: {
-    readonly title?: any,
-    readonly items?: ISideMenuItem[],
-    readonly itemActive: string,
-    readonly children?: any,
-    readonly [otherAttrs: string]: any
-  };
 
   public componentWillMount() {
     if (this.props.items) {
@@ -32,8 +32,8 @@ export default class SideMenu extends React.PureComponent {
   }
 
   public componentDidMount() {
-    const parentElement = this.sideMenuContainer.parentElement as HTMLElement;
-    parentElement.addEventListener('click', () => {
+    const parentElement = this.sideMenuContainer && this.sideMenuContainer.parentElement as HTMLElement;
+    parentElement && parentElement.addEventListener('click', () => {
       this.hide(); // Hide side menu when click outside
     });
   }

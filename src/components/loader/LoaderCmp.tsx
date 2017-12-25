@@ -2,6 +2,7 @@
 //todo: animation
 
 import React from 'react';
+import any = jasmine.any;
 
 interface IProps {
   readonly shadowColor?: string;
@@ -54,8 +55,8 @@ export default class Loader extends React.PureComponent<IProps> {
     this.loaderElement.classList.add('fade-in');
   }
 
-  public hideWhen(entity: AFrame.Entity, eventName: string = 'loaded') {
-    entity.addEventListener(eventName, () => {
+  public hideWhen(entity: AFrame.Entity, eventName: string = 'loaded'): void {
+    entity && entity.addEventListener(eventName, () => {
       this.hide();
     })
   }
