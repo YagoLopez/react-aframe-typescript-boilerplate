@@ -1,6 +1,8 @@
+<p align="center">
 # React + AFrame + TypeScript Boilerplate
 
 ![logo.svg](logo.svg)
+</p>
 
 Features:
 
@@ -25,7 +27,7 @@ Features:
 
   ​
 
-## Installation, run and build
+## Installation, execution and build
 
 - Clone, fork or download the repository
 
@@ -65,7 +67,7 @@ Features:
 - Methodologies:
   - [Smoke Tests](https://en.wikipedia.org/wiki/Smoke_testing_(software))
   - [Snapshot Tests](http://facebook.github.io/jest/blog/2016/07/27/jest-14.html)
-  - [Live testing](https://www.browserstack.com/)
+  - [Live testing with BrowserStack](https://www.browserstack.com/)
 
 ```shell
 # yarn
@@ -77,17 +79,32 @@ $ npm test
 
 
 
-## Analysis of Dependecies and Code Coverage
+## Code Coverage
 
-- [Code Coverage Report](coverage/lcov-report/index.html)
+- [Report](coverage/lcov-report/index.html)
 - Run code-coverage script:
 
 ```shell
-# yarn
-$ yarn analyze
-
 # yarn
 $ yarn yarn_code_coverage
 
 # npm: mutatis mutandi
 ```
+
+
+
+## Analysis of Dependecies
+
+- [Report](deps/deps.html)
+- Run analysis of dependencies script:
+
+```shell
+# yarn
+$ yarn analize
+
+# npm: mutatis mutandi
+```
+
+
+
+[Back to top](#)

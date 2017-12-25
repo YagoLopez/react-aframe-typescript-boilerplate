@@ -1,29 +1,22 @@
+//todo: cambiar video de canguros
+//todo: reducir tamaño de imagenes
+//todo: añadir click de mouse (raytracer component) a boton play de video 2d control
+//todo: usar router active class name. buscar mas info
 //todo: open issue en create-react-app-typescript: la documentacion está incompleta:
 //para ejecutar jest snapshots es necesarion instalar el paquete: react-test-renderer
 //todo: Warning: React depends on requestAnimationFrame. Make sure that you load a polyfill in older browsers. http://fb.me/react-poly
-//todo: ampliar un poco los snapshot. consultar ayuda
+//todo: ampliar test segun code coverage report
 //todo: comentar en stackoverflow aframe y abrir issue en aframe-extras. hay una dependencia defectuosa
-//todo: completar smoke test, añadir snapshot test
-//todo: añadir @types/react-test-renderer
 //todo: evento on load 360 video
 //todo: crear componente button close para dialogo y side menu
 //todo: crear jerarquia de componentes (usar herencia): dialog, sideMenu, loader a partir de un componente base abstracto
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)
-//todo: poner attributos que faltan a <video> en forma de props
 //todo: arreglar lo de que da errores al poner atributos no html5. Por ejemplo <img crossorigin="anonymous">
-//todo: cambiar color de theme de chrome android en index.html (color de barra superior de chrome android)
-//todo: añadir click de mouse (raytracer component) a boton play de video 2d control
 //todo: gestionar mejor el estado de la entidad camara
-//todo: camera position as component state
 //todo: probar a eliminar completamente tslint del proyecto
-//todo: able to choose to run with or without tslint
-//todo: mejorar el manejo del estado "orbitControls"
-//todo: reducir tamaño de imagenes
 //todo: creditos
-//todo: usar una imagen de fondo mejor
 //todo: custom event polyfill
 //todo: mouse cursor pointer on <a-link>
-//todo: usar router active class name. buscar mas info
 
 /// <reference path="../index.d.ts"/>
 import React from 'react';
