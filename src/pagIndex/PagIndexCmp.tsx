@@ -20,7 +20,7 @@
 
 /// <reference path="../index.d.ts"/>
 import React from 'react';
-import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component';
+import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.min';
 import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";

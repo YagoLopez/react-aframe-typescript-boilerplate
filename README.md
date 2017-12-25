@@ -1,4 +1,6 @@
-# React + AFrame + TypeScript Boilerplate
+[![Build Status](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master)](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate)
+
+<p align="center"><h1>React + AFrame + TypeScript Boilerplate</h1></p>
 
 <p align="center">
 <img src="logo.svg" />
@@ -81,7 +83,7 @@ $ npm test
 
 ## Code Coverage
 
-- [Report](coverage/lcov-report/index.html)
+- [Report](https://yagolopez.js.org/react-aframe-typescript-boilerplate/coverage/lcov-report/index.html)
 - Run code-coverage script:
 
 ```shell
@@ -95,7 +97,7 @@ $ yarn yarn_code_coverage
 
 ## Analysis of Dependecies
 
-- [Report](deps/deps.html)
+- [Report](https://yagolopez.js.org/react-aframe-typescript-boilerplate/deps/deps.html)
 - Run analysis of dependencies script:
 
 ```shell

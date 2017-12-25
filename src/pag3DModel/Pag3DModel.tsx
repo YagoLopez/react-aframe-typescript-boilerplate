@@ -3,7 +3,7 @@
 
 /// <reference path="../index.d.ts"/>
 import React from 'react';
-import 'aframe-extras/dist/aframe-extras.loaders'; // for json loader
+import 'aframe-extras/dist/aframe-extras.loaders.min'; // for json loader
 import Loader from "../components/loader/LoaderCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";

@@ -4,7 +4,7 @@
 
 /// <reference path="../index.d.ts"/>
 import React from 'react';
-import 'aframe-video-controls/dist/aframe-video-controls';
+import 'aframe-video-controls/dist/aframe-video-controls.min';
 import Loader from "../components/loader/LoaderCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
