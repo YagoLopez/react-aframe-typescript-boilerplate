@@ -59,9 +59,7 @@ exports[`<PagIndexCmp/> Matches snapshot 1`] = `
     >
       <div
         className="dialog-title"
-      >
-        Information
-      </div>
+      />
       <div
         className="dialog-subtitle"
       >
@@ -159,7 +157,7 @@ exports[`<PagIndexCmp/> Matches snapshot 1`] = `
           <a
             href="#/"
           >
-            Start
+            Home
           </a>
         </div>
         <div
@@ -298,23 +296,23 @@ exports[`<PagIndexCmp/> Matches snapshot 1`] = `
         width="6"
       />
       <a-link
-        href="#/2dvideo"
-        id="link1"
+        href="#"
         image="#link1"
+        onClick={[Function]}
         position="-3 1 0"
         title="2D/3D Video"
       />
       <a-link
-        href="#/360video"
-        id="link2"
+        href="#"
         image="#link2"
+        onClick={[Function]}
         position="0 1 0"
         title="360 Video"
       />
       <a-link
-        href="#/3dmodel"
-        id="link3"
+        href="#"
         image="#link3"
+        onClick={[Function]}
         position="3 1 0"
         title="3D Model Animation"
       />

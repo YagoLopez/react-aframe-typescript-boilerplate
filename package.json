@@ -25,8 +25,8 @@
     "eject": "react-scripts-ts eject",
     "progress build": "node_modules/.bin/webpack --progress",
     "test": "react-scripts-ts test --env=jsdom",
-    "yarn:test:coverage": "yarn test --coverage",
-    "npm:test:coverage": "npm test --coverage",
+    "yarn:coverage": "yarn test --coverage",
+    "npm:coverage": "npm test --coverage",
     "analyze": "source-map-explorer build/static/js/main.*"
   },
   "devDependencies": {

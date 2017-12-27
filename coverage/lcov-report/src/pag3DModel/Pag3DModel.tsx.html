@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pag3DModel/Pag3DModel.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/pag3DModel</a> Pag3DModel.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>20/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">44.44% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>15/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">//todo: sonido inicial
+//todo: reportar bug en aframe-extras repo
+&nbsp;
+/// &lt;reference path="../index.d.ts"/&gt;
+import React from 'react';
+import 'aframe-extras/dist/aframe-extras.loaders.min'; // for json loader
+import Loader from "../components/loader/LoaderCmp";
+import SideMenu from "../components/sideMenu/SideMenuCmp";
+import TopMenu from "../components/topMenu/TopMenuCmp";
+import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
+&nbsp;
+enum botStatus {IDLE = 'idle', RUN = 'run', WALK = 'walk', JUMP = 'jump'}
+&nbsp;
+export default class Pag3DModel extends React.Component&lt;{}, {botStatus: botStatus}&gt; {
+&nbsp;
+  public state = {botStatus: botStatus.IDLE};
+  public refs: {sideMenu: SideMenu, loader: Loader, bot: AFrame.Entity};
+&nbsp;
+  // crossFadeDuration: delay between bot animation transitions. For example: walk -&gt; run
+  private crossFadeDuration = 0.5;
+&nbsp;
+  private orbitControls = {
+    autoRotate: true,
+    target: '#bot',
+    enableDamping: true,
+    dampingFactor: 0.15,
+    rotateSpeed: 0.15,
+    autoRotateSpeed: 0.25,
+    zoomSpeed: 0.1,
+    minDistance: 0,
+    maxDistance: 100
+  };
+&nbsp;
+  public componentDidMount() {
+    this.refs.loader.hideWhen(this.refs.bot, 'model-loaded');
+  }
+&nbsp;
+  private onClickBtnRun = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: botStatus.R</span>UN});
+  };
+&nbsp;
+  private onClickBtnIdle = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: botStatus.I</span>DLE})
+  };
+&nbsp;
+  private onClickBtnWalk = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: botStatus.W</span>ALK})
+  };
+&nbsp;
+  private onClickBtnJump = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: botStatus.J</span>UMP})
+  };
+&nbsp;
+  private openSideMenu = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.refs.sideMenu.s</span>how();
+  };
+&nbsp;
+  public render() {
+    return (
+      &lt;div&gt;
+&nbsp;
+        &lt;Loader ref="loader"&gt;Loading&lt;/Loader&gt;
+&nbsp;
+        &lt;SideMenu ref="sideMenu" title="3D Model Animation" items={ SIDE_MENU_ITEMS } itemActive="3" /&gt;
+&nbsp;
+        &lt;TopMenu onClickMenuBtn={ this.openSideMenu }&gt;
+          &lt;a id="btnIdle" onClick={ this.onClickBtnWalk } className="top-menu-item"&gt;Walk&lt;/a&gt;
+          &lt;a id="btnRun" onClick={ this.onClickBtnRun } className="top-menu-item"&gt;Run&lt;/a&gt;
+          &lt;a id="btnIdle" onClick={ this.onClickBtnJump } className="top-menu-item"&gt;Jump&lt;/a&gt;
+          &lt;a id="btnIdle" onClick={ this.onClickBtnIdle } className="top-menu-item"&gt;Stop&lt;/a&gt;
+        &lt;/TopMenu&gt;
+&nbsp;
+        &lt;a-scene&gt;
+&nbsp;
+          &lt;a-assets&gt;
+            &lt;img id="sky" src="img/square.jpg"/&gt;
+            &lt;a-asset-item id="botmodel" src="models/bot4.json"&gt;&lt;/a-asset-item&gt;
+          &lt;/a-assets&gt;
+&nbsp;
+          &lt;a-sky src="#sky" rotation="0 -90 0"/&gt;
+&nbsp;
+          &lt;a-entity position="0 1 0"&gt;
+            &lt;a-entity position="0 -0.5 1.25" camera="userHeight: 0; near: 0.5; fov: 100"
+            orbit-controls={ AFRAME.utils.styleParser.stringify(this.orbitControls) }/&gt;
+          &lt;/a-entity&gt;
+&nbsp;
+          &lt;a-entity id="bot" ref={ (bot: AFrame.Entity) =&gt; this.refs.bot = bot }
+            scale="1 1 1"
+            position="0 0 0"
+            animation-mixer={ `clip: ${this.state.botStatus}; crossFadeDuration: ${this.crossFadeDuration}` }
+            json-model="src: #botmodel"&gt;
+          &lt;/a-entity&gt;
+&nbsp;
+          &lt;a-plane height="100" width="33" color="#4d672b" rotation="-90 0 0"&gt;&lt;/a-plane&gt;
+&nbsp;
+        &lt;/a-scene&gt;
+      &lt;/div&gt;
+    )
+  }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 27 2017 12:42:19 GMT+0100 (Hora estándar romance)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

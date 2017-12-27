@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1514374940391" clover="3.2.0">
+  <project timestamp="1514374940391" name="All files">
+    <metrics statements="190" coveredstatements="120" conditionals="61" coveredconditionals="47" methods="78" coveredmethods="35" elements="329" coveredelements="202" complexity="0" loc="190" ncloc="190" packages="9" files="9" classes="9">
+      <package name="src">
+        <metrics statements="9" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="index.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\index.tsx">
+          <metrics statements="9" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="10" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.dialog">
+        <metrics statements="18" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="4"/>
+        <file name="DialogCmp.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\components\dialog\DialogCmp.tsx">
+          <metrics statements="18" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="4"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="20" count="3" type="stmt"/>
+          <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="22" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="32" count="2" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="38" count="3" type="stmt"/>
+          <line num="39" count="3" type="stmt"/>
+          <line num="40" count="3" type="stmt"/>
+          <line num="49" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.loader">
+        <metrics statements="19" coveredstatements="13" conditionals="10" coveredconditionals="8" methods="9" coveredmethods="5"/>
+        <file name="LoaderCmp.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\components\loader\LoaderCmp.tsx">
+          <metrics statements="19" coveredstatements="13" conditionals="10" coveredconditionals="8" methods="9" coveredmethods="5"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="39" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="41" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="42" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="43" count="6" type="stmt"/>
+          <line num="46" count="5" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="54" count="5" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="58" count="5" type="cond" truecount="1" falsecount="1"/>
+          <line num="59" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="64" count="6" type="stmt"/>
+          <line num="65" count="6" type="stmt"/>
+          <line num="66" count="6" type="stmt"/>
+          <line num="76" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.sideMenu">
+        <metrics statements="21" coveredstatements="15" conditionals="12" coveredconditionals="12" methods="9" coveredmethods="7"/>
+        <file name="SideMenuCmp.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\components\sideMenu\SideMenuCmp.tsx">
+          <metrics statements="21" coveredstatements="15" conditionals="12" coveredconditionals="12" methods="9" coveredmethods="7"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="15" count="5" type="stmt"/>
+          <line num="19" count="5" type="stmt"/>
+          <line num="20" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="22" count="4" type="stmt"/>
+          <line num="23" count="16" type="stmt"/>
+          <line num="30" count="6" type="stmt"/>
+          <line num="31" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="32" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="44" count="5" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="49" count="6" type="stmt"/>
+          <line num="50" count="6" type="stmt"/>
+          <line num="51" count="6" type="stmt"/>
+          <line num="63" count="16" type="cond" truecount="2" falsecount="0"/>
+          <line num="76" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.topMenu">
+        <metrics statements="12" coveredstatements="9" conditionals="11" coveredconditionals="6" methods="4" coveredmethods="2"/>
+        <file name="TopMenuCmp.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\components\topMenu\TopMenuCmp.tsx">
+          <metrics statements="12" coveredstatements="9" conditionals="11" coveredconditionals="6" methods="4" coveredmethods="2"/>
+          <line num="3" count="5" type="stmt"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="7" count="6" type="cond" truecount="3" falsecount="0"/>
+          <line num="16" count="6" type="stmt"/>
+          <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="20" count="6" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="24" count="5" type="stmt"/>
+          <line num="26" count="6" type="cond" truecount="1" falsecount="1"/>
+          <line num="27" count="6" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="46" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.pag2DVideo">
+        <metrics statements="25" coveredstatements="14" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="3"/>
+        <file name="Pag2DVideoCmp.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\pag2DVideo\Pag2DVideoCmp.tsx">
+          <metrics statements="25" coveredstatements="14" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="3"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="19" count="1" type="cond" truecount="3" falsecount="0"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="25" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="53" count="1" type="stmt"/>
+          <line num="88" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.pag360Video">
+        <metrics statements="15" coveredstatements="11" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="4"/>
+        <file name="Pag360VideoCmp.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\pag360Video\Pag360VideoCmp.tsx">
+          <metrics statements="15" coveredstatements="11" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="4"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="12" count="1" type="cond" truecount="3" falsecount="0"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="23" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="64" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.pag3DModel">
+        <metrics statements="20" coveredstatements="15" conditionals="5" coveredconditionals="5" methods="9" coveredmethods="4"/>
+        <file name="Pag3DModel.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\pag3DModel\Pag3DModel.tsx">
+          <metrics statements="20" coveredstatements="15" conditionals="5" coveredconditionals="5" methods="9" coveredmethods="4"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="12" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="14" count="1" type="cond" truecount="3" falsecount="0"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="58" count="1" type="stmt"/>
+          <line num="59" count="1" type="stmt"/>
+          <line num="87" count="1" type="stmt"/>
+          <line num="100" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.pagIndex">
+        <metrics statements="51" coveredstatements="31" conditionals="5" coveredconditionals="4" methods="23" coveredmethods="6"/>
+        <file name="PagIndexCmp.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\pagIndex\PagIndexCmp.tsx">
+          <metrics statements="51" coveredstatements="31" conditionals="5" coveredconditionals="4" methods="23" coveredmethods="6"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="11" count="1" type="cond" truecount="3" falsecount="0"/>
+          <line num="70" count="1" type="stmt"/>
+          <line num="75" count="1" type="stmt"/>
+          <line num="76" count="1" type="stmt"/>
+          <line num="77" count="0" type="stmt"/>
+          <line num="78" count="0" type="stmt"/>
+          <line num="85" count="1" type="stmt"/>
+          <line num="86" count="1" type="stmt"/>
+          <line num="87" count="0" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="90" count="0" type="stmt"/>
+          <line num="91" count="0" type="stmt"/>
+          <line num="95" count="1" type="stmt"/>
+          <line num="97" count="1" type="stmt"/>
+          <line num="99" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="100" count="0" type="stmt"/>
+          <line num="105" count="1" type="stmt"/>
+          <line num="106" count="1" type="stmt"/>
+          <line num="109" count="1" type="stmt"/>
+          <line num="110" count="0" type="stmt"/>
+          <line num="113" count="1" type="stmt"/>
+          <line num="114" count="0" type="stmt"/>
+          <line num="117" count="1" type="stmt"/>
+          <line num="118" count="0" type="stmt"/>
+          <line num="119" count="0" type="stmt"/>
+          <line num="122" count="1" type="stmt"/>
+          <line num="123" count="1" type="stmt"/>
+          <line num="124" count="0" type="stmt"/>
+          <line num="128" count="1" type="stmt"/>
+          <line num="129" count="0" type="stmt"/>
+          <line num="132" count="1" type="stmt"/>
+          <line num="133" count="0" type="stmt"/>
+          <line num="136" count="1" type="stmt"/>
+          <line num="137" count="0" type="stmt"/>
+          <line num="140" count="1" type="stmt"/>
+          <line num="141" count="0" type="stmt"/>
+          <line num="142" count="0" type="stmt"/>
+          <line num="145" count="1" type="stmt"/>
+          <line num="146" count="1" type="stmt"/>
+          <line num="199" count="0" type="stmt"/>
+          <line num="201" count="0" type="stmt"/>
+          <line num="203" count="0" type="stmt"/>
+          <line num="211" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

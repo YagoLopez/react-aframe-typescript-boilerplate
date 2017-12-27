@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pagIndex/PagIndexCmp.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/pagIndex</a> PagIndexCmp.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.26% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>33/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.09% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.78% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>31/51</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">//todo: cambiar video de canguros
+//todo: reducir tamaño de imagenes
+//todo: añadir click de mouse (raytracer component) a boton play de video 2d control
+//todo: usar router active class name. buscar mas info
+//todo: open issue en create-react-app-typescript: la documentacion está incompleta:
+//para ejecutar jest snapshots es necesarion instalar el paquete: react-test-renderer
+//todo: Warning: React depends on requestAnimationFrame. Make sure that you load a polyfill in older browsers. http://fb.me/react-poly
+//todo: ampliar test segun code coverage report
+//todo: comentar en stackoverflow aframe y abrir issue en aframe-extras. hay una dependencia defectuosa
+//todo: evento on load 360 video
+//todo: crear componente button close para dialogo y side menu
+//todo: crear jerarquia de componentes (usar herencia): dialog, sideMenu, loader a partir de un componente base abstracto
+//todo: crear un component de react que sea un link con imagen (parecido al componente portal)
+//todo: arreglar lo de que da errores al poner atributos no html5. Por ejemplo &lt;img crossorigin="anonymous"&gt;
+//todo: gestionar mejor el estado de la entidad camara
+//todo: probar a eliminar completamente tslint del proyecto
+//todo: creditos
+//todo: custom event polyfill
+//todo: mouse cursor pointer on &lt;a-link&gt;
+&nbsp;
+/// &lt;reference path="../index.d.ts"/&gt;
+import React from 'react';
+import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.min';
+import Loader from "../components/loader/LoaderCmp";
+import Dialog from "../components/dialog/DialogCmp";
+import SideMenu from "../components/sideMenu/SideMenuCmp";
+import TopMenu from "../components/topMenu/TopMenuCmp";
+import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
+import './PagIndexCmp.css';
+const helpIcon = require('../components/sideMenu/icons/help.svg');
+const mouseMove = require('./icons/mouse-move.svg');
+const mouseGesture = require('./icons/move-gesture.svg');
+const mouseWheel = require('./icons/mouse-wheel.svg');
+const zoomGesture = require('./icons/zoom-gesture.svg');
+const urlVRviewer = 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=vr+viewer';
+&nbsp;
+interface IState {
+  orbitControls: {
+    autoRotate?: boolean,
+    target?: string,
+    enableDamping?: boolean,
+    dampingFactor?: number,
+    rotateSpeed?: number,
+    minDistance?: number,
+    maxDistance?: number,
+    rotateTo?: {x: number, y: number, z: number}
+  }
+}
+&nbsp;
+interface IProps {history: any}
+&nbsp;
+export default class PagIndexCmp extends React.Component&lt;IProps, IState&gt; {
+&nbsp;
+  public state = {
+    orbitControls: {
+      autoRotate: true,
+      target: '#entityGroup',
+      enableDamping: true,
+      dampingFactor: 0.14,
+      rotateSpeed: 0.1,
+      autoRotateSpeed: 0.25,
+      zoomSpeed: 0.5,
+      minDistance: 3,
+      maxDistance: 100
+    }
+  };
+&nbsp;
+  public refs: {loader: Loader, scene: AFrame.Entity, dialog: Dialog, sideMenu: SideMenu};
+&nbsp;
+  public componentDidMount() {
+&nbsp;
+    // AFRAME Events must be defined in componentDidMount().
+    // The others React Events are defined in React elements as always
+&nbsp;
+    const aHtmlTags = document.querySelectorAll(".rotate-camera") as HTMLCollection;
+    Array.from(aHtmlTags).forEach( <span class="fstat-no" title="function not covered" >(</span>aTag: HTMLAnchorElement) =&gt; {
+<span class="cstat-no" title="statement not covered" >      aTag.addEventListener('click', <span class="fstat-no" title="function not covered" >(</span>event: any) =&gt; {</span>
+        const <span class="cstat-no" title="statement not covered" >position = </span>event.target.dataset.position;
+        //todo: revisar esto, se producen estados incosistentes
+        //El estado deberia de contener las coordenadas de rotacion de la camara
+        this.setState( {orbitControls: {rotateTo: position}} )
+      });
+    });
+&nbsp;
+    const aFrameLinks = document.querySelectorAll('a-link') as HTMLCollection;
+    Array.from(aFrameLinks).forEach( <span class="fstat-no" title="function not covered" >(</span>aLink: AFrame.Entity) =&gt; {
+<span class="cstat-no" title="statement not covered" >      aLink.addEventListener('mouseenter', <span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        aLink.setAttribute('scale', {x: 1.1, y: 1.1, z: 1</span>.1});
+      });
+<span class="cstat-no" title="statement not covered" >      aLink.addEventListener('mouseleave', <span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        aLink.setAttribute('scale', {x: 1, y: 1, z: 1</span>})
+      })
+    });
+&nbsp;
+    this.refs.loader.hideWhen(this.refs.scene, 'loaded');
+&nbsp;
+    this.openDialogDelayed(2000);
+&nbsp;
+<span class="branch-1 cbranch-no" title="branch not covered" >    this.<span class="fstat-no" title="function not covered" >refs.</span>scene &amp;&amp; t</span>his.refs.scene.addEventListener('click', () =&gt; {
+<span class="cstat-no" title="statement not covered" >      this.s</span>topAnimation();
+    })
+&nbsp;
+  }
+&nbsp;
+  private objToString(component: Object): string {
+    return AFRAME.utils.styleParser.stringify(component);
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  private stopAnimation(): void {</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({orbitControls: {autoRotate: f</span>alse}});
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  private startAnimation(): void {</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({orbitControls: {autoRotate: t</span>rue}});
+  }
+&nbsp;
+  private openDialog = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.refs.dialog.s</span>how();
+<span class="cstat-no" title="statement not covered" >    this.c</span>loseSideMenu();
+  }
+&nbsp;
+  private openDialogDelayed = (delayTime: number) =&gt; {
+    setTimeout( <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.refs.dialog.s</span>how();
+    }, delayTime)
+  }
+&nbsp;
+  private closeDialog = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.refs.dialog.h</span>ide();
+  }
+&nbsp;
+  private openSideMenu = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.refs.sideMenu.s</span>how();
+  }
+&nbsp;
+  private closeSideMenu = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.refs.sideMenu.h</span>ide();
+  }
+&nbsp;
+  private onClickALink = <span class="fstat-no" title="function not covered" >(</span>event: any, route: string) =&gt; {
+<span class="cstat-no" title="statement not covered" >    event.p</span>reventDefault();
+<span class="cstat-no" title="statement not covered" >    this.props.history.push(r</span>oute);
+  }
+&nbsp;
+  public render() {
+    return (
+      &lt;div&gt;
+&nbsp;
+        &lt;Loader ref="loader"&gt;Loading&lt;/Loader&gt;
+&nbsp;
+        &lt;Dialog ref="dialog"&gt;
+          &lt;div className="dialog-subtitle"&gt;This is a demostration of ReactJS, AFrame and TypeScript integration.
+            No real functionality is implemented&lt;/div&gt;
+          &lt;div className="dialog-subtitle"&gt;For a full experience, use a
+            &lt;a href={ urlVRviewer } className="dialog-link" target="_blank"&gt; VR Viewer&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;fieldset&gt;
+            &lt;legend&gt;Panning&lt;/legend&gt;
+            &lt;div&gt;&lt;img className="icon-info" src={ mouseMove } /&gt; Mouse Pointer&lt;/div&gt;
+            &lt;div&gt;&lt;img className="icon-info" src={ mouseGesture } /&gt; Hand Gesture&lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset&gt;
+            &lt;legend&gt;Zooming&lt;/legend&gt;
+            &lt;div&gt;&lt;img className="icon-info" src={ mouseWheel } /&gt; Mouse Wheel&lt;/div&gt;
+            &lt;div&gt;&lt;img className="icon-info" src={ zoomGesture } /&gt; Hand Gesture&lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;div onClick={ this.closeDialog } className="dialog-close-bottom"&gt;Close&lt;/div&gt;
+        &lt;/Dialog&gt;
+&nbsp;
+        {/*todo: definir SIDE_MENU_ITEMS aqui. de esta forma puedo definir la funcion*/}
+        {/*openDialog en sideMenuItem*/}
+        &lt;SideMenu ref="sideMenu" title="React + AFrame" items={ SIDE_MENU_ITEMS } itemActive="0"&gt;
+          &lt;img src={ helpIcon } className="icon-item" /&gt;&lt;a href="#" onClick={ this.openDialog }&gt;Help&lt;/a&gt;
+        &lt;/SideMenu&gt;
+&nbsp;
+        &lt;TopMenu onClickMenuBtn={ this.openSideMenu }&gt;
+          &lt;a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79"&gt;Position 1&lt;/a&gt;
+          &lt;a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15"&gt;Position 2&lt;/a&gt;
+          &lt;a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20"&gt;Position 3&lt;/a&gt;
+        &lt;/TopMenu&gt;
+&nbsp;
+        &lt;a-scene id="scene" ref="scene" raycaster="far: 100; objects: [link], [url]; interval: 200" cursor="rayOrigin: mouse"&gt;
+&nbsp;
+          &lt;a-assets&gt;
+            &lt;img id="sky" src="img/1.jpg"/&gt;
+            &lt;img id="link1" src="img/sea.jpg"/&gt;
+            &lt;img id="link2" src="img/4.jpg"/&gt;
+            &lt;img id="link3" src="img/7.jpg"/&gt;
+            &lt;img id="aframeArena" src="img/aframeArena.png"/&gt;
+          &lt;/a-assets&gt;
+&nbsp;
+          &lt;a-sky src="#sky" rotation="0 -90 0"/&gt;
+&nbsp;
+          &lt;a-entity id="camera" camera="fov: 80; zoom: 1" position="0 -0.2 5"
+            orbit-controls={ this.objToString(this.state.orbitControls) }/&gt;
+&nbsp;
+          &lt;a-entity id="entityGroup"&gt;
+            &lt;a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="#aframeArena"/&gt;
+<span class="fstat-no" title="function not covered" >            &lt;a-link </span>image=<span class="cstat-no" title="statement not covered" >"#link1" onClick={ (</span>) =&gt; this.onClickALink(event, '/2dvideo') }
+              href="#" title="2D/3D Video" position="-3 1 0"/&gt;
+<span class="fstat-no" title="function not covered" >            &lt;a-link </span>image=<span class="cstat-no" title="statement not covered" >"#link2" onClick={ (</span>) =&gt; this.onClickALink(event, '/360video') }
+              href="#" title="360 Video" position="0 1 0"/&gt;
+<span class="fstat-no" title="function not covered" >            &lt;a-link </span>image=<span class="cstat-no" title="statement not covered" >"#link3" onClick={ (</span>) =&gt; this.onClickALink(event, '/3dmodel') }
+              href="#" title="3D Model Animation" position="3 1 0"/&gt;
+          &lt;/a-entity&gt;
+&nbsp;
+        &lt;/a-scene&gt;
+      &lt;/div&gt;
+    );
+  }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 27 2017 12:42:19 GMT+0100 (Hora estándar romance)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>
