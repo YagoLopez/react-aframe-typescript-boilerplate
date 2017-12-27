@@ -1,4 +1,4 @@
-<p align="center">[![Build Status](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master)](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate)</p>
+[![Build Status](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master)](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate)
 
 <p align="center"><h1>React + AFrame + TypeScript Boilerplate</p></h1>
 
