@@ -26,7 +26,7 @@ ReactDOM.render(
 
 /*
 
-// hot module reloading
+// Intent of hot module reloading
 // https://medium.com/superhighfives/hot-reloading-create-react-app-73297a00dcad
 
 declare let module: any;

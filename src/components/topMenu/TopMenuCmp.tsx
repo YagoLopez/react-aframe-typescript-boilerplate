@@ -7,10 +7,10 @@ const leftArrowSvg = require('./left-arrow.svg');
 export default class TopMenu extends React.PureComponent {
 
   public props: {
-    readonly leftIcon?: string;
-    readonly onClickMenuBtn?: Function;
-    readonly children?: any;
-    readonly [attrs: string]: any;
+    leftIcon?: string;
+    onClickMenuBtn?: Function;
+    children?: any;
+    [attrs: string]: any;
   }
 
   private onClickMenuBtn = () => {

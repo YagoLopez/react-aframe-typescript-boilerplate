@@ -2,7 +2,7 @@ import React from 'react';
 import './DialogCmp.css';
 
 interface IProps {
-  title: string;
+  title?: string;
   children?: any;
   [attrs: string]: any;
 }

@@ -47,7 +47,9 @@ interface IState {
   }
 }
 
-export default class PagIndexCmp extends React.Component<{}, IState> {
+interface IProps {history: any}
+
+export default class PagIndexCmp extends React.Component<IProps, IState> {
 
   public state = {
     orbitControls: {
@@ -135,13 +137,18 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
     this.refs.sideMenu.hide();
   }
 
+  private onClickALink = (event: any, route: string) => {
+    event.preventDefault();
+    this.props.history.push(route);
+  }
+
   public render() {
     return (
       <div>
 
         <Loader ref="loader">Loading</Loader>
 
-        <Dialog ref="dialog" title="Information">
+        <Dialog ref="dialog">
           <div className="dialog-subtitle">This is a demostration of ReactJS, AFrame and TypeScript integration.
             No real functionality is implemented</div>
           <div className="dialog-subtitle">For a full experience, use a
@@ -189,9 +196,12 @@ export default class PagIndexCmp extends React.Component<{}, IState> {
 
           <a-entity id="entityGroup">
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="#aframeArena"/>
-            <a-link id="link1" image="#link1" href="#/2dvideo" title="2D/3D Video" position="-3 1 0"/>
-            <a-link id="link2" image="#link2" href="#/360video" title="360 Video" position="0 1 0"/>
-            <a-link id="link3" image="#link3" href="#/3dmodel" title="3D Model Animation" position="3 1 0"/>
+            <a-link image="#link1" onClick={ () => this.onClickALink(event, '/2dvideo') }
+              href="#" title="2D/3D Video" position="-3 1 0"/>
+            <a-link image="#link2" onClick={ () => this.onClickALink(event, '/360video') }
+              href="#" title="360 Video" position="0 1 0"/>
+            <a-link image="#link3" onClick={ () => this.onClickALink(event, '/3dmodel') }
+              href="#" title="3D Model Animation" position="3 1 0"/>
           </a-entity>
 
         </a-scene>
