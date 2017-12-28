@@ -10,12 +10,8 @@ interface IProps {
 export default class Dialog extends React.PureComponent<IProps, {}> {
 
   private dialogContainer: HTMLDivElement;
-
-  /* Css class name for animation when showing Dialog */
-  private static classShowAnimation = 'scale-in-ver-center';
-
-  /* Css class name for animation when hidding Dialog */
-  private static classHideAnimation = 'scale-out-vertical';
+  private static classOpen = 'scale-up';
+  private static classClosed = 'scale-out-vertical';
 
   public componentDidMount() {
     const parentElement = this.dialogContainer && this.dialogContainer.parentElement as HTMLElement;
@@ -25,21 +21,22 @@ export default class Dialog extends React.PureComponent<IProps, {}> {
   }
 
   public hide() {
-    this.dialogContainer.classList.remove(Dialog.classShowAnimation);
-    this.dialogContainer.classList.add(Dialog.classHideAnimation);
+    this.dialogContainer.classList.remove(Dialog.classOpen);
+    this.dialogContainer.classList.add(Dialog.classClosed);
   }
 
   public show() {
     this.dialogContainer.style.display = 'block';
-    this.dialogContainer.classList.remove(Dialog.classHideAnimation);
-    this.dialogContainer.classList.add(Dialog.classShowAnimation);
+    this.dialogContainer.classList.remove(Dialog.classClosed);
+    this.dialogContainer.classList.add(Dialog.classOpen);
   }
 
   public render() {
+    let classDialogContent = 'dialogContent ' + Dialog.classOpen;
     return (
       <div ref={ (dialogContainer: HTMLDivElement) => this.dialogContainer = dialogContainer }
         className="dialogContainer">
-          <div className={ `dialogContent ${Dialog.classShowAnimation}` }>
+          <div className={ classDialogContent }>
             <div className="dialog-title">{ this.props.title }</div>
             { this.props.children }
           </div>

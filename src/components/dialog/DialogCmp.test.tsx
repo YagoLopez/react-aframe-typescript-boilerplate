@@ -11,7 +11,7 @@ describe('<Dialog/>', () => {
   });
 
   it('Matches snapshot', () => {
-    const componentSnapshot = renderer.create(<Dialog>Dialog Content</Dialog>).toJSON();
-    expect(componentSnapshot).toMatchSnapshot();
+    const component = renderer.create(<Dialog>Dialog Content</Dialog>);
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

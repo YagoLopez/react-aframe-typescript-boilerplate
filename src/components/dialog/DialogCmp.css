@@ -32,6 +32,14 @@
 }
 /**
  * ----------------------------------------
+ * animation scale-up
+ * ----------------------------------------
+ */
+.scale-up {-webkit-animation: scaleUp .25s ease both; animation: scaleUp .25s ease both}
+@-webkit-keyframes scaleUp {from { opacity: 0; -webkit-transform: scale(.8)}}
+@keyframes scaleUp {from { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8)}}
+/**
+ * ----------------------------------------
  * animation scale-in-center
  * ----------------------------------------
  */
@@ -228,4 +236,23 @@
     opacity: 0;
   }
 }
+
+
+
+
+/* fade */
+.page-fade {-webkit-animation: fade .9s ease both; animation: fade .9s ease both}
+@-webkit-keyframes fade {from {opacity: 0.3 }to { opacity: 1}}
+@keyframes fade {from {opacity: 0.3 } to { opacity: 1}}
+
+/* move from left */
+.page-moveFromLeft {-webkit-animation: moveFromLeft .3s ease both; animation: moveFromLeft .3s ease both}
+@-webkit-keyframes moveFromLeft {from { -webkit-transform: translateX(-100%)}}
+@keyframes moveFromLeft {from { -webkit-transform: translateX(-100%); transform: translateX(-100%)}}
+
+/* move from right */
+.page-moveFromRight {-webkit-animation: moveFromRight .3s ease both; animation: moveFromRight .3s ease both}
+@-webkit-keyframes moveFromRight {from { -webkit-transform: translateX(100%)}}
+@keyframes moveFromRight {from { -webkit-transform: translateX(100%); transform: translateX(100%)}}
+
 

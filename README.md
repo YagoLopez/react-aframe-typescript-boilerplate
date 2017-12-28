@@ -1,18 +1,18 @@
-[![Build Status](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master)](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate)
+<p align="center">[![Build Status](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master)](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate)</p>
 
-<p align="center"><h1>React + AFrame + TypeScript Boilerplate</h1></p>
+#<p align="center">React + AFrame + TypeScript Boilerplate</p>
 
 <p align="center"><img src="logo.svg" /></p>
 
 Features:
 
-- [ReactJS](https://code.facebook.com/projects/176988925806765/react/): UI components architecture, virtual DOM and functional programming
+- [ReactJS](https://code.facebook.com/projects/176988925806765/react/): components architecture, virtual DOM and functional programming
 
 - [A-Frame](https://aframe.io): 3D representation, Virtual Reality and WebGL (based in [ThreeJS](https://www.threejs.org))
 
 - [TypeScript](https://www.typescriptlang.org): provides a type system for JavaScript
 
-- [React Router](https://reacttraining.com/react-router/): SPA navigation between pages (3D scenes). AFrame library is loaded at the begining just one time not at each page change. Using only AFrame and JavaScript without React-Router, all AFrame code is loaded at each html page.
+- [React Router](https://reacttraining.com/react-router/): navigation between pages (3D scenes). AFrame library is loaded at the begining just one time not at each page change. Using only AFrame and JavaScript without React-Router, all AFrame code must be loaded at each html page.
 
 - This project is based on [create-react-app-typescript](https://github.com/wmonk/create-react-app-typescript). Documentation ([link](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents))
 
@@ -29,7 +29,7 @@ Features:
 
 ## Installation, execution and build
 
-- Clone, fork or download the repository
+- Clone or download the repository
 
 - Using **Yarn**, run in the command line:
 
@@ -66,7 +66,7 @@ Features:
 - Testing Framework: [Jest](https://facebook.github.io/jest/)
 - Methodologies:
   - [Smoke Tests](https://en.wikipedia.org/wiki/Smoke_testing_(software))
-  - [Snapshot Tests](http://facebook.github.io/jest/blog/2016/07/27/jest-14.html)
+  - [Snapshot Tests](http://facebook.github.io/jest/docs/en/snapshot-testing.html)
   - [Live testing with BrowserStack](https://www.browserstack.com/)
 
 ```shell
