@@ -52,7 +52,7 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
 
         <a-scene>
           <a-assets ref="assets">
-            <video id="videoEntity" ref="videoEntity" src="video/360-fractal-4.mp4"/>
+            <video id="videoEntity" ref="videoEntity" src="video/360-fractal-4.mp4" preload="auto"/>
           </a-assets>
           <a-camera reverse-mouse-drag="true" />
           <a-videosphere src="#videoEntity" rotation="0 -90 0"/>
