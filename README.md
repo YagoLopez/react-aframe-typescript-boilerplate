@@ -1,6 +1,6 @@
 <p align="center"><img src="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master" title="Build Status" /></p>
 
-# <p align="center">React + AFrame + TypeScript Boilerplate</p>
+# <p align="center" style="text-align: center">React + AFrame + TypeScript Boilerplate</p>
 
 <p align="center"><img src="logo.svg" title="React + AFrame + TypeScript Boilerplate" /></p>
 
@@ -107,4 +107,4 @@ $ yarn analize
 
 
 
-[Back to top](#)
+[Back to top](#) &uarr;
