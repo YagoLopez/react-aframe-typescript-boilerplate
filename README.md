@@ -1,8 +1,12 @@
-<p align="center">[![Build Status](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master)](https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate)</p>
+<p align="center">
 
-#<p align="center">React + AFrame + TypeScript Boilerplate</p>
+<img src="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master" title="Build Status" />
 
-<p align="center"><img src="logo.svg" /></p>
+<h1 style="text-align: center">React + AFrame + TypeScript Boilerplate</h1>
+
+<img src="logo.svg" title="React + AFrame + TypeScript Boilerplate" />
+
+</p>
 
 Features:
 
