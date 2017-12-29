@@ -9,7 +9,7 @@ describe('<PagIndexCmp/>', () => {
 
   it('Matches snapshot', () => {
     const component = TestRenderer.create(
-      <PagIndexCmp>Pag Index Component Content</PagIndexCmp>
+      <PagIndexCmp>Pag Index Content</PagIndexCmp>
     );
     expect(component.toJSON()).toMatchSnapshot();
   });

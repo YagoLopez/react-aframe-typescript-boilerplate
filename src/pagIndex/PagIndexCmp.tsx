@@ -1,13 +1,9 @@
+//todo: añadir click de mouse (raytracer component) a boton play de video 2d control
 //todo: cambiar video de canguros
 //todo: reducir tamaño de imagenes
-//todo: añadir click de mouse (raytracer component) a boton play de video 2d control
-//todo: usar router active class name. buscar mas info
-//todo: open issue en create-react-app-typescript: la documentacion está incompleta:
-//para ejecutar jest snapshots es necesarion instalar el paquete: react-test-renderer
 //todo: Warning: React depends on requestAnimationFrame. Make sure that you load a polyfill in older browsers. http://fb.me/react-poly
-//todo: ampliar test segun code coverage report
+//todo: ampliar test segun code coverage report (enzyme?)
 //todo: comentar en stackoverflow aframe y abrir issue en aframe-extras. hay una dependencia defectuosa
-//todo: evento on load 360 video
 //todo: crear componente button close para dialogo y side menu
 //todo: crear jerarquia de componentes (usar herencia): dialog, sideMenu, loader a partir de un componente base abstracto
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)

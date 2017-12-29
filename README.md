@@ -6,9 +6,9 @@
 
 Features:
 
-- [ReactJS](https://code.facebook.com/projects/176988925806765/react/): components architecture, virtual DOM and functional programming
+- [ReactJS](https://code.facebook.com/projects/176988925806765/react/): component architecture, virtual DOM and functional programming
 
-- [A-Frame](https://aframe.io): 3D representation, Virtual Reality and WebGL (based in [ThreeJS](https://www.threejs.org))
+- [A-Frame](https://aframe.io): 3D scenes, Virtual Reality and WebGL (based in [ThreeJS](https://www.threejs.org))
 
 - [TypeScript](https://www.typescriptlang.org): provides a type system for JavaScript
 
@@ -107,4 +107,4 @@ $ yarn analize
 
 
 
-[Back to top](#) &uarr;
+<p align="center"><a href="#">Back to top &uarr;</a></p>
