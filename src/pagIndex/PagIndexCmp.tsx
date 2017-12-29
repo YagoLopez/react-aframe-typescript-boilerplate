@@ -14,7 +14,6 @@
 //todo: custom event polyfill
 //todo: mouse cursor pointer on <a-link>
 
-/// <reference path="../index.d.ts"/>
 import React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.min';
 import Loader from "../components/loader/LoaderCmp";

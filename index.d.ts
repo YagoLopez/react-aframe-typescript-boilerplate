@@ -3,7 +3,6 @@
  *
  * This is needed for JSX not complaining with Aframe tags
  */
-// declare global {
 declare module JSX {
   interface IntrinsicElements {
     'a-scene': any;
@@ -40,5 +39,4 @@ declare module JSX {
     'a-animation'?: any;
     'a-asset-item'?: any;
   }
-  // }
 }

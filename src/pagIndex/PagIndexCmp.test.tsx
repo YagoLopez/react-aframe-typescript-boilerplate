@@ -1,5 +1,3 @@
-/// <reference path="./index.d.ts"/>
-
 import 'aframe';
 import React from 'react';
 import PagIndexCmp from "./PagIndexCmp";

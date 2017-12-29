@@ -1,4 +1,3 @@
-/// <reference path="../index.d.ts"/>
 //todo: crear componente react para incrustar videos 360 grados. Estaria basado en Aframe o en threejs
 //todo: open issue en aframe reepo: isPlaying = true inicialmente
 import React from 'react';
