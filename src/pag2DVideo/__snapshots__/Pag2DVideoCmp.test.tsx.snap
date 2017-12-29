@@ -175,6 +175,7 @@ exports[`<Pag2DVideoCmp/> Matches snapshot 1`] = `
     >
       <video
         id="video1"
+        preload="auto"
       >
         <source
           src="video/echo-hereweare.mp4"
@@ -183,6 +184,7 @@ exports[`<Pag2DVideoCmp/> Matches snapshot 1`] = `
       </video>
       <video
         id="video2"
+        preload="auto"
       >
         <source
           src="video/canguros.mp4"

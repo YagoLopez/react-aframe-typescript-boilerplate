@@ -55,7 +55,7 @@ exports[`<PagIndexCmp/> Matches snapshot 1`] = `
     className="dialogContainer"
   >
     <div
-      className="dialogContent scale-in-ver-center"
+      className="dialogContent scale-up"
     >
       <div
         className="dialog-title"

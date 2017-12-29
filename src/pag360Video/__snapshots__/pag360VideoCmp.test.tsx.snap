@@ -160,6 +160,7 @@ exports[`<Pag360VideoCmp/> Matches snapshot 1`] = `
     <a-assets>
       <video
         id="videoEntity"
+        preload="auto"
         src="video/360-fractal-4.mp4"
       />
     </a-assets>

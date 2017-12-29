@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1514374940391" clover="3.2.0">
-  <project timestamp="1514374940391" name="All files">
-    <metrics statements="190" coveredstatements="120" conditionals="61" coveredconditionals="47" methods="78" coveredmethods="35" elements="329" coveredelements="202" complexity="0" loc="190" ncloc="190" packages="9" files="9" classes="9">
+<coverage generated="1514489633029" clover="3.2.0">
+  <project timestamp="1514489633030" name="All files">
+    <metrics statements="191" coveredstatements="121" conditionals="61" coveredconditionals="47" methods="78" coveredmethods="35" elements="330" coveredelements="203" complexity="0" loc="191" ncloc="191" packages="9" files="9" classes="9">
       <package name="src">
         <metrics statements="9" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="index.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\index.tsx">
@@ -18,27 +18,28 @@
         </file>
       </package>
       <package name="src.components.dialog">
-        <metrics statements="18" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="4"/>
+        <metrics statements="19" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="4"/>
         <file name="DialogCmp.tsx" path="C:\Users\UsuarioAurora\Documents\WebstormProjects\react-aframe-typescript-boilerplate\src\components\dialog\DialogCmp.tsx">
-          <metrics statements="18" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="4"/>
+          <metrics statements="19" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="4"/>
           <line num="10" count="2" type="stmt"/>
-          <line num="15" count="2" type="stmt"/>
-          <line num="18" count="2" type="stmt"/>
-          <line num="20" count="3" type="stmt"/>
-          <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="22" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="23" count="0" type="stmt"/>
-          <line num="27" count="2" type="stmt"/>
-          <line num="28" count="0" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="16" count="3" type="stmt"/>
+          <line num="17" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
           <line num="29" count="0" type="stmt"/>
-          <line num="32" count="2" type="stmt"/>
-          <line num="33" count="0" type="stmt"/>
-          <line num="34" count="0" type="stmt"/>
-          <line num="35" count="0" type="stmt"/>
-          <line num="38" count="3" type="stmt"/>
-          <line num="39" count="3" type="stmt"/>
-          <line num="40" count="3" type="stmt"/>
-          <line num="49" count="2" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
+          <line num="35" count="3" type="stmt"/>
+          <line num="36" count="3" type="stmt"/>
+          <line num="37" count="3" type="stmt"/>
+          <line num="46" count="2" type="stmt"/>
         </file>
       </package>
       <package name="src.components.loader">
