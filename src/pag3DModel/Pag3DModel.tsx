@@ -8,11 +8,11 @@ import SideMenu from "../components/sideMenu/SideMenuCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
 import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
 
-enum botStatus {IDLE = 'idle', RUN = 'run', WALK = 'walk', JUMP = 'jump'}
+enum BotStatus {IDLE = 'idle', RUN = 'run', WALK = 'walk', JUMP = 'jump'}
 
-export default class Pag3DModel extends React.Component<{}, {botStatus: botStatus}> {
+export default class Pag3DModel extends React.Component<{}, {botStatus: BotStatus}> {
 
-  public state = {botStatus: botStatus.IDLE};
+  public state = {botStatus: BotStatus.IDLE};
   public refs: {sideMenu: SideMenu, loader: Loader, bot: AFrame.Entity};
 
   // crossFadeDuration: delay between bot animation transitions. For example: walk -> run
@@ -35,19 +35,19 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: botStatu
   }
 
   private onClickBtnRun = () => {
-    this.setState({botStatus: botStatus.RUN});
+    this.setState({botStatus: BotStatus.RUN});
   };
 
   private onClickBtnIdle = () => {
-    this.setState({botStatus: botStatus.IDLE})
+    this.setState({botStatus: BotStatus.IDLE})
   };
 
   private onClickBtnWalk = () => {
-    this.setState({botStatus: botStatus.WALK})
+    this.setState({botStatus: BotStatus.WALK})
   };
 
   private onClickBtnJump = () => {
-    this.setState({botStatus: botStatus.JUMP})
+    this.setState({botStatus: BotStatus.JUMP})
   };
 
   private openSideMenu = () => {

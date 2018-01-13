@@ -47,7 +47,7 @@ exports[`<Pag2DVideoCmp/> Matches snapshot 1`] = `
           }
         }
       >
-        Loader
+        Loading
       </div>
     </div>
   </div>

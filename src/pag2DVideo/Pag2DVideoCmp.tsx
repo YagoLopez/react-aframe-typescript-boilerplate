@@ -52,7 +52,7 @@ export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
     return (
       <div>
 
-        <Loader ref="loader">Loader</Loader>
+        <Loader ref="loader">Loading</Loader>
 
         <SideMenu ref="sideMenu" title="2D/3D Video" items={ SIDE_MENU_ITEMS } itemActive="1" />
 

@@ -1,3 +1,4 @@
+//todo: mostrar dialogo en pagindexcmp solo una vez (usar localstorage)
 //todo: añadir click de mouse (raytracer component) a boton play de video 2d control
 //todo: cambiar video de canguros
 //todo: reducir tamaño de imagenes

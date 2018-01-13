@@ -23,11 +23,11 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "eject": "react-scripts-ts eject",
-    "progress build": "node_modules/.bin/webpack --progress",
     "test": "react-scripts-ts test --env=jsdom",
     "yarn:coverage": "yarn test --coverage",
     "npm:coverage": "npm test --coverage",
-    "analyze": "source-map-explorer build/static/js/main.*"
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "webpack:progress": "node_modules/.bin/webpack --progress"
   },
   "devDependencies": {
     "@types/jest": "^21.1.8",
