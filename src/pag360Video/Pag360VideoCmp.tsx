@@ -8,7 +8,7 @@ import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
 import './pag360VideoCmp.css';
 
 
-export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
+export class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
 
   // todo: "document.querySelector('a-videosphere').isPlaying" seems not to work ("isPlaying" always true)
   public refs: {
@@ -26,19 +26,19 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
 
   private playVideo = () => {
     this.refs.videoEntity.play();
-  }
+  };
 
   private pauseVideo = () => {
     this.refs.videoEntity.pause();
-  }
+  };
 
   private openSideMenu = () => {
     this.refs.sideMenu.show();
-  }
+  };
 
   public render() {
     return(
-      <div>
+      <main>
 
         <Loader ref="loader">Loading</Loader>
 
@@ -57,7 +57,7 @@ export default class Pag360VideoCmp extends React.Component<{}, {isPlaying: bool
           <a-videosphere src="#videoEntity" rotation="0 -90 0"/>
         </a-scene>
 
-      </div>
+      </main>
     )
   }
 }

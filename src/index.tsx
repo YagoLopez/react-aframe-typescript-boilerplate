@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {HashRouter, Route} from 'react-router-dom';
-import PagIndexCmp from './pagIndex/PagIndexCmp';
-import Pag2DVideoCmp from "./pag2DVideo/Pag2DVideoCmp";
-import Pag3DModel from "./pag3DModel/Pag3DModel";
-import Pag360VideoCmp from "./pag360Video/Pag360VideoCmp";
+import {PagIndexCmp} from './pagIndex/PagIndexCmp';
+import {Pag2DVideoCmp} from "./pag2DVideo/Pag2DVideoCmp";
+import {Pag3DModel} from "./pag3DModel/Pag3DModel";
+import {Pag360VideoCmp} from "./pag360Video/Pag360VideoCmp";
 import './index.css';
-// import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   <HashRouter>
@@ -20,7 +19,6 @@ ReactDOM.render(
   document.getElementById('root') as HTMLDivElement
 );
 
-// registerServiceWorker();
 
 
 

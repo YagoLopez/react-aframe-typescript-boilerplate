@@ -1,4 +1,4 @@
-//todo: hacer componente con raycaster para que entidad sea clicable (ejemplo: btn play videoplayer)
+//todo: hacer componente aframe con raycaster para que entidad sea clicable (ejemplo: btn play videoplayer)
 //todo: usar parte del video pnau going bang
 //todo: usar raycaster para interaccion de raton con video player controls
 
@@ -15,7 +15,7 @@ interface IProps {
   readonly history?: any;
 }
 
-export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
+export class Pag2DVideoCmp extends React.PureComponent<IProps> {
 
   public refs: {loader: Loader, sideMenu: SideMenu};
 
@@ -50,7 +50,7 @@ export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
 
   public render() {
     return (
-      <div>
+      <main>
 
         <Loader ref="loader">Loading</Loader>
 
@@ -81,7 +81,7 @@ export default class Pag2DVideoCmp extends React.PureComponent<IProps> {
 
           </a-scene>
 
-      </div>
+      </main>
     )
   }
 }

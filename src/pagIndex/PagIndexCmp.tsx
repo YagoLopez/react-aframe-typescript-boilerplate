@@ -1,9 +1,10 @@
+//todo: ampliar test segun code coverage report y enzyme
+//todo: arreglar tamaño pantalla completa
 //todo: mostrar dialogo en pagindexcmp solo una vez (usar localstorage)
 //todo: añadir click de mouse (raytracer component) a boton play de video 2d control
 //todo: cambiar video de canguros
 //todo: reducir tamaño de imagenes
 //todo: Warning: React depends on requestAnimationFrame. Make sure that you load a polyfill in older browsers. http://fb.me/react-poly
-//todo: ampliar test segun code coverage report (enzyme?)
 //todo: comentar en stackoverflow aframe y abrir issue en aframe-extras. hay una dependencia defectuosa
 //todo: crear componente button close para dialogo y side menu
 //todo: crear jerarquia de componentes (usar herencia): dialog, sideMenu, loader a partir de un componente base abstracto
@@ -45,19 +46,20 @@ interface IState {
 
 interface IProps {history: any}
 
-export default class PagIndexCmp extends React.Component<IProps, IState> {
+export class PagIndexCmp extends React.Component<IProps, IState> {
 
   public state = {
     orbitControls: {
       autoRotate: true,
       target: '#entityGroup',
       enableDamping: true,
-      dampingFactor: 0.14,
+      dampingFactor: 0.1,
       rotateSpeed: 0.1,
-      autoRotateSpeed: 0.25,
+      autoRotateSpeed: 0.15,
       zoomSpeed: 0.5,
       minDistance: 3,
-      maxDistance: 100
+      maxDistance: 100,
+      invertZoom: true
     }
   };
 
@@ -65,15 +67,15 @@ export default class PagIndexCmp extends React.Component<IProps, IState> {
 
   public componentDidMount() {
 
-    // AFRAME Events must be defined in componentDidMount().
-    // The others React Events are defined in React elements as always
+    // AFrame Events must be defined here in componentDidMount().
+    // The others React Events are defined in React elements as usual
 
     const aHtmlTags = document.querySelectorAll(".rotate-camera") as HTMLCollection;
     Array.from(aHtmlTags).forEach( (aTag: HTMLAnchorElement) => {
       aTag.addEventListener('click', (event: any) => {
         const position = event.target.dataset.position;
-        //todo: revisar esto, se producen estados incosistentes
-        //El estado deberia de contener las coordenadas de rotacion de la camara
+        //todo: revisar esto, se producen estados inconsistentes
+        //El estado deberia contener las coordenadas de rotacion de la camara
         this.setState( {orbitControls: {rotateTo: position}} )
       });
     });
@@ -140,7 +142,7 @@ export default class PagIndexCmp extends React.Component<IProps, IState> {
 
   public render() {
     return (
-      <div>
+      <main>
 
         <Loader ref="loader">Loading</Loader>
 
@@ -151,20 +153,18 @@ export default class PagIndexCmp extends React.Component<IProps, IState> {
             <a href={ urlVRviewer } className="dialog-link" target="_blank"> VR Viewer</a>
           </div>
           <fieldset>
-            <legend>Panning</legend>
+            <legend>Pan</legend>
             <div><img className="icon-info" src={ mouseMove } /> Mouse Pointer</div>
             <div><img className="icon-info" src={ mouseGesture } /> Hand Gesture</div>
           </fieldset>
           <fieldset>
-            <legend>Zooming</legend>
+            <legend>Zoom</legend>
             <div><img className="icon-info" src={ mouseWheel } /> Mouse Wheel</div>
             <div><img className="icon-info" src={ zoomGesture } /> Hand Gesture</div>
           </fieldset>
           <div onClick={ this.closeDialog } className="dialog-close-bottom">Close</div>
         </Dialog>
 
-        {/*todo: definir SIDE_MENU_ITEMS aqui. de esta forma puedo definir la funcion*/}
-        {/*openDialog en sideMenuItem*/}
         <SideMenu ref="sideMenu" title="React + AFrame" items={ SIDE_MENU_ITEMS } itemActive="0">
           <img src={ helpIcon } className="icon-item" /><a href="#" onClick={ this.openDialog }>Help</a>
         </SideMenu>
@@ -201,7 +201,7 @@ export default class PagIndexCmp extends React.Component<IProps, IState> {
           </a-entity>
 
         </a-scene>
-      </div>
+      </main>
     );
   }
 }

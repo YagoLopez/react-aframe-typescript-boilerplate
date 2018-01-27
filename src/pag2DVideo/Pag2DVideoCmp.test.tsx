@@ -1,6 +1,6 @@
 import 'aframe';
-import React from 'react';
-import Pag2DVideoCmp from "./Pag2DVideoCmp";
+import * as React from 'react';
+import {Pag2DVideoCmp} from "./Pag2DVideoCmp";
 import TestRenderer from 'react-test-renderer';
 
 describe('<Pag2DVideoCmp/>', () => {

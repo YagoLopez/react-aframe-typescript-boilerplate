@@ -1,7 +1,7 @@
 import 'aframe';
-import React from 'react';
+import * as React from 'react';
 import TestRenderer from 'react-test-renderer';
-import Pag360VideoCmp from "./Pag360VideoCmp";
+import {Pag360VideoCmp} from "./Pag360VideoCmp";
 
 describe('<Pag360VideoCmp/>', () => {
 

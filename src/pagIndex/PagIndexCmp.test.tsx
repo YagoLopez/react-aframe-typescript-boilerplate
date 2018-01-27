@@ -1,6 +1,6 @@
 import 'aframe';
-import React from 'react';
-import PagIndexCmp from "./PagIndexCmp";
+import * as React from 'react';
+import {PagIndexCmp} from "./PagIndexCmp";
 import TestRenderer from 'react-test-renderer';
 
 describe('<PagIndexCmp/>', () => {

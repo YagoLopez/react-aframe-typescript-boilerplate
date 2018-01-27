@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Pag3DModel/> Matches snapshot 1`] = `
-<div>
+<main>
   <div
     className="fade-in"
     id="loader-element"
@@ -192,7 +192,7 @@ exports[`<Pag3DModel/> Matches snapshot 1`] = `
     >
       <a-entity
         camera="userHeight: 0; near: 0.5; fov: 100"
-        orbit-controls="autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.15;rotateSpeed:0.15;autoRotateSpeed:0.25;zoomSpeed:0.1;minDistance:0;maxDistance:100"
+        orbit-controls="autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:0;maxDistance:100;invertZoom:true"
         position="0 -0.5 1.25"
       />
     </a-entity>
@@ -210,5 +210,5 @@ exports[`<Pag3DModel/> Matches snapshot 1`] = `
       width="33"
     />
   </a-scene>
-</div>
+</main>
 `;

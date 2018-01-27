@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Pag360VideoCmp/> Matches snapshot 1`] = `
-<div>
+<main>
   <div
     className="fade-in"
     id="loader-element"
@@ -172,5 +172,5 @@ exports[`<Pag360VideoCmp/> Matches snapshot 1`] = `
       src="#videoEntity"
     />
   </a-scene>
-</div>
+</main>
 `;

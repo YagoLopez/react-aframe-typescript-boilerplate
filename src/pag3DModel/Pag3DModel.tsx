@@ -10,24 +10,25 @@ import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
 
 enum BotStatus {IDLE = 'idle', RUN = 'run', WALK = 'walk', JUMP = 'jump'}
 
-export default class Pag3DModel extends React.Component<{}, {botStatus: BotStatus}> {
+export class Pag3DModel extends React.Component<{}, {botStatus: BotStatus}> {
 
   public state = {botStatus: BotStatus.IDLE};
   public refs: {sideMenu: SideMenu, loader: Loader, bot: AFrame.Entity};
 
-  // crossFadeDuration: delay between bot animation transitions. For example: walk -> run
+  // Delay between bot animation transitions in seconds. For example: walk -> run
   private crossFadeDuration = 0.5;
 
   private orbitControls = {
     autoRotate: true,
     target: '#bot',
     enableDamping: true,
-    dampingFactor: 0.15,
-    rotateSpeed: 0.15,
-    autoRotateSpeed: 0.25,
-    zoomSpeed: 0.1,
+    dampingFactor: 0.1,
+    rotateSpeed: 0.1,
+    autoRotateSpeed: 0.15,
+    zoomSpeed: 0.5,
     minDistance: 0,
-    maxDistance: 100
+    maxDistance: 100,
+    invertZoom: true
   };
 
   public componentDidMount() {
@@ -56,7 +57,7 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: BotStatu
 
   public render() {
     return (
-      <div>
+      <main>
 
         <Loader ref="loader">Loading</Loader>
 
@@ -93,7 +94,7 @@ export default class Pag3DModel extends React.Component<{}, {botStatus: BotStatu
           <a-plane height="100" width="33" color="#4d672b" rotation="-90 0 0"></a-plane>
 
         </a-scene>
-      </div>
+      </main>
     )
   }
 }

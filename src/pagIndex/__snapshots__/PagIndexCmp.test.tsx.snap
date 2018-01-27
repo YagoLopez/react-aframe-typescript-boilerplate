@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PagIndexCmp/> Matches snapshot 1`] = `
-<div>
+<main>
   <div
     className="fade-in"
     id="loader-element"
@@ -79,7 +79,7 @@ exports[`<PagIndexCmp/> Matches snapshot 1`] = `
       </div>
       <fieldset>
         <legend>
-          Panning
+          Pan
         </legend>
         <div>
           <img
@@ -98,7 +98,7 @@ exports[`<PagIndexCmp/> Matches snapshot 1`] = `
       </fieldset>
       <fieldset>
         <legend>
-          Zooming
+          Zoom
         </legend>
         <div>
           <img
@@ -282,7 +282,7 @@ exports[`<PagIndexCmp/> Matches snapshot 1`] = `
     <a-entity
       camera="fov: 80; zoom: 1"
       id="camera"
-      orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.14;rotateSpeed:0.1;autoRotateSpeed:0.25;zoomSpeed:0.5;minDistance:3;maxDistance:100"
+      orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
       position="0 -0.2 5"
     />
     <a-entity
@@ -318,5 +318,5 @@ exports[`<PagIndexCmp/> Matches snapshot 1`] = `
       />
     </a-entity>
   </a-scene>
-</div>
+</main>
 `;
