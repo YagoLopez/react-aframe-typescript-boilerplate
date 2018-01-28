@@ -10,7 +10,7 @@
 <img src="logo.svg" width="300"/>
 </p>
 
-Features:
+## Features:
 
 - [ReactJS](https://code.facebook.com/projects/176988925806765/react/): component architecture, virtual DOM and functional programming
 
