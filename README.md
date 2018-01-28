@@ -1,4 +1,8 @@
-<p align="center"><img src="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master" title="Build Status" /></p>
+<p align="center">
+<a href="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate">
+<img src="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master" title="Build Status" />
+</a>
+</p>
 
 # <p align="center" style="text-align: center">React + AFrame + TypeScript Boilerplate</p>
 
