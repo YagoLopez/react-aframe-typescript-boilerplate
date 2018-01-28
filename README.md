@@ -2,10 +2,8 @@
 
 # <p align="center" style="text-align: center">React + AFrame + TypeScript Boilerplate</p>
 
-<p align="center"><img src="logo.svg" title="React + AFrame + TypeScript Boilerplate" /></p>
-
 <p align="center">
-<img src="logo.svg" width="250"/>
+<img src="logo.svg" width="300"/>
 </p>
 
 Features:
