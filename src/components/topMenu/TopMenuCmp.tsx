@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import './TopMenuCmp.css';
 const burgerIconSvg = require('./burger-icon.svg');
 const leftArrowSvg = require('./left-arrow.svg');

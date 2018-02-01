@@ -1,14 +1,15 @@
 <p align="center">
-<a href="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate">
-<img src="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master" title="Build Status" />
-</a>
+  <a href="https://codeclimate.com/github/YagoLopez/react-aframe-typescript-boilerplate/maintainability">
+    <img src="https://api.codeclimate.com/v1/badges/c294fc94b8d840217b1c/maintainability" />
+  </a>
+  <a href="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate">
+    <img src="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master" title="Build Status" />
+  </a>
 </p>
 
-# <p align="center" style="text-align: center">React + AFrame + TypeScript Boilerplate</p>
+# <p align="center">React + AFrame + TypeScript Boilerplate</p>
 
-<p align="center">
-<img src="logo.svg" width="300"/>
-</p>
+<p align="center"><img src="logo.svg" width="300"/></p>
 
 ## Features:
 

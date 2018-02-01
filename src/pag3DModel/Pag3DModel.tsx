@@ -1,7 +1,7 @@
 //todo: sonido inicial
 //todo: reportar bug en aframe-extras repo
 
-import React from 'react';
+import * as React from 'react';
 import 'aframe-extras/dist/aframe-extras.loaders.min'; // for json loader
 import Loader from "../components/loader/LoaderCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
@@ -57,7 +57,7 @@ export class Pag3DModel extends React.Component<{}, {botStatus: BotStatus}> {
 
   public render() {
     return (
-      <main>
+      <div>
 
         <Loader ref="loader">Loading</Loader>
 
@@ -94,7 +94,7 @@ export class Pag3DModel extends React.Component<{}, {botStatus: BotStatus}> {
           <a-plane height="100" width="33" color="#4d672b" rotation="-90 0 0"></a-plane>
 
         </a-scene>
-      </main>
+      </div>
     )
   }
 }

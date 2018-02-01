@@ -1,5 +1,5 @@
 /* This class allows to show the "Enter VR" icon */
-a-scene {position: absolute; height: 100%; width: 100%}
+a-scene {position: absolute; height: 100% !important; width: 100% !important;}
 
 body {background-color: #e9e9e9}
 

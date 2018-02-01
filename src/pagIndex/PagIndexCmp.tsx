@@ -16,7 +16,7 @@
 //todo: custom event polyfill
 //todo: mouse cursor pointer on <a-link>
 
-import React from 'react';
+import * as React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.min';
 import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
@@ -142,7 +142,7 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
 
   public render() {
     return (
-      <main>
+      <div>
 
         <Loader ref="loader">Loading</Loader>
 
@@ -175,7 +175,8 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
           <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
         </TopMenu>
 
-        <a-scene id="scene" ref="scene" raycaster="far: 100; objects: [link], [url]; interval: 200" cursor="rayOrigin: mouse">
+        <a-scene id="scene" ref="scene" raycaster="far: 100; objects: [link], [url]; interval: 200"
+          cursor="rayOrigin: mouse">
 
           <a-assets>
             <img id="sky" src="img/1.jpg"/>
@@ -188,7 +189,9 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
           <a-sky src="#sky" rotation="0 -90 0"/>
 
           <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 -0.2 5"
-            orbit-controls={ this.objToString(this.state.orbitControls) }/>
+          orbit-controls={ this.objToString(this.state.orbitControls) }>
+              {/*<a-cursor id="cursor" color="yellow"/>*/}
+          </a-entity>
 
           <a-entity id="entityGroup">
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="#aframeArena"/>
@@ -201,7 +204,7 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
           </a-entity>
 
         </a-scene>
-      </main>
+      </div>
     );
   }
 }

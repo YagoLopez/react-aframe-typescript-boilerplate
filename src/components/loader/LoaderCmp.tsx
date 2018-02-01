@@ -1,8 +1,7 @@
 //todo: transitions
 //todo: animation
 
-import React from 'react';
-import any = jasmine.any;
+import * as React from 'react';
 
 interface IProps {
   readonly shadowColor?: string;

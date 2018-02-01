@@ -17,7 +17,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": false,
     "skipDefaultLibCheck": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": false
   },
   "exclude": [
     "**/*.test.tsx",

@@ -2,7 +2,7 @@
 //todo: usar parte del video pnau going bang
 //todo: usar raycaster para interaccion de raton con video player controls
 
-import React from 'react';
+import * as React from 'react';
 import 'aframe-video-controls/dist/aframe-video-controls.min';
 import Loader from "../components/loader/LoaderCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
@@ -50,7 +50,7 @@ export class Pag2DVideoCmp extends React.PureComponent<IProps> {
 
   public render() {
     return (
-      <main>
+      <div>
 
         <Loader ref="loader">Loading</Loader>
 
@@ -81,7 +81,7 @@ export class Pag2DVideoCmp extends React.PureComponent<IProps> {
 
           </a-scene>
 
-      </main>
+      </div>
     )
   }
 }

@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import {HashRouter, Route} from 'react-router-dom';
 import {PagIndexCmp} from './pagIndex/PagIndexCmp';
 import {Pag2DVideoCmp} from "./pag2DVideo/Pag2DVideoCmp";
