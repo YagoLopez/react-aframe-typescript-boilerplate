@@ -10,6 +10,10 @@
   <a href="https://codeclimate.com/github/YagoLopez/react-aframe-typescript-boilerplate/maintainability">
     <img src="https://api.codeclimate.com/v1/badges/c294fc94b8d840217b1c/maintainability" />
   </a>
+
+  <a href='https://coveralls.io/github/YagoLopez/react-aframe-typescript-boilerplate'>
+    <img src='https://coveralls.io/repos/github/YagoLopez/react-aframe-typescript-boilerplate/badge.svg' alt='Coverage Status' />
+  </a>
 </p>
 
 # <p align="center">React + AFrame + TypeScript Boilerplate</p>
