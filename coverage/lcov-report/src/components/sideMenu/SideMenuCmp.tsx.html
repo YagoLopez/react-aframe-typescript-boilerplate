@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">76% </span>
+        <span class="strong">61.54% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>19/25</span>
+        <span class='fraction'>16/26</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>12/12</span>
+        <span class='fraction'>8/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">77.78% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>7/9</span>
+        <span class='fraction'>5/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">71.43% </span>
+        <span class="strong">56.52% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>15/21</span>
+        <span class='fraction'>13/23</span>
       </div>
     </div>
   </div>
@@ -137,25 +137,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -166,9 +166,9 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -179,8 +179,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,33 +212,33 @@ export default class SideMenu extends React.PureComponent&lt;IProps&gt; {
   private sideMenuContainer: HTMLDivElement;
 &nbsp;
   public componentWillMount() {
-    if (this.props.items) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.items) {
       // Initialize all sideMenuItems to inactive
-      this.props.items.forEach( item =&gt; {
-        item.active = false;
+<span class="cstat-no" title="statement not covered" >      this.props.items.forEach( <span class="fstat-no" title="function not covered" >item =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        item.active = false;</span>
       });
       // Set side menu item as active using array index passed as prop
-      this.props.items[this.props.itemActive].active = true;
+<span class="cstat-no" title="statement not covered" >      this.props.items[this.props.itemActive].active = true;</span>
     }
   }
 &nbsp;
   public componentDidMount() {
     const parentElement = this.sideMenuContainer &amp;&amp; this.sideMenuContainer.parentElement as HTMLElement;
-<span class="fstat-no" title="function not covered" >    parentElement &amp;&amp; parentElement.</span>addEventListener('click', () =&gt; {
-<span class="cstat-no" title="statement not covered" >      this.h</span>ide(); // Hide side menu when click outside
+    parentElement &amp;&amp; parentElement.addEventListener('click', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.hide(); </span>// Hide side menu when click outside
     });
   }
 &nbsp;
   // For simplicity show() and hide() operations are implemented in imperative way
-  public show() {
-<span class="cstat-no" title="statement not covered" >    this.sideMenuContainer.style.display = '</span>block';
-<span class="cstat-no" title="statement not covered" >    this.sideMenuContainer.classList.remove('</span>slide-out-left');
-<span class="cstat-no" title="statement not covered" >    this.sideMenuContainer.classList.add('</span>slide-in-left');
+<span class="fstat-no" title="function not covered" >  public show() {</span>
+<span class="cstat-no" title="statement not covered" >    this.sideMenuContainer.style.display = 'block';</span>
+<span class="cstat-no" title="statement not covered" >    this.sideMenuContainer.classList.remove('slide-out-left');</span>
+<span class="cstat-no" title="statement not covered" >    this.sideMenuContainer.classList.add('slide-in-left');</span>
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  public hide() {</span>
-<span class="cstat-no" title="statement not covered" >    this.sideMenuContainer.classList.add('</span>slide-out-left');
-<span class="cstat-no" title="statement not covered" >    this.sideMenuContainer.classList.remove('</span>slide-in-left');
+<span class="cstat-no" title="statement not covered" >    this.sideMenuContainer.classList.add('slide-out-left');</span>
+<span class="cstat-no" title="statement not covered" >    this.sideMenuContainer.classList.remove('slide-in-left');</span>
   }
 &nbsp;
   public render() {
@@ -253,8 +253,8 @@ export default class SideMenu extends React.PureComponent&lt;IProps&gt; {
           &lt;/div&gt;
           &lt;div className="items-container"&gt;
             {
-              this.props.items &amp;&amp; this.props.items.map( (item: ISideMenuItem) =&gt; {
-                return (
+              this.props.items &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.props.items.map( <span class="fstat-no" title="function not covered" >(</span>item: ISideMenuItem) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                return (</span>
                   &lt;div key={ item.name } className={ item.active ? "side-menu-item active" : "side-menu-item" }&gt;
                     &lt;img src={ item.ico } className="icon-item" /&gt;
                     &lt;a href={ item.url }&gt;{ item.name }&lt;/a&gt;
@@ -274,7 +274,7 @@ export default class SideMenu extends React.PureComponent&lt;IProps&gt; {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jan 27 2018 22:56:26 GMT+0100 (Hora estándar romance)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Feb 02 2018 18:43:32 GMT+0100 (Hora estándar romance)
 </div>
 </div>
 <script src="..\..\..\prettify.js"></script>

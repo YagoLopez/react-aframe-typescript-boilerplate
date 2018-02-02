@@ -1,18 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Enzyme, {shallow} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import {shallowToJson} from "enzyme-to-json";
 import SideMenu from "./SideMenuCmp";
-import renderer from 'react-test-renderer';
+Enzyme.configure({ adapter: new Adapter() });
 
-describe('<SideMenu/>', () => {
+describe('SideMenu Component', () => {
 
-  it('Smoke test: renders without crashing', () => {
+  const component = shallow(<SideMenu>Dummy content</SideMenu>);
+
+  it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<SideMenu />, div);
+    ReactDOM.render(<SideMenu itemActive={null} />, div);
   });
 
-  it('Matches snapshot', () => {
-    const componentSnapshot = renderer.create(<SideMenu>Side Menu Content</SideMenu>).toJSON();
-    expect(componentSnapshot).toMatchSnapshot();
+  it('matches snapshot', () => {
+    expect(shallowToJson(component)).toMatchSnapshot();
   });
 
 });

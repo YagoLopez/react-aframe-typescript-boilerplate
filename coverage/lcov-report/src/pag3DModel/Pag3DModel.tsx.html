@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">78.57% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>20/25</span>
+        <span class='fraction'>22/28</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">85.71% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>6/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">44.44% </span>
+        <span class="strong">40% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/9</span>
+        <span class='fraction'>4/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">73.68% </span>
+        <span class="strong">71.43% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>14/19</span>
+        <span class='fraction'>15/21</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -160,9 +160,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -228,7 +228,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -275,32 +275,32 @@ export class Pag3DModel extends React.Component&lt;{}, {botStatus: BotStatus}&gt
   };
 &nbsp;
   public componentDidMount() {
-    this.refs.loader.hideWhen(this.refs.bot, 'model-loaded');
+    this.refs.loader &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.refs.loader.hideWhen(this.refs.bot, 'model-loaded');</span>
   }
 &nbsp;
   private onClickBtnRun = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: BotStatus.R</span>UN});
+<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: BotStatus.RUN});</span>
   };
 &nbsp;
   private onClickBtnIdle = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: BotStatus.I</span>DLE})
+<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: BotStatus.IDLE})</span>
   };
 &nbsp;
   private onClickBtnWalk = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: BotStatus.W</span>ALK})
+<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: BotStatus.WALK})</span>
   };
 &nbsp;
   private onClickBtnJump = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: BotStatus.J</span>UMP})
+<span class="cstat-no" title="statement not covered" >    this.setState({botStatus: BotStatus.JUMP})</span>
   };
 &nbsp;
   private openSideMenu = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    this.refs.sideMenu.s</span>how();
+<span class="cstat-no" title="statement not covered" >    this.refs.sideMenu.show();</span>
   };
 &nbsp;
   public render() {
     return (
-      &lt;main&gt;
+      &lt;div&gt;
 &nbsp;
         &lt;Loader ref="loader"&gt;Loading&lt;/Loader&gt;
 &nbsp;
@@ -327,7 +327,7 @@ export class Pag3DModel extends React.Component&lt;{}, {botStatus: BotStatus}&gt
             orbit-controls={ AFRAME.utils.styleParser.stringify(this.orbitControls) }/&gt;
           &lt;/a-entity&gt;
 &nbsp;
-          &lt;a-entity id="bot" ref={ (bot: AFrame.Entity) =&gt; this.refs.bot = bot }
+          &lt;a-entity id="bot" ref={ <span class="fstat-no" title="function not covered" >(</span>bot: AFrame.Entity) =&gt; <span class="cstat-no" title="statement not covered" >this.refs.bot = bot </span>}
             scale="1 1 1"
             position="0 0 0"
             animation-mixer={ `clip: ${this.state.botStatus}; crossFadeDuration: ${this.crossFadeDuration}` }
@@ -337,7 +337,7 @@ export class Pag3DModel extends React.Component&lt;{}, {botStatus: BotStatus}&gt
           &lt;a-plane height="100" width="33" color="#4d672b" rotation="-90 0 0"&gt;&lt;/a-plane&gt;
 &nbsp;
         &lt;/a-scene&gt;
-      &lt;/main&gt;
+      &lt;/div&gt;
     )
   }
 }</pre></td></tr>
@@ -346,7 +346,7 @@ export class Pag3DModel extends React.Component&lt;{}, {botStatus: BotStatus}&gt
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jan 27 2018 22:56:26 GMT+0100 (Hora estándar romance)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Feb 02 2018 18:43:32 GMT+0100 (Hora estándar romance)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {ISideMenuItem} from "./SideMenuItems";
 import './SideMenuCmp.css';
 const btnCloseSvg = require('./icons/close-btn.svg');

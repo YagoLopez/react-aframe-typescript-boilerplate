@@ -1,229 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PagIndexCmp/> Matches snapshot 1`] = `
-<main>
-  <div
-    className="fade-in"
-    id="loader-element"
-    style={
-      Object {
-        "position": "absolute",
-        "textAlign": "center",
-        "top": "41%",
-        "width": "100%",
-        "zIndex": 11,
-      }
-    }
-  >
+exports[`PagIndexCmp matches snapshot 1`] = `
+<div>
+  <Loader>
+    Loading
+  </Loader>
+  <Dialog>
     <div
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderRadius": "4px",
-          "boxShadow": "grey 0 0 10px 0",
-          "color": "black",
-          "display": "block",
-          "fontFamily": "verdana, sans-serif",
-          "fontSize": "small",
-          "margin": "auto",
-          "padding": "20px",
-          "textAlign": "center",
-          "width": "70px",
-        }
-      }
+      className="dialog-subtitle"
     >
-      <img
-        src="img/history3.svg"
-        style={
-          Object {
-            "verticalAlign": "middle",
-          }
-        }
-      />
-      <div
-        style={
-          Object {
-            "paddingTop": "5px",
-          }
-        }
-      >
-        Loading
-      </div>
+      This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
     </div>
-  </div>
-  <div
-    className="dialogContainer"
-  >
     <div
-      className="dialogContent scale-up"
+      className="dialog-subtitle"
     >
-      <div
-        className="dialog-title"
-      />
-      <div
-        className="dialog-subtitle"
+      For a full experience, use a
+      <a
+        className="dialog-link"
+        href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
+        target="_blank"
       >
-        This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
-      </div>
-      <div
-        className="dialog-subtitle"
-      >
-        For a full experience, use a
-        <a
-          className="dialog-link"
-          href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
-          target="_blank"
-        >
-           VR Viewer
-        </a>
-      </div>
-      <fieldset>
-        <legend>
-          Pan
-        </legend>
-        <div>
-          <img
-            className="icon-info"
-            src="mouse-move.svg"
-          />
-           Mouse Pointer
-        </div>
-        <div>
-          <img
-            className="icon-info"
-            src="move-gesture.svg"
-          />
-           Hand Gesture
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>
-          Zoom
-        </legend>
-        <div>
-          <img
-            className="icon-info"
-            src="mouse-wheel.svg"
-          />
-           Mouse Wheel
-        </div>
-        <div>
-          <img
-            className="icon-info"
-            src="zoom-gesture.svg"
-          />
-           Hand Gesture
-        </div>
-      </fieldset>
-      <div
-        className="dialog-close-bottom"
-        onClick={[Function]}
-      >
-        Close
-      </div>
+         VR Viewer
+      </a>
     </div>
-  </div>
-  <div
-    className="sideMenuContainer slide-in-left"
-  >
-    <div
-      className="sideMenuContent"
-    >
-      <h1
-        className="side-menu-title"
-      >
-        React + AFrame
-      </h1>
-      <hr />
-      <div
-        className="side-menu-btn-close"
-        onClick={[Function]}
-      >
+    <fieldset>
+      <legend>
+        Pan
+      </legend>
+      <div>
         <img
-          className="vertical-center"
-          src="close-btn.svg"
+          className="icon-info"
+          src="mouse-move.svg"
         />
+         Mouse Pointer
       </div>
-      <div
-        className="items-container"
-      >
-        <div
-          className="side-menu-item active"
-        >
-          <img
-            className="icon-item"
-            src="start.svg"
-          />
-          <a
-            href="#/"
-          >
-            Home
-          </a>
-        </div>
-        <div
-          className="side-menu-item"
-        >
-          <img
-            className="icon-item"
-            src="video-player.svg"
-          />
-          <a
-            href="#/2dvideo"
-          >
-            2D/3D Video
-          </a>
-        </div>
-        <div
-          className="side-menu-item"
-        >
-          <img
-            className="icon-item"
-            src="360-degrees.svg"
-          />
-          <a
-            href="#/360video"
-          >
-            360 Video
-          </a>
-        </div>
-        <div
-          className="side-menu-item"
-        >
-          <img
-            className="icon-item"
-            src="3d-printer.svg"
-          />
-          <a
-            href="#/3dmodel"
-          >
-            3D Model Animation
-          </a>
-        </div>
-        <div
-          className="side-menu-item"
-        >
-          <img
-            className="icon-item"
-            src="help.svg"
-          />
-          <a
-            href="#"
-            onClick={[Function]}
-          >
-            Help
-          </a>
-        </div>
+      <div>
+        <img
+          className="icon-info"
+          src="move-gesture.svg"
+        />
+         Hand Gesture
       </div>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Zoom
+      </legend>
+      <div>
+        <img
+          className="icon-info"
+          src="mouse-wheel.svg"
+        />
+         Mouse Wheel
+      </div>
+      <div>
+        <img
+          className="icon-info"
+          src="zoom-gesture.svg"
+        />
+         Hand Gesture
+      </div>
+    </fieldset>
+    <div
+      className="dialog-close-bottom"
+      onClick={[Function]}
+    >
+      Close
     </div>
-  </div>
-  <div
-    className="top-menu"
+  </Dialog>
+  <SideMenu
+    itemActive="0"
+    items={
+      Array [
+        Object {
+          "active": false,
+          "ico": "start.svg",
+          "name": "Home",
+          "url": "#/",
+        },
+        Object {
+          "active": false,
+          "ico": "video-player.svg",
+          "name": "2D/3D Video",
+          "url": "#/2dvideo",
+        },
+        Object {
+          "active": false,
+          "ico": "360-degrees.svg",
+          "name": "360 Video",
+          "url": "#/360video",
+        },
+        Object {
+          "active": false,
+          "ico": "3d-printer.svg",
+          "name": "3D Model Animation",
+          "url": "#/3dmodel",
+        },
+      ]
+    }
+    title="React + AFrame"
   >
     <img
-      className="top-menu-icon-left"
-      onClick={[Function]}
-      src="left-arrow.svg"
+      className="icon-item"
+      src="help.svg"
     />
+    <a
+      href="#"
+      onClick={[Function]}
+    >
+      Help
+    </a>
+  </SideMenu>
+  <TopMenu
+    onClickMenuBtn={[Function]}
+  >
     <a
       className="top-menu-item rotate-camera"
       data-position="0.17 4.14 2.79"
@@ -242,12 +132,7 @@ exports[`<PagIndexCmp/> Matches snapshot 1`] = `
     >
       Position 3
     </a>
-    <img
-      className="top-menu-icon-right"
-      onClick={[Function]}
-      src="burger-icon.svg"
-    />
-  </div>
+  </TopMenu>
   <a-scene
     cursor="rayOrigin: mouse"
     id="scene"
@@ -318,5 +203,5 @@ exports[`<PagIndexCmp/> Matches snapshot 1`] = `
       />
     </a-entity>
   </a-scene>
-</main>
+</div>
 `;

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import './TopMenuCmp.css';
 const burgerIconSvg = require('./burger-icon.svg');
 const leftArrowSvg = require('./left-arrow.svg');
@@ -11,18 +11,19 @@ export default class TopMenu extends React.PureComponent {
     onClickMenuBtn?: Function;
     children?: any;
     [attrs: string]: any;
-  }
+  };
 
   private onClickMenuBtn = () => {
     this.props.onClickMenuBtn && this.props.onClickMenuBtn();
-  }
+  };
 
   private onClickBtnGoBack = () => {
     window.history.back();
-  }
+  };
 
   public render(){
-    // Not root route => Render left arrow button
+    //todo: refactor
+    // Not root route => Render top left arrow button
     if (window.location.hash !== "#/") {
       return(
         <div className="top-menu">
@@ -32,7 +33,7 @@ export default class TopMenu extends React.PureComponent {
             onClick={ this.onClickMenuBtn }/>
         </div>
       )
-      // Root route => not to render left arrow button
+      // In root route => not to render top left arrow button
     } else {
       return (
         <div className="top-menu">

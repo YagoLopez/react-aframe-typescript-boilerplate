@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Loader/> Matches snapshot 1`] = `
+exports[`Loader Component matches snapshot 1`] = `
 <div
   className="fade-in"
   id="loader-element"
@@ -46,7 +46,7 @@ exports[`<Loader/> Matches snapshot 1`] = `
         }
       }
     >
-      Loading
+      Dummy content
     </div>
   </div>
 </div>

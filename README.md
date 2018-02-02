@@ -2,6 +2,12 @@
   <a href="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate">
     <img src="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master" title="Build Status" />
   </a>
+
+  <a href="https://yagolopez.js.org/react-aframe-typescript-boilerplate/coverage/lcov-report/index.html">
+    <img src="https://img.shields.io/badge/code-coverage25-green.svg" title="Code Coverage" />
+    <-- <img src="https://img.shields.io/badge/coverage-65.4%25-green.svg" title="Code Coverage" /> -->
+  </a>
+
   <a href="https://codeclimate.com/github/YagoLopez/react-aframe-typescript-boilerplate/maintainability">
     <img src="https://api.codeclimate.com/v1/badges/c294fc94b8d840217b1c/maintainability" />
   </a>
@@ -19,7 +25,9 @@
 
 - [TypeScript](https://www.typescriptlang.org): provides a type system for JavaScript
 
-- [React Router](https://reacttraining.com/react-router/): navigation between pages (3D scenes). AFrame library is loaded at the begining just one time not at each page change. Using only AFrame and JavaScript without React-Router, all AFrame code must be loaded at each html page.
+- [React Router](https://reacttraining.com/react-router/): navigation between pages (3D scenes).
+AFrame library is loaded at the begining once, not at each page change.
+Using only AFrame and JavaScript without React-Router, all AFrame code must be loaded at each page.
 
 - This project is based on [create-react-app-typescript](https://github.com/wmonk/create-react-app-typescript). Documentation ([link](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents))
 
@@ -70,7 +78,7 @@
 
 ## Tests
 
-- Testing Framework: [Jest](https://facebook.github.io/jest/)
+- Testing Framework: [Jest](https://facebook.github.io/jest/), [Enzyme](https://github.com/airbnb/enzyme)
 - Methodologies:
   - [Smoke Tests](https://en.wikipedia.org/wiki/Smoke_testing_(software))
   - [Snapshot Tests](http://facebook.github.io/jest/docs/en/snapshot-testing.html)

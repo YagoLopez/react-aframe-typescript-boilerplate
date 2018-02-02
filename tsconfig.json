@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "build/dist",
-    "module": "commonjs",
+    "module": "es6",
     "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": true,
@@ -17,7 +17,8 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": false,
     "skipDefaultLibCheck": true,
-    "allowSyntheticDefaultImports": false
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src"
   },
   "exclude": [
     "**/*.test.tsx",

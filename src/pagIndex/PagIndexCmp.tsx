@@ -16,7 +16,7 @@
 //todo: custom event polyfill
 //todo: mouse cursor pointer on <a-link>
 
-import * as React from 'react';
+import React from 'react';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.min';
 import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
@@ -33,13 +33,16 @@ const urlVRviewer = 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3D
 
 interface IState {
   orbitControls: {
-    autoRotate?: boolean,
-    target?: string,
-    enableDamping?: boolean,
-    dampingFactor?: number,
-    rotateSpeed?: number,
-    minDistance?: number,
-    maxDistance?: number,
+    autoRotate?: boolean;
+    target?: string;
+    enableDamping?: boolean;
+    dampingFactor?: number;
+    rotateSpeed?: number;
+    autoRotateSpeed?: number;
+    zoomSpeed?: number;
+    minDistance?: number;
+    maxDistance?: number;
+    invertZoom?: boolean;
     rotateTo?: {x: number, y: number, z: number}
   }
 }
@@ -70,7 +73,7 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
     // AFrame Events must be defined here in componentDidMount().
     // The others React Events are defined in React elements as usual
 
-    const aHtmlTags = document.querySelectorAll(".rotate-camera") as HTMLCollection;
+    const aHtmlTags = document.querySelectorAll('.rotate-camera') as HTMLCollection;
     Array.from(aHtmlTags).forEach( (aTag: HTMLAnchorElement) => {
       aTag.addEventListener('click', (event: any) => {
         const position = event.target.dataset.position;
@@ -90,14 +93,13 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
       })
     });
 
-    this.refs.loader.hideWhen(this.refs.scene, 'loaded');
+    this.refs.loader && this.refs.loader.hideWhen(this.refs.scene, 'loaded');
 
     this.openDialogDelayed(2000);
 
     this.refs.scene && this.refs.scene.addEventListener('click', () => {
       this.stopAnimation();
     })
-
   }
 
   private objToString(component: Object): string {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TopMenu/> Matches snapshot 1`] = `
+exports[`TopMenu Component matches snapshot 1`] = `
 <div
   className="top-menu"
 >
@@ -9,7 +9,7 @@ exports[`<TopMenu/> Matches snapshot 1`] = `
     onClick={[Function]}
     src="left-arrow.svg"
   />
-  Top Menu Content
+  Dummy content
   <img
     className="top-menu-icon-right"
     onClick={[Function]}

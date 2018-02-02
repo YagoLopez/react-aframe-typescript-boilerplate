@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SideMenu/> Matches snapshot 1`] = `
+exports[`SideMenu Component matches snapshot 1`] = `
 <div
   className="sideMenuContainer slide-in-left"
 >
@@ -26,7 +26,7 @@ exports[`<SideMenu/> Matches snapshot 1`] = `
       <div
         className="side-menu-item"
       >
-        Side Menu Content
+        Dummy content
       </div>
     </div>
   </div>

@@ -6,5 +6,6 @@
     <option name="generateSourceMap" value="false" />
     <option name="trackFileSystemChanges" value="false" />
     <option name="useConfig" value="true" />
+    <option name="showAllErrors" value="true" />
   </component>
 </project>

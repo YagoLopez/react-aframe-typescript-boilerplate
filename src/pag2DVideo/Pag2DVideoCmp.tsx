@@ -2,7 +2,7 @@
 //todo: usar parte del video pnau going bang
 //todo: usar raycaster para interaccion de raton con video player controls
 
-import * as React from 'react';
+import React from 'react';
 import 'aframe-video-controls/dist/aframe-video-controls.min';
 import Loader from "../components/loader/LoaderCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";

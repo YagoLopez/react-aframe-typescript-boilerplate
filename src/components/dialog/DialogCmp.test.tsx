@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Enzyme, {shallow} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import {shallowToJson} from "enzyme-to-json";
 import Dialog from "./DialogCmp";
-import renderer from 'react-test-renderer';
+Enzyme.configure({ adapter: new Adapter() });
 
-describe('<Dialog/>', () => {
+describe('Dialog Component', () => {
 
-  it('Smoke test: renders without crashing', () => {
+  const component = shallow(<Dialog>Dummy content</Dialog>);
+
+  it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Dialog />, div);
   });
 
-  it('Matches snapshot', () => {
-    const component = renderer.create(<Dialog>Dialog Content</Dialog>);
-    expect(component.toJSON()).toMatchSnapshot();
+  it('matches snapshot', () => {
+    expect(shallowToJson(component)).toMatchSnapshot();
   });
 });

@@ -1,143 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Pag360VideoCmp/> Matches snapshot 1`] = `
-<main>
-  <div
-    className="fade-in"
-    id="loader-element"
-    style={
-      Object {
-        "position": "absolute",
-        "textAlign": "center",
-        "top": "41%",
-        "width": "100%",
-        "zIndex": 11,
-      }
-    }
-  >
-    <div
-      style={
+exports[`Pag360VideoCmp Component matches snapshot 1`] = `
+<div>
+  <Loader>
+    Loading
+  </Loader>
+  <SideMenu
+    itemActive="2"
+    items={
+      Array [
         Object {
-          "backgroundColor": "white",
-          "borderRadius": "4px",
-          "boxShadow": "grey 0 0 10px 0",
-          "color": "black",
-          "display": "block",
-          "fontFamily": "verdana, sans-serif",
-          "fontSize": "small",
-          "margin": "auto",
-          "padding": "20px",
-          "textAlign": "center",
-          "width": "70px",
-        }
-      }
-    >
-      <img
-        src="img/history3.svg"
-        style={
-          Object {
-            "verticalAlign": "middle",
-          }
-        }
-      />
-      <div
-        style={
-          Object {
-            "paddingTop": "5px",
-          }
-        }
-      >
-        Loading
-      </div>
-    </div>
-  </div>
-  <div
-    className="sideMenuContainer slide-in-left"
+          "active": false,
+          "ico": "start.svg",
+          "name": "Home",
+          "url": "#/",
+        },
+        Object {
+          "active": false,
+          "ico": "video-player.svg",
+          "name": "2D/3D Video",
+          "url": "#/2dvideo",
+        },
+        Object {
+          "active": false,
+          "ico": "360-degrees.svg",
+          "name": "360 Video",
+          "url": "#/360video",
+        },
+        Object {
+          "active": false,
+          "ico": "3d-printer.svg",
+          "name": "3D Model Animation",
+          "url": "#/3dmodel",
+        },
+      ]
+    }
+    title="React + AFrame"
+  />
+  <TopMenu
+    onClickMenuBtn={[Function]}
   >
-    <div
-      className="sideMenuContent"
-    >
-      <h1
-        className="side-menu-title"
-      >
-        React + AFrame
-      </h1>
-      <hr />
-      <div
-        className="side-menu-btn-close"
-        onClick={[Function]}
-      >
-        <img
-          className="vertical-center"
-          src="close-btn.svg"
-        />
-      </div>
-      <div
-        className="items-container"
-      >
-        <div
-          className="side-menu-item"
-        >
-          <img
-            className="icon-item"
-            src="start.svg"
-          />
-          <a
-            href="#/"
-          >
-            Home
-          </a>
-        </div>
-        <div
-          className="side-menu-item"
-        >
-          <img
-            className="icon-item"
-            src="video-player.svg"
-          />
-          <a
-            href="#/2dvideo"
-          >
-            2D/3D Video
-          </a>
-        </div>
-        <div
-          className="side-menu-item active"
-        >
-          <img
-            className="icon-item"
-            src="360-degrees.svg"
-          />
-          <a
-            href="#/360video"
-          >
-            360 Video
-          </a>
-        </div>
-        <div
-          className="side-menu-item"
-        >
-          <img
-            className="icon-item"
-            src="3d-printer.svg"
-          />
-          <a
-            href="#/3dmodel"
-          >
-            3D Model Animation
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="top-menu"
-  >
-    <img
-      className="top-menu-icon-left"
-      onClick={[Function]}
-      src="left-arrow.svg"
-    />
     <a
       className="top-menu-item player-btn"
       onClick={[Function]}
@@ -150,12 +52,7 @@ exports[`<Pag360VideoCmp/> Matches snapshot 1`] = `
     >
       Pause
     </a>
-    <img
-      className="top-menu-icon-right"
-      onClick={[Function]}
-      src="burger-icon.svg"
-    />
-  </div>
+  </TopMenu>
   <a-scene>
     <a-assets>
       <video
@@ -172,5 +69,5 @@ exports[`<Pag360VideoCmp/> Matches snapshot 1`] = `
       src="#videoEntity"
     />
   </a-scene>
-</main>
+</div>
 `;

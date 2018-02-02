@@ -1,7 +1,7 @@
 //todo: sonido inicial
 //todo: reportar bug en aframe-extras repo
 
-import * as React from 'react';
+import React from 'react';
 import 'aframe-extras/dist/aframe-extras.loaders.min'; // for json loader
 import Loader from "../components/loader/LoaderCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
@@ -32,7 +32,7 @@ export class Pag3DModel extends React.Component<{}, {botStatus: BotStatus}> {
   };
 
   public componentDidMount() {
-    this.refs.loader.hideWhen(this.refs.bot, 'model-loaded');
+    this.refs.loader && this.refs.loader.hideWhen(this.refs.bot, 'model-loaded');
   }
 
   private onClickBtnRun = () => {

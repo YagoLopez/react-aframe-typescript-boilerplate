@@ -1,6 +1,6 @@
 //todo: crear componente react para incrustar videos 360 grados. Estaria basado en Aframe o en threejs
 //todo: open issue en aframe reepo: isPlaying = true inicialmente
-import * as React from 'react';
+import React from 'react';
 import Loader from "../components/loader/LoaderCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
