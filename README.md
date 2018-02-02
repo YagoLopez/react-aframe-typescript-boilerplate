@@ -4,8 +4,7 @@
   </a>
 
   <a href="https://yagolopez.js.org/react-aframe-typescript-boilerplate/coverage/lcov-report/index.html">
-    <img src="https://img.shields.io/badge/code-coverage25-green.svg" title="Code Coverage" />
-    <-- <img src="https://img.shields.io/badge/coverage-65.4%25-green.svg" title="Code Coverage" /> -->
+    <img src="https://img.shields.io/badge/code-coverage-green.svg" title="Code Coverage" />
   </a>
 
   <a href="https://codeclimate.com/github/YagoLopez/react-aframe-typescript-boilerplate/maintainability">
