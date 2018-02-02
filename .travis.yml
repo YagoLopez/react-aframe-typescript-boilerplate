@@ -7,3 +7,12 @@ cache:
 script:
   - yarn build
   - yarn test
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: a5d3c4696388d997f6e0bccc78202eb8c38e5f78  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  local-dir: build
+  on:
+    branch: master
