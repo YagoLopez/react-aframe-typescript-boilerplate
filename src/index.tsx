@@ -16,7 +16,7 @@ ReactDOM.render(
       <Route path="/360video" component ={ Pag360VideoCmp }/>
     </div>
   </HashRouter>,
-  document.getElementById('root') as HTMLDivElement
+  document.getElementById('root') as HTMLElement
 );
 
 

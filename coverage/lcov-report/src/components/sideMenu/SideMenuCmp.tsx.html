@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/sideMenu/SideMenuCmp.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/sideMenu</a> SideMenuCmp.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.16% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>23/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">57.69% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>15/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.71% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>22/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
+import {ISideMenuItem} from "./SideMenuItems";
+import '.<span class="branch-1 cbranch-no" title="branch not covered" >/SideMenuCmp.css';<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" ></span></span></span></span>
+const bt<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >nC</span>loseSvg = requir<span class="cstat-no" title="statement not covered" >e('./icons/close-<span class="cstat-no" title="statement not covered" >btn.svg');<span class="cstat-no" title="statement not covered" ></span></span></span></span>
+&nbsp;
+&nbsp;
+interface IProps {
+  title?: any;<span class="branch-0 cbranch-no" title="branch not covered" ></span>
+  items?: ISideMenuItem[];
+  itemActive: string;
+  children?: any;
+  [otherAttrs: string]: any
+}
+&nbsp;
+export default class SideMenu extends React.PureComponent&lt;IProps&gt; {
+&nbsp;
+  private sideMenuContainer: HTMLDivElement;
+&nbsp;
+  public componentWillMount() {
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>this.props.items) {
+      // Initialize all sideMenuItems to inactive
+      this.p<span class="cstat-no" title="statement not covered" >rops.items.forEach( item <span class="fstat-no" title="function not covered" >=&gt;</span> {</span>
+        item.act<span class="cstat-no" title="statement not covered" >ive = false;</span>
+      });
+      // Set side menu item as active using array index passed as prop
+      this.p<span class="cstat-no" title="statement not covered" >rops.items[this.props.itemActive].active = true;</span>
+    }
+  }
+&nbsp;
+  public componentDidMount() {
+    const parentElement = this.sideMenuContainer &amp;&amp; this.sideMenuContainer.parentElement as HTMLElement;
+    parentElement &amp;&amp; parentElement.addEventListener('click', () =<span class="fstat-no" title="function not covered" >&gt; </span>{
+      this.h<span class="cstat-no" title="statement not covered" >ide(); // Hide</span> side menu when click outside
+    });
+  }
+&nbsp;
+  // For simplicity show() and<span class="fstat-no" title="function not covered" > h</span>ide() operations are implemented in imperative way
+  public<span class="cstat-no" title="statement not covered" > show() {</span>
+    this<span class="cstat-no" title="statement not covered" >.sideMenuContainer.style.display = 'block';</span>
+    this<span class="cstat-no" title="statement not covered" >.sideMenuContainer.classList.remove('slide-out-left');</span>
+    this.sideMenuContainer.classList.add('slide-in-left');
+  }<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+  public<span class="cstat-no" title="statement not covered" > hide() {</span>
+    this.sideMenuContainer.classList.add('slide-out-left');
+    this.sideMenuContainer.classList.remove('slide-in-left');
+  }
+&nbsp;
+  public render() {
+    return (
+      &lt;div ref={ (sideMenuContainer: HTMLDivElement) =&gt; this.sideMenuContainer = sideMenuContainer }
+        className="sideMenuContainer slide-in-left"&gt;
+        &lt;div className="sideMenuContent"&gt;
+          &lt;h1 className="side-menu-title"&gt;{ this.props.title }&lt;/h1&gt;
+          &lt;hr/&gt;<span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ></span></span>
+          &lt;div className<span class="cstat-no" title="statement not covered" >="side-menu-btn-close" onClick={ this.hide.bind(this) }&gt;</span>
+            &lt;img src={ btnCloseSvg } className="vertical-center"/&gt;
+          &lt;/div&gt;
+          &lt;div className="items-container"&gt;
+            {
+              this.props.items &amp;&amp; this.props.items.map( (item: ISideMenuItem) =&gt; {
+                return (
+                  &lt;div key={ item.name } className={ item.active ? "side-menu-item active" : "side-menu-item" }&gt;
+                    &lt;img src={ item.ico } className="icon-item" /&gt;
+                    &lt;a href={ item.url }&gt;{ item.name }&lt;/a&gt;
+                  &lt;/div&gt;
+                )
+              })
+            }
+            { this.props.children &amp;&amp; &lt;div className="side-menu-item"&gt;{ this.props.children }&lt;/div&gt; }
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    )
+  }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Feb 03 2018 12:08:08 GMT+0100 (Hora estándar romance)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

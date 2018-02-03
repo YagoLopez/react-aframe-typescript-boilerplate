@@ -16,3 +16,12 @@ script:
 #  local-dir: build
 #  on:
 #    branch: master
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAyQW4JqQ0/pOxO2BvS0LZ\nxWxnYQ+27cW0bvWM2NO1W8idBa7ekzuiRVcJjES88ewb3ikY1y5Zc192FzptCWMx\nHGznW/coQsPJXXJs2fCcvae9mRL8ibRQdc9YxdfC+HpupgOxtWkHCmXz7q/7xsyY\nOby43kEqP6cLKKtlI+Cioxmtt5vFtYYkIlsBdKl9etA0LqjCnpKY+nNDwydkiS5q\n+5jJwJS1/N+Q8c8AF8j5Y7UfRxlEoA6inuneGtP/+InTUtwxXTN070mHW+Yj2ttE\nsX7kPUDfHOinCIMeHYPIZfMPG1CsFD2JCGaHgJymF3gxxLY6ORDY7Px9uyR1J5AY\nB89B3wjwqdou3pBB8qbNyB93jGdFum2urB95R2j2EMhPFMqsdTE/k91JTsS+Sc2P\na8kNcSsLQ7o/0ZmWGcmqEQUKP2Qys+n6Vfhih/8xjRcFbXIbid//KL6IAY+PKyOA\nEZ2aR58eb3xjYnA3zestie86HAtf4Zkrr13HuCZWvFFhxBEJh0caNYzmpuZ9o4eI\nfSIiarMgqQpomArpnjBcHh1mF8Pyw/9HmehjXD/CDmYM2jpQNmDIxiFPCorBIiro\nAXA0ck0ww/33fOFASGyhCN0UrekmptlL6WNOQfjxxN8NlkNCMkYptI25tyjMfeEm\nQfSY5OthtACs56XsQEkvN40CAwEAAQ==  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  local-dir: build
+  on:
+    branch: master

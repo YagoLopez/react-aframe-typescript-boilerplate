@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/loader/LoaderCmp.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/loader</a> LoaderCmp.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.53% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>23/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">47.62% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.71% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>22/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//todo: transitions
+//todo: animation
+<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+import React from 'react';
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ></span></span></span></span>
+interfac<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >e </span>IProps {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span>
+  readonly shadowColor?: string;
+  readonly shadowDeep?: string;
+  readonly children?: any;
+  readonly [otherAttrs: string]: an<span class="branch-0 cbranch-no" title="branch not covered" >y; // Needed to a</span>dd attributes to react components whitout typescript errors
+}
+&nbsp;
+export default class Loader extends React.PureComponent&lt;IProps&gt; {
+&nbsp;
+  private loaderElement: HTMLDivElement;
+&nbsp;
+  private containerStyle: any = {
+    zIndex: 11,
+    position: 'absolute',
+    width: '100%',
+    top: '41%',
+    textAlign: 'center',
+  };
+&nbsp;
+  private contentStyle: any = {
+    color: 'black',
+    backgroundColor: 'white',
+    display: 'block',
+    margin: 'auto',
+    padding: '20px',
+    borderRadius: '4px',
+    fontFamily: 'verdana, sans-serif',
+    fontSize: 'small',
+    width: '70px',
+    textAlign: 'center'
+  };
+&nbsp;
+  public constructor(props: IProps) {
+    super(props);
+    const shadowColor = this.props.shadowColor || 'grey';
+    const shadowDeep = this.props.shadowDeep || '10';
+    this.contentStyle.boxSha<span class="fstat-no" title="function not covered" >do</span>w = `${shadowColor} 0 0 ${shadowDeep}px 0`;
+  }<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+  public<span class="cstat-no" title="statement not covered" > hide() {</span>
+    this<span class="cstat-no" title="statement not covered" >.loaderElem<span class="fstat-no" title="function not covered" >en</span>t.classList.remove('fade-in');</span>
+    this.loa<span class="cstat-no" title="statement not covered" >derElement.classList.add('fade-out');</span>
+    setTimeout( () =&gt; {
+      this.loaderElement.style.zIndex = '-1';
+    }, 1000)<span class="fstat-no" title="function not covered" ></span>
+  }<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+  public show() {<span class="fstat-no" title="function not covered" ></span>
+    this.loaderEleme<span class="cstat-no" title="statement not covered" >nt.cl</span>assList.add('fade-in');
+  }<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+  public hid<span class="cstat-no" title="statement not covered" >eWhen(entity: </span>AFrame.Entity, eventName: string = 'loaded'): void {
+    entity &amp;&amp; entity.addEventListener(eventName, () =&gt; {
+      this.hide();
+    })
+  }
+&nbsp;
+  public render() {
+    return(
+      &lt;div id="loader-element" ref={ (loader: HTMLDivElement) =&gt; this.loaderElement = loader }
+        style={ this.containerStyle } className="fade-in"&gt;
+        &lt;div style={ this.contentStyle }&gt;
+          {/* IMPORTANT: loader icon must be preloaded in "index.html" header */}
+          &lt;img src="img/history3.svg" style={ {verticalAlign: 'middle'} } /&gt;
+          &lt;div style={ {paddingTop: '5px'} }&gt;{ this.props.children }&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    )
+  }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Feb 03 2018 12:08:08 GMT+0100 (Hora estándar romance)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

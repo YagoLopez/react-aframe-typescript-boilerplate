@@ -8,7 +8,14 @@
     "type": "git",
     "url": "https://github.com/YagoLopez/react-aframe-typescript-boilerplate"
   },
-  "author": "Yago Lopez",
+  "bugs": {
+    "url" : "https://github.com/YagoLopez/react-aframe-typescript-boilerplate/issues"
+  },
+  "author": {
+    "name": "Yago Lopez",
+    "email": "yago.lopez@gmail.com",
+    "url": "https://yagolopez.js.org"
+  },
   "license": "MIT",
   "dependencies": {
     "@types/node": "^9.4.0",
@@ -33,7 +40,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.1",
-    "jest": "^22.1.4",
+    "jest": "20.0.4",
     "lite-server": "^2.3.0",
     "source-map-explorer": "^1.5.0",
     "ts-jest": "^22.0.2",

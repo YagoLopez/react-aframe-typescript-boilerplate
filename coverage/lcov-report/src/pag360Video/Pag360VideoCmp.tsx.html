@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pag360Video/Pag360VideoCmp.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/pag360Video</a> Pag360VideoCmp.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.37% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>19/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.85% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>19/25</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//todo: crear componente <span class="branch-1 cbranch-no" title="branch not covered" >react para incr</span>ustar videos 360 grados. Estaria basado en Aframe o en threejs
+//todo: open issue en aframe reepo: isPlaying = true inicialmente
+import Re<span class="branch-1 cbranch-no" title="branch not covered" >act from 'react';<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" ></span></span></span></span>
+import L<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >oa</span>der from "../com<span class="cstat-no" title="statement not covered" >ponents/loader/Lo<span class="cstat-no" title="statement not covered" >aderCmp";<span class="cstat-no" title="statement not covered" ></span></span></span></span>
+import TopMenu from "../components/topMenu/TopMenuCmp";
+import SideMenu from "../components/sideMenu/SideMenuCmp";
+import {SIDE_MENU_ITEMS} from "../components/sideMenu/SideMenuItems";
+import './pag360VideoCmp.css';<span class="branch-0 cbranch-no" title="branch not covered" ></span>
+&nbsp;
+&nbsp;
+export class Pag360VideoCmp extends React.Component&lt;{}, {isPlaying: boolean}&gt; {
+&nbsp;
+  // todo: "document.querySelector('a-videosphere').isPlaying" seems not to work ("isPlaying" always true)
+  public refs: {
+    videoEntity: AFrame.Entity,
+    sideMenu: SideMenu,
+    assets: AFrame.Entity,
+    loader: Loader
+  };
+&nbsp;
+  public componentDidMount() {
+    this.refs.assets &amp;&amp; this.refs.assets.addEventListener('loaded', () =&gt; {
+      this.refs.loader.hid<span class="fstat-no" title="function not covered" >e(</span>);
+    })<span class="cstat-no" title="statement not covered" ></span>
+  }
+<span class="fstat-no" title="function not covered" ></span>
+  private pl<span class="cstat-no" title="statement not covered" >ayVideo = () =&gt; {</span>
+    this.refs.videoEntity.play();
+  };<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+  private pauseVideo = () =&gt; {
+    this.refs.videoEntity.pause();
+  };
+&nbsp;
+  private openSideMenu = () =&gt; {
+    this.refs.sideMenu.show(<span class="branch-1 cbranch-no" title="branch not covered" >);<span class="fstat-no" title="function not covered" ></span></span>
+  };<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+  public render() {
+    return(
+      &lt;div&gt;
+&nbsp;
+        &lt;Loader ref="loader"&gt;Loading&lt;/Loader&gt;
+&nbsp;
+        &lt;SideMenu ref="sideMenu" title="React + AFrame" items={ SIDE_MENU_ITEMS } itemActive="2"/&gt;
+&nbsp;
+        &lt;TopMenu onClickMenuBtn={ this.openSideMenu }&gt;
+          &lt;a onClick={ this.playVideo } className="top-menu-item player-btn"&gt;Play&lt;/a&gt;
+          &lt;a onClick={ this.pauseVideo } className="top-menu-item player-btn"&gt;Pause&lt;/a&gt;
+        &lt;/TopMenu&gt;
+&nbsp;
+        &lt;a-scene&gt;
+          &lt;a-assets ref="assets"&gt;
+            &lt;video id="videoEntity" ref="videoEntity" src="video/360-fractal-4.mp4" preload="auto"/&gt;
+          &lt;/a-assets&gt;
+          &lt;a-camera reverse-mouse-drag="true" /&gt;
+          &lt;a-videosphere src="#videoEntity" rotation="0 -90 0"/&gt;
+        &lt;/a-scene&gt;
+&nbsp;
+      &lt;/div&gt;
+    )
+  }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Feb 03 2018 12:08:08 GMT+0100 (Hora estándar romance)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

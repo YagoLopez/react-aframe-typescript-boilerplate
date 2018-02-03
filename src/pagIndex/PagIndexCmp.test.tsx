@@ -5,13 +5,12 @@ import Adapter from 'enzyme-adapter-react-16';
 import {shallow, ShallowWrapper} from 'enzyme';
 import {shallowToJson } from 'enzyme-to-json';
 import {PagIndexCmp} from './PagIndexCmp';
-
 Enzyme.configure({ adapter: new Adapter() });
 
 
-describe('PagIndexCmp', () => {
+describe('PagIndexCmp Component', () => {
 
-  const component = shallow(<PagIndexCmp history={null}>Pag Index Component</PagIndexCmp>);
+  const component = shallow(<PagIndexCmp history={null}>Mock content</PagIndexCmp>);
 
   it("is defined", () => {
     expect(component).toBeDefined();
