@@ -1,5 +1,4 @@
 <p align="center">
-
   <a href="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate">
     <img src="https://travis-ci.org/YagoLopez/react-aframe-typescript-boilerplate.svg?branch=master" title="Build Status" />
   </a>
@@ -11,10 +10,6 @@
   <a href="https://codeclimate.com/github/YagoLopez/react-aframe-typescript-boilerplate/maintainability">
     <img src="https://api.codeclimate.com/v1/badges/c294fc94b8d840217b1c/maintainability" />
   </a>
-
-    <a href="https://yagolopez.js.org/react-aframe-typescript-boilerplate/deps/deps.html">
-      <img src="https://img.shields.io/badge/dependencies-analysis-blue.svg" title="Dependencies Analysis" />
-    </a>
 
 </p>
 
