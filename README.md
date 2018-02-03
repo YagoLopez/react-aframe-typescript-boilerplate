@@ -11,6 +11,10 @@
     <img src="https://api.codeclimate.com/v1/badges/c294fc94b8d840217b1c/maintainability" />
   </a>
 
+  <a href="https://yagolopez.js.org/react-aframe-typescript-boilerplate/deps/deps.html">
+    <img src="https://img.shields.io/badge/dependencies-analysis-blue.svg" />
+  </a>
+
 </p>
 
 # <p align="center">React + AFrame + TypeScript Boilerplate</p>
