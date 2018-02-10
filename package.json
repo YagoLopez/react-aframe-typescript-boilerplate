@@ -50,10 +50,29 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "eject": "react-scripts-ts eject",
-    "test": "react-scripts-ts test --env=jsdom",
-    "yarn:coverage": "yarn test --coverage",
-    "npm:coverage": "npm test --coverage",
-    "analyze": "source-map-explorer build/static/js/main.*",
-    "webpack:progress": "node_modules/.bin/webpack --progress"
+    "test": "jest test --env=jsdom",
+    "test:watch": "jest --watch",
+    "test:debug": "jest --debug",
+    "coverage": "jest test --coverage",
+    "analyze": "source-map-explorer build/static/js/main.*"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.test.json"
+      }
+    },
+    "setupFiles": [
+      "<rootDir>/config/test-shim.js",
+      "<rootDir>/config/test-setup.js"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/config/assetsTransformer.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "collectCoverageFrom": ["src/**/*.{js,tsx,ts}", "!**/node_modules/**", "!**/dist/**", "!**/config/**", "!**/temp/**"]
   }
 }
