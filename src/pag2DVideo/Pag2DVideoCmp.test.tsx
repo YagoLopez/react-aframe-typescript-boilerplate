@@ -1,11 +1,8 @@
 import 'aframe';
 import React from 'react';
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import {shallow, ShallowWrapper} from 'enzyme';
-import {shallowToJson} from "enzyme-to-json";
 import {Pag2DVideoCmp} from "./Pag2DVideoCmp";
-Enzyme.configure({ adapter: new Adapter() });
+
 
 describe('Pag2DVideoCmp Component', () => {
 
@@ -20,7 +17,7 @@ describe('Pag2DVideoCmp Component', () => {
   });
 
   it('matches snapshot', () => {
-    expect(shallowToJson(component)).toMatchSnapshot();
+    expect(component).toMatchSnapshot();
   });
 
 });

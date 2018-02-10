@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1518299716600" clover="3.2.0">
-  <project timestamp="1518299716600" name="All files">
-    <metrics statements="293" coveredstatements="197" conditionals="159" coveredconditionals="81" methods="125" coveredmethods="61" elements="577" coveredelements="339" complexity="0" loc="293" ncloc="293" packages="9" files="10" classes="10">
+<coverage generated="1518304722135" clover="3.2.0">
+  <project timestamp="1518304722135" name="All files">
+    <metrics statements="295" coveredstatements="199" conditionals="159" coveredconditionals="81" methods="125" coveredmethods="61" elements="579" coveredelements="341" complexity="0" loc="295" ncloc="295" packages="9" files="10" classes="10">
       <package name="src">
         <metrics statements="9" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="index.tsx" path="C:\Users\yagol\Documents\projects\react-aframe-typescript-boilerplate\src\index.tsx">
@@ -94,9 +94,9 @@
         </file>
       </package>
       <package name="src.components.sideMenu">
-        <metrics statements="35" coveredstatements="23" conditionals="26" coveredconditionals="15" methods="16" coveredmethods="9"/>
+        <metrics statements="36" coveredstatements="24" conditionals="26" coveredconditionals="15" methods="16" coveredmethods="9"/>
         <file name="SideMenuCmp.tsx" path="C:\Users\yagol\Documents\projects\react-aframe-typescript-boilerplate\src\components\sideMenu\SideMenuCmp.tsx">
-          <metrics statements="34" coveredstatements="22" conditionals="26" coveredconditionals="15" methods="16" coveredmethods="9"/>
+          <metrics statements="35" coveredstatements="23" conditionals="26" coveredconditionals="15" methods="16" coveredmethods="9"/>
           <line num="1" count="5" type="cond" truecount="2" falsecount="1"/>
           <line num="2" count="5" type="cond" truecount="1" falsecount="3"/>
           <line num="3" count="0" type="stmt"/>
@@ -129,8 +129,9 @@
           <line num="46" count="5" type="stmt"/>
           <line num="47" count="2" type="stmt"/>
           <line num="48" count="2" type="stmt"/>
-          <line num="56" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="62" count="5" type="stmt"/>
+          <line num="49" count="2" type="stmt"/>
+          <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="63" count="5" type="stmt"/>
         </file>
         <file name="SideMenuItems.ts" path="C:\Users\yagol\Documents\projects\react-aframe-typescript-boilerplate\src\components\sideMenu\SideMenuItems.ts">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -138,9 +139,9 @@
         </file>
       </package>
       <package name="src.components.topMenu">
-        <metrics statements="23" coveredstatements="18" conditionals="22" coveredconditionals="10" methods="10" coveredmethods="6"/>
+        <metrics statements="24" coveredstatements="19" conditionals="22" coveredconditionals="10" methods="10" coveredmethods="6"/>
         <file name="TopMenuCmp.tsx" path="C:\Users\yagol\Documents\projects\react-aframe-typescript-boilerplate\src\components\topMenu\TopMenuCmp.tsx">
-          <metrics statements="23" coveredstatements="18" conditionals="22" coveredconditionals="10" methods="10" coveredmethods="6"/>
+          <metrics statements="24" coveredstatements="19" conditionals="22" coveredconditionals="10" methods="10" coveredmethods="6"/>
           <line num="1" count="5" type="cond" truecount="2" falsecount="1"/>
           <line num="2" count="5" type="cond" truecount="1" falsecount="3"/>
           <line num="3" count="0" type="stmt"/>
@@ -160,10 +161,11 @@
           <line num="23" count="0" type="stmt"/>
           <line num="25" count="2" type="stmt"/>
           <line num="27" count="5" type="stmt"/>
-          <line num="30" count="2" type="cond" truecount="1" falsecount="1"/>
-          <line num="31" count="2" type="stmt"/>
-          <line num="38" count="0" type="stmt"/>
-          <line num="43" count="5" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="31" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="32" count="2" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="44" count="5" type="stmt"/>
         </file>
       </package>
       <package name="src.pag2DVideo">

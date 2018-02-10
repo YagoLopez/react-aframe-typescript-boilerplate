@@ -1,207 +1,2059 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PagIndexCmp Component matches snapshot 1`] = `
-<div>
-  <Loader>
-    Loading
-  </Loader>
-  <Dialog>
-    <div
-      className="dialog-subtitle"
-    >
-      This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
-    </div>
-    <div
-      className="dialog-subtitle"
-    >
-      For a full experience, use a
-      <a
-        className="dialog-link"
-        href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
-        target="_blank"
-      >
-         VR Viewer
-      </a>
-    </div>
-    <fieldset>
-      <legend>
-        Pan
-      </legend>
-      <div>
-        <img
-          className="icon-info"
-          src="mouse-move.svg"
-        />
-         Mouse Pointer
-      </div>
-      <div>
-        <img
-          className="icon-info"
-          src="move-gesture.svg"
-        />
-         Hand Gesture
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>
-        Zoom
-      </legend>
-      <div>
-        <img
-          className="icon-info"
-          src="mouse-wheel.svg"
-        />
-         Mouse Wheel
-      </div>
-      <div>
-        <img
-          className="icon-info"
-          src="zoom-gesture.svg"
-        />
-         Hand Gesture
-      </div>
-    </fieldset>
-    <div
-      className="dialog-close-bottom"
-      onClick={[Function]}
-    >
-      Close
-    </div>
-  </Dialog>
-  <SideMenu
-    itemActive="0"
-    items={
-      Array [
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PagIndexCmp
+    history={null}
+>
+    Mock content
+</PagIndexCmp>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Loader>
+          Loading
+</Loader>,
+        <Dialog>
+          <div
+                    className="dialog-subtitle"
+          >
+                    This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
+          </div>
+          <div
+                    className="dialog-subtitle"
+          >
+                    For a full experience, use a
+                    <a
+                              className="dialog-link"
+                              href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
+                              target="_blank"
+                    >
+                               VR Viewer
+                    </a>
+          </div>
+          <fieldset>
+                    <legend>
+                              Pan
+                    </legend>
+                    <div>
+                              <img
+                                        className="icon-info"
+                                        src="mouse-move.svg"
+                              />
+                               Mouse Pointer
+                    </div>
+                    <div>
+                              <img
+                                        className="icon-info"
+                                        src="move-gesture.svg"
+                              />
+                               Hand Gesture
+                    </div>
+          </fieldset>
+          <fieldset>
+                    <legend>
+                              Zoom
+                    </legend>
+                    <div>
+                              <img
+                                        className="icon-info"
+                                        src="mouse-wheel.svg"
+                              />
+                               Mouse Wheel
+                    </div>
+                    <div>
+                              <img
+                                        className="icon-info"
+                                        src="zoom-gesture.svg"
+                              />
+                               Hand Gesture
+                    </div>
+          </fieldset>
+          <div
+                    className="dialog-close-bottom"
+                    onClick={[Function]}
+          >
+                    Close
+          </div>
+</Dialog>,
+        <SideMenu
+          itemActive="0"
+          items={
+                    Array [
+                              Object {
+                                "active": false,
+                                "ico": "start.svg",
+                                "name": "Home",
+                                "url": "#/",
+                              },
+                              Object {
+                                "active": false,
+                                "ico": "video-player.svg",
+                                "name": "2D/3D Video",
+                                "url": "#/2dvideo",
+                              },
+                              Object {
+                                "active": false,
+                                "ico": "360-degrees.svg",
+                                "name": "360 Video",
+                                "url": "#/360video",
+                              },
+                              Object {
+                                "active": false,
+                                "ico": "3d-printer.svg",
+                                "name": "3D Model Animation",
+                                "url": "#/3dmodel",
+                              },
+                            ]
+          }
+          title="React + AFrame"
+>
+          <img
+                    className="icon-item"
+                    src="help.svg"
+          />
+          <a
+                    href="#"
+                    onClick={[Function]}
+          >
+                    Help
+          </a>
+</SideMenu>,
+        <TopMenu
+          onClickMenuBtn={[Function]}
+>
+          <a
+                    className="top-menu-item rotate-camera"
+                    data-position="0.17 4.14 2.79"
+          >
+                    Position 1
+          </a>
+          <a
+                    className="top-menu-item rotate-camera"
+                    data-position="3.48 0.57 0.15"
+          >
+                    Position 2
+          </a>
+          <a
+                    className="top-menu-item rotate-camera"
+                    data-position="-2.89 -2.51 3.20"
+          >
+                    Position 3
+          </a>
+</TopMenu>,
+        <a-scene
+          cursor="rayOrigin: mouse"
+          id="scene"
+          raycaster="far: 100; objects: [link], [url]; interval: 200"
+>
+          <a-assets>
+                    <img
+                              id="sky"
+                              src="img/1.jpg"
+                    />
+                    <img
+                              id="link1"
+                              src="img/sea.jpg"
+                    />
+                    <img
+                              id="link2"
+                              src="img/4.jpg"
+                    />
+                    <img
+                              id="link3"
+                              src="img/7.jpg"
+                    />
+                    <img
+                              id="aframeArena"
+                              src="img/aframeArena.png"
+                    />
+          </a-assets>
+          <a-sky
+                    rotation="0 -90 0"
+                    src="#sky"
+          />
+          <a-entity
+                    camera="fov: 80; zoom: 1"
+                    id="camera"
+                    orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
+                    position="0 -0.2 5"
+          />
+          <a-entity
+                    id="entityGroup"
+          >
+                    <a-plane
+                              height="6"
+                              position="0 -1 0"
+                              rotation="-90 0 0"
+                              src="#aframeArena"
+                              width="6"
+                    />
+                    <a-link
+                              href="#"
+                              image="#link1"
+                              onClick={[Function]}
+                              position="-3 1 0"
+                              title="2D/3D Video"
+                    />
+                    <a-link
+                              href="#"
+                              image="#link2"
+                              onClick={[Function]}
+                              position="0 1 0"
+                              title="360 Video"
+                    />
+                    <a-link
+                              href="#"
+                              image="#link3"
+                              onClick={[Function]}
+                              position="3 1 0"
+                              title="3D Model Animation"
+                    />
+          </a-entity>
+</a-scene>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Loading",
+        },
+        "ref": "loader",
+        "rendered": "Loading",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <div
+              className="dialog-subtitle"
+>
+              This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
+</div>,
+            <div
+              className="dialog-subtitle"
+>
+              For a full experience, use a
+              <a
+                            className="dialog-link"
+                            href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
+                            target="_blank"
+              >
+                             VR Viewer
+              </a>
+</div>,
+            <fieldset>
+              <legend>
+                            Pan
+              </legend>
+              <div>
+                            <img
+                                          className="icon-info"
+                                          src="mouse-move.svg"
+                            />
+                             Mouse Pointer
+              </div>
+              <div>
+                            <img
+                                          className="icon-info"
+                                          src="move-gesture.svg"
+                            />
+                             Hand Gesture
+              </div>
+</fieldset>,
+            <fieldset>
+              <legend>
+                            Zoom
+              </legend>
+              <div>
+                            <img
+                                          className="icon-info"
+                                          src="mouse-wheel.svg"
+                            />
+                             Mouse Wheel
+              </div>
+              <div>
+                            <img
+                                          className="icon-info"
+                                          src="zoom-gesture.svg"
+                            />
+                             Hand Gesture
+              </div>
+</fieldset>,
+            <div
+              className="dialog-close-bottom"
+              onClick={[Function]}
+>
+              Close
+</div>,
+          ],
+        },
+        "ref": "dialog",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented",
+              "className": "dialog-subtitle",
+            },
+            "ref": null,
+            "rendered": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "For a full experience, use a",
+                <a
+                  className="dialog-link"
+                  href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
+                  target="_blank"
+>
+                   VR Viewer
+</a>,
+              ],
+              "className": "dialog-subtitle",
+            },
+            "ref": null,
+            "rendered": Array [
+              "For a full experience, use a",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " VR Viewer",
+                  "className": "dialog-link",
+                  "href": "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer",
+                  "target": "_blank",
+                },
+                "ref": null,
+                "rendered": " VR Viewer",
+                "type": "a",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <legend>
+                  Pan
+</legend>,
+                <div>
+                  <img
+                                    className="icon-info"
+                                    src="mouse-move.svg"
+                  />
+                   Mouse Pointer
+</div>,
+                <div>
+                  <img
+                                    className="icon-info"
+                                    src="move-gesture.svg"
+                  />
+                   Hand Gesture
+</div>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Pan",
+                },
+                "ref": null,
+                "rendered": "Pan",
+                "type": "legend",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      className="icon-info"
+                      src="mouse-move.svg"
+/>,
+                    " Mouse Pointer",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "icon-info",
+                      "src": "mouse-move.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  " Mouse Pointer",
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      className="icon-info"
+                      src="move-gesture.svg"
+/>,
+                    " Hand Gesture",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "icon-info",
+                      "src": "move-gesture.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  " Hand Gesture",
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "fieldset",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <legend>
+                  Zoom
+</legend>,
+                <div>
+                  <img
+                                    className="icon-info"
+                                    src="mouse-wheel.svg"
+                  />
+                   Mouse Wheel
+</div>,
+                <div>
+                  <img
+                                    className="icon-info"
+                                    src="zoom-gesture.svg"
+                  />
+                   Hand Gesture
+</div>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Zoom",
+                },
+                "ref": null,
+                "rendered": "Zoom",
+                "type": "legend",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      className="icon-info"
+                      src="mouse-wheel.svg"
+/>,
+                    " Mouse Wheel",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "icon-info",
+                      "src": "mouse-wheel.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  " Mouse Wheel",
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      className="icon-info"
+                      src="zoom-gesture.svg"
+/>,
+                    " Hand Gesture",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "icon-info",
+                      "src": "zoom-gesture.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  " Hand Gesture",
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "fieldset",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Close",
+              "className": "dialog-close-bottom",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Close",
+            "type": "div",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <img
+              className="icon-item"
+              src="help.svg"
+/>,
+            <a
+              href="#"
+              onClick={[Function]}
+>
+              Help
+</a>,
+          ],
+          "itemActive": "0",
+          "items": Array [
+            Object {
+              "active": false,
+              "ico": "start.svg",
+              "name": "Home",
+              "url": "#/",
+            },
+            Object {
+              "active": false,
+              "ico": "video-player.svg",
+              "name": "2D/3D Video",
+              "url": "#/2dvideo",
+            },
+            Object {
+              "active": false,
+              "ico": "360-degrees.svg",
+              "name": "360 Video",
+              "url": "#/360video",
+            },
+            Object {
+              "active": false,
+              "ico": "3d-printer.svg",
+              "name": "3D Model Animation",
+              "url": "#/3dmodel",
+            },
+          ],
+          "title": "React + AFrame",
+        },
+        "ref": "sideMenu",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "icon-item",
+              "src": "help.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Help",
+              "href": "#",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Help",
+            "type": "a",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <a
+              className="top-menu-item rotate-camera"
+              data-position="0.17 4.14 2.79"
+>
+              Position 1
+</a>,
+            <a
+              className="top-menu-item rotate-camera"
+              data-position="3.48 0.57 0.15"
+>
+              Position 2
+</a>,
+            <a
+              className="top-menu-item rotate-camera"
+              data-position="-2.89 -2.51 3.20"
+>
+              Position 3
+</a>,
+          ],
+          "onClickMenuBtn": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Position 1",
+              "className": "top-menu-item rotate-camera",
+              "data-position": "0.17 4.14 2.79",
+            },
+            "ref": null,
+            "rendered": "Position 1",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Position 2",
+              "className": "top-menu-item rotate-camera",
+              "data-position": "3.48 0.57 0.15",
+            },
+            "ref": null,
+            "rendered": "Position 2",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Position 3",
+              "className": "top-menu-item rotate-camera",
+              "data-position": "-2.89 -2.51 3.20",
+            },
+            "ref": null,
+            "rendered": "Position 3",
+            "type": "a",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <a-assets>
+              <img
+                            id="sky"
+                            src="img/1.jpg"
+              />
+              <img
+                            id="link1"
+                            src="img/sea.jpg"
+              />
+              <img
+                            id="link2"
+                            src="img/4.jpg"
+              />
+              <img
+                            id="link3"
+                            src="img/7.jpg"
+              />
+              <img
+                            id="aframeArena"
+                            src="img/aframeArena.png"
+              />
+</a-assets>,
+            <a-sky
+              rotation="0 -90 0"
+              src="#sky"
+/>,
+            <a-entity
+              camera="fov: 80; zoom: 1"
+              id="camera"
+              orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
+              position="0 -0.2 5"
+/>,
+            <a-entity
+              id="entityGroup"
+>
+              <a-plane
+                            height="6"
+                            position="0 -1 0"
+                            rotation="-90 0 0"
+                            src="#aframeArena"
+                            width="6"
+              />
+              <a-link
+                            href="#"
+                            image="#link1"
+                            onClick={[Function]}
+                            position="-3 1 0"
+                            title="2D/3D Video"
+              />
+              <a-link
+                            href="#"
+                            image="#link2"
+                            onClick={[Function]}
+                            position="0 1 0"
+                            title="360 Video"
+              />
+              <a-link
+                            href="#"
+                            image="#link3"
+                            onClick={[Function]}
+                            position="3 1 0"
+                            title="3D Model Animation"
+              />
+</a-entity>,
+          ],
+          "cursor": "rayOrigin: mouse",
+          "id": "scene",
+          "raycaster": "far: 100; objects: [link], [url]; interval: 200",
+        },
+        "ref": "scene",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  id="sky"
+                  src="img/1.jpg"
+/>,
+                <img
+                  id="link1"
+                  src="img/sea.jpg"
+/>,
+                <img
+                  id="link2"
+                  src="img/4.jpg"
+/>,
+                <img
+                  id="link3"
+                  src="img/7.jpg"
+/>,
+                <img
+                  id="aframeArena"
+                  src="img/aframeArena.png"
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "sky",
+                  "src": "img/1.jpg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "link1",
+                  "src": "img/sea.jpg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "link2",
+                  "src": "img/4.jpg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "link3",
+                  "src": "img/7.jpg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "aframeArena",
+                  "src": "img/aframeArena.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "a-assets",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "rotation": "0 -90 0",
+              "src": "#sky",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "a-sky",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "camera": "fov: 80; zoom: 1",
+              "id": "camera",
+              "orbit-controls": "autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true",
+              "position": "0 -0.2 5",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "a-entity",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <a-plane
+                  height="6"
+                  position="0 -1 0"
+                  rotation="-90 0 0"
+                  src="#aframeArena"
+                  width="6"
+/>,
+                <a-link
+                  href="#"
+                  image="#link1"
+                  onClick={[Function]}
+                  position="-3 1 0"
+                  title="2D/3D Video"
+/>,
+                <a-link
+                  href="#"
+                  image="#link2"
+                  onClick={[Function]}
+                  position="0 1 0"
+                  title="360 Video"
+/>,
+                <a-link
+                  href="#"
+                  image="#link3"
+                  onClick={[Function]}
+                  position="3 1 0"
+                  title="3D Model Animation"
+/>,
+              ],
+              "id": "entityGroup",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "height": "6",
+                  "position": "0 -1 0",
+                  "rotation": "-90 0 0",
+                  "src": "#aframeArena",
+                  "width": "6",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "a-plane",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "href": "#",
+                  "image": "#link1",
+                  "onClick": [Function],
+                  "position": "-3 1 0",
+                  "title": "2D/3D Video",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "a-link",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "href": "#",
+                  "image": "#link2",
+                  "onClick": [Function],
+                  "position": "0 1 0",
+                  "title": "360 Video",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "a-link",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "href": "#",
+                  "image": "#link3",
+                  "onClick": [Function],
+                  "position": "3 1 0",
+                  "title": "3D Model Animation",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "a-link",
+              },
+            ],
+            "type": "a-entity",
+          },
+        ],
+        "type": "a-scene",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Loader>
+            Loading
+</Loader>,
+          <Dialog>
+            <div
+                        className="dialog-subtitle"
+            >
+                        This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
+            </div>
+            <div
+                        className="dialog-subtitle"
+            >
+                        For a full experience, use a
+                        <a
+                                    className="dialog-link"
+                                    href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
+                                    target="_blank"
+                        >
+                                     VR Viewer
+                        </a>
+            </div>
+            <fieldset>
+                        <legend>
+                                    Pan
+                        </legend>
+                        <div>
+                                    <img
+                                                className="icon-info"
+                                                src="mouse-move.svg"
+                                    />
+                                     Mouse Pointer
+                        </div>
+                        <div>
+                                    <img
+                                                className="icon-info"
+                                                src="move-gesture.svg"
+                                    />
+                                     Hand Gesture
+                        </div>
+            </fieldset>
+            <fieldset>
+                        <legend>
+                                    Zoom
+                        </legend>
+                        <div>
+                                    <img
+                                                className="icon-info"
+                                                src="mouse-wheel.svg"
+                                    />
+                                     Mouse Wheel
+                        </div>
+                        <div>
+                                    <img
+                                                className="icon-info"
+                                                src="zoom-gesture.svg"
+                                    />
+                                     Hand Gesture
+                        </div>
+            </fieldset>
+            <div
+                        className="dialog-close-bottom"
+                        onClick={[Function]}
+            >
+                        Close
+            </div>
+</Dialog>,
+          <SideMenu
+            itemActive="0"
+            items={
+                        Array [
+                                    Object {
+                                      "active": false,
+                                      "ico": "start.svg",
+                                      "name": "Home",
+                                      "url": "#/",
+                                    },
+                                    Object {
+                                      "active": false,
+                                      "ico": "video-player.svg",
+                                      "name": "2D/3D Video",
+                                      "url": "#/2dvideo",
+                                    },
+                                    Object {
+                                      "active": false,
+                                      "ico": "360-degrees.svg",
+                                      "name": "360 Video",
+                                      "url": "#/360video",
+                                    },
+                                    Object {
+                                      "active": false,
+                                      "ico": "3d-printer.svg",
+                                      "name": "3D Model Animation",
+                                      "url": "#/3dmodel",
+                                    },
+                                  ]
+            }
+            title="React + AFrame"
+>
+            <img
+                        className="icon-item"
+                        src="help.svg"
+            />
+            <a
+                        href="#"
+                        onClick={[Function]}
+            >
+                        Help
+            </a>
+</SideMenu>,
+          <TopMenu
+            onClickMenuBtn={[Function]}
+>
+            <a
+                        className="top-menu-item rotate-camera"
+                        data-position="0.17 4.14 2.79"
+            >
+                        Position 1
+            </a>
+            <a
+                        className="top-menu-item rotate-camera"
+                        data-position="3.48 0.57 0.15"
+            >
+                        Position 2
+            </a>
+            <a
+                        className="top-menu-item rotate-camera"
+                        data-position="-2.89 -2.51 3.20"
+            >
+                        Position 3
+            </a>
+</TopMenu>,
+          <a-scene
+            cursor="rayOrigin: mouse"
+            id="scene"
+            raycaster="far: 100; objects: [link], [url]; interval: 200"
+>
+            <a-assets>
+                        <img
+                                    id="sky"
+                                    src="img/1.jpg"
+                        />
+                        <img
+                                    id="link1"
+                                    src="img/sea.jpg"
+                        />
+                        <img
+                                    id="link2"
+                                    src="img/4.jpg"
+                        />
+                        <img
+                                    id="link3"
+                                    src="img/7.jpg"
+                        />
+                        <img
+                                    id="aframeArena"
+                                    src="img/aframeArena.png"
+                        />
+            </a-assets>
+            <a-sky
+                        rotation="0 -90 0"
+                        src="#sky"
+            />
+            <a-entity
+                        camera="fov: 80; zoom: 1"
+                        id="camera"
+                        orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
+                        position="0 -0.2 5"
+            />
+            <a-entity
+                        id="entityGroup"
+            >
+                        <a-plane
+                                    height="6"
+                                    position="0 -1 0"
+                                    rotation="-90 0 0"
+                                    src="#aframeArena"
+                                    width="6"
+                        />
+                        <a-link
+                                    href="#"
+                                    image="#link1"
+                                    onClick={[Function]}
+                                    position="-3 1 0"
+                                    title="2D/3D Video"
+                        />
+                        <a-link
+                                    href="#"
+                                    image="#link2"
+                                    onClick={[Function]}
+                                    position="0 1 0"
+                                    title="360 Video"
+                        />
+                        <a-link
+                                    href="#"
+                                    image="#link3"
+                                    onClick={[Function]}
+                                    position="3 1 0"
+                                    title="3D Model Animation"
+                        />
+            </a-entity>
+</a-scene>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
         Object {
-          "active": false,
-          "ico": "start.svg",
-          "name": "Home",
-          "url": "#/",
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Loading",
+          },
+          "ref": "loader",
+          "rendered": "Loading",
+          "type": [Function],
         },
         Object {
-          "active": false,
-          "ico": "video-player.svg",
-          "name": "2D/3D Video",
-          "url": "#/2dvideo",
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <div
+                className="dialog-subtitle"
+>
+                This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
+</div>,
+              <div
+                className="dialog-subtitle"
+>
+                For a full experience, use a
+                <a
+                                className="dialog-link"
+                                href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
+                                target="_blank"
+                >
+                                 VR Viewer
+                </a>
+</div>,
+              <fieldset>
+                <legend>
+                                Pan
+                </legend>
+                <div>
+                                <img
+                                                className="icon-info"
+                                                src="mouse-move.svg"
+                                />
+                                 Mouse Pointer
+                </div>
+                <div>
+                                <img
+                                                className="icon-info"
+                                                src="move-gesture.svg"
+                                />
+                                 Hand Gesture
+                </div>
+</fieldset>,
+              <fieldset>
+                <legend>
+                                Zoom
+                </legend>
+                <div>
+                                <img
+                                                className="icon-info"
+                                                src="mouse-wheel.svg"
+                                />
+                                 Mouse Wheel
+                </div>
+                <div>
+                                <img
+                                                className="icon-info"
+                                                src="zoom-gesture.svg"
+                                />
+                                 Hand Gesture
+                </div>
+</fieldset>,
+              <div
+                className="dialog-close-bottom"
+                onClick={[Function]}
+>
+                Close
+</div>,
+            ],
+          },
+          "ref": "dialog",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented",
+                "className": "dialog-subtitle",
+              },
+              "ref": null,
+              "rendered": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "For a full experience, use a",
+                  <a
+                    className="dialog-link"
+                    href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
+                    target="_blank"
+>
+                     VR Viewer
+</a>,
+                ],
+                "className": "dialog-subtitle",
+              },
+              "ref": null,
+              "rendered": Array [
+                "For a full experience, use a",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " VR Viewer",
+                    "className": "dialog-link",
+                    "href": "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": " VR Viewer",
+                  "type": "a",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <legend>
+                    Pan
+</legend>,
+                  <div>
+                    <img
+                                        className="icon-info"
+                                        src="mouse-move.svg"
+                    />
+                     Mouse Pointer
+</div>,
+                  <div>
+                    <img
+                                        className="icon-info"
+                                        src="move-gesture.svg"
+                    />
+                     Hand Gesture
+</div>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Pan",
+                  },
+                  "ref": null,
+                  "rendered": "Pan",
+                  "type": "legend",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        className="icon-info"
+                        src="mouse-move.svg"
+/>,
+                      " Mouse Pointer",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "icon-info",
+                        "src": "mouse-move.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    " Mouse Pointer",
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        className="icon-info"
+                        src="move-gesture.svg"
+/>,
+                      " Hand Gesture",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "icon-info",
+                        "src": "move-gesture.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    " Hand Gesture",
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "fieldset",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <legend>
+                    Zoom
+</legend>,
+                  <div>
+                    <img
+                                        className="icon-info"
+                                        src="mouse-wheel.svg"
+                    />
+                     Mouse Wheel
+</div>,
+                  <div>
+                    <img
+                                        className="icon-info"
+                                        src="zoom-gesture.svg"
+                    />
+                     Hand Gesture
+</div>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Zoom",
+                  },
+                  "ref": null,
+                  "rendered": "Zoom",
+                  "type": "legend",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        className="icon-info"
+                        src="mouse-wheel.svg"
+/>,
+                      " Mouse Wheel",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "icon-info",
+                        "src": "mouse-wheel.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    " Mouse Wheel",
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        className="icon-info"
+                        src="zoom-gesture.svg"
+/>,
+                      " Hand Gesture",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "icon-info",
+                        "src": "zoom-gesture.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    " Hand Gesture",
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "fieldset",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Close",
+                "className": "dialog-close-bottom",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Close",
+              "type": "div",
+            },
+          ],
+          "type": [Function],
         },
         Object {
-          "active": false,
-          "ico": "360-degrees.svg",
-          "name": "360 Video",
-          "url": "#/360video",
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <img
+                className="icon-item"
+                src="help.svg"
+/>,
+              <a
+                href="#"
+                onClick={[Function]}
+>
+                Help
+</a>,
+            ],
+            "itemActive": "0",
+            "items": Array [
+              Object {
+                "active": false,
+                "ico": "start.svg",
+                "name": "Home",
+                "url": "#/",
+              },
+              Object {
+                "active": false,
+                "ico": "video-player.svg",
+                "name": "2D/3D Video",
+                "url": "#/2dvideo",
+              },
+              Object {
+                "active": false,
+                "ico": "360-degrees.svg",
+                "name": "360 Video",
+                "url": "#/360video",
+              },
+              Object {
+                "active": false,
+                "ico": "3d-printer.svg",
+                "name": "3D Model Animation",
+                "url": "#/3dmodel",
+              },
+            ],
+            "title": "React + AFrame",
+          },
+          "ref": "sideMenu",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "icon-item",
+                "src": "help.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Help",
+                "href": "#",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Help",
+              "type": "a",
+            },
+          ],
+          "type": [Function],
         },
         Object {
-          "active": false,
-          "ico": "3d-printer.svg",
-          "name": "3D Model Animation",
-          "url": "#/3dmodel",
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <a
+                className="top-menu-item rotate-camera"
+                data-position="0.17 4.14 2.79"
+>
+                Position 1
+</a>,
+              <a
+                className="top-menu-item rotate-camera"
+                data-position="3.48 0.57 0.15"
+>
+                Position 2
+</a>,
+              <a
+                className="top-menu-item rotate-camera"
+                data-position="-2.89 -2.51 3.20"
+>
+                Position 3
+</a>,
+            ],
+            "onClickMenuBtn": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Position 1",
+                "className": "top-menu-item rotate-camera",
+                "data-position": "0.17 4.14 2.79",
+              },
+              "ref": null,
+              "rendered": "Position 1",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Position 2",
+                "className": "top-menu-item rotate-camera",
+                "data-position": "3.48 0.57 0.15",
+              },
+              "ref": null,
+              "rendered": "Position 2",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Position 3",
+                "className": "top-menu-item rotate-camera",
+                "data-position": "-2.89 -2.51 3.20",
+              },
+              "ref": null,
+              "rendered": "Position 3",
+              "type": "a",
+            },
+          ],
+          "type": [Function],
         },
-      ]
-    }
-    title="React + AFrame"
-  >
-    <img
-      className="icon-item"
-      src="help.svg"
-    />
-    <a
-      href="#"
-      onClick={[Function]}
-    >
-      Help
-    </a>
-  </SideMenu>
-  <TopMenu
-    onClickMenuBtn={[Function]}
-  >
-    <a
-      className="top-menu-item rotate-camera"
-      data-position="0.17 4.14 2.79"
-    >
-      Position 1
-    </a>
-    <a
-      className="top-menu-item rotate-camera"
-      data-position="3.48 0.57 0.15"
-    >
-      Position 2
-    </a>
-    <a
-      className="top-menu-item rotate-camera"
-      data-position="-2.89 -2.51 3.20"
-    >
-      Position 3
-    </a>
-  </TopMenu>
-  <a-scene
-    cursor="rayOrigin: mouse"
-    id="scene"
-    raycaster="far: 100; objects: [link], [url]; interval: 200"
-  >
-    <a-assets>
-      <img
-        id="sky"
-        src="img/1.jpg"
-      />
-      <img
-        id="link1"
-        src="img/sea.jpg"
-      />
-      <img
-        id="link2"
-        src="img/4.jpg"
-      />
-      <img
-        id="link3"
-        src="img/7.jpg"
-      />
-      <img
-        id="aframeArena"
-        src="img/aframeArena.png"
-      />
-    </a-assets>
-    <a-sky
-      rotation="0 -90 0"
-      src="#sky"
-    />
-    <a-entity
-      camera="fov: 80; zoom: 1"
-      id="camera"
-      orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
-      position="0 -0.2 5"
-    />
-    <a-entity
-      id="entityGroup"
-    >
-      <a-plane
-        height="6"
-        position="0 -1 0"
-        rotation="-90 0 0"
-        src="#aframeArena"
-        width="6"
-      />
-      <a-link
-        href="#"
-        image="#link1"
-        onClick={[Function]}
-        position="-3 1 0"
-        title="2D/3D Video"
-      />
-      <a-link
-        href="#"
-        image="#link2"
-        onClick={[Function]}
-        position="0 1 0"
-        title="360 Video"
-      />
-      <a-link
-        href="#"
-        image="#link3"
-        onClick={[Function]}
-        position="3 1 0"
-        title="3D Model Animation"
-      />
-    </a-entity>
-  </a-scene>
-</div>
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <a-assets>
+                <img
+                                id="sky"
+                                src="img/1.jpg"
+                />
+                <img
+                                id="link1"
+                                src="img/sea.jpg"
+                />
+                <img
+                                id="link2"
+                                src="img/4.jpg"
+                />
+                <img
+                                id="link3"
+                                src="img/7.jpg"
+                />
+                <img
+                                id="aframeArena"
+                                src="img/aframeArena.png"
+                />
+</a-assets>,
+              <a-sky
+                rotation="0 -90 0"
+                src="#sky"
+/>,
+              <a-entity
+                camera="fov: 80; zoom: 1"
+                id="camera"
+                orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
+                position="0 -0.2 5"
+/>,
+              <a-entity
+                id="entityGroup"
+>
+                <a-plane
+                                height="6"
+                                position="0 -1 0"
+                                rotation="-90 0 0"
+                                src="#aframeArena"
+                                width="6"
+                />
+                <a-link
+                                href="#"
+                                image="#link1"
+                                onClick={[Function]}
+                                position="-3 1 0"
+                                title="2D/3D Video"
+                />
+                <a-link
+                                href="#"
+                                image="#link2"
+                                onClick={[Function]}
+                                position="0 1 0"
+                                title="360 Video"
+                />
+                <a-link
+                                href="#"
+                                image="#link3"
+                                onClick={[Function]}
+                                position="3 1 0"
+                                title="3D Model Animation"
+                />
+</a-entity>,
+            ],
+            "cursor": "rayOrigin: mouse",
+            "id": "scene",
+            "raycaster": "far: 100; objects: [link], [url]; interval: 200",
+          },
+          "ref": "scene",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    id="sky"
+                    src="img/1.jpg"
+/>,
+                  <img
+                    id="link1"
+                    src="img/sea.jpg"
+/>,
+                  <img
+                    id="link2"
+                    src="img/4.jpg"
+/>,
+                  <img
+                    id="link3"
+                    src="img/7.jpg"
+/>,
+                  <img
+                    id="aframeArena"
+                    src="img/aframeArena.png"
+/>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "id": "sky",
+                    "src": "img/1.jpg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "id": "link1",
+                    "src": "img/sea.jpg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "id": "link2",
+                    "src": "img/4.jpg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "id": "link3",
+                    "src": "img/7.jpg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "id": "aframeArena",
+                    "src": "img/aframeArena.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "a-assets",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "rotation": "0 -90 0",
+                "src": "#sky",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "a-sky",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "camera": "fov: 80; zoom: 1",
+                "id": "camera",
+                "orbit-controls": "autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true",
+                "position": "0 -0.2 5",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "a-entity",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <a-plane
+                    height="6"
+                    position="0 -1 0"
+                    rotation="-90 0 0"
+                    src="#aframeArena"
+                    width="6"
+/>,
+                  <a-link
+                    href="#"
+                    image="#link1"
+                    onClick={[Function]}
+                    position="-3 1 0"
+                    title="2D/3D Video"
+/>,
+                  <a-link
+                    href="#"
+                    image="#link2"
+                    onClick={[Function]}
+                    position="0 1 0"
+                    title="360 Video"
+/>,
+                  <a-link
+                    href="#"
+                    image="#link3"
+                    onClick={[Function]}
+                    position="3 1 0"
+                    title="3D Model Animation"
+/>,
+                ],
+                "id": "entityGroup",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "height": "6",
+                    "position": "0 -1 0",
+                    "rotation": "-90 0 0",
+                    "src": "#aframeArena",
+                    "width": "6",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "a-plane",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "href": "#",
+                    "image": "#link1",
+                    "onClick": [Function],
+                    "position": "-3 1 0",
+                    "title": "2D/3D Video",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "a-link",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "href": "#",
+                    "image": "#link2",
+                    "onClick": [Function],
+                    "position": "0 1 0",
+                    "title": "360 Video",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "a-link",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "href": "#",
+                    "image": "#link3",
+                    "onClick": [Function],
+                    "position": "3 1 0",
+                    "title": "3D Model Animation",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "a-link",
+                },
+              ],
+              "type": "a-entity",
+            },
+          ],
+          "type": "a-scene",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
 `;

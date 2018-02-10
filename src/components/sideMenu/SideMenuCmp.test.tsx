@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Enzyme, {shallow} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import {shallowToJson} from "enzyme-to-json";
+import {shallow} from 'enzyme';
 import SideMenu from "./SideMenuCmp";
-Enzyme.configure({ adapter: new Adapter() });
+
 
 describe('SideMenu Component', () => {
 
@@ -16,7 +14,7 @@ describe('SideMenu Component', () => {
   });
 
   it('matches snapshot', () => {
-    expect(shallowToJson(component)).toMatchSnapshot();
+    expect(component).toMatchSnapshot();
   });
 
 });

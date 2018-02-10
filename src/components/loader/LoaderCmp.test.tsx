@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import {shallow, ShallowWrapper} from 'enzyme';
-import {shallowToJson} from "enzyme-to-json";
+import {shallow} from 'enzyme';
 import Loader from "./LoaderCmp";
-Enzyme.configure({ adapter: new Adapter() });
+
 
 describe('Loader Component', () => {
 
@@ -17,7 +14,7 @@ describe('Loader Component', () => {
   });
 
   it('matches snapshot', () => {
-    expect(shallowToJson(component)).toMatchSnapshot();
+    expect(component).toMatchSnapshot();
   });
 
 });

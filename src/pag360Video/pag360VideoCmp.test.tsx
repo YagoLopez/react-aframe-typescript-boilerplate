@@ -1,11 +1,8 @@
 import 'aframe';
 import React from 'react';
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import {shallow, ShallowWrapper} from 'enzyme';
-import {shallowToJson} from "enzyme-to-json";
 import {Pag360VideoCmp} from "./Pag360VideoCmp";
-Enzyme.configure({ adapter: new Adapter() });
+
 
 describe('Pag360VideoCmp Component', () => {
 
@@ -20,7 +17,7 @@ describe('Pag360VideoCmp Component', () => {
   });
 
   it('matches snapshot', () => {
-    expect(shallowToJson(component)).toMatchSnapshot();
+    expect(component).toMatchSnapshot();
   });
 
 });

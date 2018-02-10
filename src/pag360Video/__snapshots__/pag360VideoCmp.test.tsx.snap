@@ -1,73 +1,543 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pag360VideoCmp Component matches snapshot 1`] = `
-<div>
-  <Loader>
-    Loading
-  </Loader>
-  <SideMenu
-    itemActive="2"
-    items={
-      Array [
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Pag360VideoCmp>
+    Dummy content
+</Pag360VideoCmp>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Loader>
+          Loading
+</Loader>,
+        <SideMenu
+          itemActive="2"
+          items={
+                    Array [
+                              Object {
+                                "active": false,
+                                "ico": "start.svg",
+                                "name": "Home",
+                                "url": "#/",
+                              },
+                              Object {
+                                "active": false,
+                                "ico": "video-player.svg",
+                                "name": "2D/3D Video",
+                                "url": "#/2dvideo",
+                              },
+                              Object {
+                                "active": false,
+                                "ico": "360-degrees.svg",
+                                "name": "360 Video",
+                                "url": "#/360video",
+                              },
+                              Object {
+                                "active": false,
+                                "ico": "3d-printer.svg",
+                                "name": "3D Model Animation",
+                                "url": "#/3dmodel",
+                              },
+                            ]
+          }
+          title="React + AFrame"
+/>,
+        <TopMenu
+          onClickMenuBtn={[Function]}
+>
+          <a
+                    className="top-menu-item player-btn"
+                    onClick={[Function]}
+          >
+                    Play
+          </a>
+          <a
+                    className="top-menu-item player-btn"
+                    onClick={[Function]}
+          >
+                    Pause
+          </a>
+</TopMenu>,
+        <a-scene>
+          <a-assets>
+                    <video
+                              id="videoEntity"
+                              preload="auto"
+                              src="video/360-fractal-4.mp4"
+                    />
+          </a-assets>
+          <a-camera
+                    reverse-mouse-drag="true"
+          />
+          <a-videosphere
+                    rotation="0 -90 0"
+                    src="#videoEntity"
+          />
+</a-scene>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Loading",
+        },
+        "ref": "loader",
+        "rendered": "Loading",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "itemActive": "2",
+          "items": Array [
+            Object {
+              "active": false,
+              "ico": "start.svg",
+              "name": "Home",
+              "url": "#/",
+            },
+            Object {
+              "active": false,
+              "ico": "video-player.svg",
+              "name": "2D/3D Video",
+              "url": "#/2dvideo",
+            },
+            Object {
+              "active": false,
+              "ico": "360-degrees.svg",
+              "name": "360 Video",
+              "url": "#/360video",
+            },
+            Object {
+              "active": false,
+              "ico": "3d-printer.svg",
+              "name": "3D Model Animation",
+              "url": "#/3dmodel",
+            },
+          ],
+          "title": "React + AFrame",
+        },
+        "ref": "sideMenu",
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <a
+              className="top-menu-item player-btn"
+              onClick={[Function]}
+>
+              Play
+</a>,
+            <a
+              className="top-menu-item player-btn"
+              onClick={[Function]}
+>
+              Pause
+</a>,
+          ],
+          "onClickMenuBtn": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Play",
+              "className": "top-menu-item player-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Play",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Pause",
+              "className": "top-menu-item player-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Pause",
+            "type": "a",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <a-assets>
+              <video
+                            id="videoEntity"
+                            preload="auto"
+                            src="video/360-fractal-4.mp4"
+              />
+</a-assets>,
+            <a-camera
+              reverse-mouse-drag="true"
+/>,
+            <a-videosphere
+              rotation="0 -90 0"
+              src="#videoEntity"
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <video
+                id="videoEntity"
+                preload="auto"
+                src="video/360-fractal-4.mp4"
+/>,
+            },
+            "ref": "assets",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "videoEntity",
+                "preload": "auto",
+                "src": "video/360-fractal-4.mp4",
+              },
+              "ref": "videoEntity",
+              "rendered": null,
+              "type": "video",
+            },
+            "type": "a-assets",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "reverse-mouse-drag": "true",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "a-camera",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "rotation": "0 -90 0",
+              "src": "#videoEntity",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "a-videosphere",
+          },
+        ],
+        "type": "a-scene",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Loader>
+            Loading
+</Loader>,
+          <SideMenu
+            itemActive="2"
+            items={
+                        Array [
+                                    Object {
+                                      "active": false,
+                                      "ico": "start.svg",
+                                      "name": "Home",
+                                      "url": "#/",
+                                    },
+                                    Object {
+                                      "active": false,
+                                      "ico": "video-player.svg",
+                                      "name": "2D/3D Video",
+                                      "url": "#/2dvideo",
+                                    },
+                                    Object {
+                                      "active": false,
+                                      "ico": "360-degrees.svg",
+                                      "name": "360 Video",
+                                      "url": "#/360video",
+                                    },
+                                    Object {
+                                      "active": false,
+                                      "ico": "3d-printer.svg",
+                                      "name": "3D Model Animation",
+                                      "url": "#/3dmodel",
+                                    },
+                                  ]
+            }
+            title="React + AFrame"
+/>,
+          <TopMenu
+            onClickMenuBtn={[Function]}
+>
+            <a
+                        className="top-menu-item player-btn"
+                        onClick={[Function]}
+            >
+                        Play
+            </a>
+            <a
+                        className="top-menu-item player-btn"
+                        onClick={[Function]}
+            >
+                        Pause
+            </a>
+</TopMenu>,
+          <a-scene>
+            <a-assets>
+                        <video
+                                    id="videoEntity"
+                                    preload="auto"
+                                    src="video/360-fractal-4.mp4"
+                        />
+            </a-assets>
+            <a-camera
+                        reverse-mouse-drag="true"
+            />
+            <a-videosphere
+                        rotation="0 -90 0"
+                        src="#videoEntity"
+            />
+</a-scene>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
         Object {
-          "active": false,
-          "ico": "start.svg",
-          "name": "Home",
-          "url": "#/",
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Loading",
+          },
+          "ref": "loader",
+          "rendered": "Loading",
+          "type": [Function],
         },
         Object {
-          "active": false,
-          "ico": "video-player.svg",
-          "name": "2D/3D Video",
-          "url": "#/2dvideo",
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "itemActive": "2",
+            "items": Array [
+              Object {
+                "active": false,
+                "ico": "start.svg",
+                "name": "Home",
+                "url": "#/",
+              },
+              Object {
+                "active": false,
+                "ico": "video-player.svg",
+                "name": "2D/3D Video",
+                "url": "#/2dvideo",
+              },
+              Object {
+                "active": false,
+                "ico": "360-degrees.svg",
+                "name": "360 Video",
+                "url": "#/360video",
+              },
+              Object {
+                "active": false,
+                "ico": "3d-printer.svg",
+                "name": "3D Model Animation",
+                "url": "#/3dmodel",
+              },
+            ],
+            "title": "React + AFrame",
+          },
+          "ref": "sideMenu",
+          "rendered": null,
+          "type": [Function],
         },
         Object {
-          "active": false,
-          "ico": "360-degrees.svg",
-          "name": "360 Video",
-          "url": "#/360video",
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <a
+                className="top-menu-item player-btn"
+                onClick={[Function]}
+>
+                Play
+</a>,
+              <a
+                className="top-menu-item player-btn"
+                onClick={[Function]}
+>
+                Pause
+</a>,
+            ],
+            "onClickMenuBtn": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Play",
+                "className": "top-menu-item player-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Play",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Pause",
+                "className": "top-menu-item player-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Pause",
+              "type": "a",
+            },
+          ],
+          "type": [Function],
         },
         Object {
-          "active": false,
-          "ico": "3d-printer.svg",
-          "name": "3D Model Animation",
-          "url": "#/3dmodel",
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <a-assets>
+                <video
+                                id="videoEntity"
+                                preload="auto"
+                                src="video/360-fractal-4.mp4"
+                />
+</a-assets>,
+              <a-camera
+                reverse-mouse-drag="true"
+/>,
+              <a-videosphere
+                rotation="0 -90 0"
+                src="#videoEntity"
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <video
+                  id="videoEntity"
+                  preload="auto"
+                  src="video/360-fractal-4.mp4"
+/>,
+              },
+              "ref": "assets",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "videoEntity",
+                  "preload": "auto",
+                  "src": "video/360-fractal-4.mp4",
+                },
+                "ref": "videoEntity",
+                "rendered": null,
+                "type": "video",
+              },
+              "type": "a-assets",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "reverse-mouse-drag": "true",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "a-camera",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "rotation": "0 -90 0",
+                "src": "#videoEntity",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "a-videosphere",
+            },
+          ],
+          "type": "a-scene",
         },
-      ]
-    }
-    title="React + AFrame"
-  />
-  <TopMenu
-    onClickMenuBtn={[Function]}
-  >
-    <a
-      className="top-menu-item player-btn"
-      onClick={[Function]}
-    >
-      Play
-    </a>
-    <a
-      className="top-menu-item player-btn"
-      onClick={[Function]}
-    >
-      Pause
-    </a>
-  </TopMenu>
-  <a-scene>
-    <a-assets>
-      <video
-        id="videoEntity"
-        preload="auto"
-        src="video/360-fractal-4.mp4"
-      />
-    </a-assets>
-    <a-camera
-      reverse-mouse-drag="true"
-    />
-    <a-videosphere
-      rotation="0 -90 0"
-      src="#videoEntity"
-    />
-  </a-scene>
-</div>
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
 `;

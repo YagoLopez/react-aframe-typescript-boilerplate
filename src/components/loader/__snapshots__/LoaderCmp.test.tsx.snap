@@ -1,53 +1,275 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Loader Component matches snapshot 1`] = `
-<div
-  className="fade-in"
-  id="loader-element"
-  style={
-    Object {
-      "position": "absolute",
-      "textAlign": "center",
-      "top": "41%",
-      "width": "100%",
-      "zIndex": 11,
-    }
-  }
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Loader>
+    Dummy content
+</Loader>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        style={
+                Object {
+                        "backgroundColor": "white",
+                        "borderRadius": "4px",
+                        "boxShadow": "grey 0 0 10px 0",
+                        "color": "black",
+                        "display": "block",
+                        "fontFamily": "verdana, sans-serif",
+                        "fontSize": "small",
+                        "margin": "auto",
+                        "padding": "20px",
+                        "textAlign": "center",
+                        "width": "70px",
+                      }
+        }
 >
-  <div
-    style={
-      Object {
-        "backgroundColor": "white",
-        "borderRadius": "4px",
-        "boxShadow": "grey 0 0 10px 0",
-        "color": "black",
-        "display": "block",
-        "fontFamily": "verdana, sans-serif",
-        "fontSize": "small",
-        "margin": "auto",
-        "padding": "20px",
+        <img
+                src="img/history3.svg"
+                style={
+                        Object {
+                                "verticalAlign": "middle",
+                              }
+                }
+        />
+        <div
+                style={
+                        Object {
+                                "paddingTop": "5px",
+                              }
+                }
+        >
+                Dummy content
+        </div>
+</div>,
+      "className": "fade-in",
+      "id": "loader-element",
+      "style": Object {
+        "position": "absolute",
         "textAlign": "center",
-        "width": "70px",
-      }
-    }
-  >
-    <img
-      src="img/history3.svg"
-      style={
+        "top": "41%",
+        "width": "100%",
+        "zIndex": 11,
+      },
+    },
+    "ref": [Function],
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            src="img/history3.svg"
+            style={
+                        Object {
+                                    "verticalAlign": "middle",
+                                  }
+            }
+/>,
+          <div
+            style={
+                        Object {
+                                    "paddingTop": "5px",
+                                  }
+            }
+>
+            Dummy content
+</div>,
+        ],
+        "style": Object {
+          "backgroundColor": "white",
+          "borderRadius": "4px",
+          "boxShadow": "grey 0 0 10px 0",
+          "color": "black",
+          "display": "block",
+          "fontFamily": "verdana, sans-serif",
+          "fontSize": "small",
+          "margin": "auto",
+          "padding": "20px",
+          "textAlign": "center",
+          "width": "70px",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
         Object {
-          "verticalAlign": "middle",
-        }
-      }
-    />
-    <div
-      style={
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "src": "img/history3.svg",
+            "style": Object {
+              "verticalAlign": "middle",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
         Object {
-          "paddingTop": "5px",
-        }
-      }
-    >
-      Dummy content
-    </div>
-  </div>
-</div>
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Dummy content",
+            "style": Object {
+              "paddingTop": "5px",
+            },
+          },
+          "ref": null,
+          "rendered": "Dummy content",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          style={
+                    Object {
+                              "backgroundColor": "white",
+                              "borderRadius": "4px",
+                              "boxShadow": "grey 0 0 10px 0",
+                              "color": "black",
+                              "display": "block",
+                              "fontFamily": "verdana, sans-serif",
+                              "fontSize": "small",
+                              "margin": "auto",
+                              "padding": "20px",
+                              "textAlign": "center",
+                              "width": "70px",
+                            }
+          }
+>
+          <img
+                    src="img/history3.svg"
+                    style={
+                              Object {
+                                        "verticalAlign": "middle",
+                                      }
+                    }
+          />
+          <div
+                    style={
+                              Object {
+                                        "paddingTop": "5px",
+                                      }
+                    }
+          >
+                    Dummy content
+          </div>
+</div>,
+        "className": "fade-in",
+        "id": "loader-element",
+        "style": Object {
+          "position": "absolute",
+          "textAlign": "center",
+          "top": "41%",
+          "width": "100%",
+          "zIndex": 11,
+        },
+      },
+      "ref": [Function],
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              src="img/history3.svg"
+              style={
+                            Object {
+                                          "verticalAlign": "middle",
+                                        }
+              }
+/>,
+            <div
+              style={
+                            Object {
+                                          "paddingTop": "5px",
+                                        }
+              }
+>
+              Dummy content
+</div>,
+          ],
+          "style": Object {
+            "backgroundColor": "white",
+            "borderRadius": "4px",
+            "boxShadow": "grey 0 0 10px 0",
+            "color": "black",
+            "display": "block",
+            "fontFamily": "verdana, sans-serif",
+            "fontSize": "small",
+            "margin": "auto",
+            "padding": "20px",
+            "textAlign": "center",
+            "width": "70px",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "src": "img/history3.svg",
+              "style": Object {
+                "verticalAlign": "middle",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Dummy content",
+              "style": Object {
+                "paddingTop": "5px",
+              },
+            },
+            "ref": null,
+            "rendered": "Dummy content",
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
 `;

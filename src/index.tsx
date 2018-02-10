@@ -19,30 +19,3 @@ ReactDOM.render(
   document.getElementById('root') as HTMLElement
 );
 
-
-
-
-/*
-
-// Intent of hot module reloading
-// https://medium.com/superhighfives/hot-reloading-create-react-app-73297a00dcad
-
-declare let module: any;
-
-ReactDOM.render(
-  <HashRouter>
-    <div>
-      <Route exact path="/" component={PagRoot}/>
-      <Route path="/2dvideo" component={PagVideoCmp}/>
-    </div>
-  </HashRouter>,
-  document.getElementById('root') as HTMLElement);
-
-if (module.hot) {
-  module.hot.accept('./pagIndex/PagRoot', () => {
-    debugger
-    const NextApp = require('./pagIndex/PagRoot').default;
-    ReactDOM.render(<NextApp />, document.getElementById('root'))
-  })
-}
-*/

@@ -1,19 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TopMenu Component matches snapshot 1`] = `
-<div
-  className="top-menu"
->
-  <img
-    className="top-menu-icon-left"
-    onClick={[Function]}
-    src="left-arrow.svg"
-  />
-  Dummy content
-  <img
-    className="top-menu-icon-right"
-    onClick={[Function]}
-    src="burger-icon.svg"
-  />
-</div>
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TopMenu>
+    Dummy content
+</TopMenu>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <img
+          className="top-menu-icon-left"
+          onClick={[Function]}
+          src="left-arrow.svg"
+/>,
+        "Dummy content",
+        <img
+          className="top-menu-icon-right"
+          onClick={[Function]}
+          src="burger-icon.svg"
+/>,
+      ],
+      "className": "top-menu",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "top-menu-icon-left",
+          "onClick": [Function],
+          "src": "left-arrow.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      "Dummy content",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "top-menu-icon-right",
+          "onClick": [Function],
+          "src": "burger-icon.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            className="top-menu-icon-left"
+            onClick={[Function]}
+            src="left-arrow.svg"
+/>,
+          "Dummy content",
+          <img
+            className="top-menu-icon-right"
+            onClick={[Function]}
+            src="burger-icon.svg"
+/>,
+        ],
+        "className": "top-menu",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "top-menu-icon-left",
+            "onClick": [Function],
+            "src": "left-arrow.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "Dummy content",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "top-menu-icon-right",
+            "onClick": [Function],
+            "src": "burger-icon.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
 `;

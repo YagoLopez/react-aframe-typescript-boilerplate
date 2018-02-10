@@ -22,14 +22,15 @@ export default class TopMenu extends React.PureComponent {
   };
 
   public render(){
+    const {leftIcon, children} = this.props;
     //todo: refactor
     // Not root route => Render top left arrow button
     if (window.location.hash !== "#/") {
       return(
         <div className="top-menu">
           <img src={ leftArrowSvg } className="top-menu-icon-left" onClick={ this.onClickBtnGoBack }/>
-          { this.props.children }
-          <img src={ this.props.leftIcon || burgerIconSvg } className="top-menu-icon-right"
+          { children }
+          <img src={ leftIcon || burgerIconSvg } className="top-menu-icon-right"
             onClick={ this.onClickMenuBtn }/>
         </div>
       )
@@ -37,8 +38,8 @@ export default class TopMenu extends React.PureComponent {
     } else {
       return (
         <div className="top-menu">
-          { this.props.children }
-          <img src={ this.props.leftIcon || burgerIconSvg } className="top-menu-icon-right"
+          { children }
+          <img src={ leftIcon || burgerIconSvg } className="top-menu-icon-right"
             onClick={ this.onClickMenuBtn }/>
         </div>
       )
