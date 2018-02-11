@@ -53,7 +53,7 @@
     "test": "jest test --env=jsdom",
     "test:watch": "jest --watch",
     "test:debug": "jest --debug",
-    "coverage": "jest test --coverage",
+    "coverage": "jest --no-cache --coverage",
     "analyze": "source-map-explorer build/static/js/main.*"
   },
   "jest": {
@@ -66,13 +66,15 @@
       "<rootDir>/config/test-shim.js",
       "<rootDir>/config/test-setup.js"
     ],
+    "mapCoverage": true,
     "transform": {
       "^.+\\.tsx?$": "ts-jest",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/assetsTransformer.js",
       "\\.(css|less)$": "<rootDir>/config/assetsTransformer.js"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
-    "collectCoverageFrom": ["src/**/*.{js,tsx,ts}", "!**/node_modules/**", "!**/dist/**", "!**/config/**", "!**/temp/**"]
+    "roots": ["src"],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "collectCoverageFrom": ["src/**/*.{tsx,ts}", "!src/index.tsx"]
   }
 }
