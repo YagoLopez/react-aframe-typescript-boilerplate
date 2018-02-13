@@ -40,7 +40,7 @@ ShallowWrapper {
                               href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                               target="_blank"
                     >
-                               VR Viewer
+                               VR HeadSet
                     </a>
           </div>
           <fieldset>
@@ -135,19 +135,19 @@ ShallowWrapper {
           onClickMenuBtn={[Function]}
 >
           <a
-                    className="top-menu-item rotate-camera"
+                    className="top-menu-item position-button"
                     data-position="0.17 4.14 2.79"
           >
                     Position 1
           </a>
           <a
-                    className="top-menu-item rotate-camera"
+                    className="top-menu-item position-button"
                     data-position="3.48 0.57 0.15"
           >
                     Position 2
           </a>
           <a
-                    className="top-menu-item rotate-camera"
+                    className="top-menu-item position-button"
                     data-position="-2.89 -2.51 3.20"
           >
                     Position 3
@@ -258,7 +258,7 @@ ShallowWrapper {
                             href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                             target="_blank"
               >
-                             VR Viewer
+                             VR HeadSet
               </a>
 </div>,
             <fieldset>
@@ -333,7 +333,7 @@ ShallowWrapper {
                   href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                   target="_blank"
 >
-                   VR Viewer
+                   VR HeadSet
 </a>,
               ],
               "className": "dialog-subtitle",
@@ -346,13 +346,13 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": " VR Viewer",
+                  "children": " VR HeadSet",
                   "className": "dialog-link",
                   "href": "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer",
                   "target": "_blank",
                 },
                 "ref": null,
-                "rendered": " VR Viewer",
+                "rendered": " VR HeadSet",
                 "type": "a",
               },
             ],
@@ -663,19 +663,19 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <a
-              className="top-menu-item rotate-camera"
+              className="top-menu-item position-button"
               data-position="0.17 4.14 2.79"
 >
               Position 1
 </a>,
             <a
-              className="top-menu-item rotate-camera"
+              className="top-menu-item position-button"
               data-position="3.48 0.57 0.15"
 >
               Position 2
 </a>,
             <a
-              className="top-menu-item rotate-camera"
+              className="top-menu-item position-button"
               data-position="-2.89 -2.51 3.20"
 >
               Position 3
@@ -691,7 +691,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Position 1",
-              "className": "top-menu-item rotate-camera",
+              "className": "top-menu-item position-button",
               "data-position": "0.17 4.14 2.79",
             },
             "ref": null,
@@ -704,7 +704,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Position 2",
-              "className": "top-menu-item rotate-camera",
+              "className": "top-menu-item position-button",
               "data-position": "3.48 0.57 0.15",
             },
             "ref": null,
@@ -717,7 +717,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Position 3",
-              "className": "top-menu-item rotate-camera",
+              "className": "top-menu-item position-button",
               "data-position": "-2.89 -2.51 3.20",
             },
             "ref": null,
@@ -1056,7 +1056,7 @@ ShallowWrapper {
                                     href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                                     target="_blank"
                         >
-                                     VR Viewer
+                                     VR HeadSet
                         </a>
             </div>
             <fieldset>
@@ -1151,19 +1151,19 @@ ShallowWrapper {
             onClickMenuBtn={[Function]}
 >
             <a
-                        className="top-menu-item rotate-camera"
+                        className="top-menu-item position-button"
                         data-position="0.17 4.14 2.79"
             >
                         Position 1
             </a>
             <a
-                        className="top-menu-item rotate-camera"
+                        className="top-menu-item position-button"
                         data-position="3.48 0.57 0.15"
             >
                         Position 2
             </a>
             <a
-                        className="top-menu-item rotate-camera"
+                        className="top-menu-item position-button"
                         data-position="-2.89 -2.51 3.20"
             >
                         Position 3
@@ -1274,7 +1274,7 @@ ShallowWrapper {
                                 href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                                 target="_blank"
                 >
-                                 VR Viewer
+                                 VR HeadSet
                 </a>
 </div>,
               <fieldset>
@@ -1349,7 +1349,7 @@ ShallowWrapper {
                     href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                     target="_blank"
 >
-                     VR Viewer
+                     VR HeadSet
 </a>,
                 ],
                 "className": "dialog-subtitle",
@@ -1362,13 +1362,13 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": " VR Viewer",
+                    "children": " VR HeadSet",
                     "className": "dialog-link",
                     "href": "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer",
                     "target": "_blank",
                   },
                   "ref": null,
-                  "rendered": " VR Viewer",
+                  "rendered": " VR HeadSet",
                   "type": "a",
                 },
               ],
@@ -1679,19 +1679,19 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <a
-                className="top-menu-item rotate-camera"
+                className="top-menu-item position-button"
                 data-position="0.17 4.14 2.79"
 >
                 Position 1
 </a>,
               <a
-                className="top-menu-item rotate-camera"
+                className="top-menu-item position-button"
                 data-position="3.48 0.57 0.15"
 >
                 Position 2
 </a>,
               <a
-                className="top-menu-item rotate-camera"
+                className="top-menu-item position-button"
                 data-position="-2.89 -2.51 3.20"
 >
                 Position 3
@@ -1707,7 +1707,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Position 1",
-                "className": "top-menu-item rotate-camera",
+                "className": "top-menu-item position-button",
                 "data-position": "0.17 4.14 2.79",
               },
               "ref": null,
@@ -1720,7 +1720,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Position 2",
-                "className": "top-menu-item rotate-camera",
+                "className": "top-menu-item position-button",
                 "data-position": "3.48 0.57 0.15",
               },
               "ref": null,
@@ -1733,7 +1733,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Position 3",
-                "className": "top-menu-item rotate-camera",
+                "className": "top-menu-item position-button",
                 "data-position": "-2.89 -2.51 3.20",
               },
               "ref": null,

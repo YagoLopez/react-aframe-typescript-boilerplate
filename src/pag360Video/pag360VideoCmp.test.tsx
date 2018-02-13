@@ -1,23 +1,24 @@
 import 'aframe';
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {shallow, ShallowWrapper} from 'enzyme';
 import {Pag360VideoCmp} from "./Pag360VideoCmp";
 
 
 describe('Pag360VideoCmp Component', () => {
 
-  const component = shallow(<Pag360VideoCmp>Dummy content</Pag360VideoCmp>);
+  const shallowComponent = shallow(<Pag360VideoCmp>Dummy content</Pag360VideoCmp>);
 
   it("is defined", () => {
-    expect(component).toBeDefined();
+    expect(shallowComponent).toBeDefined();
   });
 
   it('renders without crashing', () => {
-    expect(component).toBeInstanceOf(ShallowWrapper);
+    expect(shallowComponent).toBeInstanceOf(ShallowWrapper);
   });
 
   it('matches snapshot', () => {
-    expect(component).toMatchSnapshot();
+    expect(shallowComponent).toMatchSnapshot();
   });
+
 
 });

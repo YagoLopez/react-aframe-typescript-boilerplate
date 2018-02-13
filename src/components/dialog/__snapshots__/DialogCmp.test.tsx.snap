@@ -20,14 +20,16 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="dialogContent scale-up"
+        className="dialog-content"
+        id="dialog-content"
 >
         <div
                 className="dialog-title"
         />
         Dummy content
 </div>,
-      "className": "dialogContainer",
+      "className": "dialog-container",
+      "id": "dialog-container",
     },
     "ref": [Function],
     "rendered": Object {
@@ -41,7 +43,8 @@ ShallowWrapper {
 />,
           "Dummy content",
         ],
-        "className": "dialogContent scale-up",
+        "className": "dialog-content",
+        "id": "dialog-content",
       },
       "ref": null,
       "rendered": Array [
@@ -70,14 +73,16 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="dialogContent scale-up"
+          className="dialog-content"
+          id="dialog-content"
 >
           <div
                     className="dialog-title"
           />
           Dummy content
 </div>,
-        "className": "dialogContainer",
+        "className": "dialog-container",
+        "id": "dialog-container",
       },
       "ref": [Function],
       "rendered": Object {
@@ -91,7 +96,8 @@ ShallowWrapper {
 />,
             "Dummy content",
           ],
-          "className": "dialogContent scale-up",
+          "className": "dialog-content",
+          "id": "dialog-content",
         },
         "ref": null,
         "rendered": Array [

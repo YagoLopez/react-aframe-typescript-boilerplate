@@ -24,7 +24,6 @@ export default class Dialog extends React.PureComponent<DialogProps> {
     this.dialogContainer.style.display = 'flex';
     this.dialogContainer.classList.remove(Dialog.cssClassClosed);
     this.dialogContainer.classList.add(Dialog.cssClassOpen);
-
   }
 
   public hide() {
@@ -35,9 +34,9 @@ export default class Dialog extends React.PureComponent<DialogProps> {
   public render() {
     const {title, children} = this.props;
     return (
-      <div ref={ (dialogContainer: HTMLDivElement) => this.dialogContainer = dialogContainer }
-        className="outer-flex-container">
-          <div className={ "inner-flex-container" }>
+      <div id="dialog-container" ref={ (dialogContainer: HTMLDivElement) => this.dialogContainer = dialogContainer }
+        className="dialog-container">
+          <div id="dialog-content" className="dialog-content">
             <div className="dialog-title">{ title }</div>
             { children }
           </div>

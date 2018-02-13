@@ -6,7 +6,7 @@ import Dialog from "./DialogCmp";
 
 describe('Dialog Component', () => {
 
-  const component = shallow(<Dialog>Dummy content</Dialog>);
+  const shallowComponent = shallow(<Dialog>Dummy content</Dialog>);
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
@@ -14,6 +14,7 @@ describe('Dialog Component', () => {
   });
 
   it('matches snapshot', () => {
-    expect(component).toMatchSnapshot();
+    expect(shallowComponent).toMatchSnapshot();
   });
+
 });

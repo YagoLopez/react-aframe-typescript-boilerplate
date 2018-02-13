@@ -53,7 +53,7 @@ ShallowWrapper {
                               },
                             ]
           }
-          title="React + AFrame"
+          title="Video 360º"
 />,
         <TopMenu
           onClickMenuBtn={[Function]}
@@ -134,7 +134,7 @@ ShallowWrapper {
               "url": "#/3dmodel",
             },
           ],
-          "title": "React + AFrame",
+          "title": "Video 360º",
         },
         "ref": "sideMenu",
         "rendered": null,
@@ -312,7 +312,7 @@ ShallowWrapper {
                                     },
                                   ]
             }
-            title="React + AFrame"
+            title="Video 360º"
 />,
           <TopMenu
             onClickMenuBtn={[Function]}
@@ -393,7 +393,7 @@ ShallowWrapper {
                 "url": "#/3dmodel",
               },
             ],
-            "title": "React + AFrame",
+            "title": "Video 360º",
           },
           "ref": "sideMenu",
           "rendered": null,
