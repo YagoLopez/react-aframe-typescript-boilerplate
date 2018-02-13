@@ -1,17 +1,17 @@
 import React from 'react';
 import './DialogCmp.css';
 
-interface IProps {
+interface DialogProps {
   title?: string;
   children?: any;
   [attrs: string]: any;
 }
 
-export default class Dialog extends React.PureComponent<IProps, {}> {
+export default class Dialog extends React.PureComponent<DialogProps> {
 
   private dialogContainer: HTMLDivElement;
   private static cssClassOpen = 'scale-up';
-  private static cssClassClosed = 'scale-out-vertical';
+  private static cssClassClosed = 'scale-out-center';
 
   public componentDidMount() {
     const parentElement = this.dialogContainer && this.dialogContainer.parentElement as HTMLElement;
@@ -20,25 +20,26 @@ export default class Dialog extends React.PureComponent<IProps, {}> {
     });
   }
 
+  public show() {
+    this.dialogContainer.style.display = 'flex';
+    this.dialogContainer.classList.remove(Dialog.cssClassClosed);
+    this.dialogContainer.classList.add(Dialog.cssClassOpen);
+
+  }
+
   public hide() {
     this.dialogContainer.classList.remove(Dialog.cssClassOpen);
     this.dialogContainer.classList.add(Dialog.cssClassClosed);
   }
 
-  public show() {
-    this.dialogContainer.style.display = 'block';
-    this.dialogContainer.classList.remove(Dialog.cssClassClosed);
-    this.dialogContainer.classList.add(Dialog.cssClassOpen);
-  }
-
   public render() {
-    let classDialogContent = 'dialogContent ' + Dialog.cssClassOpen;
+    const {title, children} = this.props;
     return (
       <div ref={ (dialogContainer: HTMLDivElement) => this.dialogContainer = dialogContainer }
-        className="dialogContainer">
-          <div className={ classDialogContent }>
-            <div className="dialog-title">{ this.props.title }</div>
-            { this.props.children }
+        className="outer-flex-container">
+          <div className={ "inner-flex-container" }>
+            <div className="dialog-title">{ title }</div>
+            { children }
           </div>
       </div>
     )

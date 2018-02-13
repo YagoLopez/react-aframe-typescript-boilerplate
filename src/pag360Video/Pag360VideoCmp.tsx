@@ -42,7 +42,7 @@ export class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
 
         <Loader ref="loader">Loading</Loader>
 
-        <SideMenu ref="sideMenu" title="React + AFrame" items={ SIDE_MENU_ITEMS } itemActive="2"/>
+        <SideMenu ref="sideMenu" title="Video 360º" items={ SIDE_MENU_ITEMS } itemActive="2"/>
 
         <TopMenu onClickMenuBtn={ this.openSideMenu }>
           <a onClick={ this.playVideo } className="top-menu-item player-btn">Play</a>

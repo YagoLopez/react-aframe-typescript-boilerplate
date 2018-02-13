@@ -47,7 +47,7 @@ interface IState {
   }
 }
 
-interface IProps {history: any}
+interface IProps {history: any, isFirstTimeVisited: boolean}
 
 export class PagIndexCmp extends React.Component<IProps, IState> {
 
@@ -62,22 +62,22 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
       zoomSpeed: 0.5,
       minDistance: 3,
       maxDistance: 100,
-      invertZoom: true
+      invertZoom: true,
     }
   };
 
   public refs: {loader: Loader, scene: AFrame.Entity, dialog: Dialog, sideMenu: SideMenu};
-
+  
   public componentDidMount() {
 
     // AFrame Events must be defined here in componentDidMount().
     // The others React Events are defined in React elements as usual
 
-    const aHtmlTags = document.querySelectorAll('.rotate-camera') as HTMLCollection;
+    const aHtmlTags = document.querySelectorAll('.position-button') as HTMLCollection;
     Array.from(aHtmlTags).forEach( (aTag: HTMLAnchorElement) => {
       aTag.addEventListener('click', (event: any) => {
         const position = event.target.dataset.position;
-        //todo: revisar esto, se producen estados inconsistentes
+        //todo: revisar esto, se pueden producir estados inconsistentes
         //El estado deberia contener las coordenadas de rotacion de la camara
         this.setState( {orbitControls: {rotateTo: position}} )
       });
@@ -95,11 +95,14 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
 
     this.refs.loader && this.refs.loader.hideWhen(this.refs.scene, 'loaded');
 
-    this.openDialogDelayed(2000);
-
     this.refs.scene && this.refs.scene.addEventListener('click', () => {
       this.stopAnimation();
-    })
+    });
+
+    if (window.isFirstVisit) {
+      this.openDialogDelayed(2000);
+      window.isFirstVisit = false;
+    }
   }
 
   private objToString(component: Object): string {
@@ -152,7 +155,7 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
           <div className="dialog-subtitle">This is a demostration of ReactJS, AFrame and TypeScript integration.
             No real functionality is implemented</div>
           <div className="dialog-subtitle">For a full experience, use a
-            <a href={ urlVRviewer } className="dialog-link" target="_blank"> VR Viewer</a>
+            <a href={ urlVRviewer } className="dialog-link" target="_blank"> VR HeadSet</a>
           </div>
           <fieldset>
             <legend>Pan</legend>
@@ -172,9 +175,9 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
         </SideMenu>
 
         <TopMenu onClickMenuBtn={ this.openSideMenu }>
-          <a className="top-menu-item rotate-camera" data-position="0.17 4.14 2.79">Position 1</a>
-          <a className="top-menu-item rotate-camera" data-position="3.48 0.57 0.15">Position 2</a>
-          <a className="top-menu-item rotate-camera" data-position="-2.89 -2.51 3.20">Position 3</a>
+          <a className="top-menu-item position-button" data-position="0.17 4.14 2.79">Position 1</a>
+          <a className="top-menu-item position-button" data-position="3.48 0.57 0.15">Position 2</a>
+          <a className="top-menu-item position-button" data-position="-2.89 -2.51 3.20">Position 3</a>
         </TopMenu>
 
         <a-scene id="scene" ref="scene" raycaster="far: 100; objects: [link], [url]; interval: 200"
