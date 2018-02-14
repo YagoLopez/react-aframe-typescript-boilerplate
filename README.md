@@ -112,7 +112,7 @@ $ yarn yarn_code_coverage
 
 
 
-## Analysis of Dependecies
+## Analysis of Dependencies
 
 - [Report](https://yagolopez.js.org/react-aframe-typescript-boilerplate/deps/deps.html)
 - Run analysis of dependencies script:
