@@ -14,7 +14,6 @@
   <a href="https://yagolopez.js.org/react-aframe-typescript-boilerplate/deps/deps.html">
     <img src="https://img.shields.io/badge/dependencies-analysis-blue.svg" />
   </a>
-
 </p>
 
 # <p align="center">React + AFrame + TypeScript Boilerplate</p>

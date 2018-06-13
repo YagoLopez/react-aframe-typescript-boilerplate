@@ -20,7 +20,9 @@ export class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
 
   public componentDidMount() {
     this.refs.assets && this.refs.assets.addEventListener('loaded', () => {
-      this.refs.loader.hide();
+      setTimeout(() => {
+        this.refs.loader.hide();
+      }, 1200);
     })
   }
 

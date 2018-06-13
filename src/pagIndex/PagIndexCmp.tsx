@@ -153,7 +153,7 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
 
         <Dialog ref="dialog">
           <div className="dialog-subtitle">This is a demostration of ReactJS, AFrame and TypeScript integration.
-            No real functionality is implemented</div>
+            No real functionality has been implemented</div>
           <div className="dialog-subtitle">For a full experience, use a
             <a href={ urlVRviewer } className="dialog-link" target="_blank"> VR HeadSet</a>
           </div>
@@ -195,7 +195,11 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
 
           <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 -0.2 5"
           orbit-controls={ this.objToString(this.state.orbitControls) }>
-              {/*<a-cursor id="cursor" color="yellow"/>*/}
+            {/*<a-cursor id="cursor" color="yellow" position="0 1 -3"/>*/}
+            <a-entity position="0 -0.5 -3"
+                    geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
+                    material="color: yellow; shader: flat"
+                    cursor="maxDistance: 30; fuse: false"/>
           </a-entity>
 
           <a-entity id="entityGroup">

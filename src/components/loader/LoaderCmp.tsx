@@ -45,9 +45,9 @@ export default class Loader extends React.PureComponent<IProps> {
   public hide() {
     this.loaderElement.classList.remove('fade-in');
     this.loaderElement.classList.add('fade-out');
-    setTimeout( () => {
+    // setTimeout( () => {
       this.loaderElement.style.zIndex = '-1';
-    }, 1000)
+    // }, 1000)
   }
 
   public show() {
