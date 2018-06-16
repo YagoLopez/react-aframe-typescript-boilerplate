@@ -17,7 +17,6 @@
 //todo: mouse cursor pointer on <a-link>
 
 import * as React from 'react';
-import '../aframe.min.js';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.min';
 import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
