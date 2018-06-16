@@ -1,7 +1,7 @@
 //todo: transitions
 //todo: animation
 
-import React from 'react';
+import * as React from 'react';
 
 interface IProps {
   readonly shadowColor?: string;
@@ -43,15 +43,11 @@ export default class Loader extends React.PureComponent<IProps> {
   }
 
   public hide() {
-    this.loaderElement.classList.remove('fade-in');
-    this.loaderElement.classList.add('fade-out');
-    // setTimeout( () => {
-      this.loaderElement.style.zIndex = '-1';
-    // }, 1000)
+    this.loaderElement.style.display = 'none';
   }
 
   public show() {
-    this.loaderElement.classList.add('fade-in');
+    this.loaderElement.style.display = 'block';
   }
 
   public hideWhen(entity: AFrame.Entity, eventName: string = 'loaded'): void {
@@ -66,7 +62,7 @@ export default class Loader extends React.PureComponent<IProps> {
         style={ this.containerStyle } className="fade-in">
         <div style={ this.contentStyle }>
           {/* IMPORTANT: loader icon must be preloaded in "index.html" header */}
-          <img src="img/history3.svg" style={ {verticalAlign: 'middle'} } />
+          <img id="loader-image" src="img/history3.svg" style={ {verticalAlign: 'middle'} } />
           <div style={ {paddingTop: '5px'} }>{ this.props.children }</div>
         </div>
       </div>

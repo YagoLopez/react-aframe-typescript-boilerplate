@@ -9,7 +9,7 @@
     "url": "https://github.com/YagoLopez/react-aframe-typescript-boilerplate"
   },
   "bugs": {
-    "url" : "https://github.com/YagoLopez/react-aframe-typescript-boilerplate/issues"
+    "url": "https://github.com/YagoLopez/react-aframe-typescript-boilerplate/issues"
   },
   "author": {
     "name": "Yago Lopez",
@@ -72,9 +72,18 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/assetsTransformer.js",
       "\\.(css|less)$": "<rootDir>/config/assetsTransformer.js"
     },
-    "roots": ["src"],
+    "roots": [
+      "src"
+    ],
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": ["ts", "tsx", "js"],
-    "collectCoverageFrom": ["src/**/*.{tsx,ts}", "!src/index.tsx"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{tsx,ts}",
+      "!src/index.tsx"
+    ]
   }
 }

@@ -17,4 +17,13 @@ describe('SideMenu Component', () => {
     expect(component).toMatchSnapshot();
   });
 
+  it("renders content", () => {
+    expect(component.find('div.sideMenuContainer').length).toBe(1);
+    expect(component.find('div.sideMenuContent').length).toBe(1);
+    expect(component.find('h1.side-menu-title').length).toBe(1);
+    expect(component.find('div.side-menu-btn-close').length).toBe(1);
+    expect(component.find('div.items-container').length).toBe(1);
+    expect(component.find('img.icon-item').length).toBeGreaterThanOrEqual(0);
+  });
+
 });

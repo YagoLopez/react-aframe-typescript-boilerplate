@@ -16,7 +16,8 @@
 //todo: custom event polyfill
 //todo: mouse cursor pointer on <a-link>
 
-import React from 'react';
+import * as React from 'react';
+import '../aframe.min.js';
 import 'aframe-orbit-controls-component-2/dist/aframe-orbit-controls-component.min';
 import Loader from "../components/loader/LoaderCmp";
 import Dialog from "../components/dialog/DialogCmp";
@@ -70,11 +71,10 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
   
   public componentDidMount() {
 
-    // AFrame Events must be defined here in componentDidMount().
-    // The others React Events are defined in React elements as usual
+    // AFrame Events must be defined in componentDidMount().
 
-    const aHtmlTags = document.querySelectorAll('.position-button') as HTMLCollection;
-    Array.from(aHtmlTags).forEach( (aTag: HTMLAnchorElement) => {
+    const aElements = document.querySelectorAll('.position-button') as HTMLCollection;
+    Array.from(aElements).forEach( (aTag: HTMLAnchorElement) => {
       aTag.addEventListener('click', (event: any) => {
         const position = event.target.dataset.position;
         //todo: revisar esto, se pueden producir estados inconsistentes
@@ -155,7 +155,8 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
           <div className="dialog-subtitle">This is a demostration of ReactJS, AFrame and TypeScript integration.
             No real functionality has been implemented</div>
           <div className="dialog-subtitle">For a full experience, use a
-            <a href={ urlVRviewer } className="dialog-link" target="_blank"> VR HeadSet</a>
+            <a href={ urlVRviewer } className="dialog-link" target="_blank"> VR HeadSet.</a>
+            <div>Yellow circle is the pointer when VR HeadSet is on</div>
           </div>
           <fieldset>
             <legend>Pan</legend>
@@ -194,8 +195,7 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
           <a-sky src="#sky" rotation="0 -90 0"/>
 
           <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 -0.2 5"
-          orbit-controls={ this.objToString(this.state.orbitControls) }>
-            {/*<a-cursor id="cursor" color="yellow" position="0 1 -3"/>*/}
+            orbit-controls={ this.objToString(this.state.orbitControls) }>
             <a-entity position="0 -0.5 -3"
                     geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
                     material="color: yellow; shader: flat"

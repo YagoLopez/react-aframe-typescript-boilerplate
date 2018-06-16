@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <PagIndexCmp
     history={null}
+    isFirstTimeVisited={false}
 >
     Mock content
 </PagIndexCmp>,
@@ -29,7 +30,7 @@ ShallowWrapper {
           <div
                     className="dialog-subtitle"
           >
-                    This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
+                    This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality has been implemented
           </div>
           <div
                     className="dialog-subtitle"
@@ -40,8 +41,11 @@ ShallowWrapper {
                               href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                               target="_blank"
                     >
-                               VR HeadSet
+                               VR HeadSet.
                     </a>
+                    <div>
+                              Yellow circle is the pointer when VR HeadSet is on
+                    </div>
           </div>
           <fieldset>
                     <legend>
@@ -189,7 +193,14 @@ ShallowWrapper {
                     id="camera"
                     orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
                     position="0 -0.2 5"
-          />
+          >
+                    <a-entity
+                              cursor="maxDistance: 30; fuse: false"
+                              geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
+                              material="color: yellow; shader: flat"
+                              position="0 -0.5 -3"
+                    />
+          </a-entity>
           <a-entity
                     id="entityGroup"
           >
@@ -247,7 +258,7 @@ ShallowWrapper {
             <div
               className="dialog-subtitle"
 >
-              This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
+              This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality has been implemented
 </div>,
             <div
               className="dialog-subtitle"
@@ -258,8 +269,11 @@ ShallowWrapper {
                             href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                             target="_blank"
               >
-                             VR HeadSet
+                             VR HeadSet.
               </a>
+              <div>
+                            Yellow circle is the pointer when VR HeadSet is on
+              </div>
 </div>,
             <fieldset>
               <legend>
@@ -314,11 +328,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented",
+              "children": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality has been implemented",
               "className": "dialog-subtitle",
             },
             "ref": null,
-            "rendered": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented",
+            "rendered": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality has been implemented",
             "type": "div",
           },
           Object {
@@ -333,8 +347,11 @@ ShallowWrapper {
                   href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                   target="_blank"
 >
-                   VR HeadSet
+                   VR HeadSet.
 </a>,
+                <div>
+                  Yellow circle is the pointer when VR HeadSet is on
+</div>,
               ],
               "className": "dialog-subtitle",
             },
@@ -346,14 +363,25 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": " VR HeadSet",
+                  "children": " VR HeadSet.",
                   "className": "dialog-link",
                   "href": "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer",
                   "target": "_blank",
                 },
                 "ref": null,
-                "rendered": " VR HeadSet",
+                "rendered": " VR HeadSet.",
                 "type": "a",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Yellow circle is the pointer when VR HeadSet is on",
+                },
+                "ref": null,
+                "rendered": "Yellow circle is the pointer when VR HeadSet is on",
+                "type": "div",
               },
             ],
             "type": "div",
@@ -764,7 +792,14 @@ ShallowWrapper {
               id="camera"
               orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
               position="0 -0.2 5"
-/>,
+>
+              <a-entity
+                            cursor="maxDistance: 30; fuse: false"
+                            geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
+                            material="color: yellow; shader: flat"
+                            position="0 -0.5 -3"
+              />
+</a-entity>,
             <a-entity
               id="entityGroup"
 >
@@ -915,12 +950,31 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "camera": "fov: 80; zoom: 1",
+              "children": <a-entity
+                cursor="maxDistance: 30; fuse: false"
+                geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
+                material="color: yellow; shader: flat"
+                position="0 -0.5 -3"
+/>,
               "id": "camera",
               "orbit-controls": "autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true",
               "position": "0 -0.2 5",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "cursor": "maxDistance: 30; fuse: false",
+                "geometry": "primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;",
+                "material": "color: yellow; shader: flat",
+                "position": "0 -0.5 -3",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "a-entity",
+            },
             "type": "a-entity",
           },
           Object {
@@ -1045,7 +1099,7 @@ ShallowWrapper {
             <div
                         className="dialog-subtitle"
             >
-                        This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
+                        This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality has been implemented
             </div>
             <div
                         className="dialog-subtitle"
@@ -1056,8 +1110,11 @@ ShallowWrapper {
                                     href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                                     target="_blank"
                         >
-                                     VR HeadSet
+                                     VR HeadSet.
                         </a>
+                        <div>
+                                    Yellow circle is the pointer when VR HeadSet is on
+                        </div>
             </div>
             <fieldset>
                         <legend>
@@ -1205,7 +1262,14 @@ ShallowWrapper {
                         id="camera"
                         orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
                         position="0 -0.2 5"
-            />
+            >
+                        <a-entity
+                                    cursor="maxDistance: 30; fuse: false"
+                                    geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
+                                    material="color: yellow; shader: flat"
+                                    position="0 -0.5 -3"
+                        />
+            </a-entity>
             <a-entity
                         id="entityGroup"
             >
@@ -1263,7 +1327,7 @@ ShallowWrapper {
               <div
                 className="dialog-subtitle"
 >
-                This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented
+                This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality has been implemented
 </div>,
               <div
                 className="dialog-subtitle"
@@ -1274,8 +1338,11 @@ ShallowWrapper {
                                 href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                                 target="_blank"
                 >
-                                 VR HeadSet
+                                 VR HeadSet.
                 </a>
+                <div>
+                                Yellow circle is the pointer when VR HeadSet is on
+                </div>
 </div>,
               <fieldset>
                 <legend>
@@ -1330,11 +1397,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented",
+                "children": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality has been implemented",
                 "className": "dialog-subtitle",
               },
               "ref": null,
-              "rendered": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality is implemented",
+              "rendered": "This is a demostration of ReactJS, AFrame and TypeScript integration. No real functionality has been implemented",
               "type": "div",
             },
             Object {
@@ -1349,8 +1416,11 @@ ShallowWrapper {
                     href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer"
                     target="_blank"
 >
-                     VR HeadSet
+                     VR HeadSet.
 </a>,
+                  <div>
+                    Yellow circle is the pointer when VR HeadSet is on
+</div>,
                 ],
                 "className": "dialog-subtitle",
               },
@@ -1362,14 +1432,25 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": " VR HeadSet",
+                    "children": " VR HeadSet.",
                     "className": "dialog-link",
                     "href": "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=vr+viewer",
                     "target": "_blank",
                   },
                   "ref": null,
-                  "rendered": " VR HeadSet",
+                  "rendered": " VR HeadSet.",
                   "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Yellow circle is the pointer when VR HeadSet is on",
+                  },
+                  "ref": null,
+                  "rendered": "Yellow circle is the pointer when VR HeadSet is on",
+                  "type": "div",
                 },
               ],
               "type": "div",
@@ -1780,7 +1861,14 @@ ShallowWrapper {
                 id="camera"
                 orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
                 position="0 -0.2 5"
-/>,
+>
+                <a-entity
+                                cursor="maxDistance: 30; fuse: false"
+                                geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
+                                material="color: yellow; shader: flat"
+                                position="0 -0.5 -3"
+                />
+</a-entity>,
               <a-entity
                 id="entityGroup"
 >
@@ -1931,12 +2019,31 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "camera": "fov: 80; zoom: 1",
+                "children": <a-entity
+                  cursor="maxDistance: 30; fuse: false"
+                  geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
+                  material="color: yellow; shader: flat"
+                  position="0 -0.5 -3"
+/>,
                 "id": "camera",
                 "orbit-controls": "autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true",
                 "position": "0 -0.2 5",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "cursor": "maxDistance: 30; fuse: false",
+                  "geometry": "primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;",
+                  "material": "color: yellow; shader: flat",
+                  "position": "0 -0.5 -3",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "a-entity",
+              },
               "type": "a-entity",
             },
             Object {

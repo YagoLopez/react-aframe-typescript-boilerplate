@@ -37,6 +37,7 @@ ShallowWrapper {
         }
 >
         <img
+                id="loader-image"
                 src="img/history3.svg"
                 style={
                         Object {
@@ -72,6 +73,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <img
+            id="loader-image"
             src="img/history3.svg"
             style={
                         Object {
@@ -110,6 +112,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "id": "loader-image",
             "src": "img/history3.svg",
             "style": Object {
               "verticalAlign": "middle",
@@ -162,6 +165,7 @@ ShallowWrapper {
           }
 >
           <img
+                    id="loader-image"
                     src="img/history3.svg"
                     style={
                               Object {
@@ -197,6 +201,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <img
+              id="loader-image"
               src="img/history3.svg"
               style={
                             Object {
@@ -235,6 +240,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "id": "loader-image",
               "src": "img/history3.svg",
               "style": Object {
                 "verticalAlign": "middle",

@@ -1,6 +1,6 @@
 //todo: crear componente react para incrustar videos 360 grados. Estaria basado en Aframe o en threejs
 //todo: open issue en aframe reepo: isPlaying = true inicialmente
-import React from 'react';
+import * as React from 'react';
 import Loader from "../components/loader/LoaderCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
@@ -10,24 +10,31 @@ import './pag360VideoCmp.css';
 
 export class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
 
-  // todo: "document.querySelector('a-videosphere').isPlaying" seems not to work ("isPlaying" always true)
+  playVideoDelay = 2000;
+
+  // todo: "document.querySelector('a-videosphere').isPlaying" seems not working ("isPlaying" always true)
   public refs: {
     videoEntity: AFrame.Entity,
     sideMenu: SideMenu,
     assets: AFrame.Entity,
-    loader: Loader
+    loader: Loader,
+    loader2: Loader
   };
 
   public componentDidMount() {
-    this.refs.assets && this.refs.assets.addEventListener('loaded', () => {
-      setTimeout(() => {
-        this.refs.loader.hide();
-      }, 1200);
+    this.refs.loader2 && this.refs.loader2.hide();
+    this.refs.assets && this.refs.assets.addEventListener('loaded', _ => {
+      setTimeout(_ => this.refs.loader.hide(), this.playVideoDelay);
     })
   }
 
   private playVideo = () => {
+    this.refs.loader2.show();
     this.refs.videoEntity.play();
+    setTimeout(_ => {
+      this.refs.loader2.hide();
+      this.playVideoDelay = 0;
+    }, this.playVideoDelay);
   };
 
   private pauseVideo = () => {
@@ -43,6 +50,8 @@ export class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
       <div>
 
         <Loader ref="loader">Loading</Loader>
+
+        <Loader ref="loader2">Preparing 3D Video</Loader>
 
         <SideMenu ref="sideMenu" title="Video 360º" items={ SIDE_MENU_ITEMS } itemActive="2"/>
 

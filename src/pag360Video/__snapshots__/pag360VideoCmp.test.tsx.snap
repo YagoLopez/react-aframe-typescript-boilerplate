@@ -23,6 +23,9 @@ ShallowWrapper {
         <Loader>
           Loading
 </Loader>,
+        <Loader>
+          Preparing 3D Video
+</Loader>,
         <SideMenu
           itemActive="2"
           items={
@@ -100,6 +103,17 @@ ShallowWrapper {
         },
         "ref": "loader",
         "rendered": "Loading",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Preparing 3D Video",
+        },
+        "ref": "loader2",
+        "rendered": "Preparing 3D Video",
         "type": [Function],
       },
       Object {
@@ -282,6 +296,9 @@ ShallowWrapper {
           <Loader>
             Loading
 </Loader>,
+          <Loader>
+            Preparing 3D Video
+</Loader>,
           <SideMenu
             itemActive="2"
             items={
@@ -359,6 +376,17 @@ ShallowWrapper {
           },
           "ref": "loader",
           "rendered": "Loading",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Preparing 3D Video",
+          },
+          "ref": "loader2",
+          "rendered": "Preparing 3D Video",
           "type": [Function],
         },
         Object {
