@@ -1,5 +1,5 @@
+//todo: usar service worker
 //todo: ampliar test segun code coverage report y enzyme
-//todo: arreglar tamaño pantalla completa
 //todo: mostrar dialogo en pagindexcmp solo una vez (usar localstorage)
 //todo: añadir click de mouse (raytracer component) a boton play de video 2d control
 //todo: cambiar video de canguros
@@ -7,9 +7,8 @@
 //todo: Warning: React depends on requestAnimationFrame. Make sure that you load a polyfill in older browsers. http://fb.me/react-poly
 //todo: comentar en stackoverflow aframe y abrir issue en aframe-extras. hay una dependencia defectuosa
 //todo: crear componente button close para dialogo y side menu
-//todo: crear jerarquia de componentes (usar herencia): dialog, sideMenu, loader a partir de un componente base abstracto
 //todo: crear un component de react que sea un link con imagen (parecido al componente portal)
-//todo: arreglar lo de que da errores al poner atributos no html5. Por ejemplo <img crossorigin="anonymous">
+//todo: arreglar errores al poner atributos no html5. Por ejemplo <img crossorigin="anonymous">
 //todo: gestionar mejor el estado de la entidad camara
 //todo: probar a eliminar completamente tslint del proyecto
 //todo: creditos
@@ -213,6 +212,6 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
 
         </a-scene>
       </div>
-    );
+    )
   }
 }

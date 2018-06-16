@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
+        <span class="strong">60.87% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>12/16</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
-        <span class="quiet">Branches</span>
-        <span class='fraction'>4/5</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>4/8</span>
+        <span class='fraction'>14/23</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">71.43% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/14</span>
+        <span class='fraction'>12/20</span>
       </div>
     </div>
   </div>
@@ -105,7 +105,18 @@
 60
 61
 62
-63</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -117,6 +128,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -127,6 +141,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -140,11 +164,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -169,7 +191,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">//todo: crear componente react para incrustar videos 360 grados. Estaria basado en Aframe o en threejs
 //todo: open issue en aframe reepo: isPlaying = true inicialmente
-import React from 'react';
+import * as React from 'react';
 import Loader from "../components/loader/LoaderCmp";
 import TopMenu from "../components/topMenu/TopMenuCmp";
 import SideMenu from "../components/sideMenu/SideMenuCmp";
@@ -179,22 +201,31 @@ import './pag360VideoCmp.css';
 &nbsp;
 export class Pag360VideoCmp extends React.Component&lt;{}, {isPlaying: boolean}&gt; {
 &nbsp;
-  // todo: "document.querySelector('a-videosphere').isPlaying" seems not to work ("isPlaying" always true)
+  playVideoDelay = 2000;
+&nbsp;
+  // todo: "document.querySelector('a-videosphere').isPlaying" seems not working ("isPlaying" always true)
   public refs: {
     videoEntity: AFrame.Entity,
     sideMenu: SideMenu,
     assets: AFrame.Entity,
-    loader: Loader
+    loader: Loader,
+    loader2: Loader
   };
 &nbsp;
   public componentDidMount() {
-<span class="branch-1 cbranch-no" title="branch not covered" >    this.refs.<span class="fstat-no" title="function not covered" >assets &amp;&amp; t</span>his.</span>refs.assets.addEventListener('loaded', () =&gt; {
-<span class="cstat-no" title="statement not covered" >      this.refs.loader.h</span>ide();
+<span class="branch-1 cbranch-no" title="branch not covered" >    this.</span>refs.loader2 &amp;&amp; this.refs.loader2.hide();
+<span class="branch-1 cbranch-no" title="branch not covered" >    this.refs.<span class="fstat-no" title="function not covered" >assets &amp;&amp; t</span>his.</span>refs.assets.addEventListener('loaded', _ =&gt; {
+<span class="cstat-no" title="statement not covered" >      setTimeout(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >_</span> =&gt; </span>this.refs.loader.hide(), this.playVideoDelay);</span>
     })
   }
 &nbsp;
   private playVideo = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.refs.loader2.s</span>how();
 <span class="cstat-no" title="statement not covered" >    this.refs.videoEntity.p</span>lay();
+<span class="cstat-no" title="statement not covered" >    setTimeout(<span class="fstat-no" title="function not covered" >_ =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >      this.refs.loader2.h</span>ide();
+<span class="cstat-no" title="statement not covered" >      this.playVideoDelay = 0</span>;
+    }, this.playVideoDelay);
   };
 &nbsp;
   private pauseVideo = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
@@ -211,7 +242,9 @@ export class Pag360VideoCmp extends React.Component&lt;{}, {isPlaying: boolean}&
 &nbsp;
         &lt;Loader ref="loader"&gt;Loading&lt;/Loader&gt;
 &nbsp;
-        &lt;SideMenu ref="sideMenu" title="React + AFrame" items={ SIDE_MENU_ITEMS } itemActive="2"/&gt;
+        &lt;Loader ref="loader2"&gt;Preparing 3D Video&lt;/Loader&gt;
+&nbsp;
+        &lt;SideMenu ref="sideMenu" title="Video 360º" items={ SIDE_MENU_ITEMS } itemActive="2"/&gt;
 &nbsp;
         &lt;TopMenu onClickMenuBtn={ this.openSideMenu }&gt;
           &lt;a onClick={ this.playVideo } className="top-menu-item player-btn"&gt;Play&lt;/a&gt;
@@ -235,7 +268,7 @@ export class Pag360VideoCmp extends React.Component&lt;{}, {isPlaying: boolean}&
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Feb 11 2018 22:54:28 GMT+0100 (Hora estándar romance)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jun 17 2018 00:41:09 GMT+0200 (Hora de verano romance)
 </div>
 </div>
 <script src="..\prettify.js"></script>
