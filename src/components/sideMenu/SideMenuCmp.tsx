@@ -63,12 +63,16 @@ export default class SideMenu extends React.PureComponent<IProps> {
                 return (
                   <div key={ item.name } className={ item.active ? "side-menu-item active" : "side-menu-item" }>
                     <img src={ item.ico } className="icon-item" />
-                    <a href={ item.url }>{ item.name }</a>
+                    <a href={ item.url } className="inline">{ item.name }</a>
                   </div>
                 )
               })
             }
             { children && <div className="side-menu-item">{ children }</div> }
+          </div>
+          <div className="footer">
+            Note: this is cutting-edge software. It can be unstable and contain bugs due to third party code.<br/><br/>
+            Tested in mobile Chorme 66, Destokp Chrome 66 and Windows 10
           </div>
         </div>
       </div>

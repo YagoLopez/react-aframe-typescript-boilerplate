@@ -193,14 +193,7 @@ ShallowWrapper {
                     id="camera"
                     orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
                     position="0 -0.2 5"
-          >
-                    <a-entity
-                              cursor="maxDistance: 30; fuse: false"
-                              geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
-                              material="color: yellow; shader: flat"
-                              position="0 -0.5 -3"
-                    />
-          </a-entity>
+          />
           <a-entity
                     id="entityGroup"
           >
@@ -216,7 +209,7 @@ ShallowWrapper {
                               image="#link1"
                               onClick={[Function]}
                               position="-3 1 0"
-                              title="2D/3D Video"
+                              title="2D/360 Video"
                     />
                     <a-link
                               href="#"
@@ -792,14 +785,7 @@ ShallowWrapper {
               id="camera"
               orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
               position="0 -0.2 5"
->
-              <a-entity
-                            cursor="maxDistance: 30; fuse: false"
-                            geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
-                            material="color: yellow; shader: flat"
-                            position="0 -0.5 -3"
-              />
-</a-entity>,
+/>,
             <a-entity
               id="entityGroup"
 >
@@ -815,7 +801,7 @@ ShallowWrapper {
                             image="#link1"
                             onClick={[Function]}
                             position="-3 1 0"
-                            title="2D/3D Video"
+                            title="2D/360 Video"
               />
               <a-link
                             href="#"
@@ -950,31 +936,12 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "camera": "fov: 80; zoom: 1",
-              "children": <a-entity
-                cursor="maxDistance: 30; fuse: false"
-                geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
-                material="color: yellow; shader: flat"
-                position="0 -0.5 -3"
-/>,
               "id": "camera",
               "orbit-controls": "autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true",
               "position": "0 -0.2 5",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "cursor": "maxDistance: 30; fuse: false",
-                "geometry": "primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;",
-                "material": "color: yellow; shader: flat",
-                "position": "0 -0.5 -3",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "a-entity",
-            },
+            "rendered": null,
             "type": "a-entity",
           },
           Object {
@@ -995,7 +962,7 @@ ShallowWrapper {
                   image="#link1"
                   onClick={[Function]}
                   position="-3 1 0"
-                  title="2D/3D Video"
+                  title="2D/360 Video"
 />,
                 <a-link
                   href="#"
@@ -1040,7 +1007,7 @@ ShallowWrapper {
                   "image": "#link1",
                   "onClick": [Function],
                   "position": "-3 1 0",
-                  "title": "2D/3D Video",
+                  "title": "2D/360 Video",
                 },
                 "ref": null,
                 "rendered": null,
@@ -1262,14 +1229,7 @@ ShallowWrapper {
                         id="camera"
                         orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
                         position="0 -0.2 5"
-            >
-                        <a-entity
-                                    cursor="maxDistance: 30; fuse: false"
-                                    geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
-                                    material="color: yellow; shader: flat"
-                                    position="0 -0.5 -3"
-                        />
-            </a-entity>
+            />
             <a-entity
                         id="entityGroup"
             >
@@ -1285,7 +1245,7 @@ ShallowWrapper {
                                     image="#link1"
                                     onClick={[Function]}
                                     position="-3 1 0"
-                                    title="2D/3D Video"
+                                    title="2D/360 Video"
                         />
                         <a-link
                                     href="#"
@@ -1861,14 +1821,7 @@ ShallowWrapper {
                 id="camera"
                 orbit-controls="autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true"
                 position="0 -0.2 5"
->
-                <a-entity
-                                cursor="maxDistance: 30; fuse: false"
-                                geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
-                                material="color: yellow; shader: flat"
-                                position="0 -0.5 -3"
-                />
-</a-entity>,
+/>,
               <a-entity
                 id="entityGroup"
 >
@@ -1884,7 +1837,7 @@ ShallowWrapper {
                                 image="#link1"
                                 onClick={[Function]}
                                 position="-3 1 0"
-                                title="2D/3D Video"
+                                title="2D/360 Video"
                 />
                 <a-link
                                 href="#"
@@ -2019,31 +1972,12 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "camera": "fov: 80; zoom: 1",
-                "children": <a-entity
-                  cursor="maxDistance: 30; fuse: false"
-                  geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
-                  material="color: yellow; shader: flat"
-                  position="0 -0.5 -3"
-/>,
                 "id": "camera",
                 "orbit-controls": "autoRotate:true;target:#entityGroup;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:3;maxDistance:100;invertZoom:true",
                 "position": "0 -0.2 5",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "cursor": "maxDistance: 30; fuse: false",
-                  "geometry": "primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;",
-                  "material": "color: yellow; shader: flat",
-                  "position": "0 -0.5 -3",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "a-entity",
-              },
+              "rendered": null,
               "type": "a-entity",
             },
             Object {
@@ -2064,7 +1998,7 @@ ShallowWrapper {
                     image="#link1"
                     onClick={[Function]}
                     position="-3 1 0"
-                    title="2D/3D Video"
+                    title="2D/360 Video"
 />,
                   <a-link
                     href="#"
@@ -2109,7 +2043,7 @@ ShallowWrapper {
                     "image": "#link1",
                     "onClick": [Function],
                     "position": "-3 1 0",
-                    "title": "2D/3D Video",
+                    "title": "2D/360 Video",
                   },
                   "ref": null,
                   "rendered": null,

@@ -6,6 +6,7 @@
   background-color: slategray;
   display: none;
   box-shadow: 0 0 10px 0 black;
+  overflow: auto;
 }
 .sideMenuContent {
   color: white;
@@ -63,6 +64,14 @@
 .icon-item {
   vertical-align: middle;
   padding: 5px;
+}
+a.inline {
+  display: inline;
+}
+.footer {
+  font-size: x-small;
+  padding-top: 20px;
+  font-family: sans-serif;
 }
 /**
  * ----------------------------------------

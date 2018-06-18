@@ -180,7 +180,7 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
         </TopMenu>
 
         <a-scene id="scene" ref="scene" raycaster="far: 100; objects: [link], [url]; interval: 200"
-          cursor="rayOrigin: mouse">
+                 cursor="rayOrigin: mouse">
 
           <a-assets>
             <img id="sky" src="img/1.jpg"/>
@@ -194,10 +194,12 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
 
           <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 -0.2 5"
             orbit-controls={ this.objToString(this.state.orbitControls) }>
-            {/*<a-entity position="0 -0.5 -3"*/}
-                    {/*geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"*/}
-                    {/*material="color: yellow; shader: flat"*/}
-                    {/*cursor="maxDistance: 30; fuse: false"/>*/}
+            <a-cursor position="0 -0.5 -3"
+                    geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
+                    material="color: yellow; shader: flat"
+                    raycaster="far: 20; interval: 1000; objects: a-link"
+                    />
+            {/*<a-entity cursor raycaster="far: 20; interval: 1000; objects: .clickable"></a-entity>*/}
           </a-entity>
 
           <a-entity id="entityGroup">

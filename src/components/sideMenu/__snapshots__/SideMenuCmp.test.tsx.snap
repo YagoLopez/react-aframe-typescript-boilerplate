@@ -44,6 +44,14 @@ ShallowWrapper {
                         Dummy content
                 </div>
         </div>
+        <div
+                className="footer"
+        >
+                Note: this is cutting-edge software. It can be unstable and contain bugs due to third party code.
+                <br />
+                <br />
+                Tested in mobile Chorme 66, Destokp Chrome 66 and Windows 10
+        </div>
 </div>,
       "className": "sideMenuContainer slide-in-left",
     },
@@ -75,6 +83,14 @@ ShallowWrapper {
             >
                         Dummy content
             </div>
+</div>,
+          <div
+            className="footer"
+>
+            Note: this is cutting-edge software. It can be unstable and contain bugs due to third party code.
+            <br />
+            <br />
+            Tested in mobile Chorme 66, Destokp Chrome 66 and Windows 10
 </div>,
         ],
         "className": "sideMenuContent",
@@ -162,6 +178,44 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Note: this is cutting-edge software. It can be unstable and contain bugs due to third party code.",
+              <br />,
+              <br />,
+              "Tested in mobile Chorme 66, Destokp Chrome 66 and Windows 10",
+            ],
+            "className": "footer",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Note: this is cutting-edge software. It can be unstable and contain bugs due to third party code.",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "Tested in mobile Chorme 66, Destokp Chrome 66 and Windows 10",
+          ],
+          "type": "div",
+        },
       ],
       "type": "div",
     },
@@ -198,6 +252,14 @@ ShallowWrapper {
                               Dummy content
                     </div>
           </div>
+          <div
+                    className="footer"
+          >
+                    Note: this is cutting-edge software. It can be unstable and contain bugs due to third party code.
+                    <br />
+                    <br />
+                    Tested in mobile Chorme 66, Destokp Chrome 66 and Windows 10
+          </div>
 </div>,
         "className": "sideMenuContainer slide-in-left",
       },
@@ -229,6 +291,14 @@ ShallowWrapper {
               >
                             Dummy content
               </div>
+</div>,
+            <div
+              className="footer"
+>
+              Note: this is cutting-edge software. It can be unstable and contain bugs due to third party code.
+              <br />
+              <br />
+              Tested in mobile Chorme 66, Destokp Chrome 66 and Windows 10
 </div>,
           ],
           "className": "sideMenuContent",
@@ -313,6 +383,44 @@ ShallowWrapper {
                 "rendered": "Dummy content",
                 "type": "div",
               },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Note: this is cutting-edge software. It can be unstable and contain bugs due to third party code.",
+                <br />,
+                <br />,
+                "Tested in mobile Chorme 66, Destokp Chrome 66 and Windows 10",
+              ],
+              "className": "footer",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Note: this is cutting-edge software. It can be unstable and contain bugs due to third party code.",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              "Tested in mobile Chorme 66, Destokp Chrome 66 and Windows 10",
             ],
             "type": "div",
           },

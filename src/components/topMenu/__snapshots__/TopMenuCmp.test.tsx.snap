@@ -21,13 +21,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <img
-          className="top-menu-icon-left"
+          className="top-menu-icon-right"
           onClick={[Function]}
           src="left-arrow.svg"
 />,
         "Dummy content",
         <img
-          className="top-menu-icon-right"
+          className="top-menu-icon-left"
           onClick={[Function]}
           src="burger-icon.svg"
 />,
@@ -41,7 +41,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "top-menu-icon-left",
+          "className": "top-menu-icon-right",
           "onClick": [Function],
           "src": "left-arrow.svg",
         },
@@ -55,7 +55,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "top-menu-icon-right",
+          "className": "top-menu-icon-left",
           "onClick": [Function],
           "src": "burger-icon.svg",
         },
@@ -74,13 +74,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <img
-            className="top-menu-icon-left"
+            className="top-menu-icon-right"
             onClick={[Function]}
             src="left-arrow.svg"
 />,
           "Dummy content",
           <img
-            className="top-menu-icon-right"
+            className="top-menu-icon-left"
             onClick={[Function]}
             src="burger-icon.svg"
 />,
@@ -94,7 +94,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "top-menu-icon-left",
+            "className": "top-menu-icon-right",
             "onClick": [Function],
             "src": "left-arrow.svg",
           },
@@ -108,7 +108,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "top-menu-icon-right",
+            "className": "top-menu-icon-left",
             "onClick": [Function],
             "src": "burger-icon.svg",
           },

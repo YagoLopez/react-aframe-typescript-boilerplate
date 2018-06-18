@@ -92,21 +92,13 @@ ShallowWrapper {
                     <video
                               id="video1"
                               preload="auto"
-                    >
-                              <source
-                                        src="video/echo-hereweare.mp4"
-                                        type="video/mp4"
-                              />
-                    </video>
+                              src="video/echo-hereweare.mp4"
+                    />
                     <video
                               id="video2"
                               preload="auto"
-                    >
-                              <source
-                                        src="video/canguros.mp4"
-                                        type="video/mp4"
-                              />
-                    </video>
+                              src="video/canguros.mp4"
+                    />
                     <img
                               id="video-play-image"
                               src="img/play-video-btn.png"
@@ -117,7 +109,7 @@ ShallowWrapper {
                     />
           </a-assets>
           <a-camera
-                    position="0 0.5 1"
+                    position="0 2.2 1"
                     reverse-mouse-drag="true"
           >
                     <a-cursor
@@ -275,21 +267,13 @@ ShallowWrapper {
               <video
                             id="video1"
                             preload="auto"
-              >
-                            <source
-                                          src="video/echo-hereweare.mp4"
-                                          type="video/mp4"
-                            />
-              </video>
+                            src="video/echo-hereweare.mp4"
+              />
               <video
                             id="video2"
                             preload="auto"
-              >
-                            <source
-                                          src="video/canguros.mp4"
-                                          type="video/mp4"
-                            />
-              </video>
+                            src="video/canguros.mp4"
+              />
               <img
                             id="video-play-image"
                             src="img/play-video-btn.png"
@@ -300,7 +284,7 @@ ShallowWrapper {
               />
 </a-assets>,
             <a-camera
-              position="0 0.5 1"
+              position="0 2.2 1"
               reverse-mouse-drag="true"
 >
               <a-cursor
@@ -338,21 +322,13 @@ ShallowWrapper {
                 <video
                   id="video1"
                   preload="auto"
->
-                  <source
-                                    src="video/echo-hereweare.mp4"
-                                    type="video/mp4"
-                  />
-</video>,
+                  src="video/echo-hereweare.mp4"
+/>,
                 <video
                   id="video2"
                   preload="auto"
->
-                  <source
-                                    src="video/canguros.mp4"
-                                    type="video/mp4"
-                  />
-</video>,
+                  src="video/canguros.mp4"
+/>,
                 <img
                   id="video-play-image"
                   src="img/play-video-btn.png"
@@ -371,26 +347,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <source
-                    src="video/echo-hereweare.mp4"
-                    type="video/mp4"
-/>,
                   "id": "video1",
                   "preload": "auto",
+                  "src": "video/echo-hereweare.mp4",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "src": "video/echo-hereweare.mp4",
-                    "type": "video/mp4",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "source",
-                },
+                "rendered": null,
                 "type": "video",
               },
               Object {
@@ -398,26 +360,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <source
-                    src="video/canguros.mp4"
-                    type="video/mp4"
-/>,
                   "id": "video2",
                   "preload": "auto",
+                  "src": "video/canguros.mp4",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "src": "video/canguros.mp4",
-                    "type": "video/mp4",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "source",
-                },
+                "rendered": null,
                 "type": "video",
               },
               Object {
@@ -456,7 +404,7 @@ ShallowWrapper {
                 color="yellow"
                 id="cursor"
 />,
-              "position": "0 0.5 1",
+              "position": "0 2.2 1",
               "reverse-mouse-drag": "true",
             },
             "ref": null,
@@ -616,21 +564,13 @@ ShallowWrapper {
                         <video
                                     id="video1"
                                     preload="auto"
-                        >
-                                    <source
-                                                src="video/echo-hereweare.mp4"
-                                                type="video/mp4"
-                                    />
-                        </video>
+                                    src="video/echo-hereweare.mp4"
+                        />
                         <video
                                     id="video2"
                                     preload="auto"
-                        >
-                                    <source
-                                                src="video/canguros.mp4"
-                                                type="video/mp4"
-                                    />
-                        </video>
+                                    src="video/canguros.mp4"
+                        />
                         <img
                                     id="video-play-image"
                                     src="img/play-video-btn.png"
@@ -641,7 +581,7 @@ ShallowWrapper {
                         />
             </a-assets>
             <a-camera
-                        position="0 0.5 1"
+                        position="0 2.2 1"
                         reverse-mouse-drag="true"
             >
                         <a-cursor
@@ -799,21 +739,13 @@ ShallowWrapper {
                 <video
                                 id="video1"
                                 preload="auto"
-                >
-                                <source
-                                                src="video/echo-hereweare.mp4"
-                                                type="video/mp4"
-                                />
-                </video>
+                                src="video/echo-hereweare.mp4"
+                />
                 <video
                                 id="video2"
                                 preload="auto"
-                >
-                                <source
-                                                src="video/canguros.mp4"
-                                                type="video/mp4"
-                                />
-                </video>
+                                src="video/canguros.mp4"
+                />
                 <img
                                 id="video-play-image"
                                 src="img/play-video-btn.png"
@@ -824,7 +756,7 @@ ShallowWrapper {
                 />
 </a-assets>,
               <a-camera
-                position="0 0.5 1"
+                position="0 2.2 1"
                 reverse-mouse-drag="true"
 >
                 <a-cursor
@@ -862,21 +794,13 @@ ShallowWrapper {
                   <video
                     id="video1"
                     preload="auto"
->
-                    <source
-                                        src="video/echo-hereweare.mp4"
-                                        type="video/mp4"
-                    />
-</video>,
+                    src="video/echo-hereweare.mp4"
+/>,
                   <video
                     id="video2"
                     preload="auto"
->
-                    <source
-                                        src="video/canguros.mp4"
-                                        type="video/mp4"
-                    />
-</video>,
+                    src="video/canguros.mp4"
+/>,
                   <img
                     id="video-play-image"
                     src="img/play-video-btn.png"
@@ -895,26 +819,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <source
-                      src="video/echo-hereweare.mp4"
-                      type="video/mp4"
-/>,
                     "id": "video1",
                     "preload": "auto",
+                    "src": "video/echo-hereweare.mp4",
                   },
                   "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "src": "video/echo-hereweare.mp4",
-                      "type": "video/mp4",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "source",
-                  },
+                  "rendered": null,
                   "type": "video",
                 },
                 Object {
@@ -922,26 +832,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <source
-                      src="video/canguros.mp4"
-                      type="video/mp4"
-/>,
                     "id": "video2",
                     "preload": "auto",
+                    "src": "video/canguros.mp4",
                   },
                   "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "src": "video/canguros.mp4",
-                      "type": "video/mp4",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "source",
-                  },
+                  "rendered": null,
                   "type": "video",
                 },
                 Object {
@@ -980,7 +876,7 @@ ShallowWrapper {
                   color="yellow"
                   id="cursor"
 />,
-                "position": "0 0.5 1",
+                "position": "0 2.2 1",
                 "reverse-mouse-drag": "true",
               },
               "ref": null,

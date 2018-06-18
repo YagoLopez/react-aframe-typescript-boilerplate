@@ -73,7 +73,8 @@ export class Pag2DVideoCmp extends React.PureComponent<IProps> {
             </a-assets>
 
             <a-camera position="0 2.2 1" reverse-mouse-drag="true">
-              <a-cursor id="cursor" color="yellow"/>
+              <a-cursor id="cursor" color="yellow"
+                        raycaster="far: 100; interval: 150; objects: [src='#video-play-image']"/>
             </a-camera>
 
             <a-videosphere src="#video2"/>

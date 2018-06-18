@@ -106,7 +106,7 @@ ShallowWrapper {
                     position="0 1 0"
           >
                     <a-entity
-                              camera="userHeight: 0; near: 0.5; fov: 100"
+                              camera="near: 0.5; fov: 100"
                               orbit-controls="autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:0;maxDistance:100;invertZoom:true"
                               position="0 -0.5 1.25"
                     />
@@ -300,7 +300,7 @@ ShallowWrapper {
               position="0 1 0"
 >
               <a-entity
-                            camera="userHeight: 0; near: 0.5; fov: 100"
+                            camera="near: 0.5; fov: 100"
                             orbit-controls="autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:0;maxDistance:100;invertZoom:true"
                             position="0 -0.5 1.25"
               />
@@ -385,7 +385,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <a-entity
-                camera="userHeight: 0; near: 0.5; fov: 100"
+                camera="near: 0.5; fov: 100"
                 orbit-controls="autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:0;maxDistance:100;invertZoom:true"
                 position="0 -0.5 1.25"
 />,
@@ -397,7 +397,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "camera": "userHeight: 0; near: 0.5; fov: 100",
+                "camera": "near: 0.5; fov: 100",
                 "orbit-controls": "autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:0;maxDistance:100;invertZoom:true",
                 "position": "0 -0.5 1.25",
               },
@@ -535,7 +535,7 @@ ShallowWrapper {
                         position="0 1 0"
             >
                         <a-entity
-                                    camera="userHeight: 0; near: 0.5; fov: 100"
+                                    camera="near: 0.5; fov: 100"
                                     orbit-controls="autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:0;maxDistance:100;invertZoom:true"
                                     position="0 -0.5 1.25"
                         />
@@ -729,7 +729,7 @@ ShallowWrapper {
                 position="0 1 0"
 >
                 <a-entity
-                                camera="userHeight: 0; near: 0.5; fov: 100"
+                                camera="near: 0.5; fov: 100"
                                 orbit-controls="autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:0;maxDistance:100;invertZoom:true"
                                 position="0 -0.5 1.25"
                 />
@@ -814,7 +814,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <a-entity
-                  camera="userHeight: 0; near: 0.5; fov: 100"
+                  camera="near: 0.5; fov: 100"
                   orbit-controls="autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:0;maxDistance:100;invertZoom:true"
                   position="0 -0.5 1.25"
 />,
@@ -826,7 +826,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "camera": "userHeight: 0; near: 0.5; fov: 100",
+                  "camera": "near: 0.5; fov: 100",
                   "orbit-controls": "autoRotate:true;target:#bot;enableDamping:true;dampingFactor:0.1;rotateSpeed:0.1;autoRotateSpeed:0.15;zoomSpeed:0.5;minDistance:0;maxDistance:100;invertZoom:true",
                   "position": "0 -0.5 1.25",
                 },
