@@ -197,9 +197,7 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
             <a-cursor position="0 -0.5 -3"
                     geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
                     material="color: yellow; shader: flat"
-                    raycaster="far: 20; interval: 1000; objects: a-link"
-                    />
-            {/*<a-entity cursor raycaster="far: 20; interval: 1000; objects: .clickable"></a-entity>*/}
+                    raycaster="far: 20; interval: 1000; objects: a-link"/>
           </a-entity>
 
           <a-entity id="entityGroup">
