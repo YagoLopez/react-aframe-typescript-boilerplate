@@ -28,9 +28,9 @@ export default class TopMenu extends React.PureComponent {
     if (window.location.hash !== "#/") {
       return(
         <div className="top-menu">
-          <img src={ leftArrowSvg } className="top-menu-icon-left" onClick={ this.onClickBtnGoBack }/>
+          <img src={ leftArrowSvg } className="top-menu-icon-right" onClick={ this.onClickBtnGoBack }/>
           { children }
-          <img src={ leftIcon || burgerIconSvg } className="top-menu-icon-right"
+          <img src={ leftIcon || burgerIconSvg } className="top-menu-icon-left"
             onClick={ this.onClickMenuBtn }/>
         </div>
       )
@@ -39,7 +39,7 @@ export default class TopMenu extends React.PureComponent {
       return (
         <div className="top-menu">
           { children }
-          <img src={ leftIcon || burgerIconSvg } className="top-menu-icon-right"
+          <img src={ leftIcon || burgerIconSvg } className="top-menu-icon-left"
             onClick={ this.onClickMenuBtn }/>
         </div>
       )

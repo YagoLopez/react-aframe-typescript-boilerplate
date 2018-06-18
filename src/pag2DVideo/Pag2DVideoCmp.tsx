@@ -66,13 +66,15 @@ export class Pag2DVideoCmp extends React.PureComponent<IProps> {
         <a-scene raycaster="far: 100; objects: [src='#video-play-image']; interval: 150" cursor="rayOrigin: mouse">
 
             <a-assets id="assets">
-              <video id="video1" preload="auto"><source type="video/mp4" src="video/echo-hereweare.mp4"/></video>
-              <video id="video2" preload="auto"><source type="video/mp4" src="video/canguros.mp4"/></video>
+              <video id="video1" preload="auto" src="video/echo-hereweare.mp4"/>
+              <video id="video2" preload="auto" src="video/canguros.mp4"/>
               <img id="video-play-image" src="img/play-video-btn.png"/>
               <img id="video-pause-image" src="img/pause-video-btn.png"/>
             </a-assets>
 
-            <a-camera position="0 0.5 1" reverse-mouse-drag="true"><a-cursor id="cursor" color="yellow"/></a-camera>
+            <a-camera position="0 2.2 1" reverse-mouse-drag="true">
+              <a-cursor id="cursor" color="yellow"/>
+            </a-camera>
 
             <a-videosphere src="#video2"/>
 

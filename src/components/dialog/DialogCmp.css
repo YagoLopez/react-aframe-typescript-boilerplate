@@ -4,7 +4,7 @@
 }
 .dialog-container {
   z-index: 10;
-  display: none; /* [none => closded dialog] - [flex => open dialog] (Initialy is hidden) */
+  display: none; /* [closed dialog => none] - [open dialog => flex] (Dialog's Initialy hidden) */
   height: 100%;
   width: 100%;
   align-items: center;
@@ -12,6 +12,7 @@
   position: fixed;
 }
 .dialog-content {
+  overflow: auto;
   color: white;
   background-color: black;
   max-height: 80%;

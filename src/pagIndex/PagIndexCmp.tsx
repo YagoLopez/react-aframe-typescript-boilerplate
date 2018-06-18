@@ -71,9 +71,9 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
 
     // AFrame Events must be defined in componentDidMount().
 
-    const aElements = document.querySelectorAll('.position-button') as HTMLCollection;
-    Array.from(aElements).forEach( (aTag: HTMLAnchorElement) => {
-      aTag.addEventListener('click', (event: any) => {
+    const aBtnLinks = document.querySelectorAll('.position-button') as HTMLCollection;
+    Array.from(aBtnLinks).forEach( (aBtnLink: HTMLAnchorElement) => {
+      aBtnLink.addEventListener('click', (event: any) => {
         const position = event.target.dataset.position;
         //todo: revisar esto, se pueden producir estados inconsistentes
         //El estado deberia contener las coordenadas de rotacion de la camara
@@ -194,16 +194,16 @@ export class PagIndexCmp extends React.Component<IProps, IState> {
 
           <a-entity id="camera" camera="fov: 80; zoom: 1" position="0 -0.2 5"
             orbit-controls={ this.objToString(this.state.orbitControls) }>
-            <a-entity position="0 -0.5 -3"
-                    geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
-                    material="color: yellow; shader: flat"
-                    cursor="maxDistance: 30; fuse: false"/>
+            {/*<a-entity position="0 -0.5 -3"*/}
+                    {/*geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"*/}
+                    {/*material="color: yellow; shader: flat"*/}
+                    {/*cursor="maxDistance: 30; fuse: false"/>*/}
           </a-entity>
 
           <a-entity id="entityGroup">
             <a-plane position="0 -1 0" rotation="-90 0 0" width="6" height="6" src="#aframeArena"/>
             <a-link image="#link1" onClick={ () => this.onClickALink(event, '/2dvideo') }
-              href="#" title="2D/3D Video" position="-3 1 0"/>
+              href="#" title="2D/360 Video" position="-3 1 0"/>
             <a-link image="#link2" onClick={ () => this.onClickALink(event, '/360video') }
               href="#" title="360 Video" position="0 1 0"/>
             <a-link image="#link3" onClick={ () => this.onClickALink(event, '/3dmodel') }

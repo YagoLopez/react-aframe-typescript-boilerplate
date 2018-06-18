@@ -80,7 +80,7 @@ export class Pag3DModel extends React.Component<{}, {botStatus: BotStatus}> {
           <a-sky src="#sky" rotation="0 -90 0"/>
 
           <a-entity position="0 1 0">
-            <a-entity position="0 -0.5 1.25" camera="userHeight: 0; near: 0.5; fov: 100"
+            <a-entity position="0 -0.5 1.25" camera="near: 0.5; fov: 100"
             orbit-controls={ AFRAME.utils.styleParser.stringify(this.orbitControls) }/>
           </a-entity>
 

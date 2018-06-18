@@ -43,7 +43,7 @@
   background-color: dimgrey;
   border: 1px solid white;
   padding: 5px;
-  border-radius: 20px;
+  border-radius: 2px;
 }
 .top-menu-icon-left:active {
   box-shadow: 0 0 1px 1px white;
@@ -62,7 +62,7 @@
   background-color: dimgrey;
   border: 1px solid white;
   padding: 5px;
-  border-radius: 2px;
+  border-radius: 20px;
 }
 .top-menu-icon-right:active {
   box-shadow: 0 0 1px 1px white;

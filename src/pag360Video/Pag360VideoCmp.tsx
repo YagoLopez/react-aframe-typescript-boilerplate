@@ -51,7 +51,7 @@ export class Pag360VideoCmp extends React.Component<{}, {isPlaying: boolean}> {
 
         <Loader ref="loader">Loading</Loader>
 
-        <Loader ref="loader2">Preparing 3D Video</Loader>
+        <Loader ref="loader2">Preparing 360 Video</Loader>
 
         <SideMenu ref="sideMenu" title="Video 360º" items={ SIDE_MENU_ITEMS } itemActive="2"/>
 
